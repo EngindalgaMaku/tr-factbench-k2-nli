@@ -1,0 +1,5 @@
+﻿model,run_id,alternative_rule,flat_only_correct,alternative_only_correct,discordant,exact_p_value
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,contradiction_priority,35,9,44,0.00010604466626773501
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,sentence_grouped,6,7,13,1.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,contradiction_priority,19,7,26,0.028959274291992188
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,sentence_grouped,1,6,7,0.125

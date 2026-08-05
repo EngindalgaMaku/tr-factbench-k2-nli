@@ -1,0 +1,41 @@
+{
+  "experiment_id": "K2-AGG-ABLATION-ASSISTED-PILOT-v1.1",
+  "title": "K2 aggregation ablation on the assistant-assisted atom pilot v1.1",
+  "status": "exploratory ablation",
+  "stage": "aggregation policy selection",
+  "research_question": "When frozen atom-level NLI decisions are reused, how do flat, contradiction-priority, and sentence-grouped deterministic aggregation rules affect four-class claim classification?",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "source_run_ids": [
+    "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7",
+    "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli"
+  ],
+  "rules": [
+    "flat",
+    "contradiction_priority",
+    "sentence_grouped"
+  ],
+  "policy_review_example_ids": [
+    "finance_test_0158",
+    "medical_test_0185"
+  ],
+  "notes": [
+    "Flat is the frozen K2 pilot baseline and preserves the original aggregation policy.",
+    "Contradiction-priority tests whether any contradicted atom should dominate the full claim decision.",
+    "Sentence-grouped aggregation tests a structural compromise: contradiction dominates only within the source sentence, while supported and contradicted sentences can still yield a partially_supported claim.",
+    "Results excluding the two pre-identified gold_or_policy_review examples are reported as a sensitivity analysis rather than as the primary score."
+  ],
+  "limitations": [
+    "This is a post-hoc exploratory ablation on the same 200-claim pilot used for error analysis; it must not be treated as final policy selection evidence.",
+    "Sentence grouping is inferred automatically from lexical overlap with claim sentences and is not human-annotated discourse structure.",
+    "The atom set remains assistant-assisted and provisional rather than human-adjudicated gold.",
+    "Hard atom labels are reused; probability-aware aggregation and calibrated thresholds are outside this experiment."
+  ],
+  "next_steps": [
+    "Select a provisional aggregation policy using performance, error direction, and annotation-policy consistency rather than Macro-F1 alone.",
+    "Human-adjudicate the two policy-review examples before freezing the aggregation definition.",
+    "Validate the chosen rule on a separate calibration or internal evaluation split.",
+    "Keep flat aggregation as the primary baseline even if an alternative rule is selected."
+  ]
+}

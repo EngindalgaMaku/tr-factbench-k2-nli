@@ -1,0 +1,78 @@
+{
+  "n_examples": 200,
+  "labels": [
+    "supported",
+    "partially_supported",
+    "contradicted",
+    "unverifiable"
+  ],
+  "accuracy": 0.73,
+  "macro_f1": 0.729176397751583,
+  "weighted_f1": 0.729176397751583,
+  "mcc": 0.6448110434240363,
+  "classification_report": {
+    "supported": {
+      "precision": 0.7948717948717948,
+      "recall": 0.62,
+      "f1-score": 0.6966292134831461,
+      "support": 50.0
+    },
+    "partially_supported": {
+      "precision": 0.75,
+      "recall": 0.66,
+      "f1-score": 0.7021276595744681,
+      "support": 50.0
+    },
+    "contradicted": {
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1-score": 0.8,
+      "support": 50.0
+    },
+    "unverifiable": {
+      "precision": 0.6268656716417911,
+      "recall": 0.84,
+      "f1-score": 0.717948717948718,
+      "support": 50.0
+    },
+    "accuracy": 0.73,
+    "macro avg": {
+      "precision": 0.7429343666283964,
+      "recall": 0.73,
+      "f1-score": 0.729176397751583,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 0.7429343666283965,
+      "recall": 0.73,
+      "f1-score": 0.729176397751583,
+      "support": 200.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      31,
+      6,
+      0,
+      13
+    ],
+    [
+      2,
+      33,
+      7,
+      8
+    ],
+    [
+      2,
+      4,
+      40,
+      4
+    ],
+    [
+      4,
+      1,
+      3,
+      42
+    ]
+  ]
+}

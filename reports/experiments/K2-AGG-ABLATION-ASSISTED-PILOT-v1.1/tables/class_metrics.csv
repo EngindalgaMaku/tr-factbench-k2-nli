@@ -1,0 +1,25 @@
+﻿model,run_id,rule,label,precision,recall,f1_score,support
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,flat,supported,0.7962962962962963,0.86,0.8269230769230769,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,flat,partially_supported,0.7258064516129032,0.9,0.8035714285714286,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,flat,contradicted,0.8095238095238095,0.68,0.7391304347826086,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,flat,unverifiable,0.8809523809523809,0.74,0.8043478260869565,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,contradiction_priority,supported,0.7962962962962963,0.86,0.8269230769230769,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,contradiction_priority,partially_supported,0.7142857142857143,0.2,0.3125,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,contradiction_priority,contradicted,0.4777777777777778,0.86,0.6142857142857143,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,contradiction_priority,unverifiable,0.8809523809523809,0.74,0.8043478260869565,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,sentence_grouped,supported,0.7962962962962963,0.86,0.8269230769230769,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,sentence_grouped,partially_supported,0.8297872340425532,0.78,0.8041237113402062,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,sentence_grouped,contradicted,0.7192982456140351,0.82,0.7663551401869159,50.0
+mDeBERTa-v3-base 2mil7,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7,sentence_grouped,unverifiable,0.8809523809523809,0.74,0.8043478260869565,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,flat,supported,0.7948717948717948,0.62,0.6966292134831461,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,flat,partially_supported,0.6666666666666666,0.68,0.6732673267326733,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,flat,contradicted,0.7906976744186046,0.68,0.7311827956989247,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,flat,unverifiable,0.6268656716417911,0.84,0.717948717948718,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,contradiction_priority,supported,0.7948717948717948,0.62,0.6966292134831461,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,contradiction_priority,partially_supported,0.6,0.3,0.4,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,contradiction_priority,contradicted,0.5942028985507246,0.82,0.6890756302521008,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,contradiction_priority,unverifiable,0.6268656716417911,0.84,0.717948717948718,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,sentence_grouped,supported,0.7948717948717948,0.62,0.6966292134831461,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,sentence_grouped,partially_supported,0.75,0.66,0.7021276595744681,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,sentence_grouped,contradicted,0.8,0.8,0.8,50.0
+XLM-R-large XNLI,K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli,sentence_grouped,unverifiable,0.6268656716417911,0.84,0.717948717948718,50.0

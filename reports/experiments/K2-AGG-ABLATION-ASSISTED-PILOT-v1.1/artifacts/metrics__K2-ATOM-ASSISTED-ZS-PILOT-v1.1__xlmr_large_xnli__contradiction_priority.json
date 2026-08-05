@@ -1,0 +1,78 @@
+{
+  "n_examples": 200,
+  "labels": [
+    "supported",
+    "partially_supported",
+    "contradicted",
+    "unverifiable"
+  ],
+  "accuracy": 0.645,
+  "macro_f1": 0.6259133904209913,
+  "weighted_f1": 0.6259133904209913,
+  "mcc": 0.5393653896384447,
+  "classification_report": {
+    "supported": {
+      "precision": 0.7948717948717948,
+      "recall": 0.62,
+      "f1-score": 0.6966292134831461,
+      "support": 50.0
+    },
+    "partially_supported": {
+      "precision": 0.6,
+      "recall": 0.3,
+      "f1-score": 0.4,
+      "support": 50.0
+    },
+    "contradicted": {
+      "precision": 0.5942028985507246,
+      "recall": 0.82,
+      "f1-score": 0.6890756302521008,
+      "support": 50.0
+    },
+    "unverifiable": {
+      "precision": 0.6268656716417911,
+      "recall": 0.84,
+      "f1-score": 0.717948717948718,
+      "support": 50.0
+    },
+    "accuracy": 0.645,
+    "macro avg": {
+      "precision": 0.6539850912660776,
+      "recall": 0.6449999999999999,
+      "f1-score": 0.6259133904209913,
+      "support": 200.0
+    },
+    "weighted avg": {
+      "precision": 0.6539850912660776,
+      "recall": 0.645,
+      "f1-score": 0.6259133904209913,
+      "support": 200.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      31,
+      6,
+      0,
+      13
+    ],
+    [
+      2,
+      15,
+      25,
+      8
+    ],
+    [
+      2,
+      3,
+      41,
+      4
+    ],
+    [
+      4,
+      1,
+      3,
+      42
+    ]
+  ]
+}
