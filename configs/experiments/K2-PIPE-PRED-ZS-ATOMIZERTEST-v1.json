@@ -1,0 +1,31 @@
+{
+  "experiment_id": "K2-PIPE-PRED-ZS-ATOMIZERTEST-v1",
+  "title": "K2 end-to-end pipeline with Gemma-predicted atoms — atomizer test v1",
+  "status": "exploratory end-to-end atomizer test",
+  "stage": "predicted-atom pipeline integration",
+  "research_question": "When Gemma-generated Turkish claim atoms are verified with the selected mDeBERTa zero-shot NLI model and flat deterministic aggregation, what claim-level performance and pipeline coverage are obtained on the atomizer test set?",
+  "dataset_path": "data/processed/atom_level/gemma_predicted_v1/k2_input.jsonl",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "aggregation": "flat deterministic aggregation over hard atom labels",
+  "run_id": "K2-PIPE-PRED-ZS-ATOMIZERTEST-v1__mdeberta_base_2mil7",
+  "notes": [
+    "The input contains Gemma-predicted atoms rather than assistant-assisted or human-gold atomizations.",
+    "Atomizer failures are retained as abstentions and are not silently dropped or mapped to unverifiable.",
+    "Conditional four-class metrics and strict end-to-end accuracy are reported separately.",
+    "The selected verifier is MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7 and the frozen primary aggregation baseline is flat aggregation."
+  ],
+  "limitations": [
+    "The set contains 161 claims with a strongly imbalanced gold-label distribution: 108 supported, 46 partially_supported, 5 contradicted, and 2 unverifiable.",
+    "This is an atomizer test set rather than the balanced, independent K2 internal-evaluation split, so the result is not a final system estimate.",
+    "Gemma atom-count correctness is reference-based metadata and does not establish semantic atom quality by itself.",
+    "The experiment uses hard NLI labels and does not include probability calibration, evidence retrieval, or sliding-window inference."
+  ],
+  "next_steps": [
+    "Inspect all atomizer failures and a stratified sample of atomizer successes, especially atom-count mismatches.",
+    "Create Gemma-predicted atoms for the independent four-class internal-evaluation split.",
+    "Run the same frozen mDeBERTa plus flat-aggregation pipeline on that balanced split.",
+    "Compare direct claim-level, assistant-assisted atom, and Gemma-predicted atom systems on matched examples."
+  ]
+}

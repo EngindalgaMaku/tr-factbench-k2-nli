@@ -1,0 +1,15 @@
+{
+  "experiment_id": "K2-PIPE-PRED-ZS-ATOMIZERTEST-v1",
+  "config_path": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\k2_nli\\configs\\experiments\\K2-PIPE-PRED-ZS-ATOMIZERTEST-v1.json",
+  "config_sha256": "10279daa21751385d92e5a5918c6d3b2719e4b686c8d13c4ad945896116f3eb5",
+  "run_id": "K2-PIPE-PRED-ZS-ATOMIZERTEST-v1__mdeberta_base_2mil7",
+  "metrics_sha256": "ca5179e00c2c3b9eb77beb36a2a24a1b65a2bd7e7e3390c9413c35bdc60235e7",
+  "manifest_sha256": "715cf6ae6e30145e1378060d88e941aab5f197ed185659f34ec39f4558c2cbc9",
+  "predictions_sha256": "a6546de564e7363942713ee4cd3e50aeaef0e08c7c8ac4b25b5bea0a5a25cba2",
+  "atom_predictions_sha256": "93867f06450373ed898d3ba0247a20a87a27e741584cc01c0ccdfc32dd268b75",
+  "failures_sha256": "5fdd7c6cb510d975a708d58d1cd5bf277122a9be0cdad4b79b82719da8240498",
+  "model": "mDeBERTa-v3-base 2mil7",
+  "conditional_macro_f1": 0.5234681186174747,
+  "strict_accuracy": 0.7391304347826086,
+  "coverage": 0.9751552795031055
+}

@@ -1,0 +1,5 @@
+﻿example_id,source_example_id,domain,gold_label,failure_reason,json_valid,atom_count_correct,claim
+v3_contradicted_legal_agent_b06_0069,legal_agent_b06_0069,legal,contradicted,invalid_atomizer_json,False,False,Geçersiz fesih kararına rağmen işçiyi işe başlatmayan işveren tazminat veya ücret ödeme yükümlülüğü taşımaz.
+v3_supported_legal_agent_b09_0036,legal_agent_b09_0036,legal,supported,invalid_atomizer_json,False,False,"Kendi edimini yerine getirmeyen taraf, aksi kararlaştırılmadıkça karşı edimi doğrudan talep edemez."
+v3_supported_legal_train_0131,legal_train_0131,legal,supported,invalid_atomizer_json,False,False,Hukukun iki temel işlevi düzeni sağlamak ve adaleti tesis etmektir.
+v3_supported_legal_agent_b09_0096,legal_agent_b09_0096,legal,supported,invalid_atomizer_json,False,False,Hastalıkla yapılan iş arasında nedensel bağ ve tıbbi belgeler bulunursa işten ayrıldıktan sonra da değerlendirme yapılabilir.

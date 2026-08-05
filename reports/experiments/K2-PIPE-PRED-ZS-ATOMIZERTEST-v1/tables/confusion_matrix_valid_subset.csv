@@ -1,0 +1,5 @@
+﻿gold_label,pred_supported,pred_partially_supported,pred_contradicted,pred_unverifiable
+supported,87,12,3,3
+partially_supported,12,29,4,1
+contradicted,1,1,2,0
+unverifiable,0,1,0,1

@@ -1,0 +1,5 @@
+﻿label,input_count,scored_count,failure_count
+supported,108,105,3
+partially_supported,46,46,0
+contradicted,5,4,1
+unverifiable,2,2,0
