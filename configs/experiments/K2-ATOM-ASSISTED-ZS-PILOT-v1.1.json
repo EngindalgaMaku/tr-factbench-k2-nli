@@ -1,0 +1,34 @@
+{
+  "experiment_id": "K2-ATOM-ASSISTED-ZS-PILOT-v1.1",
+  "title": "K2 assistant-assisted atom-level zero-shot NLI pilot v1.1",
+  "status": "frozen pilot",
+  "stage": "model comparison and atomization verification",
+  "research_question": "How accurately do multilingual zero-shot NLI verifiers classify assistant-generated Turkish claim atoms, and how do atom-level decisions propagate to the four claim labels under deterministic flat aggregation?",
+  "dataset_path": "data/processed/atom_level/assistant_draft_v1_1/k2_atomization_assistant_pilot_v1.1_with_context.jsonl",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "aggregation": "flat deterministic aggregation over hard atom labels",
+  "run_ids": [
+    "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7",
+    "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli"
+  ],
+  "notes": [
+    "The v1.1 atomization revision changed one finance example from five scope-fragmented atoms to two scope-preserving atoms; the total atom count decreased from 436 to 433.",
+    "Both verifiers corrected the targeted claim after the v1.1 atomization change, increasing accuracy by 0.005 and Macro-F1 by approximately 0.005.",
+    "mDeBERTa-v3-base 2mil7 remains the stronger verifier on this pilot. XLM-R-large produces substantially more neutral atom decisions and therefore overpredicts the final unverifiable class.",
+    "Most remaining priority errors were classified as NLI errors rather than atomization errors. Two examples remain flagged for joint gold-label and aggregation-policy review."
+  ],
+  "limitations": [
+    "The atom set is assistant-assisted and provisional; it is not a human-adjudicated gold atomization dataset.",
+    "The same 200-claim pilot is used for exploratory comparison, so the reported scores must not be presented as final held-out test performance.",
+    "Fourteen mDeBERTa pairs and four XLM-R pairs were truncated at 512 tokens; evidence retrieval or sliding-window inference has not yet been evaluated.",
+    "The flat aggregation rule can map mixed entailment and contradiction atoms to partially_supported even when the claim-level annotation policy prefers contradicted."
+  ],
+  "next_steps": [
+    "Run aggregation ablations on the saved atom predictions without repeating model inference: flat, contradiction-priority, and sentence-grouped aggregation.",
+    "Human-review the two gold_or_policy_review examples and a stratified sample of assistant-generated atoms.",
+    "Evaluate evidence selection or sliding-window inference for truncated pairs.",
+    "After policy and atom validation, evaluate the selected verifier on a separate calibration and internal evaluation split."
+  ]
+}

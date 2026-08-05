@@ -1,0 +1,21 @@
+{
+  "experiment_id": "K2-ATOM-ASSISTED-ZS-PILOT-v1.1",
+  "config_path": "configs\\experiments\\K2-ATOM-ASSISTED-ZS-PILOT-v1.1.json",
+  "config_sha256": "c3579b47c18be3cc59543132ad1c0cf457e9b67bf3225035b06eff426e53a83c",
+  "runs": [
+    {
+      "run_id": "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7",
+      "metrics_sha256": "a42ae65989d8ff87abbe7e0089817541374cbc25cec3c34f32a90000b20556f7",
+      "manifest_sha256": "6a8fc20f71e406bf79412e37223395fdba4ac9dff3d6d9c5dfdedd3cfdc289e6",
+      "predictions_sha256": "58cee4edf02d47560692f710efc6ebdeb4443f4fcf6d954ca2df6234510cbf65"
+    },
+    {
+      "run_id": "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__xlmr_large_xnli",
+      "metrics_sha256": "2a1dd4e710d077969391ec869f08d7d1260e8c750438c325417ddd5cd810a7dc",
+      "manifest_sha256": "84bf728f4214c1a1158ef6d0949417b67c64cde7c98d71d7db394b9fd6f24323",
+      "predictions_sha256": "40449f712f070ba71927c2876a60d3d20ae9967225993eab73d4c5d3917ef005"
+    }
+  ],
+  "best_model": "mDeBERTa-v3-base 2mil7",
+  "best_macro_f1": 0.7934931915910176
+}
