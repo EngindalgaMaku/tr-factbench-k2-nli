@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "model_id": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+      "short_name": "mdeberta_base_2mil7",
+      "role": "claim_level_leader"
+    },
+    {
+      "model_id": "joeddav/xlm-roberta-large-xnli",
+      "short_name": "xlmr_large_xnli",
+      "role": "strong_large_baseline"
+    }
+  ]
+}
