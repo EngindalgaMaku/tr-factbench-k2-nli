@@ -1,0 +1,36 @@
+{
+  "models": [
+    {
+      "model_id": "joeddav/xlm-roberta-large-xnli",
+      "short_name": "xlmr_large_xnli",
+      "role": "current_primary_candidate",
+      "trust_remote_code": false
+    },
+    {
+      "model_id": "MoritzLaurer/mDeBERTa-v3-base-mnli-xnli",
+      "short_name": "mdeberta_base_mnli_xnli",
+      "role": "strong_efficiency_candidate",
+      "trust_remote_code": false
+    },
+    {
+      "model_id": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+      "short_name": "mdeberta_base_2mil7",
+      "role": "broad_nli_candidate",
+      "trust_remote_code": false
+    },
+    {
+      "model_id": "MoritzLaurer/xlm-v-base-mnli-xnli",
+      "short_name": "xlmv_base_mnli_xnli",
+      "role": "vocabulary_ablation_candidate",
+      "trust_remote_code": false,
+      "notes": "Optional; larger vocabulary and heavier checkpoint. Run with a smaller batch size on 8 GB GPUs."
+    },
+    {
+      "model_id": "emrecan/convbert-base-turkish-mc4-cased-allnli_tr",
+      "short_name": "tr_convbert_allnli",
+      "role": "monolingual_turkish_control",
+      "trust_remote_code": false,
+      "notes": "Turkish-only control trained on NLI-TR. Verify semantic id2label before the first full run."
+    }
+  ]
+}

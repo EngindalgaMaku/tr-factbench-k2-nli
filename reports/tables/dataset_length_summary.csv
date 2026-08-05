@@ -1,0 +1,5 @@
+,context_chars,context_chars,context_chars,context_chars,context_chars,context_chars,context_chars,context_chars,claim_chars,claim_chars,claim_chars,claim_chars,claim_chars,claim_chars,claim_chars,claim_chars,question_chars,question_chars,question_chars,question_chars,question_chars,question_chars,question_chars,question_chars
+,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max,count,mean,std,min,25%,50%,75%,max
+dataset,,,,,,,,,,,,,,,,,,,,,,,,
+dev_general,960.0,1064.5083333333334,259.10440106254975,593.0,954.75,1031.5,1106.25,1923.0,960.0,114.52604166666667,34.73956957749998,27.0,85.0,118.0,140.0,254.0,960.0,84.565625,23.950632786435907,26.0,67.0,88.0,102.0,137.0
+dev_stress,600.0,932.0466666666666,92.37915169742638,700.0,889.0,953.5,998.0,1179.0,600.0,132.585,24.399898224971796,75.0,116.0,128.0,145.0,235.0,600.0,93.76,15.09134347055436,61.0,83.0,93.0,103.0,132.0

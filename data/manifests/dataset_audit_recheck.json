@@ -1,0 +1,59 @@
+{
+  "datasets": [
+    {
+      "path": "/mnt/data/k2_nli_clean/k2_nli/data/reviewed/claim_level/dev_general.jsonl",
+      "sha256": "f17b3ad40df07146f09e1dfaedfcc74908b447dd97adba296fc5a509b61bd7e4",
+      "n_examples": 960,
+      "n_contexts": 240,
+      "n_unique_claims": 960,
+      "label_counts": {
+        "contradicted": 242,
+        "partially_supported": 240,
+        "supported": 240,
+        "unverifiable": 238
+      },
+      "domain_counts": {
+        "finance": 320,
+        "legal": 320,
+        "medical": 320
+      },
+      "annotation_status_counts": {
+        "single_annotator_provisional": 960
+      },
+      "n_errors": 0,
+      "n_warnings": 1,
+      "errors": [],
+      "warnings": [
+        "2 context groups do not contain exactly one example per claim label"
+      ]
+    },
+    {
+      "path": "/mnt/data/k2_nli_clean/k2_nli/data/reviewed/claim_level/dev_stress.jsonl",
+      "sha256": "bff12be9a92e7376dea9a801313be2734184803ce89b362be8075210dcb7717f",
+      "n_examples": 600,
+      "n_contexts": 150,
+      "n_unique_claims": 600,
+      "label_counts": {
+        "contradicted": 151,
+        "partially_supported": 152,
+        "supported": 150,
+        "unverifiable": 147
+      },
+      "domain_counts": {
+        "finance": 200,
+        "legal": 200,
+        "medical": 200
+      },
+      "annotation_status_counts": {
+        "single_annotator_provisional": 600
+      },
+      "n_errors": 0,
+      "n_warnings": 1,
+      "errors": [],
+      "warnings": [
+        "3 context groups do not contain exactly one example per claim label"
+      ]
+    }
+  ],
+  "total_errors": 0
+}

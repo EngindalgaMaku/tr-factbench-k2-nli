@@ -1,0 +1,10 @@
+{
+  "seed": 42,
+  "batch_size": 8,
+  "max_length": 512,
+  "premise_mode": "context_only",
+  "truncation": "only_first",
+  "primary_metric": "macro_f1",
+  "bootstrap_samples": 2000,
+  "ece_bins": 15
+}

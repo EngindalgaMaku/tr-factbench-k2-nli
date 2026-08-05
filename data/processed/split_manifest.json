@@ -1,0 +1,135 @@
+{
+  "seed": 42,
+  "splits": {
+    "model_selection": {
+      "claim4": {
+        "n_examples": 648,
+        "n_contexts": 162,
+        "labels": {
+          "supported": 162,
+          "partially_supported": 162,
+          "contradicted": 162,
+          "unverifiable": 162
+        },
+        "domains": {
+          "legal": 216,
+          "finance": 216,
+          "medical": 216
+        }
+      },
+      "nli3": {
+        "n_examples": 486,
+        "n_contexts": 162,
+        "labels": {
+          "supported": 162,
+          "contradicted": 162,
+          "unverifiable": 162
+        },
+        "domains": {
+          "legal": 162,
+          "medical": 162,
+          "finance": 162
+        }
+      },
+      "claim4_path": "data\\processed\\general_model_selection_claim4.jsonl",
+      "nli3_path": "data\\processed\\general_model_selection_nli3.jsonl"
+    },
+    "calibration": {
+      "claim4": {
+        "n_examples": 156,
+        "n_contexts": 39,
+        "labels": {
+          "partially_supported": 39,
+          "contradicted": 39,
+          "unverifiable": 39,
+          "supported": 39
+        },
+        "domains": {
+          "finance": 52,
+          "legal": 52,
+          "medical": 52
+        }
+      },
+      "nli3": {
+        "n_examples": 117,
+        "n_contexts": 39,
+        "labels": {
+          "contradicted": 39,
+          "unverifiable": 39,
+          "supported": 39
+        },
+        "domains": {
+          "legal": 39,
+          "finance": 39,
+          "medical": 39
+        }
+      },
+      "claim4_path": "data\\processed\\general_calibration_claim4.jsonl",
+      "nli3_path": "data\\processed\\general_calibration_nli3.jsonl"
+    },
+    "internal_eval": {
+      "claim4": {
+        "n_examples": 156,
+        "n_contexts": 39,
+        "labels": {
+          "contradicted": 41,
+          "supported": 39,
+          "partially_supported": 39,
+          "unverifiable": 37
+        },
+        "domains": {
+          "medical": 52,
+          "finance": 52,
+          "legal": 52
+        }
+      },
+      "nli3": {
+        "n_examples": 117,
+        "n_contexts": 39,
+        "labels": {
+          "contradicted": 41,
+          "supported": 39,
+          "unverifiable": 37
+        },
+        "domains": {
+          "medical": 39,
+          "finance": 39,
+          "legal": 39
+        }
+      },
+      "claim4_path": "data\\processed\\general_internal_eval_claim4.jsonl",
+      "nli3_path": "data\\processed\\general_internal_eval_nli3.jsonl"
+    }
+  },
+  "stress_eval": {
+    "claim4": {
+      "n_examples": 600,
+      "n_contexts": 150,
+      "labels": {
+        "unverifiable": 147,
+        "supported": 150,
+        "contradicted": 151,
+        "partially_supported": 152
+      },
+      "domains": {
+        "legal": 200,
+        "medical": 200,
+        "finance": 200
+      }
+    },
+    "nli3": {
+      "n_examples": 448,
+      "n_contexts": 150,
+      "labels": {
+        "unverifiable": 147,
+        "supported": 150,
+        "contradicted": 151
+      },
+      "domains": {
+        "legal": 149,
+        "medical": 150,
+        "finance": 149
+      }
+    }
+  }
+}
