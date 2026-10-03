@@ -91,3 +91,21 @@ Detaylı deney raporu, SVG grafikleri ve hata matrisleri için: [`reports/experi
 
 Ayrıntılı kullanım için `docs/EXPERIMENT_PROTOCOL.md` ve `docs/DATASET_USAGE.md` dosyalarına bakın.
 
+## Citation & Benchmark Reference
+
+If you use this modular verification pipeline or evaluate on the TR-FactBench benchmark splits, please cite the foundational benchmark paper:
+
+```bibtex
+@inproceedings{dalga2026source,
+  title={Source-Grounded Factuality Verification in Turkish: A Multi-Domain Experimental Study},
+  author={Dalga, Engin and Ball{\i}, Serkan},
+  booktitle={2026 10th International Symposium on Multidisciplinary Studies and Innovative Technologies (ISMSIT)},
+  year={2026},
+  pages={1--6},
+  publisher={IEEE}
+}
+```
+
+> **Ecosystem Note:** The foundational dataset splits, annotation guidelines, and K1 direct encoder baselines are maintained in the companion repository: [tr-factbench](https://github.com/EngindalgaMaku/tr-factbench).
+
+
