@@ -1,0 +1,89 @@
+{
+  "experiment_id": "K3-LIVE-LLAMA70B-ARBITRATION-v1",
+  "judge_model": "meta-llama/llama-3.3-70b-instruct",
+  "n_arbitration_cases": 120,
+  "judge_correct_count": 57,
+  "judge_disagreement_accuracy": 0.475,
+  "judge_disagreement_macro_f1": 0.4579,
+  "favored_model_distribution": {
+    "Model A": 50,
+    "Model B": 64,
+    "Neither": 6
+  },
+  "consensus_cases_count": 358,
+  "consensus_accuracy": 0.9413,
+  "hybrid_end_to_end": {
+    "total_examples": 478,
+    "correct_examples": 394,
+    "accuracy": 0.8243,
+    "macro_recall": 0.8236,
+    "macro_precision": 0.8515,
+    "macro_f1": 0.8262,
+    "mcc": 0.7723,
+    "confusion_matrix": [
+      [
+        106,
+        14,
+        0,
+        0
+      ],
+      [
+        2,
+        92,
+        24,
+        0
+      ],
+      [
+        1,
+        7,
+        113,
+        0
+      ],
+      [
+        1,
+        12,
+        23,
+        83
+      ]
+    ]
+  },
+  "baselines_comparison": {
+    "k1_electra_macro_f1": 0.8316,
+    "k1_electra_accuracy": 0.8326,
+    "k2_soft_macro_f1": 0.8059,
+    "k2_soft_accuracy": 0.8033,
+    "gemma_2b_hybrid_acc": 0.8305,
+    "gemma_2b_hybrid_macro_f1": 0.8294
+  },
+  "mcnemar_tests": {
+    "hybrid_vs_k1": {
+      "b_model_a_only": 29,
+      "c_model_b_only": 33,
+      "total_discordant": 62,
+      "chi2_continuity": 0.14516129032258066,
+      "p_value_exact": 0.7035366713552733,
+      "significant_005": false
+    },
+    "hybrid_vs_k2": {
+      "b_model_a_only": 31,
+      "c_model_b_only": 21,
+      "total_discordant": 52,
+      "chi2_continuity": 1.5576923076923077,
+      "p_value_exact": 0.21160856876151612,
+      "significant_005": false
+    },
+    "hybrid_vs_gemma_2b": {
+      "b_model_a_only": 27,
+      "c_model_b_only": 30,
+      "total_discordant": 57,
+      "chi2_continuity": 0.07017543859649122,
+      "p_value_exact": 0.7913664277791806,
+      "significant_005": false
+    }
+  },
+  "total_tokens_prompt": 79609,
+  "total_tokens_completion": 14009,
+  "estimated_cost_usd": 0.0138,
+  "total_inference_seconds": 793.8,
+  "avg_latency_per_case_seconds": 6.61
+}

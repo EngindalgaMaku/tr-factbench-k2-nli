@@ -1,0 +1,14 @@
+{
+  "experiment_id": "K3-LIVE-GEMMA-ARBITRATION-v1",
+  "judge_model": "google/gemma-4-E2B-it",
+  "n_arbitration_cases": 120,
+  "judge_disagreement_accuracy": 0.5,
+  "judge_disagreement_macro_f1": 0.4551441293219199,
+  "judge_correct_count": 60,
+  "hybrid_full_accuracy": 0.8305439330543933,
+  "hybrid_full_macro_f1": 0.8294175704522663,
+  "hybrid_full_mcc": 0.784026095185794,
+  "consensus_count": 358,
+  "consensus_accuracy": 0.9413407821229051,
+  "elapsed_seconds": 968.2390203475952
+}
