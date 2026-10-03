@@ -406,10 +406,15 @@ def main() -> None:
         gemma_metrics_path = Path("k2_nli/reports/experiments/K3-LIVE-GEMMA-ARBITRATION-v1/hybrid_full_predictions_478.jsonl")
 
     mcnemar_vs_gemma = {}
+    gemma_metrics = None
     if gemma_metrics_path.exists():
         gemma_rows = [json.loads(line) for line in gemma_metrics_path.read_text(encoding="utf-8").splitlines() if line.strip()]
-        y_gemma_all = [r["pred_label"] for r in gemma_rows]
-        mcnemar_vs_gemma = calculate_mcnemar(y_true_all, y_hybrid_all, y_gemma_all)
+        gemma_by_id = {r["example_id"]: r["pred_label"] for r in gemma_rows}
+        hyb_ids = [r["example_id"] for r in hybrid_full_records]
+        if all(e in gemma_by_id for e in hyb_ids):
+            y_gemma_all = [gemma_by_id[e] for e in hyb_ids]  # aligned strictly by example_id
+            mcnemar_vs_gemma = calculate_mcnemar(y_true_all, y_hybrid_all, y_gemma_all)
+            gemma_metrics = hard_label_metrics(y_true_all, y_gemma_all)
 
     # Breakdown of favored models
     favored_counts = {
@@ -421,6 +426,15 @@ def main() -> None:
     total_tokens_prompt = sum(r.get("prompt_tokens", 0) for r in results)
     total_tokens_completion = sum(r.get("completion_tokens", 0) for r in results)
     total_latency_seconds = sum(r.get("latency_seconds", 0) for r in results)
+    # Actual billed cost as reported by OpenRouter in usage.cost (no assumed price table)
+    actual_cost = 0.0
+    if raw_resp_file.exists():
+        for line in raw_resp_file.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                actual_cost += float((json.loads(line)["response"].get("usage") or {}).get("cost", 0) or 0)
+
+    consensus_records = [r for r in hybrid_full_records if r["source"] == "consensus"]
+    consensus_correct = sum(1 for r in consensus_records if r["is_correct"])
 
     summary = {
         "experiment_id": "K3-LIVE-LLAMA70B-ARBITRATION-v1",
@@ -429,9 +443,11 @@ def main() -> None:
         "judge_correct_count": correct_count,
         "judge_disagreement_accuracy": round(disagree_metrics["accuracy"], 4),
         "judge_disagreement_macro_f1": round(disagree_metrics["macro_f1"], 4),
+        "json_valid_count": sum(1 for r in results if r["json_valid"]),
         "favored_model_distribution": favored_counts,
-        "consensus_cases_count": len(y_true_all) - len(cases),
-        "consensus_accuracy": round(337 / (len(y_true_all) - len(cases)), 4),
+        "consensus_cases_count": len(consensus_records),
+        "consensus_correct": consensus_correct,
+        "consensus_accuracy": round(consensus_correct / len(consensus_records), 4),
         "hybrid_end_to_end": {
             "total_examples": len(y_true_all),
             "correct_examples": sum(1 for r in hybrid_full_records if r["is_correct"]),
@@ -445,10 +461,13 @@ def main() -> None:
         "baselines_comparison": {
             "k1_electra_macro_f1": round(k1_metrics["macro_f1"], 4),
             "k1_electra_accuracy": round(k1_metrics["accuracy"], 4),
+            "k1_electra_mcc": round(k1_metrics["mcc"], 4),
             "k2_soft_macro_f1": round(k2_metrics["macro_f1"], 4),
             "k2_soft_accuracy": round(k2_metrics["accuracy"], 4),
-            "gemma_2b_hybrid_acc": 0.8305,
-            "gemma_2b_hybrid_macro_f1": 0.8294,
+            "k2_soft_mcc": round(k2_metrics["mcc"], 4),
+            "gemma_2b_hybrid_acc": round(gemma_metrics["accuracy"], 4) if gemma_metrics else None,
+            "gemma_2b_hybrid_macro_f1": round(gemma_metrics["macro_f1"], 4) if gemma_metrics else None,
+            "gemma_2b_hybrid_mcc": round(gemma_metrics["mcc"], 4) if gemma_metrics else None,
         },
         "mcnemar_tests": {
             "hybrid_vs_k1": mcnemar_vs_k1,
@@ -457,7 +476,7 @@ def main() -> None:
         },
         "total_tokens_prompt": total_tokens_prompt,
         "total_tokens_completion": total_tokens_completion,
-        "estimated_cost_usd": round((total_tokens_prompt * 0.12 + total_tokens_completion * 0.30) / 1_000_000, 4),
+        "actual_cost_usd_openrouter": round(actual_cost, 6),
         "total_inference_seconds": round(total_latency_seconds, 2),
         "avg_latency_per_case_seconds": round(total_latency_seconds / len(cases), 2),
     }
@@ -465,57 +484,70 @@ def main() -> None:
     with open(out_dir / "metrics_summary.json", "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=2)
 
-    # Generate Markdown Report
+    gm = summary["baselines_comparison"]
+    gemma_row = (
+        f"| Hibrit + Gemma-4-E2B-it (bilgilendirilmiş meta-hakem, yerel) | %{gm['gemma_2b_hybrid_acc']*100:.2f} | "
+        f"{gm['gemma_2b_hybrid_macro_f1']:.4f} | {gm['gemma_2b_hybrid_mcc']:.4f} | K1/K2 kararlarını gören 2B hakem |"
+        if gm["gemma_2b_hybrid_acc"] is not None else "| Hibrit + Gemma-4-E2B-it | - | - | - | dosya bulunamadı |"
+    )
+    n_all = len(y_true_all)
+    oracle_correct = consensus_correct + sum(1 for r in results if r["k1_correct"] or r["k2_correct"])
     report_md = f"""# K3-LIVE-LLAMA70B-ARBITRATION-v1 Raporu
 
-**Model:** `{MODEL_ID}` (OpenRouter API)  
+**Model:** `{MODEL_ID}` (OpenRouter API, temperature=0)  
+**Tasarım:** Bilgilendirilmiş meta-hakem (hakem K1 ve K2 kararlarını + K2 atom NLI dökümünü görür)  
 **Tarih:** {time.strftime('%Y-%m-%d %H:%M:%S')}  
-**Veri Kümesi:** TR-FactBench Gold 480 (478 geçerli test örneği)  
+**Veri Kümesi:** TR-FactBench Gold 480 ({n_all} geçerli test örneği; 2 örnek atomizer hatası nedeniyle dışarıda)  
 
 ---
 
-## 1. Hakem Başarımı (120 Çelişki Örneğinde)
+## 1. Hakem Başarımı (120 Ayrışma Örneğinde)
 
 - **Doğru Karar:** {correct_count} / {len(cases)} (**%{disagree_metrics['accuracy']*100:.2f}**)
 - **Hakem Macro-F1:** {disagree_metrics['macro_f1']:.4f}
-- **Desteklenen Model Dağılımı:**
-  - Model A (K1 ELECTRA): {favored_counts['Model A']}
-  - Model B (K2 DeBERTa Soft-Prob): {favored_counts['Model B']}
-  - Tarafsız / İkisi de Değil: {favored_counts['Neither']}
+- **Geçerli JSON:** {summary['json_valid_count']} / {len(cases)}
+- **Beyan edilen `favored_model` dağılımı:** Model A (K1): {favored_counts['Model A']}, Model B (K2): {favored_counts['Model B']}, Neither/Unknown: {favored_counts['Neither']}
 
 ---
 
-## 2. Uçtan Uca Hibrit Sistem Başarımı (478 Örnek)
+## 2. Uçtan Uca Hibrit Sistem Başarımı ({n_all} Örnek)
 
-| Model / Sistem | Doğruluk (Acc) | Macro-F1 | MCC | Açıklama |
+| Model / Sistem | Doğruluk | Macro-F1 | MCC | Açıklama |
 |---|---|---|---|---|
-| **K1 (ELECTRA-TR Base)** | %{k1_metrics['accuracy']*100:.2f} ({sum(1 for ya, yt in zip(y_k1_all, y_true_all) if ya==yt)}/478) | {k1_metrics['macro_f1']:.4f} | {k1_metrics['mcc']:.4f} | Bütüncül sekans sınıflandırıcı |
-| **K2 (Gemma-4 + DeBERTa Soft-Prob)** | %{k2_metrics['accuracy']*100:.2f} ({sum(1 for yb, yt in zip(y_k2_all, y_true_all) if yb==yt)}/478) | {k2_metrics['macro_f1']:.4f} | {k2_metrics['mcc']:.4f} | Atomik NLI & Olasılık Toplulaştırma |
-| **Hibrit + Gemma-4-E2B-it (Yerel Hakem)** | %83.05 (397/478) | 0.8294 | 0.7711 | 2B Yerel LLM Hakemliği |
-| **Hibrit + Llama-3.3-70B (Canlı OpenRouter Hakem)** | **%{hybrid_metrics['accuracy']*100:.2f} ({sum(1 for r in hybrid_full_records if r['is_correct'])}/478)** | **{hybrid_metrics['macro_f1']:.4f}** | **{hybrid_metrics['mcc']:.4f}** | **70B Büyük Parametreli Meta-Hakem** |
-| *Teorik Üst Sınır (Oracle)* | *%93.10 (445/478)* | *-* | *-* | *K1 veya K2'den birinin bildiği tavan* |
+| K1 (ELECTRA-TR) | %{k1_metrics['accuracy']*100:.2f} | {k1_metrics['macro_f1']:.4f} | {k1_metrics['mcc']:.4f} | Bütüncül sınıflandırıcı |
+| K2 (Gemma-4 atomizer + mDeBERTa, soft-prob) | %{k2_metrics['accuracy']*100:.2f} | {k2_metrics['macro_f1']:.4f} | {k2_metrics['mcc']:.4f} | Atomik NLI |
+{gemma_row}
+| **Hibrit + Llama-3.3-70B (bilgilendirilmiş meta-hakem)** | **%{hybrid_metrics['accuracy']*100:.2f} ({summary['hybrid_end_to_end']['correct_examples']}/{n_all})** | **{hybrid_metrics['macro_f1']:.4f}** | **{hybrid_metrics['mcc']:.4f}** | 70B hakem |
+| *Oracle tavanı* | *%{oracle_correct/n_all*100:.2f} ({oracle_correct}/{n_all})* | - | - | K1 veya K2 doğruysa doğru sayılır |
 
 ---
 
-## 3. İstatistiksel Anlamlılık (McNemar Testi)
+## 3. İstatistiksel Anlamlılık (Exact McNemar, örnek kimliğine göre eşlenmiş)
 
-- **Hibrit vs K1 (ELECTRA):**
-  - Hibrit tek başına doğru: {mcnemar_vs_k1.get('b_model_a_only', 0)}
-  - K1 tek başına doğru: {mcnemar_vs_k1.get('c_model_b_only', 0)}
-  - Exact $p$-değeri: **{mcnemar_vs_k1.get('p_value_exact', 1.0):.4e}** (Anlamlılık: {mcnemar_vs_k1.get('significant_005', False)})
-- **Hibrit vs K2 (DeBERTa Soft-Prob):**
-  - Exact $p$-değeri: **{mcnemar_vs_k2.get('p_value_exact', 1.0):.4e}** (Anlamlılık: {mcnemar_vs_k2.get('significant_005', False)})
-- **Hibrit (Llama-70B) vs Hibrit (Gemma-2B):**
-  - Exact $p$-değeri: **{mcnemar_vs_gemma.get('p_value_exact', 1.0):.4e}** (Anlamlılık: {mcnemar_vs_gemma.get('significant_005', False)})
+| Karşılaştırma | Yalnız Hibrit doğru | Yalnız karşı taraf doğru | p (exact) |
+|---|---:|---:|---:|
+| Hibrit vs K1 | {mcnemar_vs_k1.get('b_model_a_only', 0)} | {mcnemar_vs_k1.get('c_model_b_only', 0)} | {mcnemar_vs_k1.get('p_value_exact', 1.0):.4f} |
+| Hibrit vs K2 | {mcnemar_vs_k2.get('b_model_a_only', 0)} | {mcnemar_vs_k2.get('c_model_b_only', 0)} | {mcnemar_vs_k2.get('p_value_exact', 1.0):.4f} |
+| Hibrit(Llama-70B) vs Hibrit(Gemma-E2B) | {mcnemar_vs_gemma.get('b_model_a_only', 0)} | {mcnemar_vs_gemma.get('c_model_b_only', 0)} | {mcnemar_vs_gemma.get('p_value_exact', 1.0):.4f} |
 
 ---
 
-## 4. Kaynak ve Maliyet Analizi
+## 4. Kaynak ve Maliyet
 
-- Toplam Prompt Token: {total_tokens_prompt:,}
-- Toplam Tamamlama Token: {total_tokens_completion:,}
-- Tahmini API Maliyeti: ~${summary['estimated_cost_usd']:.4f} USD
-- Toplam Süre: {summary['total_inference_seconds']} saniye (ortalama {summary['avg_latency_per_case_seconds']} saniye/örnek)
+- Prompt token: {total_tokens_prompt:,} | Tamamlama token: {total_tokens_completion:,}
+- **Gerçek faturalanan maliyet (OpenRouter `usage.cost`):** ${summary['actual_cost_usd_openrouter']:.4f} USD
+- Toplam istek süresi: {summary['total_inference_seconds']} sn (ortalama {summary['avg_latency_per_case_seconds']} sn/örnek)
+
+---
+
+## 5. Yorum (bkz. `reports/experiments/AUDIT-K2-K3-v1/README.md`)
+
+Bu bilgilendirilmiş meta-hakem tasarımı, aynı 120 örnekte **kör (blind) LLM hakem** tasarımının
+(resmi TR-FactBench sistem istemi + 8-shot) gerisinde kalmıştır. Ana hata kaynağı, hakemin
+`contradicted` etiketini aşırı üretmesidir (gold kısmi-destek örneklerinin çoğu `contradicted`
+olarak etiketlenmiştir). Bu desen aynı modelin kör zero-shot çıktısında da görüldüğünden, düşüşün
+temel nedeni K1/K2 bilgisinin gösterilmesinden çok, zero-shot ayarı ve istemdeki etiket tanımlarının
+resmi tanımlardan sapmasıdır.
 """
 
     with open(out_dir / "REPORT_K3_LIVE_LLAMA70B.md", "w", encoding="utf-8") as f:

@@ -157,6 +157,12 @@ def build_hybrid_arbitration(config_path: Path, project_root: Path) -> Path:
 
     oracle_correct = both_corr + k1_only + k2_only
     oracle_acc = oracle_correct / n_total
+    # Both-wrong split: inside disagreement zone vs. consensus errors (both agree on a wrong label)
+    disagree_both_wrong = sum(
+        k1_map[e]["predicted_label"] != k1_map[e]["gold_label"] and k2_map[e]["pred_label"] != k1_map[e]["gold_label"]
+        for e in disagree_ids
+    )
+    consensus_wrong = consensus_count - consensus_correct
 
     # Evaluate Candidate Judges
     summary_rows = []
@@ -264,7 +270,7 @@ def build_hybrid_arbitration(config_path: Path, project_root: Path) -> Path:
             "judge_accuracy_in_disagree": judge_disagree_acc,
             "k1_alone_correct_in_disagree": k1_only,
             "k2_alone_correct_in_disagree": k2_only,
-            "both_wrong_in_disagree": both_wrong,
+            "both_wrong_in_disagree": disagree_both_wrong,
         })
 
         efficiency_rows.append({
@@ -358,26 +364,34 @@ def build_hybrid_arbitration(config_path: Path, project_root: Path) -> Path:
         "                                           │",
         "                   ┌───────────────────────┴───────────────────────┐",
         "                   ▼                                               ▼",
-        "              EVET (%74.90)                                  HAYIR (%25.10)",
+        f"              EVET (%{consensus_count/n_total*100:.2f})                                  HAYIR (%{disagree_count/n_total*100:.2f})",
         "         [Konsensüs Kabul Edilir]                         [Bileşen 3: LLM Hakem]",
-        "         (Doğruluk: %94.13, 0 API maliyeti)               (120 Vakada Arbitrasyon)",
+        f"         (Doğruluk: %{consensus_acc*100:.2f}, 0 API çağrısı)               ({disagree_count} vakada kör hakem)",
         "                   │                                               │",
         "                   └───────────────────────┬───────────────────────┘",
         "                                           ▼",
         "                                  FİNAL HİBRİT KARAR",
-        "                                (Doğruluk: %92.26, Macro-F1: 0.9221)",
+        f"                  (En iyi hakemle: Doğruluk %{best_row['hybrid_accuracy']*100:.2f}, Macro-F1 {fmt(best_row['hybrid_macro_f1'])})",
         "```",
+        "",
+        "**Hakem tasarımı (kör / blind tie-breaker):** Hakem LLM, K1 ve K2 kararlarını GÖRMEZ. Her LLM, resmi "
+        "TR-FactBench sistem istemi (`llm_baselines/prompts/system_tr_v1.txt`) ile yalnız bağlam + iddiayı bağımsız olarak "
+        "sınıflandırmıştır (gerçek OpenRouter çağrıları, `results/llm_baselines/gold_v1.0/`). Ayrışma bölgesinde bu bağımsız "
+        "karar nihai karar olarak kullanılır. Canlı bir dağıtımda LLM yalnızca ayrışma örnekleri için çağrılır.",
+        "",
+        "> **Seçim yanlılığı uyarısı:** En iyi hakem, aynı Gold 480 kümesi üzerinde 6 yapılandırma arasından seçilmiştir. "
+        "Tarafsız özet için tüm hakemlerin ortalaması da raporlanmalıdır (bkz. `AUDIT-K2-K3-v1`).",
         "",
         "## 2. Konsensüs vs. Ayrışma Bölgesi Temel İstatistikleri",
         "",
         f"- **Toplam Değerlendirilen Altın Örnek Sayısı:** {n_total}",
         f"- **Konsensüs Bölgesi (K1 == K2):** **{consensus_count} örnek ({consensus_count/n_total*100:.2f}%)**",
-        f"  - Konsensüs Doğruluğu: **{consensus_correct}/{consensus_count} ({consensus_acc*100:.2f}%)**",
-        f"  - Bilimsel Anlamı: İki farklı mimari uzlaştığında sistem neredeyse kusursuz (%94.13) çalışır; pahalı LLM hakemine hiç gerek kalmaz.",
+        f"  - Konsensüs Doğruluğu: **{consensus_correct}/{consensus_count} ({consensus_acc*100:.2f}%)**; "
+        f"iki modelin aynı yanlış etikette uzlaştığı {consensus_wrong} örnek hakeme hiç ulaşmaz (sistemin indirgenemez hatası).",
         f"- **Ayrışma Bölgesi (K1 != K2):** **{disagree_count} örnek ({disagree_count/n_total*100:.2f}%)**",
-        f"  - Yalnızca K1 Doğru: {k1_only} örnek ({k1_only/n_total*100:.2f}%)",
-        f"  - Yalnızca K2 Doğru: {k2_only} örnek ({k2_only/n_total*100:.2f}%)",
-        f"  - İkisi de Yanlış: {both_wrong} örnek ({both_wrong/n_total*100:.2f}%)",
+        f"  - Yalnızca K1 Doğru: {k1_only} örnek",
+        f"  - Yalnızca K2 Doğru: {k2_only} örnek",
+        f"  - İkisi de Yanlış (ayrışma içinde): {disagree_both_wrong} örnek",
         f"- **Teorik Oracle Üst Tavanı (Oracle Upper Bound):** **{oracle_correct}/{n_total} (%{oracle_acc*100:.2f})**",
         "",
         "## 3. Hibrit Triad Arbitrasyon Sonuçları",

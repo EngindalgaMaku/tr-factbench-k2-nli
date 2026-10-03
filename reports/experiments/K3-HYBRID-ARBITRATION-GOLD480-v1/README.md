@@ -24,24 +24,27 @@ K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %7
                    ▼                                               ▼
               EVET (%74.90)                                  HAYIR (%25.10)
          [Konsensüs Kabul Edilir]                         [Bileşen 3: LLM Hakem]
-         (Doğruluk: %94.13, 0 API maliyeti)               (120 Vakada Arbitrasyon)
+         (Doğruluk: %94.13, 0 API çağrısı)               (120 vakada kör hakem)
                    │                                               │
                    └───────────────────────┬───────────────────────┘
                                            ▼
                                   FİNAL HİBRİT KARAR
-                                (Doğruluk: %92.26, Macro-F1: 0.9221)
+                  (En iyi hakemle: Doğruluk %92.26, Macro-F1 0.9221)
 ```
+
+**Hakem tasarımı (kör / blind tie-breaker):** Hakem LLM, K1 ve K2 kararlarını GÖRMEZ. Her LLM, resmi TR-FactBench sistem istemi (`llm_baselines/prompts/system_tr_v1.txt`) ile yalnız bağlam + iddiayı bağımsız olarak sınıflandırmıştır (gerçek OpenRouter çağrıları, `results/llm_baselines/gold_v1.0/`). Ayrışma bölgesinde bu bağımsız karar nihai karar olarak kullanılır. Canlı bir dağıtımda LLM yalnızca ayrışma örnekleri için çağrılır.
+
+> **Seçim yanlılığı uyarısı:** En iyi hakem, aynı Gold 480 kümesi üzerinde 6 yapılandırma arasından seçilmiştir. Tarafsız özet için tüm hakemlerin ortalaması da raporlanmalıdır (bkz. `AUDIT-K2-K3-v1`).
 
 ## 2. Konsensüs vs. Ayrışma Bölgesi Temel İstatistikleri
 
 - **Toplam Değerlendirilen Altın Örnek Sayısı:** 478
 - **Konsensüs Bölgesi (K1 == K2):** **358 örnek (74.90%)**
-  - Konsensüs Doğruluğu: **337/358 (94.13%)**
-  - Bilimsel Anlamı: İki farklı mimari uzlaştığında sistem neredeyse kusursuz (%94.13) çalışır; pahalı LLM hakemine hiç gerek kalmaz.
+  - Konsensüs Doğruluğu: **337/358 (94.13%)**; iki modelin aynı yanlış etikette uzlaştığı 21 örnek hakeme hiç ulaşmaz (sistemin indirgenemez hatası).
 - **Ayrışma Bölgesi (K1 != K2):** **120 örnek (25.10%)**
-  - Yalnızca K1 Doğru: 61 örnek (12.76%)
-  - Yalnızca K2 Doğru: 47 örnek (9.83%)
-  - İkisi de Yanlış: 33 örnek (6.90%)
+  - Yalnızca K1 Doğru: 61 örnek
+  - Yalnızca K2 Doğru: 47 örnek
+  - İkisi de Yanlış (ayrışma içinde): 12 örnek
 - **Teorik Oracle Üst Tavanı (Oracle Upper Bound):** **445/478 (%93.10)**
 
 ## 3. Hibrit Triad Arbitrasyon Sonuçları

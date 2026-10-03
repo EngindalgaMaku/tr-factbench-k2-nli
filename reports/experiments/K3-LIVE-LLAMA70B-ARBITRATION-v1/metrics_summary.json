@@ -5,12 +5,14 @@
   "judge_correct_count": 57,
   "judge_disagreement_accuracy": 0.475,
   "judge_disagreement_macro_f1": 0.4579,
+  "json_valid_count": 118,
   "favored_model_distribution": {
     "Model A": 50,
     "Model B": 64,
     "Neither": 6
   },
   "consensus_cases_count": 358,
+  "consensus_correct": 337,
   "consensus_accuracy": 0.9413,
   "hybrid_end_to_end": {
     "total_examples": 478,
@@ -50,10 +52,13 @@
   "baselines_comparison": {
     "k1_electra_macro_f1": 0.8316,
     "k1_electra_accuracy": 0.8326,
+    "k1_electra_mcc": 0.7802,
     "k2_soft_macro_f1": 0.8059,
     "k2_soft_accuracy": 0.8033,
+    "k2_soft_mcc": 0.7405,
     "gemma_2b_hybrid_acc": 0.8305,
-    "gemma_2b_hybrid_macro_f1": 0.8294
+    "gemma_2b_hybrid_macro_f1": 0.8294,
+    "gemma_2b_hybrid_mcc": 0.784
   },
   "mcnemar_tests": {
     "hybrid_vs_k1": {
@@ -83,7 +88,7 @@
   },
   "total_tokens_prompt": 79609,
   "total_tokens_completion": 14009,
-  "estimated_cost_usd": 0.0138,
+  "actual_cost_usd_openrouter": 0.020677,
   "total_inference_seconds": 793.8,
   "avg_latency_per_case_seconds": 6.61
 }

@@ -1,0 +1,24 @@
+{
+  "K2-ATOM-ASSISTED-ZS-PILOT-v1.1__mdeberta_base_2mil7": {
+    "n": 200,
+    "flat_acc": 0.795,
+    "flat_macro_f1": 0.7935,
+    "soft_acc": 0.8,
+    "soft_macro_f1": 0.7983,
+    "changed": 3,
+    "soft_only_correct": 2,
+    "flat_only_correct": 1,
+    "mcnemar_p_exact": 1.0
+  },
+  "K2-PIPE-PRED-ZS-ATOMIZERTEST-v1__mdeberta_base_2mil7": {
+    "n": 157,
+    "flat_acc": 0.758,
+    "flat_macro_f1": 0.5235,
+    "soft_acc": 0.758,
+    "soft_macro_f1": 0.5235,
+    "changed": 0,
+    "soft_only_correct": 0,
+    "flat_only_correct": 0,
+    "mcnemar_p_exact": 1.0
+  }
+}
