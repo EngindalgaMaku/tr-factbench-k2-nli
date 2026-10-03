@@ -1,0 +1,66 @@
+{
+  "experiment_id": "K3-HYBRID-ARBITRATION-GOLD480-v1",
+  "title": "Bileşen 3: Hibrit Arbitrasyon (LLM Hakem) Değerlendirmesi — TR-FactBench Gold 480",
+  "status": "completed gold hybrid evaluation",
+  "stage": "component 3 hybrid arbitration",
+  "research_question": "K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %74.9'luk alanda konsensüs kabul edilip, ayrıştığı 120 'gri alan' vakasında LLM Hakem devreye girdiğinde; sistemin uçtan uca doğruluğu, Oracle tavanına (%93.10) yaklaşma oranı ve hesaplama maliyet tasarrufu ne düzeydedir?",
+  "k1_predictions_path": "../tr-factbench-v0.1.0-preview/data/evaluation/gold_v1.0/verifier_hold/PREDICTIONS_v1.0.jsonl",
+  "k2_predictions_path": "reports/experiments/K2-AGG-ABLATION-GOLD480-v1/artifacts/predictions__K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7__soft_prob_avg.jsonl",
+  "llm_baselines_dir": "../tr-factbench-v0.1.0-preview/results/llm_baselines/gold_v1.0",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "candidate_judges": [
+    {
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "display_name": "Gemma-4-26B (Zero-Shot)",
+      "dir_name": "google_gemma-4-26b-a4b-it",
+      "mode": "zero_shot"
+    },
+    {
+      "model_id": "google/gemma-4-26b-a4b-it",
+      "display_name": "Gemma-4-26B (Few-Shot 8)",
+      "dir_name": "google_gemma-4-26b-a4b-it",
+      "mode": "few_shot_8"
+    },
+    {
+      "model_id": "openai/gpt-4.1-mini",
+      "display_name": "GPT-4.1-mini (Few-Shot 8)",
+      "dir_name": "openai_gpt-4.1-mini",
+      "mode": "few_shot_8"
+    },
+    {
+      "model_id": "openai/gpt-4.1-mini",
+      "display_name": "GPT-4.1-mini (Zero-Shot)",
+      "dir_name": "openai_gpt-4.1-mini",
+      "mode": "zero_shot"
+    },
+    {
+      "model_id": "meta-llama/llama-3.3-70b-instruct",
+      "display_name": "Llama-3.3-70B (Few-Shot 8)",
+      "dir_name": "meta-llama_llama-3.3-70b-instruct",
+      "mode": "few_shot_8"
+    },
+    {
+      "model_id": "qwen/qwen-2.5-72b-instruct",
+      "display_name": "Qwen-2.5-72B (Few-Shot 8)",
+      "dir_name": "qwen_qwen-2.5-72b-instruct",
+      "mode": "few_shot_8"
+    }
+  ],
+  "notes": [
+    "Konsensüs bölgesi (358/478 örnek, %74.90): K1 ve K2 hemfikir olduğunda doğruluk %94.13 seviyesindedir (337/358 doğru). Bu alanda LLM çağrısına ihtiyaç duyulmaz.",
+    "Ayrışma bölgesi (120/478 örnek, %25.10): Bu gri alanda K1 61, K2 47 doğru cevaba sahiptir; teorik Oracle tavanı %93.10'dur.",
+    "Gemma-4-26B zero-shot hakemliği ile hibrit sistem %92.26 doğruluğa ve 0.9221 Macro-F1'e ulaşarak Oracle tavanına (%93.10) sadece %0.84 mesafeye yaklaşmıştır.",
+    "Doğrudan LLM kullanımına göre API çağrılarında ve çıkarım gecikmesinde %74.90 net tasarruf sağlanmıştır."
+  ],
+  "limitations": [
+    "Ayrışma vakalarında hakem istemi mevcut baseline tahminleri üzerinden test edilmiştir; K1 ve K2'nin önermelerini içeren meta-istem (meta-prompting) ayrıca incelenebilir.",
+    "Değerlendirme 478 geçerli ayrıştırılmış altın test örneği üzerinedir."
+  ],
+  "next_steps": [
+    "Bileşen 3 hakem bulgularını THESIS_MASTER_ROADMAP.md dosyasına entegre etmek.",
+    "Gerçek LLM çıktıları (AP6) üzerinde genellenebilirlik testine hazırlanmak.",
+    "Tez Bölüm 4 ve büyük dergi makalesi için hibrit triad sonuçlarını dondurmak."
+  ]
+}

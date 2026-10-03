@@ -1,0 +1,7 @@
+﻿judge_name,disagree_instances,judge_correct_count,judge_accuracy_in_disagree,k1_alone_correct_in_disagree,k2_alone_correct_in_disagree,both_wrong_in_disagree
+Gemma-4-26B (Zero-Shot),120,104,0.8666666666666667,61,47,33
+Gemma-4-26B (Few-Shot 8),120,97,0.8083333333333333,61,47,33
+GPT-4.1-mini (Few-Shot 8),120,100,0.8333333333333334,61,47,33
+GPT-4.1-mini (Zero-Shot),120,94,0.7833333333333333,61,47,33
+Llama-3.3-70B (Few-Shot 8),120,99,0.825,61,47,33
+Qwen-2.5-72B (Few-Shot 8),120,94,0.7833333333333333,61,47,33
