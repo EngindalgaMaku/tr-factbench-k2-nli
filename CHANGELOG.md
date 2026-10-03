@@ -18,6 +18,18 @@
 - Veri dağılım grafikleri ve ayrıntılı deney raporu üreticileri eklendi.
 - Dokuz birim testi eklendi ve tamamı geçti.
 
-## Bilinen sınır
+## Bilinen sınır (ilk teslimat)
 
-Bu teslimatta model ağırlıkları indirilip beş modelin tam inference benchmark'ı çalıştırılmadı. `runs/` klasörü bu nedenle boştur. Deney komutları ve raporlama hattı hazırdır.
+İlk teslimatta beş modelin inference benchmark'ı henüz çalıştırılmamıştı ve `runs/` boştu. Deney komutları ve raporlama hattı hazırdı.
+
+## Güncelleme
+
+`runs/` artık boş değildir. Diskte duran başlıca koşular:
+
+- `K2-10-selection-v1` — beş model, claim-level 3-sınıf, 486 örnek
+- `K2-ATOM-ASSISTED-ZS-PILOT-v1.1`
+- `K2-PIPE-PRED-ZS-ATOMIZERTEST-v1`
+- `K2-PIPE-PRED-GOLD480-v1` — resmi 480 held-out altın test kümesi değerlendirmesi (Macro-F1 0.7830, %99.58 kapsama, paired K1 vs K2 analizi)
+
+İndeks: `docs/EXPERIMENTS.md` ve `reports/experiments/`.
+
