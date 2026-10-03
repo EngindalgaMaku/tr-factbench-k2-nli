@@ -1,0 +1,36 @@
+{
+  "experiment_id": "K3-FEWSHOT-GPT4OMINI-ARBITRATION-v1",
+  "judge_model": "openai/gpt-4o-mini",
+  "strategy": "Informed Few-Shot Precedents (4 rulings from train)",
+  "n_arbitration_cases": 120,
+  "judge_disagreement_accuracy": 0.6333,
+  "judge_disagreement_correct_count": 76,
+  "judge_disagreement_macro_f1": 0.6168,
+  "judge_disagreement_mcc": 0.5445,
+  "hybrid_full_count": 478,
+  "hybrid_full_correct_count": 413,
+  "hybrid_full_accuracy": 0.864,
+  "hybrid_full_macro_f1": 0.8666,
+  "hybrid_full_weighted_f1": 0.8669,
+  "hybrid_full_mcc": 0.8259,
+  "consensus_count": 358,
+  "consensus_correct": 337,
+  "mcnemar_vs_k1": {
+    "b_model_a_only": 39,
+    "c_model_b_only": 24,
+    "total_discordant": 63,
+    "p_value_exact": 0.07692583360960925,
+    "significant_005": false
+  },
+  "mcnemar_vs_k2": {
+    "b_model_a_only": 38,
+    "c_model_b_only": 9,
+    "total_discordant": 47,
+    "p_value_exact": 2.4904030624384174e-05,
+    "significant_005": true
+  },
+  "total_cost_usd": 0.02957,
+  "total_elapsed_seconds": 301.45,
+  "mean_latency_seconds": 2.409,
+  "json_valid_rate": 1.0
+}

@@ -1,0 +1,36 @@
+{
+  "experiment_id": "K3-FEWSHOT-QWEN72B-ARBITRATION-v1",
+  "judge_model": "qwen/qwen-2.5-72b-instruct",
+  "strategy": "Informed Few-Shot Precedents (4 rulings from train)",
+  "n_arbitration_cases": 120,
+  "judge_disagreement_accuracy": 0.7,
+  "judge_disagreement_correct_count": 84,
+  "judge_disagreement_macro_f1": 0.6977,
+  "judge_disagreement_mcc": 0.6148,
+  "hybrid_full_count": 478,
+  "hybrid_full_correct_count": 421,
+  "hybrid_full_accuracy": 0.8808,
+  "hybrid_full_macro_f1": 0.8821,
+  "hybrid_full_weighted_f1": 0.8824,
+  "hybrid_full_mcc": 0.845,
+  "consensus_count": 358,
+  "consensus_correct": 337,
+  "mcnemar_vs_k1": {
+    "b_model_a_only": 48,
+    "c_model_b_only": 25,
+    "total_discordant": 73,
+    "p_value_exact": 0.009542211425865477,
+    "significant_005": true
+  },
+  "mcnemar_vs_k2": {
+    "b_model_a_only": 40,
+    "c_model_b_only": 3,
+    "total_discordant": 43,
+    "p_value_exact": 3.0213413992896676e-09,
+    "significant_005": true
+  },
+  "total_cost_usd": 0.09216,
+  "total_elapsed_seconds": 560.15,
+  "mean_latency_seconds": 4.565,
+  "json_valid_rate": 1.0
+}
