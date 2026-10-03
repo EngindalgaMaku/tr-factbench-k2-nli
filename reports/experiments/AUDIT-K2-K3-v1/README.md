@@ -105,6 +105,7 @@ Aşağıdaki tablo, 478 test örneğinin tamamında hiçbir tahmin uydurulmadan 
 | **K2 Tek Başına (Soft-Prob)** | - | 47/120 (%39.17) | %80.33 (384/478) | 0.8059 | 0.7405 | 0 |
 | **K2 Tek Başına (Flat)** | - | 42/120 (%35.00) | %78.24 (374/478) | 0.7830 | 0.7136 | 0 |
 | **Hibrit + Llama-3.3-70B** | Bilgilendirilmiş Canlı (Zero-Shot) | 57/120 (%47.50) | %82.43 (394/478) | 0.8262 | 0.7723 | 120 |
+| **Hibrit + Llama-3.3-70B** | **Bilgilendirilmiş Emsalli (Few-Shot 4)** | **91/120 (%75.83)** | **%89.54 (428/478)** | **0.8966** | **0.8628** | **120** |
 | **Hibrit + Gemma-4-E2B-it** | Bilgilendirilmiş Canlı (Zero-Shot) | 60/120 (%50.00) | %83.05 (397/478) | 0.8294 | 0.7840 | 120 |
 | **Hibrit + Qwen-2.5-72B** | Kör Tie-Breaker (Few-Shot 8) | 94/120 (%78.33) | %90.17 (431/478) | 0.9011 | 0.8717 | 120 |
 | **Hibrit + GPT-4.1-mini** | Kör Tie-Breaker (Few-Shot 8) | 100/120 (%83.33) | %91.42 (437/478) | 0.9147 | 0.8865 | 120 |

@@ -123,7 +123,12 @@ def main() -> None:
 
     # 4. Judges on the 120 disagreement cases + end-to-end
     judges: dict[str, dict[str, str]] = {}
-    for name, path in (("live_meta_gemma4_e2b", LIVE_GEMMA), ("live_meta_llama70b", LIVE_LLAMA)):
+    FEWSHOT_LLAMA = Path("reports/experiments/K3-FEWSHOT-LLAMA70B-ARBITRATION-v1/arbitration_predictions_120.jsonl")
+    for name, path in (
+        ("live_meta_gemma4_e2b", LIVE_GEMMA),
+        ("live_meta_llama70b", LIVE_LLAMA),
+        ("live_fewshot_meta_llama70b", FEWSHOT_LLAMA),
+    ):
         if path.exists():
             rows = rj(path)
             ids_rows = [r["example_id"] for r in rows]
