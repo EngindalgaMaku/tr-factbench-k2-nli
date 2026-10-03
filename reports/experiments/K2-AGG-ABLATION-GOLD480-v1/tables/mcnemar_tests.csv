@@ -1,0 +1,4 @@
+﻿model,run_id,alternative_rule,flat_only_correct,alternative_only_correct,discordant,exact_p_value
+mDeBERTa-v3-base 2mil7,K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7,contradiction_priority,76,17,93,4.446306937765536e-10
+mDeBERTa-v3-base 2mil7,K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7,sentence_grouped,36,11,47,0.00034600114031491097
+mDeBERTa-v3-base 2mil7,K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7,soft_prob_avg,2,12,14,0.012939453125

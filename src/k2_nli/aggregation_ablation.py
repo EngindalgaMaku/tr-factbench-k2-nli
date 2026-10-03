@@ -24,11 +24,12 @@ from .experiment_reporting import (
 from .labels import CLAIM_LABELS, NLI_LABELS
 from .metrics import evaluate_predictions
 
-AGGREGATION_RULES = ("flat", "contradiction_priority", "sentence_grouped")
+AGGREGATION_RULES = ("flat", "contradiction_priority", "sentence_grouped", "soft_prob_avg")
 _RULE_TITLES = {
     "flat": "Flat",
     "contradiction_priority": "Contradiction-priority",
     "sentence_grouped": "Sentence-grouped",
+    "soft_prob_avg": "Soft-probability average",
 }
 _SENTENCE_RE = re.compile(r"(?<=[.!?])\s+")
 _TOKEN_RE = re.compile(r"[^\W_]+", flags=re.UNICODE)
@@ -171,6 +172,22 @@ def aggregate_sentence_grouped(
     return claim_label, group_outputs
 
 
+def aggregate_soft_prob(atoms: Sequence[dict[str, Any]]) -> str:
+    labels = [str(atom.get("pred_label", "")).strip().lower() for atom in atoms]
+    if all(label == "entailment" for label in labels):
+        return "supported"
+    if "entailment" in labels:
+        return "partially_supported"
+    p_e = sum(float(atom.get("prob_entailment", 0.0)) for atom in atoms) / max(len(atoms), 1)
+    p_n = sum(float(atom.get("prob_neutral", 0.0)) for atom in atoms) / max(len(atoms), 1)
+    p_c = sum(float(atom.get("prob_contradiction", 0.0)) for atom in atoms) / max(len(atoms), 1)
+    if p_c > max(p_e, p_n):
+        return "contradicted"
+    if p_n > max(p_e, p_c):
+        return "unverifiable"
+    return aggregate_flat(labels)
+
+
 def aggregate_prediction(prediction: dict[str, Any], rule: str) -> tuple[str, list[dict[str, Any]] | None]:
     atoms = list(prediction.get("atoms") or [])
     labels = [atom["pred_label"] for atom in atoms]
@@ -180,6 +197,8 @@ def aggregate_prediction(prediction: dict[str, Any], rule: str) -> tuple[str, li
         return aggregate_contradiction_priority(labels), None
     if rule == "sentence_grouped":
         return aggregate_sentence_grouped(str(prediction.get("claim", "")), atoms)
+    if rule == "soft_prob_avg":
+        return aggregate_soft_prob(atoms), None
     raise ValueError(f"Unknown aggregation rule: {rule}")
 
 
@@ -212,7 +231,8 @@ def exact_mcnemar(flat_correct: Sequence[bool], alternative_correct: Sequence[bo
 
 def load_source_run(project_root: Path, runs_dir: str, run_id: str) -> SourceRun:
     run_dir = project_root / runs_dir / run_id
-    predictions_path = run_dir / "predictions.jsonl"
+    scored_path = run_dir / "scored_predictions.jsonl"
+    predictions_path = scored_path if scored_path.exists() else (run_dir / "predictions.jsonl")
     manifest_path = run_dir / "manifest.json"
     metrics_path = run_dir / "metrics.json"
     missing = [path.name for path in (predictions_path, manifest_path, metrics_path) if not path.exists()]
@@ -382,7 +402,7 @@ def build_aggregation_ablation(config_path: Path, project_root: Path) -> Path:
             changed_count = sum(
                 flat != current["pred_label"] for flat, current in zip(flat_labels, current_rows)
             )
-            summary_rows.append(_metrics_row(run, rule, per_rule_metrics[rule], "all_200", changed_count))
+            summary_rows.append(_metrics_row(run, rule, per_rule_metrics[rule], "all", changed_count))
             summary_rows.append(_metrics_row(run, rule, per_rule_clean_metrics[rule], "policy_clean", changed_count))
 
             report = per_rule_metrics[rule]["classification_report"]
@@ -498,18 +518,18 @@ def build_aggregation_ablation(config_path: Path, project_root: Path) -> Path:
     )
 
     best_row = max(
-        (row for row in summary_rows if row["subset"] == "all_200"),
+        (row for row in summary_rows if row["subset"] == "all"),
         key=lambda row: float(row["macro_f1"]),
     )
     flat_rows = {
         row["run_id"]: row
         for row in summary_rows
-        if row["subset"] == "all_200" and row["rule"] == "flat"
+        if row["subset"] == "all" and row["rule"] == "flat"
     }
 
     report_table = []
     for row in summary_rows:
-        if row["subset"] != "all_200":
+        if row["subset"] != "all":
             continue
         delta = float(row["macro_f1"]) - float(flat_rows[row["run_id"]]["macro_f1"])
         report_table.append([
@@ -529,7 +549,7 @@ def build_aggregation_ablation(config_path: Path, project_root: Path) -> Path:
         if row["subset"] == "policy_clean"
     }
     for row in summary_rows:
-        if row["subset"] != "all_200":
+        if row["subset"] != "all":
             continue
         clean = clean_lookup[(row["run_id"], row["rule"])]
         sensitivity_table.append([
@@ -568,6 +588,7 @@ def build_aggregation_ablation(config_path: Path, project_root: Path) -> Path:
         "- **Flat:** all-entailment → supported; otherwise any entailment → partially_supported; otherwise any contradiction → contradicted; otherwise unverifiable.",
         "- **Contradiction-priority:** all-entailment → supported; otherwise any contradiction → contradicted; otherwise any entailment → partially_supported; otherwise unverifiable.",
         "- **Sentence-grouped:** atoms are automatically aligned to the claim sentence from which they were derived. Contradiction dominates within a sentence; sentence outcomes are then combined across the claim.",
+        "- **Soft-probability average:** preserves entailment rules; when no entailment exists, adjudicates between contradiction and unverifiable using mean posterior probabilities across atoms.",
         "",
         "No NLI inference was repeated. All rules reuse the frozen atom decisions from the v1.1 source runs.",
         "",

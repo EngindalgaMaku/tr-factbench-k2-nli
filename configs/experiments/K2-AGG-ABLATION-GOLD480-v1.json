@@ -1,0 +1,37 @@
+{
+  "experiment_id": "K2-AGG-ABLATION-GOLD480-v1",
+  "title": "K2 aggregation policy ablation on the official TR-FactBench Gold 480 test set",
+  "status": "completed gold ablation",
+  "stage": "aggregation policy evaluation",
+  "research_question": "When frozen Gemma-4 predicted atoms and mDeBERTa-v3 zero-shot NLI decisions are aggregated, how do flat, contradiction-priority, sentence-grouped, and soft-probability rules affect 4-class claim verification and boundary trade-offs on the 480 held-out gold test set?",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "source_run_ids": [
+    "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7"
+  ],
+  "rules": [
+    "flat",
+    "contradiction_priority",
+    "sentence_grouped",
+    "soft_prob_avg"
+  ],
+  "policy_review_example_ids": [],
+  "notes": [
+    "Evaluated on the exact 478 validly decomposed instances from the official TR-FactBench held-out gold test set.",
+    "Flat aggregation serves as the primary pipeline baseline (Macro-F1 0.7830, Accuracy 78.24%).",
+    "Contradiction-priority severely degrades performance (Macro-F1 0.6237, Accuracy 65.90%) due to massive recall collapse on partially_supported claims.",
+    "Sentence-grouped aggregation moderately degrades performance (Macro-F1 0.7249, Accuracy 73.01%) because intra-sentence factual conjunctions dominate.",
+    "Soft-probability average breaks the 0.80 Macro-F1 barrier (Macro-F1 0.8059, Accuracy 80.33%, MCC 0.7405) with a statistically significant improvement over flat (Exact McNemar p = 0.0129)."
+  ],
+  "limitations": [
+    "Evaluated conditionally on the 478 validly decomposed gold test examples.",
+    "Probabilities are derived from zero-shot cross-encoder NLI logits without temperature scaling or Platt scaling.",
+    "Sentence boundary detection is rule-based and does not model complex sub-clause discourse dependencies."
+  ],
+  "next_steps": [
+    "Freeze soft-probability average as the primary decision rule for K2.",
+    "Compare K1 against K2 under soft-probability aggregation to update disagreement set for LLM Judge arbitration.",
+    "Incorporate aggregation ablation findings into Chapter 4 of the master thesis."
+  ]
+}
