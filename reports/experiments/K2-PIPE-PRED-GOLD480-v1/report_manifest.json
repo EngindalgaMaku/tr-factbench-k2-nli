@@ -1,0 +1,15 @@
+{
+  "experiment_id": "K2-PIPE-PRED-GOLD480-v1",
+  "config_path": "C:\\Users\\Engin Dalga\\Documents\\GitHub\\halusinasyon\\hls_new\\k2_nli\\configs\\experiments\\K2-PIPE-PRED-GOLD480-v1.json",
+  "config_sha256": "58c9d4289eea2ba85f0014d68cca350beec7a73fe7e00ea962320315807990c0",
+  "run_id": "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7",
+  "metrics_sha256": "50d868f93cab5d218c8dceccf2f4d7bd88e7b3e8c534950a1d7932d398dac454",
+  "manifest_sha256": "5c8cd90319cbeea22694c72cefccbadab24b8d18cc4e4c95566b9d5b77ee3003",
+  "predictions_sha256": "68bd016744025237533261a590c7ccad1000235f66677fb683f9d0cf943a4691",
+  "atom_predictions_sha256": "eb69231bcfdc6305ac6d16526ec9821d6ebfdf3b1eb2e92331321665a7e098bd",
+  "failures_sha256": "00d758528d39f7aceb816a3a65bdb5916abac0da7d2e1ef8bcf9685e850ac54f",
+  "model": "mDeBERTa-v3-base 2mil7",
+  "conditional_macro_f1": 0.7830272765137831,
+  "strict_accuracy": 0.7791666666666667,
+  "coverage": 0.9958333333333333
+}

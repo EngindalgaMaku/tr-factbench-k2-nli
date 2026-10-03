@@ -1,0 +1,29 @@
+{
+  "experiment_id": "K2-PIPE-PRED-GOLD480-v1",
+  "title": "K2 end-to-end pipeline with Gemma-predicted atoms — TR-FactBench 480 Gold Test",
+  "status": "frozen gold evaluation",
+  "stage": "held-out gold pipeline evaluation",
+  "research_question": "When Gemma-4 QLoRA predicted atoms on the official 480 held-out gold test set are verified with mDeBERTa-v3 zero-shot NLI and flat aggregation, what claim-level Macro-F1, strict accuracy, and class-level metrics are achieved compared to K1?",
+  "dataset_path": "data/processed/atom_level/gemma_predicted_gold480/k2_input.jsonl",
+  "runs_dir": "runs",
+  "reports_dir": "reports/experiments",
+  "registry_path": "docs/EXPERIMENTS.md",
+  "aggregation": "flat deterministic aggregation over hard atom labels",
+  "run_id": "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7",
+  "notes": [
+    "Evaluated on the exact 480 held-out gold test examples from TR-FactBench v1.0.",
+    "Claims were atomized using google/gemma-4-E2B-it + QLoRA adapter.",
+    "478 out of 480 claims were validly atomized (99.58% coverage) yielding 996 atoms.",
+    "NLI verification was conducted with MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7.",
+    "Conditional Macro-F1 reached 0.7830 and accuracy reached 78.24%."
+  ],
+  "limitations": [
+    "Uses hard NLI labels with flat deterministic aggregation without probability calibration.",
+    "Does not include sentence-level or multi-hop retrieval over external documents."
+  ],
+  "next_steps": [
+    "Run sentence-grouped and contradiction-priority aggregation ablations.",
+    "Analyze the 127 disagreement cases between K1 and K2.",
+    "Integrate the LLM Judge for hybrid arbitration on disagreements."
+  ]
+}

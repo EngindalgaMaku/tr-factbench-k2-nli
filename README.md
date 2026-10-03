@@ -23,9 +23,9 @@ Atomizer bu klasörün parçası değildir. K2 yalnızca sürümlenmiş atom JSO
 
 ## İlk model paneli
 
-- `joeddav/xlm-roberta-large-xnli` — mevcut ana aday
+- `joeddav/xlm-roberta-large-xnli` — panel adayı
 - `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli` — güçlü ve daha verimli rakip
-- `MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7` — geniş NLI eğitimli rakip
+- `MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7` — K2-10 seçimi (Macro-F1 0.8684, 486 örnek, 3-sınıf)
 - `MoritzLaurer/xlm-v-base-mnli-xnli` — vocabulary ablation adayı
 - `emrecan/convbert-base-turkish-mc4-cased-allnli_tr` — monolingual Türkçe kontrol modeli
 
@@ -42,14 +42,41 @@ python scripts/01_prepare_splits.py
 pytest -q
 ```
 
+## Resmi Held-Out Gold 480 Sonuçları (K2 vs K1)
+
+TR-FactBench v1.0 resmi 480 örneklik held-out altın test kümesi üzerinde K2 uçtan uca boru hattı (`K2-PIPE-PRED-GOLD480-v1`) ve K1 (`ELECTRA-TR + LoRA`) kafa kafaya karşılaştırma sonuçları:
+
+| Metrik / Sınıf | K1 (ELECTRA-TR + LoRA) | K2 (Gemma-4 QLoRA + mDeBERTa-v3) | Fark / Üstünlük |
+|:---|:---:|:---:|:---:|
+| **Macro-F1** | **0.8300** | **0.7830** | K1 +0.047 |
+| **Genel Doğruluk (Accuracy)** | **%83.13** | **%78.24** (Strict: %77.92) | K1 +%4.89 |
+| **MCC (Matthews Corr.)** | 0.7750 | 0.7136 | K1 +0.061 |
+| **Atomizer Kapsaması (Coverage)** | — | **%99.58** (478/480) | 996 atom üretildi |
+| **Supported F1** | **0.9090** | 0.8175 | K1 üstün |
+| **Partially Supported F1** | **0.8080** | 0.7287 | K1 üstün |
+| **Contradicted F1** | 0.7920 | **0.8017** | **K2 Üstün (+0.0097) 🚀** |
+| **Unverifiable F1** | **0.8120** | 0.7843 | K1 üstün |
+
+### K1 vs K2 İkili Anlaşma ve Oracle Tavanı (AP3)
+
+- **Ham Uyuşma (Raw Agreement):** 353 / 480 (%73.54)
+- **İkisinin de Doğru Bildiği:** 330 / 480 (%68.75)
+- **Yalnızca K1'in Doğru Bildiği:** 69 / 480 (%14.37)
+- **YALNIZCA K2'NİN DOĞRU BİLDİĞİ:** **44 / 480 (%9.17)** *(K1'in kaçırdığı 44 hatayı K2 tek başına kurtarmıştır; 17'si Tıp alanındadır).*
+- **İkisinin de Yanıldığı:** 37 / 480 (%7.71)
+- **ORACLE HİBRİT TAVANI (K1 OR K2):** **443 / 480 (%92.29)** *(Bileşen 3 LLM Hakem için teorik tavan).*
+
+Detaylı deney raporu, SVG grafikleri ve hata matrisleri için: [`reports/experiments/K2-PIPE-PRED-GOLD480-v1/README.md`](reports/experiments/K2-PIPE-PRED-GOLD480-v1/README.md)  
+İnsan gözüyle dilbilimsel ve niteliksel vaka analizi için: [`reports/K2_QUALITATIVE_ANALYSIS_GOLD480.md`](reports/K2_QUALITATIVE_ANALYSIS_GOLD480.md)
+
 ## Sıralı deneyler
 
 1. `K2-00` — veri ve şema denetimi
 2. `K2-10` — claim-level üç sınıflı zero-shot model seçimi
 3. `K2-20` — calibration ve threshold ablation
 4. `K2-30` — human gold-atom verifier değerlendirmesi
-5. `K2-40` — sürümlenmiş atomizer çıktılarıyla gerçek dört sınıflı K2 pipeline
-6. `K2-50` — ablation ve hata analizi
+5. `K2-40` — sürümlenmiş atomizer çıktılarıyla gerçek dört sınıflı K2 pipeline (`K2-PIPE-PRED-GOLD480-v1` ✅)
+6. `K2-50` — ablation ve hata analizi (`K2_QUALITATIVE_ANALYSIS_GOLD480.md` ✅)
 7. `K2-60` — tablolar, grafikler ve nihai rapor
 
 ## Temel ilkeler
@@ -63,4 +90,4 @@ pytest -q
 - Aynı run kimliği üzerine yazılmaz.
 
 Ayrıntılı kullanım için `docs/EXPERIMENT_PROTOCOL.md` ve `docs/DATASET_USAGE.md` dosyalarına bakın.
-# tr-factbench-k2-nli
+

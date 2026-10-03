@@ -1,0 +1,3 @@
+﻿example_id,source_example_id,domain,gold_label,failure_reason,json_valid,atom_count_correct,claim
+tfb_ex_0006,tfb_ex_0006,finance,partially_supported,invalid_atomizer_json,False,False,Üyeler ile müşteriler arasındaki değerleme uyuşmazlıklarının çözümüne yardımcı olan Meslek Birliği A Değerlendirme Komitesinin bu uyuşmazlıklara ilişkin kararları mahkemeler açısından bağlayıcıdır.
+tfb_ex_0328,tfb_ex_0328,medical,unverifiable,invalid_atomizer_json,False,False,"Örneğin karanlık ve serin tutulması, kullanılacak toplama kabının boyutunu belirler."
