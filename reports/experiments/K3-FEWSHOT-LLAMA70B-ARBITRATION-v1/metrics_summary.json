@@ -1,0 +1,76 @@
+{
+  "experiment_id": "K3-FEWSHOT-LLAMA70B-ARBITRATION-v1",
+  "judge_model": "meta-llama/llama-3.3-70b-instruct",
+  "n_arbitration_cases": 120,
+  "judge_correct_count": 91,
+  "judge_disagreement_accuracy": 0.7583,
+  "judge_disagreement_macro_f1": 0.7757,
+  "favored_model_distribution": {
+    "Model A": 41,
+    "Model B": 77,
+    "Neither": 2
+  },
+  "consensus_cases_count": 358,
+  "consensus_accuracy": 0.9413,
+  "hybrid_end_to_end": {
+    "total_examples": 478,
+    "correct_examples": 428,
+    "accuracy": 0.8954,
+    "macro_recall": 0.8952,
+    "macro_precision": 0.9054,
+    "macro_f1": 0.8966,
+    "mcc": 0.8628,
+    "confusion_matrix": [
+      [
+        114,
+        6,
+        0,
+        0
+      ],
+      [
+        2,
+        107,
+        9,
+        0
+      ],
+      [
+        1,
+        10,
+        110,
+        0
+      ],
+      [
+        1,
+        15,
+        6,
+        97
+      ]
+    ]
+  },
+  "baselines_comparison": {
+    "k1_electra_macro_f1": 0.8316,
+    "k1_electra_accuracy": 0.8326,
+    "k2_soft_macro_f1": 0.8059,
+    "k2_soft_accuracy": 0.8033,
+    "zero_shot_meta_acc": 0.475,
+    "zero_shot_meta_macro_f1": 0.4579
+  },
+  "mcnemar_tests": {
+    "hybrid_vs_k1": {
+      "b_model_a_only": 52,
+      "c_model_b_only": 22,
+      "total_discordant": 74,
+      "p_value_exact": 0.0006428073490507027,
+      "significant_005": true
+    },
+    "hybrid_vs_k2": {
+      "b_model_a_only": 45,
+      "c_model_b_only": 1,
+      "total_discordant": 46,
+      "p_value_exact": 1.3358203432289883e-12,
+      "significant_005": true
+    }
+  },
+  "actual_cost_usd_openrouter": 0.036047,
+  "total_inference_seconds": 670.04
+}
