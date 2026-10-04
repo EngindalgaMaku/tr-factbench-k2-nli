@@ -55,18 +55,18 @@
 };
 
 % 2. BİLEŞEN 1 (K1) - SOL SÜTUN
-\node[box=k1blue, fill=k1bg, text width=5.2cm, below left=1.4cm and 0.5cm of input] (k1) {
-    \textbf{\textcolor{k1blue}{BİLEŞEN 1: BÜTÜNCÜL ENCODER (K1)}}\\[8pt]
-    \begin{minipage}{4.8cm}
+\node[box=k1blue, fill=k1bg, text width=5.4cm, below left=1.4cm and 0.5cm of input] (k1) {
+    \textbf{\textcolor{k1blue}{BİLEŞEN 1: DOĞRUDAN DOĞRULAYICI (K1)}}\\[8pt]
+    \begin{minipage}{5.0cm}
         \centering
         \begin{tikzpicture}[font=\footnotesize]
-            \node[subnode=k1blue!40, text width=4.6cm] (k1_model) {
+            \node[subnode=k1blue!40, text width=4.8cm] (k1_model) {
                 \textbf{ELECTRA-TR Base + LoRA}\\
-                Küresel Sekans Sınıflandırıcısı
+                Göreve Özgü 4-Sınıflı Verifier
             };
         \end{tikzpicture}
     \end{minipage}\\[8pt]
-    \textbf{\textcolor{k1blue}{K1 Tahmini: $\hat{y}_{\text{K1}}$}}
+    \textbf{\textcolor{k1blue}{K1 Kararı: $\hat{y}_{\text{K1}}$}}
 };
 
 % 3. BİLEŞEN 2 (K2) - SAĞ SÜTUN
