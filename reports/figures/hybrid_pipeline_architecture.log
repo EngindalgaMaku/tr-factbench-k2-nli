@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.14)  4 OCT 2026 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.5.14)  4 OCT 2026 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -567,30 +567,10 @@ er/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlay
-er/tikz/libraries\tikzlibraryfit.code.tex
-File: tikzlibraryfit.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlay
 er/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
-(C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/pgf-blur\tikzlibr
-aryshadows.blur.code.tex  v1.02, 2012/12/09
-(C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlay
-er/tikz/libraries\tikzlibraryshadows.code.tex
-File: tikzlibraryshadows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlay
-er/tikz/libraries\tikzlibraryfadings.code.tex
-File: tikzlibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\p
-gflibraryfadings.code.tex
-File: pgflibraryfadings.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-\pgfbs@fading@count=\count319
-)
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 30
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 26
 .
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
@@ -599,38 +579,38 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backe
 nd-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count320
+\l__color_backend_stack_int=\count319
 ) (hybrid_pipeline_architecture.aux)
 \openout1 = `hybrid_pipeline_architecture.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-
 pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
+\scratchcounter=\count320
 \scratchdimen=\dimen272
 \scratchbox=\box67
-\nofMPsegments=\count322
-\nofMParguments=\count323
+\nofMPsegments=\count321
+\nofMParguments=\count322
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count324
+\MPscratchCnt=\count323
 \MPscratchDim=\dimen273
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
+\MPnumerator=\count324
+\makeMPintoPDFobject=\count325
 \everyMPtoPDFconversion=\toks39
 )
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epst
@@ -643,123 +623,101 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 -sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 3
-1.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
+7.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-8.
+4.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-8.
+4.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-58.
+54.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-58.
+54.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 58.
+(Font)              <8> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 58.
+(Font)              <6> on input line 54.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 58.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
+(Font)              <5> on input line 54.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 (C:\Users\Engin Dalga\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (1.41905pt too wide) in paragraph at lines 78--79
+Overfull \hbox (7.10953pt too wide) in paragraph at lines 67--68
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 79.
+(Font)              <9> on input line 68.
 
-Overfull \hbox (1.41907pt too wide) in paragraph at lines 100--101
+Overfull \hbox (1.41905pt too wide) in paragraph at lines 87--88
  [][] 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 114.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 123.
-
-Overfull \hbox (1.41907pt too wide) in paragraph at lines 145--146
- [][] 
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 160.
 [1
 
 
 Non-PDF special ignored!
-<special> papersize=693.02463pt,601.62874pt
+<special> papersize=685.4173pt,526.58011pt
 {C:/Users/Engin Dalga/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/User
 s/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Us
 ers/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}
-{C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mat
-hsy.enc}] (hybrid_pipeline_architecture.aux)
+{C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm
+-rm.enc}] (hybrid_pipeline_architecture.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15545 strings out of 467691
- 322585 string characters out of 5412047
- 728706 words of memory out of 5000000
- 44288 multiletter control sequences out of 15000+600000
- 695786 words of font info for 91 fonts, out of 8000000 for 9000
+ 15149 strings out of 467691
+ 312478 string characters out of 5412047
+ 703851 words of memory out of 5000000
+ 43916 multiletter control sequences out of 15000+600000
+ 675430 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,16n,121p,442b,1521s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,14n,121p,442b,1499s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmm
-i12.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmmi6.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/lm/lmmi7.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/public/lm/lmmi8.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/font
-s/type1/public/lm/lmmi9.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/lm/lmr12.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Engin Dalga/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Engin Dalga/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Engin Dalga/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Engin Dalga/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Engin Dalga/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/Engin Dalga
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Eng
-in Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Use
-rs/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C
-:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy7.p
-fb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lm
-sy8.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-lm/lmsy9.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/symbols/msam10.pfb>
-Output written on hybrid_pipeline_architecture.pdf (1 page, 248054 bytes).
+i6.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/public/l
+m/lmmi8.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmmi9.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/lm/lmr6.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/lm/lmr8.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/lm/lmr9.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/lm/lmss8.pfb><C:/Users/Engin Dalga/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Engin Dalga/AppData/Local/P
+rograms/MiKTeX/fonts/type1/public/lm/lmsy8.pfb>
+Output written on hybrid_pipeline_architecture.pdf (1 page, 134999 bytes).
 PDF statistics:
- 160 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

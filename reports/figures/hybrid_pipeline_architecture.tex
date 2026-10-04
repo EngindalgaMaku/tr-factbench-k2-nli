@@ -1,170 +1,143 @@
-\documentclass[tikz,border=12pt]{standalone}
+\documentclass[tikz,border=15pt]{standalone}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amsmath,amssymb}
 \usepackage{xcolor}
 
-\usetikzlibrary{shapes.geometric,arrows.meta,positioning,fit,calc,shadows.blur}
+\usetikzlibrary{shapes.geometric,arrows.meta,positioning,calc}
 
-% Academic Color Palette
-\definecolor{k1blue}{RGB}{37, 99, 235}
+% Zarif ve Sade Renk Paleti
+\definecolor{k1blue}{RGB}{30, 64, 175}
 \definecolor{k1bg}{RGB}{239, 246, 255}
-\definecolor{k1border}{RGB}{147, 197, 253}
 
-\definecolor{k2purple}{RGB}{124, 58, 237}
+\definecolor{k2purple}{RGB}{109, 40, 217}
 \definecolor{k2bg}{RGB}{245, 243, 255}
-\definecolor{k2border}{RGB}{196, 181, 253}
 
-\definecolor{consgreen}{RGB}{22, 163, 74}
+\definecolor{consgreen}{RGB}{21, 128, 61}
 \definecolor{consbg}{RGB}{240, 253, 244}
-\definecolor{consborder}{RGB}{134, 239, 172}
 
-\definecolor{k3orange}{RGB}{234, 88, 12}
+\definecolor{k3orange}{RGB}{194, 65, 12}
 \definecolor{k3bg}{RGB}{255, 247, 237}
-\definecolor{k3border}{RGB}{253, 186, 116}
 
-\definecolor{darkslate}{RGB}{15, 23, 42}
-\definecolor{lightgray}{RGB}{241, 245, 249}
+\definecolor{slateborder}{RGB}{71, 85, 105}
+\definecolor{slatebg}{RGB}{248, 250, 252}
 
 \begin{document}
 \sffamily
 
 \begin{tikzpicture}[
     >=Stealth,
-    node distance=1.2cm and 1.8cm,
+    node distance=1.4cm and 2.2cm,
     font=\small,
     box/.style={
         rectangle, rounded corners=6pt, draw=#1, line width=1.2pt,
-        align=center, inner sep=8pt, blur shadow={shadow blur steps=4, shadow opacity=15}
+        align=center, inner sep=10pt
     },
-    subbox/.style={
+    subnode/.style={
         rectangle, rounded corners=4pt, draw=#1, line width=0.8pt, fill=white,
         align=center, inner sep=6pt
     },
     diamondbox/.style={
-        diamond, draw=darkslate, line width=1.5pt, fill=white, aspect=1.8,
-        align=center, inner sep=4pt, blur shadow={shadow blur steps=4, shadow opacity=15}
+        diamond, draw=slateborder, line width=1.2pt, fill=white, aspect=1.8,
+        align=center, inner sep=6pt
     },
-    line/.style={
-        draw=#1, line width=1.5pt, ->
+    arr/.style={
+        draw=#1, line width=1.3pt, ->
     }
 ]
 
-% 1. INPUT NODE
-\node[box=darkslate, fill=white, text width=9.5cm] (input) {
-    \textbf{\large GİRDİ (DOĞRULAMA TALEBİ)}\\[3pt]
+% 1. GİRDİ
+\node[box=slateborder, fill=white, text width=9.0cm] (input) {
+    \textbf{\normalsize GİRDİ VERİLERİ}\\[2pt]
     \footnotesize
-    \textbf{Bağlam Metni ($C$):} Resmi Kanıt Dokümanı / Mevzuat / Klinik Kılavuz\\
-    \textbf{Doğrulanacak İddia ($S$):} LLM Yanıtı (Tıp, Hukuk, Finans)
+    Bağlam Dokümanı ($C$) \quad $\vert$ \quad Doğrulanacak İddia ($S$)
 };
 
-% 2. COMPONENT 1 (K1 - HOLISTIC ENCODER)
-\node[box=k1blue, fill=k1bg, text width=5.6cm, below left=1.4cm and 0.2cm of input] (k1) {
-    \textbf{\textcolor{k1blue}{\normalsize BİLEŞEN 1: BÜTÜNCÜL ENCODER (K1)}}\\[5pt]
-    \begin{minipage}{5.4cm}
+% 2. BİLEŞEN 1 (K1) - SOL SÜTUN
+\node[box=k1blue, fill=k1bg, text width=5.2cm, below left=1.4cm and 0.5cm of input] (k1) {
+    \textbf{\textcolor{k1blue}{BİLEŞEN 1: BÜTÜNCÜL ENCODER (K1)}}\\[8pt]
+    \begin{minipage}{4.8cm}
         \centering
         \begin{tikzpicture}[font=\footnotesize]
-            \node[subbox=k1border, text width=5.0cm] (k1_model) {
-                \textbf{dbmdz/electra-base-turkish-cased}\\
-                (110M Parametre, All-Linear LoRA)
+            \node[subnode=k1blue!40, text width=4.6cm] (k1_model) {
+                \textbf{ELECTRA-TR Base + LoRA}\\
+                Küresel Sekans Sınıflandırıcısı
             };
-            \node[subbox=k1border, text width=5.0cm, below=0.35cm of k1_model] (k1_inf) {
-                \textbf{Küresel Sekans Sınıflandırması}\\
-                $\text{Girdi: } [C] \oplus [S] \to \text{Softmax}$\\
-                Gecikme: $\approx 12$\,ms
-            };
-            \draw[->, line width=1pt, draw=k1blue] (k1_model) -- (k1_inf);
         \end{tikzpicture}
-    \end{minipage}\\[6pt]
-    \textbf{\textcolor{k1blue}{K1 Kararı: $\hat{y}_{\text{K1}} \in \{0, 1, 2, 3\}$}}
+    \end{minipage}\\[8pt]
+    \textbf{\textcolor{k1blue}{K1 Tahmini: $\hat{y}_{\text{K1}}$}}
 };
 
-% 3. COMPONENT 2 (K2 - PROPOSITION NLI)
-\node[box=k2purple, fill=k2bg, text width=6.2cm, below right=1.4cm and 0.2cm of input] (k2) {
-    \textbf{\textcolor{k2purple}{\normalsize BİLEŞEN 2: ÖNERME-DÜZEYLİ NLI (K2)}}\\[5pt]
-    \begin{minipage}{6.0cm}
+% 3. BİLEŞEN 2 (K2) - SAĞ SÜTUN
+\node[box=k2purple, fill=k2bg, text width=5.6cm, below right=1.4cm and 0.5cm of input] (k2) {
+    \textbf{\textcolor{k2purple}{BİLEŞEN 2: ÖNERME-DÜZEYLİ NLI (K2)}}\\[8pt]
+    \begin{minipage}{5.2cm}
         \centering
         \begin{tikzpicture}[font=\footnotesize]
-            \node[subbox=k2border, text width=5.6cm] (k2_atom) {
-                \textbf{1. Aşama: Gemma-4 QLoRA Atomizer}\\
-                $\text{İddia } S \to \{a_1, a_2, \dots, a_n\}$ Önermeler\\
-                \scriptsize \%99.58 Test Kapsaması (Ort. 2.08 atom/iddia)
+            \node[subnode=k2purple!40, text width=4.8cm] (k2_atom) {
+                \textbf{1. Önerme Ayrıştırıcı}\\
+                Yerel Gemma-4 QLoRA $\to \{a_1, \dots, a_n\}$
             };
-            \node[subbox=k2border, text width=5.6cm, below=0.35cm of k2_atom] (k2_nli) {
-                \textbf{2. Aşama: mDeBERTa-v3 NLI (278M)}\\
-                $(C, a_i) \to \{p_{\text{ent}}, p_{\text{neu}}, p_{\text{con}}\}$\\
-                Soft-Probability Toplulaştırma ($\approx 28$\,ms)
+            \node[subnode=k2purple!40, text width=4.8cm, below=0.35cm of k2_atom] (k2_nli) {
+                \textbf{2. Önerme Doğrulayıcı}\\
+                mDeBERTa-v3 NLI + Toplulaştırma
             };
-            \draw[->, line width=1pt, draw=k2purple] (k2_atom) -- (k2_nli);
+            \draw[->, line width=0.9pt, draw=k2purple] (k2_atom) -- (k2_nli);
         \end{tikzpicture}
-    \end{minipage}\\[6pt]
-    \textbf{\textcolor{k2purple}{K2 Kararı: $\hat{y}_{\text{K2}} \in \{0, 1, 2, 3\}$}}
+    \end{minipage}\\[8pt]
+    \textbf{\textcolor{k2purple}{K2 Tahmini: $\hat{y}_{\text{K2}}$}}
 };
 
-% ARROWS FROM INPUT TO K1 & K2
-\draw[line=k1blue] (input.south) -| node[above, pos=0.25, font=\scriptsize, text=k1blue] {} (k1.north);
-\draw[line=k2purple] (input.south) -| node[above, pos=0.25, font=\scriptsize, text=k2purple] {} (k2.north);
+% GİRDİDEN K1 VE K2'YE OKLAR
+\draw[arr=k1blue] (input.south) -| (k1.north);
+\draw[arr=k2purple] (input.south) -| (k2.north);
 
-% 4. DECISION GATE (ROUTER)
-\coordinate (midk) at ($(k1.south)!0.5!(k2.south)$);
-\node[diamondbox, below=1.0cm of midk] (gate) {
+% 4. KARAR MERKEZİ (ROUTER)
+\coordinate (centerpoint) at ($(k1.south)!0.5!(k2.south)$);
+\node[diamondbox, below=1.2cm of centerpoint] (router) {
     \textbf{Kararlar}\\
     \textbf{Aynı mı?}\\
-    \scriptsize $(\hat{y}_{\text{K1}} \stackrel{?}{=} \hat{y}_{\text{K2}})$
+    \footnotesize $(\hat{y}_{\text{K1}} = \hat{y}_{\text{K2}})$
 };
 
-% ARROWS FROM K1 & K2 TO GATE
-\draw[line=k1blue] (k1.south) |- (gate.west);
-\draw[line=k2purple] (k2.south) |- (gate.east);
+% K1 VE K2'DEN ROUTER'A
+\draw[arr=k1blue] (k1.south) |- (router.west);
+\draw[arr=k2purple] (k2.south) |- (router.east);
 
-% 5. BRANCH A: CONSENSUS NODE
-\node[box=consgreen, fill=consbg, text width=5.6cm, below left=1.2cm and 0.4cm of gate] (consensus) {
-    \textbf{\textcolor{consgreen}{\large \checkmark\ TAM KONSENSÜS BÖLGESİ}}\\[4pt]
+% 5. KONSENSÜS BÖLGESİ (SOL ALTA)
+\node[box=consgreen, fill=consbg, text width=5.0cm, below left=1.6cm and 0.8cm of router] (consensus) {
+    \textbf{\textcolor{consgreen}{\normalsize KONSENSÜS ONAYI}}\\[4pt]
     \footnotesize
-    \textbf{Kapsam:} 358 Altın Test Örneği (\%74.90)\\[2pt]
-    \textbf{Doğruluk:} \textbf{\textcolor{consgreen}{\%94.13}} (337/358 Doğru)\\[2pt]
-    \textbf{Maliyet / Hız:} 0 LLM Çağrısı (\$0.00), $\approx 35$\,ms\\[3pt]
-    \scriptsize İki bağımsız mimari doğrudan uzlaştığı için\\karar dış müdahale olmadan onaylanır.
+    İki model doğrudan hemfikir.\\
+    Dış LLM çağrısı yapılmadan\\
+    anında onaylanır.
 };
 
-% 6. BRANCH B: COMPONENT 3 (K3 - META-JUDGE)
-\node[box=k3orange, fill=k3bg, text width=6.2cm, below right=1.2cm and 0.4cm of gate] (k3) {
-    \textbf{\textcolor{k3orange}{\normalsize BİLEŞEN 3: EMSALLİ META-HAKEM (K3)}}\\[4pt]
+% 6. BİLEŞEN 3: META-HAKEM (SAĞ ALTA)
+\node[box=k3orange, fill=k3bg, text width=5.4cm, below right=1.6cm and 0.8cm of router] (judge) {
+    \textbf{\textcolor{k3orange}{\normalsize BİLEŞEN 3: META-HAKEM (K3)}}\\[4pt]
     \footnotesize
-    \textbf{Hakem Modeli:} Meta Llama-3.3-70B-Instruct\\
-    \scriptsize (Ablasyon: Qwen-2.5-72B \%70.0 $\mid$ GPT-4o-mini \%63.3)\\[3pt]
-    \begin{minipage}{6.0cm}
-        \centering
-        \begin{tikzpicture}[font=\scriptsize]
-            \node[subbox=k3border, text width=5.6cm] (k3_input) {
-                \textbf{Hakeme Sunulan Dosya:}\\
-                Bağlam $C$ + İddia $S$ + K1 Görüşü + K2 Atom Raporu\\
-                + 4 Gerçek Emsal Mahkeme İçtihadı (Few-Shot)
-            };
-        \end{tikzpicture}
-    \end{minipage}\\[4pt]
-    \textbf{Uyuşmazlık Çözüm Başarımı:} \textbf{\textcolor{k3orange}{\%75.83}} (91/120 vaka)\\
-    \scriptsize 120 Vakanın Toplam Maliyeti: Yalnızca \$0.036 USD
+    \textbf{Meta Llama-3.3-70B-Instruct}\\[2pt]
+    Modeller uyuşmadığında devreye girer;\\
+    emsal kararlarla uyuşmazlığı çözer.
 };
 
-% GATE BRANCHING ARROWS
-\draw[line=consgreen] (gate.south) -| node[above right, pos=0.15, font=\bfseries\footnotesize, text=consgreen] {EVET (\%74.9)} (consensus.north);
-\draw[line=k3orange] (gate.south) -| node[above left, pos=0.15, font=\bfseries\footnotesize, text=k3orange] {HAYIR (\%25.1)} (k3.north);
+% ROUTER'DAN AYRILAN OKLAR (ÇAKIŞMAYI ÖNLEYEN NET KONUMLANDIRMA)
+\draw[arr=consgreen] (router.south) -| node[pos=0.25, above, font=\bfseries\small, text=consgreen] {Evet} (consensus.north);
+\draw[arr=k3orange] (router.south) -| node[pos=0.25, above, font=\bfseries\small, text=k3orange] {Hayır} (judge.north);
 
-% 7. FINAL OUTPUT NODE
-\coordinate (midbottom) at ($(consensus.south)!0.5!(k3.south)$);
-\node[box=darkslate, fill=darkslate, text=white, text width=11.2cm, below=1.2cm of midbottom] (output) {
-    \textbf{\large \textcolor{cyan}{NİHAİ HİBRİT DOĞRULAMA ÇIKTISI $\hat{y}_{\text{Hibrit}}$}}\\[4pt]
-    \normalsize
-    \textbf{478 Altın Test Kümesi Başarımı: \textcolor{green!40}{\%89.54 Doğruluk} $\;\vert\;$ \textcolor{green!40}{Macro-F1: 0.8966} $\;\vert\;$ \textcolor{green!40}{MCC: 0.8628}}\\[3pt]
+% 7. NİHAİ KARAR ÇIKTISI
+\coordinate (finalcenter) at ($(consensus.south)!0.5!(judge.south)$);
+\node[box=slateborder, fill=white, text width=8.5cm, below=1.3cm of finalcenter] (final) {
+    \textbf{\normalsize NİHAİ HİBRİT DOĞRULAMA KARARI}\\[2pt]
     \footnotesize
-    \textcolor{gray!20}{McNemar İstatistiki Anlamlılık: vs K1 ($p = 0.00064$) $\;\vert\;$ vs K2 ($p = 1.34 \times 10^{-12}$)}
+    $\hat{y} \in \{\text{Supported}, \text{Partially\_Supported}, \text{Contradicted}, \text{Unverifiable}\}$
 };
 
-% CONNECT TO FINAL
-\draw[line=consgreen] (consensus.south) |- (output.west);
-\draw[line=k3orange] (k3.south) |- (output.east);
+% ÇIKIŞA BAĞLANTILAR
+\draw[arr=consgreen] (consensus.south) |- (final.west);
+\draw[arr=k3orange] (judge.south) |- (final.east);
 
 \end{tikzpicture}
 
