@@ -1,0 +1,466 @@
+[
+  {
+    "example_id": "tfb_ex_0019",
+    "domain": "finance",
+    "gold_label": "contradicted",
+    "pred_label": "supported",
+    "claim": "Kasko sigortası üçüncü kişilere verilen zararları, zorunlu trafik sigortası ise sigortalının kendi aracındaki maddi zararı karşılar.",
+    "context": "Sektör Birliği A’nın Kasko Sigortası SSS'sinde Dar Kasko, genel şartlardaki teminat gruplarının bir bölümünü; Kasko bu grupların tamamını kapsayan ürün olarak tanımlanır. Genişletilmiş Kasko, temel teminat gruplarının tamamına ek olarak ek sözleşmeyle alınabilecek risklerin bir bölümünü; Tam Kasko ise bu ek risklerin tamamını kapsar. Kasko sigortalının kendi aracındaki maddi zararları güvence altına alırken zorunlu trafik sigortası aracın üçüncü kişilere verdiği maddi ve bedensel zararları karşılar.",
+    "k1_probs": {
+      "supported": 0.96,
+      "partially_supported": 0.0079,
+      "contradicted": 0.0315,
+      "unverifiable": 0.0006
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "entailment"
+    ],
+    "atoms": [
+      "Kasko sigortası üçüncü kişilere verilen zararları karşılar",
+      "Zorunlu trafik sigortası sigortalının kendi aracındaki maddi zararı karşılar"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0035",
+    "domain": "finance",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "Kefalet Kurumu A Özkaynak Kefalet Programında yatırım kredilerinin azami vadesi 60 ay, azami ödemesiz dönemi bir yıldır; bu sınırlar işletme kredileriyle aynıdır.",
+    "context": "Kefalet Kurumu A Özkaynak Kefalet Programı, uygun KOBİ ve benzeri yararlanıcıların banka kredilerine Kefalet Kurumu A’nın kendi özkaynağından kefalet sağlamasına dayanır. İşletme kredilerinde vade 6 ila 60 ay arasında, ödemesiz dönem en fazla bir yıldır; yatırım kredilerinde vade 6 ila 84 ay arasında ve ödemesiz dönem en fazla iki yıldır. Yararlanıcı veya grup başına kefalet limiti 5 milyon TL, azami kefalet oranı yüzde 80'dir. Başvurular bankalar üzerinden Kefalet Kurumu A’nın elektronik sistemi aracılığıyla yapılır.",
+    "k1_probs": {
+      "supported": 0.0001,
+      "partially_supported": 0.9978,
+      "contradicted": 0.0021,
+      "unverifiable": 0.0
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "contradiction",
+      "entailment"
+    ],
+    "atoms": [
+      "Kefalet Kurumu A Özkaynak Kefalet Programında yatırım kredilerinin azami vadesi 60 ay",
+      "azami ödemesiz dönemi bir yıldır",
+      "bu sınırlar işletme kredileriyle aynıdır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0115",
+    "domain": "finance",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "Borsa işlemlerinden doğan uyuşmazlıklar Meslek Birliği A’ya, borsa dışı tazmin talepleri Borsa A’ya götürülür ve Düzenleyici Kurum A zarar tazminine karar verir.",
+    "context": "Sermaye piyasası uyuşmazlığında izlenecek başvuru yolu uyuşmazlığın türüne göre değişebilir. Borsada emirlerin iletilmesi, eşleştirilmesi ve gerçekleşen işlemlere ilişkin yükümlülüklerin yerine getirilmesi gibi borsa işlemlerinden doğan uyuşmazlıklar için Borsa A’ya başvuru yapılabilir. Borsa işlemleri dışındaki zarar ve tazmin talepleri Meslek Birliği A bünyesindeki müşteri uyuşmazlıkları hakem mekanizmasına iletilebilir. Düzenleyici Kurum A ise mevzuata aykırılık iddialarını idari yönden inceleyebilir ancak bu inceleme kapsamında zarar tazminine karar vermez.",
+    "k1_probs": {
+      "supported": 0.0001,
+      "partially_supported": 0.9952,
+      "contradicted": 0.0047,
+      "unverifiable": 0.0001
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "entailment",
+      "contradiction"
+    ],
+    "atoms": [
+      "Borsa işlemlerinden doğan uyuşmazlıklar Meslek Birliği A’ya",
+      "borsa dışı tazmin talepleri Borsa’ya",
+      "zarar tazminine karar verir Düzenleyici Kurum A"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0195",
+    "domain": "legal",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "Ön ödemeli sayaç kullanan tüketicilerden güvence bedeli alınır ve güvence bedelinin iadesi için borçların ödenmesine ek olarak ayrı bir uygunluk belgesi sunulması gerekir.",
+    "context": "Elektrik perakende satışında görevli tedarik şirketi, kullanım yerinin değişmesi veya perakende satış sözleşmesinin sona ermesi ya da feshi halinde tüketim bedelinin ödenmemesi riskine karşı güvence bedeli talep eder. Ön ödemeli sayaç kullanan tüketicilerden, genel aydınlatma kapsamındaki yerlerden ve ilgili düzenlemede belirtilen ibadethanelerden güvence bedeli alınmaz. Perakende satış sözleşmesi sona erdiğinde, feshedildiğinde veya tüketici ön ödemeli sayaca geçtiğinde güvence bedeli iade edilir. Tüketicinin borçları ödendikten sonra kalan tutar, talep tarihinden itibaren en geç beş iş günü içinde iade edilir. İade için borcun ödenmesi dışında başka bir şart veya belge istenemez.",
+    "k1_probs": {
+      "supported": 0.0,
+      "partially_supported": 0.9999,
+      "contradicted": 0.0,
+      "unverifiable": 0.0
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "contradiction"
+    ],
+    "atoms": [
+      "Ön ödemeli sayaç kullanan tüketicilerden güvence bedeli alınır",
+      "güvence bedelinin iadesi için borçların ödenmesine ek olarak ayrı bir uygunluk belgesi sunulması gerekir"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0232",
+    "domain": "legal",
+    "gold_label": "unverifiable",
+    "pred_label": "contradicted",
+    "claim": "Pasif kayda alınan arabulucunun elektronik tebligat adresi edinmesi kaydı kendiliğinden aktif hâle getirir ve daha önce tevzi edilen dosyalar yeniden dağıtılır.",
+    "context": "Arabuluculuk bürolarının dava şartı kapsamındaki yazışmalarında elektronik tebligat kanalı kullanılmasına yönelik yeni uygulamada, arabulucuların elektronik tebligat adresine sahip olması istenmiştir. Duyuruda bu adreslerin 23 Temmuz 2026 tarihine kadar tebligat yapılabilecek biçimde hazır olması gerektiği belirtilmiştir. Bu tarihten itibaren büro yazışmalarının elektronik tebligat adresi üzerinden yürütülmesi öngörülmüş; elektronik tebligat adresi bulunmayan arabuluculara dava şartı arabuluculuk kapsamında dosya tevzi edilmemesi ve kayıtlarının aktif durumdan çıkarılması bildirilmiştir.",
+    "k1_probs": {
+      "supported": 0.0014,
+      "partially_supported": 0.016,
+      "contradicted": 0.5408,
+      "unverifiable": 0.4418
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "contradiction"
+    ],
+    "atoms": [
+      "Pasif kayda alınan arabulucunun elektronik tebligat adresi edinmesi kaydı kendiliğinden aktif hâle getirir",
+      "daha önce tevzi edilen dosyalar yeniden dağıtılır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0274",
+    "domain": "legal",
+    "gold_label": "partially_supported",
+    "pred_label": "supported",
+    "claim": "Satışa engel hukuki durum varsa noter işlemi yapmaz. Sözleşme tapu sistemine kaydedilince ayrıca tescil yapılmasına gerek kalmaz.",
+    "context": "Noter, taşınmaz satış başvurusu üzerine bir başvuru belgesi düzenler ve taşınmaz üzerindeki kısıtlamalar ile satışa ilişkin yasal sınırlamaları inceler. Hak sahibinin belirlenememesi veya satışa engel hukuki bir durum bulunması hâlinde satış işlemi yapılmaz. Satışa engel durum olmadığı tespit edilirse sözleşme taraflarca imzalanır. Noter, tapu bilişim sisteminden yevmiye numarası alarak sözleşmeyi sisteme kaydeder; kaydın ardından tapu müdürlüğü taşınmazın tapu siciline tescilini sağlar.",
+    "k1_probs": {
+      "supported": 0.9969,
+      "partially_supported": 0.0028,
+      "contradicted": 0.0003,
+      "unverifiable": 0.0
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "entailment"
+    ],
+    "atoms": [
+      "Satışa engel hukuki durum varsa noter işlemi yapmaz.",
+      "Sözleşme tapu sistemine kaydedilince ayrıca tescil yapılmasına gerek kalmaz."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0278",
+    "domain": "legal",
+    "gold_label": "partially_supported",
+    "pred_label": "supported",
+    "claim": "Başvuruda gönüllü formu ile yerleşim yeri belgesi sunulur, adli sicil belgesini de adayın dilekçesine eklemesi gerekir.",
+    "context": "Denetimli serbestlik hizmetlerinde gönüllü çalışmak isteyen kişinin Türk vatandaşı olması, başvuru tarihinde on sekiz yaşını tamamlamış bulunması ve mevzuatta belirtilen belirli suçlardan hükümlü olmaması gerekir. Gönüllü olmak isteyen kişi denetimli serbestlik müdürlüğüne dilekçe ile başvurur. Başvuruda gönüllü başvuru formu ve yerleşim yeri belgesi istenir; adli sicil belgesi müdürlük tarafından temin edilir. Başvuru, infaz işlemleri değerlendirme komisyonu tarafından incelenerek karara bağlanır.",
+    "k1_probs": {
+      "supported": 0.6663,
+      "partially_supported": 0.3327,
+      "contradicted": 0.0008,
+      "unverifiable": 0.0002
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "entailment"
+    ],
+    "atoms": [
+      "Başvuruda gönüllü formu ile yerleşim yeri belgesi sunulur",
+      "adli sicil belgesini de adayın dilekçesine eklemesi gerekir"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0323",
+    "domain": "medical",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "EMG önce ince iğne elektrotlarla kasların değerlendirilmesiyle başlar. Sinir iletim ölçümü ikinci aşamadadır ve iki bölüm bütün hastalara uygulanır.",
+    "context": "Elektromiyografi (EMG), sinir ve kasların elektriksel yöntemlerle değerlendirildiği bir incelemedir. İlk bölümde düşük şiddette elektrik uyarıları kullanılarak sinirlerin iletim fonksiyonları ölçülebilir. Gerekli hastalarda ikinci bölümde tek kullanımlık ince iğne elektrotlarla kaslar ve bu kaslara gelen sinirler değerlendirilir; her hastada iki bölümün birden yapılması zorunlu değildir. İncelemenin süresi hastaya ve istenen değerlendirmeye göre değişmekle birlikte yaklaşık yarım saat olabilir. Düzenli ilaçlar genellikle sürdürülebilir, ancak kan sulandırıcı kullananların ve kalp pili ya da başka bir pil taşıyanların hekimi önceden bilgilendirmesi önerilir.",
+    "k1_probs": {
+      "supported": 0.0,
+      "partially_supported": 0.9994,
+      "contradicted": 0.0005,
+      "unverifiable": 0.0
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "entailment",
+      "contradiction"
+    ],
+    "atoms": [
+      "EMG önce ince iğne elektrotlarla kasların değerlendirilmesiyle başlar",
+      "Sinir iletim ölçümü ikinci aşamadadır",
+      "EMG değerlendirmesi bütün hastalara uygulanır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0332",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "supported",
+    "claim": "Biyopsi alınacak bölge seçilirken PET/CT öncesindeki kan şekeri sonucu da dikkate alınır.",
+    "context": "PET/CT işlemi öncesinde hastanın en az altı saat aç kalması gerekir. İşleme başlanırken kan şekeri ölçülür; değer uygun aralıktaysa damar yoluyla radyoaktif işaretli madde verilir. Sık kullanılan maddelerden biri F-18 florodeoksiglukozdur. Enjeksiyonun ardından maddenin vücutta dağılması için hasta yaklaşık bir saat bekletilir ve daha sonra PET/CT cihazında görüntüleme yapılır. PET/CT, kanserin yaygınlığını değerlendirmede, canlı tümör dokusunun yerini göstermede ve gerektiğinde biyopsi alınacak bölgenin belirlenmesine yardımcı olmada kullanılabilir.",
+    "k1_probs": {
+      "supported": 0.6979,
+      "partially_supported": 0.0305,
+      "contradicted": 0.1173,
+      "unverifiable": 0.1543
+    },
+    "k2_atom_labels": [
+      "entailment"
+    ],
+    "atoms": [
+      "Biyopsi alınacak bölge seçilirken PET/CT öncesindeki kan şekeri sonucu da dikkate alınır."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0336",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "partially_supported",
+    "claim": "Bronkoskopide biyopsi alınan hastaların gözlem süresi iki saate çıkarılır. Yalnız yıkama örneği alınmışsa gözlem bir saatte sonlandırılır.",
+    "context": "Bronkoskopi öncesinde kullanılan ilaçlar, mevcut hastalıklar ve ilaç alerjileri hekime bildirilmelidir. İşlemden altı ila sekiz saat önce yiyecek ve içecek alınmaması gerekir; sürekli kullanılan bazı ilaçlar hekimin yönlendirmesiyle az miktarda suyla alınabilir. Bronkoskop ağız veya burundan ilerletilerek hava yolları incelenir, gerekli olduğunda biyopsi alınabilir veya yıkama sıvısı toplanabilir. İşlem sonrasında hasta en az bir ila iki saat gözlem altında tutulur ve yutma refleksi zayıfladığı için yaklaşık iki saat yiyecek ve içecek verilmez. Anestezi etkisi nedeniyle en az on iki saat araç veya iş makinesi kullanılması ve alkol alınması önerilmez.",
+    "k1_probs": {
+      "supported": 0.0,
+      "partially_supported": 0.9995,
+      "contradicted": 0.0004,
+      "unverifiable": 0.0001
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "neutral"
+    ],
+    "atoms": [
+      "Bronkoskopide biyopsi alınan hastaların gözlem süresi iki saate çıkarılır.",
+      "Yalnız yıkama örneği alınmışsa gözlem bir saatte sonlandırılır."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0340",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "partially_supported",
+    "claim": "Kolonoskopi sonrası dinlenme süresi, işlem sırasında sakinleştirici ilaç verilip verilmediğine bağlıdır. Ağrı azaltıcı ilaç kullanılmışsa dinlenme süresi ayrıca uzatılır.",
+    "context": "Kolonoskopinin tam ve güvenilir yapılabilmesi için altı saatlik açlığın yanında iki ila üç günlük diyet ve özel ilaçlarla bağırsak temizliği gerekir. İşlem sırasında hasta sol yanına yatırılır; kalp ritmi ve kandaki oksijen miktarı izlenir. Karında basınç, gaz ve kramp görülebileceği için işlem öncesinde veya gerektiğinde işlem sırasında sakinleştirici ve ağrı azaltıcı ilaçlar uygulanabilir. Kolonoskopi yaklaşık yirmi ila otuz dakika sürebilir. İşlemden sonra hasta on beş ila otuz dakika dinlendirilir; ilaç kullanılmışsa güvenlik amacıyla yirmi dört saat taşıt veya makine kullanılmaması önerilir.",
+    "k1_probs": {
+      "supported": 0.0118,
+      "partially_supported": 0.8193,
+      "contradicted": 0.0513,
+      "unverifiable": 0.1176
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "neutral"
+    ],
+    "atoms": [
+      "Kolonoskopi sonrası dinlenme süresi, işlem sırasında sakinleştirici ilaç verilip verilmediğine bağlıdır.",
+      "Ağrı azaltıcı ilaç kullanılmışsa dinlenme süresi ayrıca uzatılır."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0360",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "contradicted",
+    "claim": "Nefes komutu verilen BT çekimlerinde kontrast yalnız damar yoluyla uygulanır. Nefes komutu gerekmeyen çekimlerde ağızdan kontrast tercih edilir.",
+    "context": "Bilgisayarlı tomografi ilaçlı veya ilaçsız yapılabilir. İlaçlı incelemede kontrast madde damar yoluyla verilebilir veya suya karıştırılarak hastaya içirilebilir. Özel bir hazırlık talimatı verilmemişse her çekim için aynı hazırlık gerekmez; ilaçlı çekimlerde açlık istenebilir ve bazı incelemelerde hastadan belirli miktarda suyla erken başvurması istenir. Çekim bölgesindeki takı ve metal eşyalar çıkarılır. İnceleme sırasında hasta hareketli bir masa üzerinde halka biçimli tarayıcıdan geçirilir ve bazen nefes komutlarına uyması istenir. İşlem süresi tetkike göre değişmekle birlikte yaklaşık bir ila on dakika arasında olabilir.",
+    "k1_probs": {
+      "supported": 0.0001,
+      "partially_supported": 0.0002,
+      "contradicted": 0.9995,
+      "unverifiable": 0.0001
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "neutral"
+    ],
+    "atoms": [
+      "Nefes komutu verilen BT çekimlerinde kontrast yalnız damar yoluyla uygulanır",
+      "Nefes komutu gerekmeyen çekimlerde ağızdan kontrast tercih edilir"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0363",
+    "domain": "medical",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "MR çekim odasına metal eşyalarla girilebilir ve çekim sırasında hareket etmek görüntülemeyi etkilemez.",
+    "context": "Manyetik rezonans incelemelerinin çoğunda özel bir ön hazırlık gerekmez; aksi söylenmedikçe hasta yemek yiyip düzenli ilaçlarını alabilir. Ancak bazı özellikli çekimlerde hazırlık değişir. Örneğin entero incelemesinde hastadan aç gelmesi ve hazırlanan yaklaşık bir buçuk litre suyu iki saat içinde içmesi, bazı batın ve ilaçlı incelemelerde ise en az sekiz saat açlık istenebilir. Güçlü manyetik alan nedeniyle saat, takı, kredi kartı, işitme cihazı ve benzeri metal ya da manyetik alandan etkilenebilecek eşyalar çekim odasına girmeden çıkarılmalıdır. Vücutta implant, kalp pili, metal parça veya benzeri bir materyal varsa görevliye önceden bildirilir. Çekim sırasında hasta hareketsiz kalır; cihazın gürültüsü için kulak koruyucu verilebilir ve görevliyle mikrofon üzerinden iletişim kurulabilir.",
+    "k1_probs": {
+      "supported": 0.0,
+      "partially_supported": 0.9992,
+      "contradicted": 0.0007,
+      "unverifiable": 0.0
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "contradiction"
+    ],
+    "atoms": [
+      "MR çekim odasına metal eşyalarla girilebilir.",
+      "MR çekim sırasında hareket etmek görüntülemeyi etkilemez."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0364",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "partially_supported",
+    "claim": "Kalp pili veya implant bildiren hasta için MR öncesinde cihazın model bilgisi yazılı olarak kaydedilir. Bu bilgi olmadan çekim planı oluşturulmaz.",
+    "context": "Manyetik rezonans incelemelerinin çoğunda özel bir ön hazırlık gerekmez; aksi söylenmedikçe hasta yemek yiyip düzenli ilaçlarını alabilir. Ancak bazı özellikli çekimlerde hazırlık değişir. Örneğin entero incelemesinde hastadan aç gelmesi ve hazırlanan yaklaşık bir buçuk litre suyu iki saat içinde içmesi, bazı batın ve ilaçlı incelemelerde ise en az sekiz saat açlık istenebilir. Güçlü manyetik alan nedeniyle saat, takı, kredi kartı, işitme cihazı ve benzeri metal ya da manyetik alandan etkilenebilecek eşyalar çekim odasına girmeden çıkarılmalıdır. Vücutta implant, kalp pili, metal parça veya benzeri bir materyal varsa görevliye önceden bildirilir. Çekim sırasında hasta hareketsiz kalır; cihazın gürültüsü için kulak koruyucu verilebilir ve görevliyle mikrofon üzerinden iletişim kurulabilir.",
+    "k1_probs": {
+      "supported": 0.0058,
+      "partially_supported": 0.9874,
+      "contradicted": 0.0021,
+      "unverifiable": 0.0046
+    },
+    "k2_atom_labels": [
+      "neutral",
+      "entailment"
+    ],
+    "atoms": [
+      "Kalp pili veya implant bildiren hasta için MR öncesinde cihazın model bilgisi yazılı olarak kaydedilir.",
+      "Bu bilgi olmadan çekim planı oluşturulmaz."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0368",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "contradicted",
+    "claim": "Önceki meme görüntülemesi varsa çekime eski görüntüyle aynı pozisyondan başlanır ve meme kısa süre sıkıştırılır.",
+    "context": "Mamografi çekimine gelmeden önce koltuk altı temizliği yapılması ve duş alınması önerilir. Koltukaltı ve göğüs bölgesine parfüm, deodorant veya benzeri ürünler uygulanmamalı; daha önce yapılmış meme görüntülemeleri varsa bunlar da beraberinde getirilmelidir. Çekim sırasında meme iki plastik tabaka arasında sıkıştırılır ve genellikle iki farklı pozisyonda görüntü alınır. Sıkıştırmanın amacı hareketi azaltmak, görüntüyü keskinleştirmek ve daha düşük doz radyasyonla görüntü elde edilmesine yardımcı olmaktır. Uygulanan baskı kısa süreli ağrı veya rahatsızlık oluşturabilir, ancak bu his genellikle çekim bittikten sonra geçer.",
+    "k1_probs": {
+      "supported": 0.1242,
+      "partially_supported": 0.2817,
+      "contradicted": 0.5661,
+      "unverifiable": 0.028
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "neutral"
+    ],
+    "atoms": [
+      "Önceki meme görüntülemesi varsa çekime eski görüntüyle aynı pozisyondan başlanır",
+      "meme kısa süre sıkıştırılır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0372",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "contradicted",
+    "claim": "Gastroskopide biyopsi alınacak bölge sakinleştirici verildikten sonra seçilir. Patolojiye gönderilecek örnek sayısı işlem sonunda belirlenir.",
+    "context": "Gastroskopi yemek borusu, mide ve onikiparmak bağırsağının incelenmesinde kullanılır. İnceleme sırasında görüntü alınabilir ve gerekli görülen alanlardan biyopsi örneği alınarak patolojiye gönderilebilir. İşlem için yaklaşık sekiz saat açlık gerekir. Rahatsızlığı azaltmak amacıyla boğaza uyuşturucu sprey uygulanabilir ve sakinleştirici ilaç verilebilir. Gastroskopi çoğu durumda yaklaşık beş ila on dakika sürer. İşlem sonrasında hasta bir ila iki saat izlenebilir; ardından sıvı gıdalara başlanıp aynı gün taburculuk yapılabilir. Gastroskopi yalnız tanı amacıyla değil, bazı kanamaların kontrolü, polip çıkarılması, daralmış bölgelerin genişletilmesi veya yabancı cisim çıkarılması gibi tedavi amaçlı işlemlerde de kullanılabilir.",
+    "k1_probs": {
+      "supported": 0.0018,
+      "partially_supported": 0.0163,
+      "contradicted": 0.9764,
+      "unverifiable": 0.0055
+    },
+    "k2_atom_labels": [
+      "neutral",
+      "contradiction"
+    ],
+    "atoms": [
+      "Gastroskopide biyopsi alınacak bölge sakinleştirici verildikten sonra seçilir.",
+      "Patolojiye gönderilecek örnek sayısı işlem sonunda belirlenir."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0405",
+    "domain": "medical",
+    "gold_label": "supported",
+    "pred_label": "partially_supported",
+    "claim": "DEXA sırasında hasta yaklaşık çeyrek saat yatar ve ölçüm boyunca hareketsiz kalır. Yakın zamanda kontrast kullanılmışsa çekim ertelenebilir.",
+    "context": "DEXA, kemik mineral yoğunluğunu ve kemik kaybını değerlendirmek için kullanılan düşük radyasyonlu bir ölçümdür. Ölçümde sıklıkla bel omurları ile kalça bölgesi değerlendirilir. Genel olarak özel bir ön hazırlık gerekmez; hasta yaklaşık on beş dakika yatar ve ölçümün tamamlanması için hareketsiz kalır. İşlem ağrısızdır. Gebelik veya emzirme durumu sağlık ekibine önceden bildirilmelidir. İncelemeden iki ile altı gün önce ağızdan ya da damar yoluyla kontrast madde kullanılmışsa DEXA çekimi ertelenebilir.",
+    "k1_probs": {
+      "supported": 0.0034,
+      "partially_supported": 0.9781,
+      "contradicted": 0.018,
+      "unverifiable": 0.0005
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "entailment"
+    ],
+    "atoms": [
+      "DEXA sırasında hasta yaklaşık çeyrek saat yatar ve ölçüm boyunca hareketsiz kalır.",
+      "Yakın zamanda kontrast kullanılmışsa çekim ertelenebilir."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0423",
+    "domain": "medical",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "ERCP sırasında görüntüleme için kontrast mesaneye verilir ve işlem sedoanaljezi olmadan tamamlanır.",
+    "context": "ERCP, safra yolları ve pankreas kanalının tanı ve tedavisinde kullanılan özel bir endoskopi yöntemidir. Duodenoskop ağızdan ilerletilerek onikiparmak bağırsağına ulaştırılır; papilla üzerinden ince kateterlerle safra kanalına, gerektiğinde pankreas kanalına kontrast madde verilir ve X ışınıyla görüntüleme yapılır. Aynı seansta safra yolu taşının çıkarılması, darlığın balon veya stentle giderilmesi gibi tedaviler uygulanabilir. İşlemden önce en az altı-sekiz saat açlık gerekir; kan sulandırıcı ilaçlar ve ilaç alerjileri hekime bildirilir. Damar yolu açılıp sedoanaljezi uygulanır. İşlem genellikle otuz-altmış dakika sürer.",
+    "k1_probs": {
+      "supported": 0.0004,
+      "partially_supported": 0.8372,
+      "contradicted": 0.1611,
+      "unverifiable": 0.0013
+    },
+    "k2_atom_labels": [
+      "entailment",
+      "contradiction"
+    ],
+    "atoms": [
+      "ERCP sırasında görüntüleme için kontrast mesaneye verilir",
+      "ERCP işlemi sedoanaljezi olmadan tamamlanır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0452",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "partially_supported",
+    "claim": "Prob yemek borusunda belirli bir işarete kadar ilerletilir. Bu noktadan ek görüntü alınır.",
+    "context": "Transözofageal ekokardiyografi, göğüsten yapılan ekokardiyografide yeterince görüntülenemeyen kalp yapılarını yemek borusundan ilerletilen ultrason probuyla incelemek için kullanılır. İşlem öncesinde en az dört saat açlık gerekir ve çıkarılabilir diş protezleri çıkarılır. Boğaza lokal anestezik sprey uygulanır, damar yolu açılır ve ağızlık yerleştirildikten sonra prob yutkunma yardımıyla yemek borusuna ilerletilir. İnceleme yaklaşık 15-20 dakika sürer. İşlemden sonra iki saat boyunca bir şey yenilip içilmez.",
+    "k1_probs": {
+      "supported": 0.0048,
+      "partially_supported": 0.5209,
+      "contradicted": 0.0364,
+      "unverifiable": 0.4379
+    },
+    "k2_atom_labels": [
+      "neutral",
+      "entailment"
+    ],
+    "atoms": [
+      "Prob yemek borusunda belirli bir işarete kadar ilerletilir.",
+      "Bu noktadan ek görüntü alınır."
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0463",
+    "domain": "medical",
+    "gold_label": "contradicted",
+    "pred_label": "partially_supported",
+    "claim": "UVA riboflavinden önce uygulanır. Işınlama tamamlandıktan sonra riboflavin damlatmaya başlanır.",
+    "context": "Korneal cross-linking, ilerleme saptanan keratokonusta kornea dokusunu güçlendirmek için riboflavin ve ultraviyole A kullanılan bir işlemdir. Damla anestezisiyle göz uyuşturulduktan sonra korneanın epitel tabakası kaldırılır. Riboflavin solüsyonu 30 dakika boyunca beş dakikada bir damlatılır; ardından korneaya yaklaşık 30 dakika UVA uygulanırken riboflavin damlatılmaya devam edilir. İşlem sonunda göz antibiyotikli pomatla kapatılır ve ortalama iyileşme süreci yaklaşık iki gündür.",
+    "k1_probs": {
+      "supported": 0.0005,
+      "partially_supported": 0.97,
+      "contradicted": 0.029,
+      "unverifiable": 0.0005
+    },
+    "k2_atom_labels": [
+      "contradiction",
+      "entailment"
+    ],
+    "atoms": [
+      "UVA riboflavinden önce uygulanır",
+      "Işınlama tamamlandıktan sonra riboflavin damlatmaya başlanır"
+    ]
+  },
+  {
+    "example_id": "tfb_ex_0468",
+    "domain": "medical",
+    "gold_label": "unverifiable",
+    "pred_label": "contradicted",
+    "claim": "İğneyle alınan biyopsi örneği endoskop çekilmeden cihazın ayrı bir kanalında incelenir.",
+    "context": "Endoskopik ultrasonografi, endoskopi ile ultrasonografiyi aynı cihazda birleştirerek sindirim sisteminin iç yüzeyinin yanında duvar katmanlarını ve çevredeki lenf bezleri ile komşu organları incelemeyi sağlar. Endoskop ağızdan yemek borusu, mide ve ince bağırsağa doğru ilerletilir; işlem sırasında endoskopik görüntüler ile ultrason görüntüleri ayrı ekranlardan izlenir. Şüpheli bir doku görüldüğünde cihazdan ilerletilen iğneyle biyopsi örneği alınabilir. İşlem çoğunlukla sedasyon altında yapılır ve yaklaşık 20-30 dakika sürer.",
+    "k1_probs": {
+      "supported": 0.0007,
+      "partially_supported": 0.0002,
+      "contradicted": 0.9988,
+      "unverifiable": 0.0002
+    },
+    "k2_atom_labels": [
+      "contradiction"
+    ],
+    "atoms": [
+      "İğneyle alınan biyopsi örneği endoskop çekilmeden cihazın ayrı bir kanalında incelenir"
+    ]
+  }
+]
