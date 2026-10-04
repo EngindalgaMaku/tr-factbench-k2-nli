@@ -169,31 +169,66 @@ def main() -> None:
         "",
     ])
 
-    # Add 8 representative examples from different categories
-    sample_eids = [
-        # Cat-1
-        [e for e in compiled_errors if "Cat-1" in e["failure_category"]][0]["example_id"],
-        # Cat-2
-        [e for e in compiled_errors if "Cat-2" in e["failure_category"]][0]["example_id"],
-        # Cat-3
-        [e for e in compiled_errors if "Cat-3" in e["failure_category"]][0]["example_id"],
-        # Cat-4
-        [e for e in compiled_errors if "Cat-4" in e["failure_category"]][0]["example_id"],
-    ]
+    # Section 3: All 44 individual cases detailed
+    lines.extend([
+        "## 3. 44 Hatanın Tek Tek Derinlemesine İncelenmesi",
+        "",
+        "Bu bölümde, boru hattının başarısız olduğu 44 vakanın tamamı iki ana aşamada (21 Konsensüs Hatası ve 23 Hakem Hatası) eksiksiz olarak incelenmiştir.",
+        "",
+        "### 3.1. Konsensüs Hataları (21 Vaka: K1 == K2 != Altın Etiket)",
+        "Bu vakalarda her iki yerel model (ELECTRA ve Gemma+mDeBERTa) aynı yanlış etiket üzerinde uzlaşmış, sistem uyuşmazlık algılamadığı için hakeme gidilmeden doğrudan yanlış karar üretilmiştir.",
+        "",
+    ])
 
-    for idx, e in enumerate([e for e in compiled_errors if e["example_id"] in sample_eids], 1):
+    for idx, e in enumerate([x for x in compiled_errors if x["error_stage"].startswith("Consensus")], 1):
         lines.extend([
-            f"### Örnek {idx}: `{e['example_id']}` ({e['domain'].upper()} - {e['failure_category']})",
-            f"- **Hata Aşaması:** {e['error_stage']}",
-            f"- **Altın Etiket (İnsan):** `{e['gold_label']}`",
-            f"- **Sistemin Kararı:** `{e['pipeline_pred']}`",
-            f"- **K1 Tahmini:** `{e['k1_pred']}` | **K2 Tahmini:** `{e['k2_pred']}`",
-            f"- **İddia:** *\"{e['claim']}\"*",
-            f"- **Bağlam Özeti:** *\"{e['context'][:250]}...\"*",
+            f"#### Vaka {idx:02d} (Konsensüs): `{e['example_id']}` — {e['domain'].upper()}",
+            f"- **Başarısızlık Kategorisi:** {e['failure_category']}",
+            f"- **Altın Etiket (Doğru):** `{e['gold_label']}`",
+            f"- **Sistemin Yanlış Kararı (K1 & K2 Konsensüsü):** `{e['pipeline_pred']}`",
+            f"- **K1 (ELECTRA) Kararı:** `{e['k1_pred']}`",
+            f"- **K2 (Gemma+mDeBERTa) Kararı:** `{e['k2_pred']}`",
+            f"- **İddia (Claim):** *\"{e['claim']}\"*",
+            f"- **Bağlam (Context):** *\"{e['context']}\"*",
         ])
-        if e.get("judge_reasoning"):
-            lines.append(f"- **Hakem Gerekçesi:** *\"{e['judge_reasoning']}\"*")
-        lines.append("")
+        if e.get("atoms"):
+            atom_str = " | ".join([f'"{a}"' for a in e["atoms"]])
+            lines.append(f"- **K2'nin Ayrıştırdığı Atomlar:** {atom_str}")
+        lines.extend([
+            f"- **Hakemin Değerlendirmesi:** *\"{e.get('judge_reasoning', 'Hakeme gidilmedi')}\"*",
+            f"- **Hakem Olsaydı Düzeltir miydi?:** {'Evet, Hakem Doğruyu Bulabilirdi' if e.get('judge_would_fix') else 'Hayır, Hakem de Yanılırdı'}",
+            "",
+            "---",
+            "",
+        ])
+
+    lines.extend([
+        "### 3.2. Hakem Arbitrasyon Hataları (23 Vaka: Hakem != Altın Etiket)",
+        "Bu vakalarda K1 ve K2 modelleri uyuşmazlığa düşmüş (`K1 != K2`) ve Baş Hakem (Llama-3.3-70B) devreye girmiştir. Ancak Hakem, modellerin analizlerini değerlendirirken yanlış modeli tercih etmiş veya yanlış nihai karar vermiştir.",
+        "",
+    ])
+
+    for idx, e in enumerate([x for x in compiled_errors if x["error_stage"].startswith("Arbitration")], 1):
+        lines.extend([
+            f"#### Vaka {idx:02d} (Hakem): `{e['example_id']}` — {e['domain'].upper()}",
+            f"- **Başarısızlık Kategorisi:** {e['failure_category']}",
+            f"- **Altın Etiket (Doğru):** `{e['gold_label']}`",
+            f"- **Hakemin Yanlış Kararı (Nihai Tahmin):** `{e['pipeline_pred']}`",
+            f"- **Model A (K1) Tahmini:** `{e['k1_pred']}`",
+            f"- **Model B (K2) Tahmini:** `{e['k2_pred']}`",
+            f"- **Hakemin Tercih Ettiği Taraf:** `{e.get('favored_model', 'Neither')}`",
+            f"- **Hakemin Karar Gerekçesi (CoT Reasoning):** *\"{e.get('judge_reasoning', '')}\"*",
+            f"- **İddia (Claim):** *\"{e['claim']}\"*",
+            f"- **Bağlam (Context):** *\"{e['context']}\"*",
+        ])
+        if e.get("atoms"):
+            atom_str = " | ".join([f'"{a}"' for a in e["atoms"]])
+            lines.append(f"- **K2'nin Ayrıştırdığı Atomlar:** {atom_str}")
+        lines.extend([
+            "",
+            "---",
+            "",
+        ])
 
     lines.extend([
         "---",
