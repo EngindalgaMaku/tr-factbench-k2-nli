@@ -1,0 +1,21 @@
+{
+  "n_consensus_cases": 358,
+  "initial_consensus_accuracy": 0.9413,
+  "initial_correct_count": 337,
+  "initial_error_count": 21,
+  "judge_accuracy_on_consensus": 0.9553,
+  "judge_correct_count": 342,
+  "breakdown": {
+    "recovered_fixed (Düzeltilen Hatalar)": {
+      "count": 12,
+      "recovery_rate_pct": 57.14
+    },
+    "regressed_broken (Bozulan Doğrular)": {
+      "count": 7,
+      "regression_rate_pct": 2.08
+    },
+    "maintained_correct": 330,
+    "maintained_wrong": 9
+  },
+  "net_gain_or_loss": 5
+}
