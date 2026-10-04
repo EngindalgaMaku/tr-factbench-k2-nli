@@ -1,0 +1,156 @@
+<svg width="1020" height="820" viewBox="0 0 1020 820" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Definitions for Shadows & Gradients -->
+        <defs>
+          <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.06"/>
+          </filter>
+          <linearGradient id="gradK1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#eff6ff"/>
+            <stop offset="100%" stop-color="#dbeafe"/>
+          </linearGradient>
+          <linearGradient id="gradK2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f5f3ff"/>
+            <stop offset="100%" stop-color="#ede9fe"/>
+          </linearGradient>
+          <linearGradient id="gradK3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#fff7ed"/>
+            <stop offset="100%" stop-color="#ffedd5"/>
+          </linearGradient>
+          <linearGradient id="gradCons" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f0fdf4"/>
+            <stop offset="100%" stop-color="#dcfce7"/>
+          </linearGradient>
+          <linearGradient id="gradFinal" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1e293b"/>
+            <stop offset="100%" stop-color="#0f172a"/>
+          </linearGradient>
+          <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748b"/>
+          </marker>
+          <marker id="arrowBlue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+          </marker>
+          <marker id="arrowPurple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#7c3aed"/>
+          </marker>
+          <marker id="arrowOrange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#ea580c"/>
+          </marker>
+          <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a"/>
+          </marker>
+        </defs>
+
+        <!-- 1. GİRDİ BLOĞU -->
+        <g transform="translate(360, 20)" filter="url(#shadow)">
+          <rect width="300" height="75" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+          <text x="150" y="32" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">GİRDİ (KULLANICI TALEBİ)</text>
+          <text x="150" y="52" text-anchor="middle" font-size="12" fill="#475569">📄 Bağlam Metni (Kanıt Dokümanı)</text>
+          <text x="150" y="68" text-anchor="middle" font-size="12" fill="#475569">💬 Doğrulanacak İddia (LLM Yanıtı)</text>
+        </g>
+
+        <!-- Bağlantı Çizgileri: Girdiden K1 ve K2'ye -->
+        <path d="M 510 95 L 510 120 L 250 120 L 250 150" fill="none" stroke="#2563eb" stroke-width="2" marker-end="url(#arrowBlue)"/>
+        <path d="M 510 95 L 510 120 L 770 120 L 770 150" fill="none" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+        <!-- 2. BİLEŞEN 1 (K1 - BÜTÜNCÜL ENCODER) SOL SÜTUN -->
+        <g transform="translate(70, 150)" filter="url(#shadow)">
+          <rect width="360" height="230" rx="14" fill="url(#gradK1)" stroke="#3b82f6" stroke-width="2"/>
+          <rect x="15" y="15" width="330" height="32" rx="6" fill="#2563eb"/>
+          <text x="180" y="36" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">BİLEŞEN 1: BÜTÜNCÜL ENCODER (K1)</text>
+
+          <text x="25" y="75" font-size="12" font-weight="700" fill="#1e3a8a">Model Mimarisi:</text>
+          <text x="25" y="93" font-size="12" fill="#1e40af">• dbmdz/electra-base-turkish-cased (110M)</text>
+          <text x="25" y="111" font-size="12" fill="#1e40af">• Göreve Özgü LoRA Adaptasyonu (All-Linear)</text>
+
+          <text x="25" y="140" font-size="12" font-weight="700" fill="#1e3a8a">Çıkarım Mekanizması:</text>
+          <text x="25" y="158" font-size="12" fill="#1e40af">• Tek Geçişte Küresel Sekans Sınıflandırması</text>
+          <text x="25" y="176" font-size="12" fill="#1e40af">• 4 Sınıflı Softmax Olasılık Dağılımı (~12ms)</text>
+
+          <rect x="25" y="195" width="310" height="26" rx="6" fill="#ffffff" stroke="#93c5fd"/>
+          <text x="180" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">K1 Çıktısı: ŷ_K1 ∈ {Sup, Part, Contra, Unver}</text>
+        </g>
+
+        <!-- 3. BİLEŞEN 2 (K2 - ÖNERME DÜZEYLİ NLI) SAĞ SÜTUN -->
+        <g transform="translate(590, 150)" filter="url(#shadow)">
+          <rect width="360" height="230" rx="14" fill="url(#gradK2)" stroke="#8b5cf6" stroke-width="2"/>
+          <rect x="15" y="15" width="330" height="32" rx="6" fill="#7c3aed"/>
+          <text x="180" y="36" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">BİLEŞEN 2: ÖNERME-DÜZEYLİ NLI (K2)</text>
+
+          <!-- Alt Adım 1: Gemma-4 Atomizer -->
+          <rect x="20" y="60" width="320" height="58" rx="8" fill="#ffffff" stroke="#c4b5fd"/>
+          <text x="30" y="78" font-size="11" font-weight="700" fill="#5b21b6">1. Aşama: Gemma-4 QLoRA Atomizer (2B Yerel):</text>
+          <text x="30" y="94" font-size="11" fill="#6d28d9">İddia ➔ Bağımsız Önermelere Ayrıştırma {a₁, a₂, ..., aₙ}</text>
+          <text x="30" y="108" font-size="10" fill="#7c3aed">%99.58 Test Kapsaması &bull; Ort. 2.08 atom/iddia</text>
+
+          <!-- Alt Adım 2: mDeBERTa NLI -->
+          <rect x="20" y="125" width="320" height="60" rx="8" fill="#ffffff" stroke="#c4b5fd"/>
+          <text x="30" y="142" font-size="11" font-weight="700" fill="#5b21b6">2. Aşama: mDeBERTa-v3 Önerme NLI (278M):</text>
+          <text x="30" y="158" font-size="11" fill="#6d28d9">Her atom için: (Bağlam, aᵢ) ➔ {Entail, Neutral, Contra}</text>
+          <text x="30" y="173" font-size="10" fill="#7c3aed">Soft-Probability Ortalama Toplulaştırma (~28ms)</text>
+
+          <rect x="25" y="195" width="310" height="26" rx="6" fill="#ffffff" stroke="#c4b5fd"/>
+          <text x="180" y="212" text-anchor="middle" font-size="11" font-weight="700" fill="#6d28d9">K2 Çıktısı: ŷ_K2 ∈ {Sup, Part, Contra, Unver}</text>
+        </g>
+
+        <!-- K1 ve K2'den Karar Eşitlik Düğümüne Çizgiler -->
+        <path d="M 250 380 L 250 420 L 460 420" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <path d="M 770 380 L 770 420 L 560 420" fill="none" stroke="#7c3aed" stroke-width="2"/>
+
+        <!-- 4. KARAR MERKEZİ (ROUTER / TRIAGE) -->
+        <g transform="translate(435, 395)" filter="url(#shadow)">
+          <polygon points="75,0 150,50 75,100 0,50" fill="#ffffff" stroke="#0f172a" stroke-width="2"/>
+          <text x="75" y="46" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">KARARLAR</text>
+          <text x="75" y="62" text-anchor="middle" font-size="12" font-weight="800" fill="#0f172a">AYNI MI?</text>
+        </g>
+
+        <!-- EVET KANALI (KONSENSÜS BÖLGESİ) SOLA/AŞAĞI -->
+        <path d="M 435 445 L 260 445 L 260 500" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#arrowGreen)"/>
+        <rect x="290" y="425" width="120" height="24" rx="4" fill="#dcfce7" stroke="#86efac"/>
+        <text x="350" y="441" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">EVET (%74.9 Vaka)</text>
+
+        <!-- KONSENSÜS KARTI -->
+        <g transform="translate(80, 500)" filter="url(#shadow)">
+          <rect width="360" height="150" rx="14" fill="url(#gradCons)" stroke="#22c55e" stroke-width="2"/>
+          <text x="180" y="30" text-anchor="middle" font-size="14" font-weight="800" fill="#15803d">✅ TAM KONSENSÜS BÖLGESİ</text>
+          <text x="180" y="52" text-anchor="middle" font-size="12" font-weight="700" fill="#166534">358 Altın Test Örneği (337 Doğru)</text>
+
+          <text x="25" y="80" font-size="12" fill="#14532d">• İki farklı mimari aynı hükümde uzlaştı.</text>
+          <text x="25" y="98" font-size="12" font-weight="700" fill="#14532d">• Doğruluk: %94.13 (İnsan Uzman Güvenilirliği)</text>
+          <text x="25" y="116" font-size="12" fill="#14532d">• Sıfır LLM API Çağrısı &bull; $0.00 Ek Maliyet</text>
+          <text x="25" y="134" font-size="12" fill="#14532d">• Çıkarım Gecikmesi: Anında (~35ms)</text>
+        </g>
+
+        <!-- HAYIR KANALI (UYUŞMAZLIK / ARBITRATION) SAĞA/AŞAĞI -->
+        <path d="M 585 445 L 760 445 L 760 500" fill="none" stroke="#ea580c" stroke-width="3" marker-end="url(#arrowOrange)"/>
+        <rect x="610" y="425" width="130" height="24" rx="4" fill="#ffedd5" stroke="#fdba74"/>
+        <text x="675" y="441" text-anchor="middle" font-size="11" font-weight="700" fill="#c2410c">HAYIR (%25.1 Vaka)</text>
+
+        <!-- 5. BİLEŞEN 3 (K3 - META-HAKEM) -->
+        <g transform="translate(580, 500)" filter="url(#shadow)">
+          <rect width="380" height="160" rx="14" fill="url(#gradK3)" stroke="#f97316" stroke-width="2"/>
+          <rect x="15" y="12" width="350" height="30" rx="6" fill="#ea580c"/>
+          <text x="190" y="32" text-anchor="middle" font-size="13" font-weight="700" fill="#ffffff">BİLEŞEN 3: EMSALLİ META-HAKEM (K3)</text>
+
+          <text x="25" y="65" font-size="12" font-weight="700" fill="#9a3412">Hakem Modeli: Meta Llama-3.3-70B-Instruct</text>
+          <text x="25" y="82" font-size="11" fill="#c2410c">(Ablasyon: Qwen-2.5-72B %70.0 | GPT-4o-mini %63.3)</text>
+
+          <text x="25" y="105" font-size="11" font-weight="700" fill="#7c2d12">Hakeme Sunulan Kanıt Dosyası:</text>
+          <text x="25" y="120" font-size="11" fill="#9a3412">• Bağlam + İddia + K1 Kararı + K2 Atom NLI Raporu</text>
+          <text x="25" y="135" font-size="11" fill="#9a3412">• 4 Gerçek Emsal Karar (Few-Shot Precedents)</text>
+          <text x="25" y="150" font-size="11" font-weight="700" fill="#ea580c">120 Uyuşmazlık Çözüm Başarımı: %75.83 (91/120)</text>
+        </g>
+
+        <!-- Konsensüs ve K3'ten Nihai Çıktıya Bağlantılar -->
+        <path d="M 260 650 L 260 700 L 480 700" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+        <path d="M 770 660 L 770 700 L 540 700" fill="none" stroke="#ea580c" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+        <!-- 6. NİHAİ ÇIKTI KARTI -->
+        <g transform="translate(290, 715)" filter="url(#shadow)">
+          <rect width="440" height="85" rx="14" fill="url(#gradFinal)" stroke="#475569" stroke-width="2"/>
+          <text x="220" y="32" text-anchor="middle" font-size="15" font-weight="800" fill="#38bdf8">🎯 NİHAİ HİBRİT DOĞRULAMA ÇIKTISI</text>
+          <text x="220" y="54" text-anchor="middle" font-size="13" font-weight="700" fill="#f8fafc">478 Altın Test Örneği: %89.54 Doğruluk &bull; Macro-F1: 0.8966</text>
+          <text x="220" y="72" text-anchor="middle" font-size="11" fill="#94a3b8">McNemar İstatistiki Anlamlılık: vs K1 (p=0.00064) | vs K2 (p=1.34e-12)</text>
+        </g>
+
+      </svg>
