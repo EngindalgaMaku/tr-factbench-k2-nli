@@ -1,5 +1,9 @@
 # K2 — Atom-Tabanlı Zero-Shot NLI Deney Hattı
 
+> 📌 **TEZ SAVUNMASI VE TEMEL METODOLOJİ RAPORU:**  
+> Jüri savunmasında K1 ve K2'nin bilimsel varlık sebebi, "Frugal AI / Model Cascading", Açıklanabilirlik (XAI), 478 vaka tam LLM karşılaştırması ($p = 0.3593$) ve Danışman Prof. Dr. Serkan Ballı'nın 358 uzlaşma vakası deney bulguları için ana referans belgesi:  
+> 👉 [**`reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md)
+
 Bu klasör, K1'deki task-specific ELECTRA hattından ayrı olarak K2'nin bilimsel ve tekrar üretilebilir deneylerini yürütür.
 K2'nin temel amacı, önceden atomize edilmiş claim'leri hazır çok dilli NLI modelleriyle doğrulamak ve atom kararlarını dört sınıflı claim kararına deterministik biçimde birleştirmektir.
 
