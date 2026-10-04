@@ -4,6 +4,13 @@
 > Jüri savunmasında K1 ve K2'nin bilimsel varlık sebebi, "Frugal AI / Model Cascading", Açıklanabilirlik (XAI), 478 vaka tam LLM karşılaştırması ($p = 0.3593$) ve Danışman Prof. Dr. Serkan Ballı'nın 358 uzlaşma vakası deney bulguları için ana referans belgesi:  
 > 👉 [**`reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md)
 
+> 🔬 **DAĞILIM DIŞI (OOD) GENELLENEBİLİRLİK RAPORLARI (%0 Veri Sızıntısı / Zero Data Leakage):**  
+> Tez başlığındaki *"ve Genellenebilirlik Analizi"* boyutunu kanıtlayan 3 farklı disiplin ve 48 vakalık uçtan uca benchmark sonuçları:  
+> 1. [**Klinik Tıp (Alzheimer / Nöroloji) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_ALZHEIMER_CASE_STUDY_REPORT.md)  
+> 2. [**Türk İş Hukuku (4857 Sayılı Kanun) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_LEGAL_CASE_STUDY_REPORT.md)  
+> 3. [**Finans Piyasaları (Eurobond / Takas) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_FINANCE_CASE_STUDY_REPORT.md)  
+> *(Toplam 48 OOD Vaka: K1=%91.7, K2=%81.3, **Kademeli Hibrit=%100.0**, LLM Tasarrufu=%75.0)*
+
 Bu klasör, K1'deki task-specific ELECTRA hattından ayrı olarak K2'nin bilimsel ve tekrar üretilebilir deneylerini yürütür.
 K2'nin temel amacı, önceden atomize edilmiş claim'leri hazır çok dilli NLI modelleriyle doğrulamak ve atom kararlarını dört sınıflı claim kararına deterministik biçimde birleştirmektir.
 
