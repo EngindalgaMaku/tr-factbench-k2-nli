@@ -1,0 +1,59 @@
+{
+  "component_1_electra": {
+    "model_name": "dbmdz/electra-base-turkish-cased-discriminator + LoRA",
+    "total_parameters": 113868296,
+    "vram_model_mb": 435.13,
+    "vram_peak_inference_mb": 453.36,
+    "mean_latency_ms": 15.36,
+    "median_latency_ms": 15.21,
+    "p95_latency_ms": 15.73,
+    "std_latency_ms": 0.91,
+    "throughput_claims_per_sec": 65.12
+  },
+  "component_2b_mdeberta_nli": {
+    "model_name": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+    "total_parameters": 278811651,
+    "vram_model_mb": 552.87,
+    "mean_latency_per_pair_ms": 26.51,
+    "median_latency_per_pair_ms": 17.93,
+    "p95_latency_per_pair_ms": 37.56,
+    "throughput_pairs_per_sec": 37.72
+  },
+  "component_2a_gemma_atomizer": {
+    "model_name": "google/gemma-4-e2b-it (4-bit NF4 QLoRA)",
+    "quantization": "4-bit NF4 (bitsandbytes)",
+    "vram_model_mb": 6576.5,
+    "mean_latency_ms": 9136.26,
+    "median_latency_ms": 9006.6,
+    "p95_latency_ms": 12875.69,
+    "mean_atoms_per_claim": 2.07
+  },
+  "component_2_full_pipeline": {
+    "mean_latency_ms": 9191.04,
+    "median_latency_ms": 9043.66,
+    "total_vram_mb": 7129.37
+  },
+  "component_3_llama70b_judge": {
+    "model_name": "meta-llama/llama-3.3-70b-instruct (CoT Few-Shot)",
+    "deployment": "Remote OpenRouter Cloud Inference (70 Billion Parameters)",
+    "mean_latency_sec": 4.46,
+    "median_latency_sec": 4.07,
+    "p95_latency_sec": 6.79,
+    "mean_prompt_tokens": 1882.0,
+    "mean_completion_tokens": 126.4
+  },
+  "cascading_hybrid_pipeline": {
+    "local_stack_vram_mb": 7564.5,
+    "local_stack_vram_gb": 7.39,
+    "hardware_fit": "Runs comfortably on single 8GB VRAM consumer GPU (RTX 4060 / RTX 3060)",
+    "consensus_share_pct": 74.9,
+    "disagreement_share_pct": 25.1,
+    "sequential_local_latency_ms": 9206.4,
+    "parallel_local_latency_ms": 9191.04,
+    "expected_latency_sequential_ms": 10326.57,
+    "expected_latency_parallel_ms": 10311.22,
+    "pure_70b_llm_latency_ms": 4462.83,
+    "latency_speedup_vs_pure_llm": 0.43,
+    "cost_reduction_vs_pure_llm_pct": 74.9
+  }
+}
