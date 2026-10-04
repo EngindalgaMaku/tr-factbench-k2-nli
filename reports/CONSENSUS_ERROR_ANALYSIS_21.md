@@ -35,6 +35,33 @@ Bu rapor, iki bağımsız mimarinin neden aynı yanılsamaya düştüğünü sı
 
 ---
 
+### C. 21 Hata Vakasının Hızlı Başvuru İndeksi (Master Table)
+
+| No | Örnek ID | Alan | Altın Etiket | Konsensüs Tahmini | K1 Güven (%) | Ayrışan Atomlar ve Sonuçları |
+|:---:|---|:---:|:---:|:---:|:---:|---|
+| 1 | **tfb_ex_0019** | Finance | contradicted | supported | %96.0 | A1: entailment, A2: entailment |
+| 2 | **tfb_ex_0035** | Finance | contradicted | partially_supported | %99.8 | A1: contradiction, A2: contradiction, A3: entailment |
+| 3 | **tfb_ex_0115** | Finance | contradicted | partially_supported | %99.5 | A1: entailment, A2: entailment, A3: contradiction |
+| 4 | **tfb_ex_0195** | Legal | contradicted | partially_supported | %100.0 | A1: entailment, A2: contradiction |
+| 5 | **tfb_ex_0232** | Legal | unverifiable | contradicted | %54.1 | A1: contradiction, A2: contradiction |
+| 6 | **tfb_ex_0274** | Legal | partially_supported | supported | %99.7 | A1: entailment, A2: entailment |
+| 7 | **tfb_ex_0278** | Legal | partially_supported | supported | %66.6 | A1: entailment, A2: entailment |
+| 8 | **tfb_ex_0323** | Medical | contradicted | partially_supported | %99.9 | A1: contradiction, A2: entailment, A3: contradiction |
+| 9 | **tfb_ex_0332** | Medical | unverifiable | supported | %69.8 | A1: entailment |
+| 10 | **tfb_ex_0336** | Medical | unverifiable | partially_supported | %100.0 | A1: entailment, A2: neutral |
+| 11 | **tfb_ex_0340** | Medical | unverifiable | partially_supported | %81.9 | A1: entailment, A2: neutral |
+| 12 | **tfb_ex_0360** | Medical | unverifiable | contradicted | %100.0 | A1: contradiction, A2: neutral |
+| 13 | **tfb_ex_0363** | Medical | contradicted | partially_supported | %99.9 | A1: entailment, A2: contradiction |
+| 14 | **tfb_ex_0364** | Medical | unverifiable | partially_supported | %98.7 | A1: neutral, A2: entailment |
+| 15 | **tfb_ex_0368** | Medical | unverifiable | contradicted | %56.6 | A1: contradiction, A2: neutral |
+| 16 | **tfb_ex_0372** | Medical | unverifiable | contradicted | %97.6 | A1: neutral, A2: contradiction |
+| 17 | **tfb_ex_0405** | Medical | supported | partially_supported | %97.8 | A1: contradiction, A2: entailment |
+| 18 | **tfb_ex_0423** | Medical | contradicted | partially_supported | %83.7 | A1: entailment, A2: contradiction |
+| 19 | **tfb_ex_0452** | Medical | unverifiable | partially_supported | %52.1 | A1: neutral, A2: entailment |
+| 20 | **tfb_ex_0463** | Medical | contradicted | partially_supported | %97.0 | A1: contradiction, A2: entailment |
+| 21 | **tfb_ex_0468** | Medical | unverifiable | contradicted | %99.9 | A1: contradiction |
+
+---
 ## 2. Sınıf Geçişlerine Göre 21 Vakanın Detaylı İncelenmesi
 
 ### Grup 1: Çelişkiyi Kısmi Destek Sanma (contradicted -> partially_supported, 7 Vaka)
