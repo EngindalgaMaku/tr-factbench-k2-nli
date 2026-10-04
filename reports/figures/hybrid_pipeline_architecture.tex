@@ -105,13 +105,13 @@
 \draw[arr=k1blue] (k1.south) |- (router.west);
 \draw[arr=k2purple] (k2.south) |- (router.east);
 
-% 5. KONSENSÜS BÖLGESİ (SOL ALTA)
+% 5. DOĞRUDAN UZLAŞMA BÖLGESİ (SOL ALTA)
 \node[box=consgreen, fill=consbg, text width=5.0cm, below left=1.6cm and 0.8cm of router] (consensus) {
-    \textbf{\textcolor{consgreen}{\normalsize KONSENSÜS ONAYI}}\\[4pt]
+    \textbf{\textcolor{consgreen}{\normalsize DOĞRUDAN UZLAŞMA}}\\[4pt]
     \footnotesize
-    İki model doğrudan hemfikir.\\
-    Dış LLM çağrısı yapılmadan\\
-    anında onaylanır.
+    İki model aynı kararda birleşti.\\
+    Dış hakeme gerek kalmadan\\
+    doğrudan onaylanır.
 };
 
 % 6. BİLEŞEN 3: META-HAKEM (SAĞ ALTA)
