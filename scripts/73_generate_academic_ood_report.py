@@ -88,9 +88,10 @@ Bu testler, halüsinasyon tespiti ve doğrulama (fact-checking) için önerilen 
 2. **K2 - Bileşen 2: Atomik NLI Doğrulayıcı (Gemma-4-2B + mDeBERTa):** Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.
 3. **Meta-Hakem (Llama-3.3-70B):** K1 ve K2 farklı kararlar verdiğinde (*Uyuşmazlık*) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.
 
-<div class="page-break"></div>
+<div class="prompt-box-wrapper">
 
-**Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):**
+<p style="font-weight: bold; font-size: 11pt; color: #2c3e50; margin-bottom: 4px;">Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):</p>
+
 ```text
 Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
 
@@ -133,6 +134,8 @@ Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN 
   "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
 }}
 ```
+
+</div>
 
 <div class="page-break"></div>
 
@@ -393,7 +396,8 @@ def convert_md_to_html(md_text):
             color: #c0392b;
         }}
         table code {{ color: #2980b9; font-weight: bold; }}
-        pre {{ background-color: #f8f9f9; padding: 12px; border-radius: 5px; border: 1px solid #d5dbdb; font-family: 'Consolas', monospace; font-size: 8.5pt; color: #2c3e50; white-space: pre-wrap; word-wrap: break-word; page-break-inside: avoid; }}
+        pre {{ background-color: #f8f9f9; padding: 10px; border-radius: 5px; border: 1px solid #d5dbdb; font-family: 'Consolas', monospace; font-size: 7.8pt; line-height: 1.25; color: #2c3e50; white-space: pre-wrap; word-wrap: break-word; margin-top: 4px; }}
+        .prompt-box-wrapper {{ page-break-before: always; page-break-inside: avoid; }}
     </style>
 </head>
 <body>
