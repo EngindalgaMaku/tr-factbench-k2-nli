@@ -383,7 +383,7 @@ def convert_md_to_html(md_text):
             color: #c0392b;
         }}
         table code {{ color: #2980b9; font-weight: bold; }}
-        pre {{ background-color: #f8f9f9; padding: 12px; border-radius: 5px; border: 1px solid #d5dbdb; font-family: 'Consolas', monospace; font-size: 8.5pt; color: #2c3e50; white-space: pre-wrap; word-wrap: break-word; }}
+        pre {{ background-color: #f8f9f9; padding: 12px; border-radius: 5px; border: 1px solid #d5dbdb; font-family: 'Consolas', monospace; font-size: 8.5pt; color: #2c3e50; white-space: pre-wrap; word-wrap: break-word; page-break-inside: avoid; }}
     </style>
 </head>
 <body>
