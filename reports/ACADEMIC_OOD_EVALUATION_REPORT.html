@@ -140,6 +140,8 @@
 <li><strong>K2 - Bileşen 2: Atomik NLI Doğrulayıcı (Gemma-4-2B + mDeBERTa):</strong> Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.</li>
 <li><strong>Meta-Hakem (Llama-3.3-70B):</strong> K1 ve K2 farklı kararlar verdiğinde (<em>Uyuşmazlık</em>) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.</li>
 </ol>
+<div class="page-break"></div>
+
 <p><strong>Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):</strong></p>
 <pre><code class="language-text">Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
 
@@ -178,6 +180,8 @@ Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN 
   &quot;final_decision&quot;: &quot;&lt;supported | partially_supported | contradicted | unverifiable&gt;&quot;
 }}
 </code></pre>
+<div class="page-break"></div>
+
 <h2>3. Kümülatif Performans Tablosu</h2>
 <table>
 <thead>

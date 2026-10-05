@@ -16,6 +16,8 @@ Bu testler, halüsinasyon tespiti ve doğrulama (fact-checking) için önerilen 
 2. **K2 - Bileşen 2: Atomik NLI Doğrulayıcı (Gemma-4-2B + mDeBERTa):** Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.
 3. **Meta-Hakem (Llama-3.3-70B):** K1 ve K2 farklı kararlar verdiğinde (*Uyuşmazlık*) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.
 
+<div class="page-break"></div>
+
 **Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):**
 ```text
 Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
@@ -55,6 +57,8 @@ Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN 
   "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
 }}
 ```
+
+<div class="page-break"></div>
 
 ## 3. Kümülatif Performans Tablosu
 
