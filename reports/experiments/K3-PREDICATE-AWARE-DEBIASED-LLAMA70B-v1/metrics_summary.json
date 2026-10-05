@@ -1,0 +1,15 @@
+{
+  "experiment_id": "K3-PREDICATE-AWARE-DEBIASED-LLAMA70B-v1",
+  "judge_model": "meta-llama/llama-3.3-70b-instruct",
+  "n_cases": 123,
+  "judge_correct": 110,
+  "judge_accuracy": 0.8943,
+  "judge_macro_f1": 0.8995,
+  "judge_mcc": 0.8576,
+  "end_to_end_480_correct": 447,
+  "end_to_end_480_accuracy": 0.9313,
+  "end_to_end_480_macro_f1": 0.9315,
+  "end_to_end_480_mcc": 0.9092,
+  "oracle_ceiling_accuracy": 0.9333,
+  "distance_to_oracle": 0.002
+}
