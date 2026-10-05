@@ -53,9 +53,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 | Metrik / Model | Tıp (Alzheimer) | Hukuk (İş Kanunu) | Finans (Eurobond) | Toplam (48 Vaka) |
 | :--- | :---: | :---: | :---: | :---: |
 | K1 Doğruluğu (ELECTRA-TR) | 15/16 (%93.75) | 14/16 (%87.50) | 15/16 (%93.75) | 44/48 (%91.67) |
-| K2 Doğruluğu (Gemma-4+mDeBERTa) | 13/16 (%81.25) | 15/16 (%93.75) | 11/16 (%68.75) | 39/48 (%81.25) |
-| Doğrudan Uzlaşma (Hakemsiz) Oranı | 13/16 (%81.25) | 13/16 (%81.25) | 10/16 (%62.50) | 36/48 (%75.00) |
-| **Hibrit Mimari Nihai Doğruluğu** | **16/16 (%100.0)** | **16/16 (%100.0)** | **16/16 (%100.0)** | **48/48 (%100.0)** |
+| K2 Doğruluğu (Gemma-4+mDeBERTa) | 15/16 (%93.75) | 12/16 (%75.0) | 14/16 (%87.5) | 41/48 (%85.4) |
+| Doğrudan Uzlaşma (Hakemsiz) Oranı | 14/16 (%87.5) | 10/16 (%62.5) | 13/16 (%81.2) | 37/48 (%77.0) |
+| **Hibrit Mimari Nihai Doğruluğu** | **15/16 (%93.75)** | **15/16 (%93.75)** | **15/16 (%93.75)** | **45/48 (%93.75)** |
 
 <div class="page-break"></div>
 
