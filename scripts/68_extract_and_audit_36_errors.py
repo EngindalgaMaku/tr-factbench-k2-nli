@@ -100,8 +100,8 @@ def main() -> None:
                     "error_type": "arbitration_error",
                 })
 
-    print(f"Toplam Konsensüs Hatası : {len(cons_errors)} / 357 (%{len(cons_errors)/357*100:.2f})")
-    print(f"Toplam Hakem Hatası     : {len(arb_errors)} / 123 (%{len(arb_errors)/123*100:.2f})")
+    print(f"Toplam Yerel Modellerin Ortak Yanılgısı (Doğrudan Uzlaşma Hatası) : {len(cons_errors)} / 357 (%{len(cons_errors)/357*100:.2f})")
+    print(f"Toplam Meta-Hakem Karar Hatası (Uyuşmazlık Çözüm Hatası)     : {len(arb_errors)} / 123 (%{len(arb_errors)/123*100:.2f})")
     print(f"TOPLAM SİSTEM HATASI    : {len(cons_errors) + len(arb_errors)} / 480 (Doğruluk: %{(480 - len(cons_errors) - len(arb_errors))/480*100:.2f})")
 
     # 4. Taxonomy
@@ -126,14 +126,14 @@ def main() -> None:
         "",
         "Önceki mimaride sistem toplam **44 hata** (ve 2 vaka atomizer çökmesi) üretmekteydi (%90.42 - %90.79 doğruluk).",
         "Bileşen 0 (Nötr Atomlar ve Etiket Maskeleme) mimarisine geçilmesiyle birlikte:",
-        "- **Konsensüs Hataları:** 21'den **20'ye** düştü (%94.40 konsensüs doğruluğu).",
+        "- **Yerel Modellerin Ortak Yanılgısı (Doğrudan Uzlaşma Hataları):** 21'den **20'ye** düştü (%94.40 konsensüs doğruluğu).",
         "- **Hakem Uyuşmazlık Hataları:** 23'ten **16'ya** düştü (Hakem doğruluğu %80.49'dan **%86.99'a** yükseldi).",
         "- **Toplam Hata:** 44'ten **36'ya geriledi (-8 net hata azaldı).**",
         "- **Nihai Sistem Doğruluğu:** **%90.83'ten %92.50'ye sıçradı.**",
         "",
         "| Hata Kaynağı | Eski Hata Sayısı | Yeni Hata Sayısı | Net İyileşme |",
         "| :--- | :---: | :---: | :---: |",
-        f"| **Konsensüs Hataları (K1 == K2 != Gold)** | 21 | {len(cons_errors)} | -1 vaka |",
+        f"| **Yerel Modellerin Ortak Yanılgısı (Doğrudan Uzlaşma Hataları) (K1 == K2 != Gold)** | 21 | {len(cons_errors)} | -1 vaka |",
         f"| **Hakem Arbitrasyon Hataları (Hakem != Gold)** | 23 | {len(arb_errors)} | -7 vaka |",
         f"| **TOPLAM HATA** | **44** | **{len(cons_errors) + len(arb_errors)}** | **-8 vaka (%18.2 hata azalışı)** |",
         "",
@@ -143,7 +143,7 @@ def main() -> None:
         "",
         "### 2.1. Alan Bazlı Hata Dağılımı",
         "",
-        "| Alan (Domain) | Konsensüs Hatası | Hakem Hatası | Toplam Hata | Alan Hata Oranı (160 vaka) |",
+        "| Alan (Domain) | Yerel Modellerin Ortak Yanılgısı (Doğrudan Uzlaşma Hatası) | Meta-Hakem Karar Hatası (Uyuşmazlık Çözüm Hatası) | Toplam Hata | Alan Hata Oranı (160 vaka) |",
         "| :--- | :---: | :---: | :---: | :---: |",
     ]
 
@@ -170,7 +170,7 @@ def main() -> None:
         "",
         "## 3. Detaylı Vaka İncelemeleri (36 Hatanın Tam Dökümü)",
         "",
-        "### 3.1. Konsensüs Hataları (Yerel Modellerin Birlikte Yanıldığı 20 Vaka)",
+        "### 3.1. Yerel Modellerin Ortak Yanılgısı (Doğrudan Uzlaşma Hataları) (Yerel Modellerin Birlikte Yanıldığı 20 Vaka)",
         "*Bu vakalarda K1 ve K2 aynı yanlış kararda uzlaşmış, sisteme maliyet tasarrufu sağlatmış ancak hakeme gidilmediği için hata kaçınılmaz olmuştur.*",
         "",
     ])
@@ -218,7 +218,7 @@ def main() -> None:
         "",
         "## 4. Akademik Tartışma ve Teze Katkı",
         "",
-        "1. **Hakem Hatalarının %30.4 Oranında Azalması:**",
+        "1. **Meta-Hakem Karar Hataları (Uyuşmazlık Çözüm Hataları)nın %30.4 Oranında Azalması:**",
         "   - Hakem hataları 23'ten 16'ya inmiştir. Bu düşüş, Nötr Atom yaklaşımının model zehirlenmesini engellediğinin en somut kanıtıdır.",
         "",
         "2. **Kalan 36 Hatanın Doğası:**",
