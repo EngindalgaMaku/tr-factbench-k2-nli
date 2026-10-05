@@ -46,7 +46,7 @@ def generate_markdown():
 **Danışman:** Prof. Dr. Serkan Ballı  
 
 ## 1. Giriş
-Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir.
+Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. Her vaka için sorulan soru, referans bağlam ve değerlendirilen iddia açıkça gösterilmiştir.
 
 ## 2. Kümülatif Performans Tablosu
 
@@ -69,12 +69,14 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
         original_data = load_jsonl(domain['data_file'])
         results_data = load_jsonl(domain['results_file'])
         
-        # Create context lookup map
-        context_map = {item['id']: item['context'] for item in original_data}
+        # Create lookups
+        context_map = {item['id']: item.get('context', 'Bağlam bulunamadı.') for item in original_data}
+        question_map = {item['id']: item.get('question', 'Soru bulunamadı.') for item in original_data}
         
         for res in results_data:
             c_id = res['id']
             context = context_map.get(c_id, "Bağlam bulunamadı.")
+            question = question_map.get(c_id, "Soru bulunamadı.")
             claim = res.get('claim', '')
             gold = res.get('gold_label', '')
             k1 = res.get('k1_pred', '')
@@ -85,7 +87,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
             
             md += f"#### Vaka: `{c_id}`\n\n"
             md += f"**Bağlam:** {context}\n\n"
-            md += f"**İddia:** {claim}\n\n"
+            md += f"**Soru:** {question}\n\n"
+            md += f"**İddia (Sistem Çıktısı):** {claim}\n\n"
             
             md += f"| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |\n"
             md += f"| :--- | :--- | :--- | :--- | :--- |\n"
