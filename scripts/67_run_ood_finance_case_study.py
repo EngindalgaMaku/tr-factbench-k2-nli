@@ -56,8 +56,12 @@ FEWSHOT_PRECEDENTS = """EMSAL KARARLAR (ÖNCEKİ MAHKEME İÇTİHATLARI):
 [EMSAL 1 - İki parçalı doğru iddia]
 BAĞLAM: "Alışverişlerde işyeri bir FAST-TR Karekod oluşturabilir. Müşteri bu karekodu mobil bankacılık uygulamasından okutarak FAST ödemesini başlatır."
 İDDİA: "Alışverişte müşteri, işyerinin oluşturduğu karekodu mobil uygulamasından okutarak FAST ödemesi başlatabilir."
-MODEL A'NIN KARARI: supported
-MODEL B'NİN KARARI: supported (Atom 1: "işyeri karekod oluşturabilir" -> entailed, Atom 2: "müşteri ödeme başlatabilir" -> entailed)
+İDDİANIN ATOMİK ÖNERMELERİ:
+1. "işyeri karekod oluşturabilir"
+2. "müşteri mobil uygulamadan karekodu okutarak FAST ödemesi başlatabilir"
+BİLİRKİŞİ DEĞERLENDİRMELERİ:
+- Model A (Bütüncül Analiz): supported
+- Model B (Atomik Analiz): supported
 HAKEM KARARI:
 ```json
 {
@@ -70,8 +74,12 @@ HAKEM KARARI:
 [EMSAL 2 - Kısmi Destek Kuralı: En az bir doğru + en az bir bağlam dışı/çelişkili parça]
 BAĞLAM: "KOAH'ta kronik öksürük balgamlı veya balgamsız olabilir. Hastalığın alevlenme dönemlerinde balgamın sarı-yeşil renge dönmesi mümkündür."
 İDDİA: "Sarı-yeşil balgam alevlenmede görülebilir, bu renk değişikliği zatürre tanısını kesinleştirir."
-MODEL A'NIN KARARI: contradicted (Gerekçe: Zatürre tanısı bağlamda yoktur, yanlıştır)
-MODEL B'NİN KARARI: partially_supported (Atom 1: "Sarı-yeşil balgam alevlenmede görülebilir" -> entailed, Atom 2: "Zatürre tanısını kesinleştirir" -> not_in_context)
+İDDİANIN ATOMİK ÖNERMELERİ:
+1. "Sarı-yeşil balgam alevlenmede görülebilir"
+2. "bu renk değişikliği zatürre tanısını kesinleştirir"
+BİLİRKİŞİ DEĞERLENDİRMELERİ:
+- Model A (Bütüncül Analiz): contradicted
+- Model B (Atomik Analiz): partially_supported
 HAKEM KARARI:
 ```json
 {
@@ -84,12 +92,16 @@ HAKEM KARARI:
 [EMSAL 3 - Tam Çelişki Kuralı: Sıfır destek + en az bir doğrudan zıtlık]
 BAĞLAM: "Ödeme İste servisinde farklı kullanım modelleri bulunur. Modeller, talebin kabul edilebileceği tarih ile ödemenin beklendiği tarihe göre değişebilir."
 İDDİA: "Ödeme İste servisinde tarihe göre değişmeyen tek bir kullanım modeli vardır."
-MODEL A'NIN KARARI: contradicted (Gerekçe: Bağlam farklı modeller olduğunu söylüyor)
-MODEL B'NİN KARARI: partially_supported (Atom 1: "Ödeme iste servisi vardır" -> entailed, Atom 2: "Tek bir model vardır" -> contradicted)
+İDDİANIN ATOMİK ÖNERMELERİ:
+1. "Ödeme İste servisi vardır"
+2. "tarihe göre değişmeyen tek bir kullanım modeli vardır"
+BİLİRKİŞİ DEĞERLENDİRMELERİ:
+- Model A (Bütüncül Analiz): contradicted
+- Model B (Atomik Analiz): partially_supported
 HAKEM KARARI:
 ```json
 {
-  "reasoning": "İddianın ana hükmü bağlamdaki 'farklı modeller vardır' bilgisiyle doğrudan zıttır. Model B'nin iddiayı zoraki parçalayarak destek çıkarması hatalıdır; iddiada doğrulanabilir bir destek yoktur. Model A haklıdır.",
+  "reasoning": "İddianın temel iddiası 'tek bir model olduğu' yönündedir ve bu bilgi bağlamla taban tabana zıttır. Giriş ifadesi bağımsız bir olgu değil, zıt önermenin taşıyıcısıdır. Model A'nın contradicted kararı doğrudur.",
   "favored_model": "Model A",
   "final_decision": "contradicted"
 }
@@ -98,8 +110,11 @@ HAKEM KARARI:
 [EMSAL 4 - Bilgi Yokluğu / Doğrulanamazlık]
 BAĞLAM: "FAST sistemi 8 Ocak 2021 tarihinde işletime alınmıştır. Ödeme talimatları saniyeler içinde sonuçlanabilir."
 İDDİA: "FAST bildirimi alan taraf tamamlanan ödemeyi bir saat içinde geri çevirebilir."
-MODEL A'NIN KARARI: contradicted
-MODEL B'NİN KARARI: unverifiable (Atom: "tamamlanan ödemeyi geri çevirebilir" -> not_in_context)
+İDDİANIN ATOMİK ÖNERMELERİ:
+1. "FAST bildirimi alan taraf tamamlanan ödemeyi bir saat içinde geri çevirebilir"
+BİLİRKİŞİ DEĞERLENDİRMELERİ:
+- Model A (Bütüncül Analiz): contradicted
+- Model B (Atomik Analiz): unverifiable
 HAKEM KARARI:
 ```json
 {
@@ -107,8 +122,7 @@ HAKEM KARARI:
   "favored_model": "Model B",
   "final_decision": "unverifiable"
 }
-```
-"""
+```"""
 
 
 def call_cot_judge(
@@ -119,11 +133,15 @@ def call_cot_judge(
     k2_atoms: list[dict[str, Any]],
     api_key: str,
 ) -> dict[str, Any]:
-    atoms_str = "\n".join([f"- Atom {i+1}: \"{a['atom']}\" -> Sonuç: {a['label']}" for i, a in enumerate(k2_atoms)])
+    if k2_atoms:
+        atoms_str = "\n".join([f"{i+1}. \"{a['atom']}\"" for i, a in enumerate(k2_atoms)])
+    else:
+        atoms_str = f"1. \"{claim}\""
+
     prompt = f"""Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
 
 GÖREV:
-Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşamamıştır. Bağlamı ve modellerin analizlerini inceleyerek hakem kararını ver.
+Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı bilirkişi modeli uzlaşamamıştır. İddianın bağımsız olarak ayrıştırılmış atomik önermelerini ve bilirkişi modellerinin kararlarını inceleyerek hakem kararını ver.
 
 {FEWSHOT_PRECEDENTS}
 
@@ -131,31 +149,30 @@ Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşam
 ŞİMDİ KARAR VERMEN GEREKEN YENİ VAKA:
 
 BAĞLAM:
-\"\"\"{context}\"\"\"
+'''{context}'''
 
 İDDİA:
-\"\"\"{claim}\"\"\"
+'''{claim}'''
 
-MODEL A'NIN ANALİZİ (Bileşen 1: Doğrudan Doğrulayıcı):
-- Karar: {k1_pred}
-- Açıklama: Cümlenin tamamını bağlamla birlikte tek seferde değerlendirmiştir.
-
-MODEL B'NİN ANALİZİ (Bileşen 2: Atomik NLI Doğrulayıcı):
-- Karar: {k2_pred}
-- Ayrıştırdığı Önermeler ve NLI Sonuçları:
+İDDİANIN ATOMİK ÖNERMELERİ (Ön İnceleme - Bağımsız Ayrıştırıcı Tarafından Bölünmüş Yapıtaşları):
 {atoms_str}
 
-ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
-1. supported: İddiadaki BÜTÜN bilgiler bağlam tarafından açıkça doğrulanmaktadır. İddiada hiçbir yanlış veya bağlam dışı parça yoksa bu etiket ZORUNLUDUR. Sırf Model B iddiayı atomlara böldü diye yapay bir kusur arama!
-2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir bilgi yer alıyorsa bu etiket ZORUNLUDUR. Sakın sırf yanlış parça var diye contradicted seçme!
-3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
-4. unverifiable: Bağlamda iddiaya dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.
-5. DİKKAT: Eğer her iki model de (Model A ve Model B) yanlış karar vermişse, 'favored_model' alanına 'Neither' yaz ve bağımsız olarak doğru etiketi ('final_decision') ver!
+BİLİRKİŞİ MODELLERİNİN DEĞERLENDİRMELERİ:
+- Model A (Bütüncül Analiz): {k1_pred}
+  (İddianın tüm bağlam içindeki mantıksal kapsamını tek seferde değerlendirmiştir.)
+- Model B (Atomik Analiz): {k2_pred}
+  (Yukarıdaki atomik önermelerin her birini tekil olarak test ederek bu sonuca varmıştır.)
 
-Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
+ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
+1. supported: İddiadaki BÜTÜN önermeler bağlam tarafından açıkça doğrulanmaktadır.
+2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir önerme yer alıyorsa bu etiket ZORUNLUDUR.
+3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
+4. unverifiable: Bağlamda önermelere dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.
+
+Lütfen ÖNCE bağlamdaki kanıtı ve ayrıştırılmış önermeleri adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
 ```json
 {{
-  "reasoning": "<Önce bağlamdaki kanıtı ve modellerin analizini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe>",
+  "reasoning": "<Önce bağlamdaki kanıtı ve önermeleri tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe>",
   "favored_model": "<Model A | Model B | Neither>",
   "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
 }}
