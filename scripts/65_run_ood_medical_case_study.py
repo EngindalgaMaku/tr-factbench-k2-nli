@@ -294,7 +294,9 @@ def main() -> None:
 
         # Aggregation
         atom_labels = [x["label"] for x in atom_res]
-        if all(l == "entailment" for l in atom_labels):
+        if len(atom_labels) == 0:
+            k2_pred = "unverifiable"
+        elif all(l == "entailment" for l in atom_labels):
             k2_pred = "supported"
         elif "entailment" in atom_labels:
             k2_pred = "partially_supported"

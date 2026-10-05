@@ -294,12 +294,12 @@ def main() -> None:
 
         # Aggregation
         atom_labels = [x["label"] for x in atom_res]
-        if len(atom_labels) > 0 and all(l == "entailment" for l in atom_labels):
+        if len(atom_labels) == 0:
+            k2_pred = "unverifiable"
+        elif all(l == "entailment" for l in atom_labels):
             k2_pred = "supported"
         elif "entailment" in atom_labels:
             k2_pred = "partially_supported"
-        elif len(atom_labels) == 0:
-            k2_pred = k1_pred
         else:
             avg_e = sum(pe_list) / max(len(pe_list), 1)
             avg_n = sum(pn_list) / max(len(pn_list), 1)
