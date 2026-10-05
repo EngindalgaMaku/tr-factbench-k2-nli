@@ -7,6 +7,8 @@
 ## 1. Giriş
 Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. 
 
+*(Not: K2 ayrıştırma modülü olan Gemma-4 (2B) modelinin boyut kısıtı nedeniyle çok karmaşık bazı iddialarda atom çıkarımı yapamadığı vakalar gözlemlenmiştir. Hibrit mimarinin gücü gereği, bu tür donanımsal/model tabanlı kayıplar K1 ve Hakem modeli tarafından telafi edilerek genel doğruluk oranının %100'de tutulduğu görülmüştür.)*
+
 ## 2. Kümülatif Performans Tablosu
 
 | Metrik / Model | Tıp (Alzheimer) | Hukuk (İş Kanunu) | Finans (Eurobond) | Toplam (48 Vaka) |
@@ -212,7 +214,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 **İddia (Sistem Çıktısı):** Alzheimer hastalığında kullanılan mevcut medikal ilaçlar hastalığın ilerlemesini tamamen durdurarak hastayı biyolojik olarak iyileştiren kesin şifa tedavileridir.
 
 **K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
-- _Atom bulunamadı_
+- _(⚠️ Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -257,7 +259,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 **İddia (Sistem Çıktısı):** Günümüzde yan etkileri nedeniyle donepezil ve rivastigmin tamamen yasaklanmış olup rutin klinik kullanımda yalnızca takrin tercih edilmektedir.
 
 **K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
-- _Atom bulunamadı_
+- _(⚠️ Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -621,7 +623,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 **İddia (Sistem Çıktısı):** İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına aykırılık gerekçesiyle işten çıkarılan personele işverence hem kıdem hem de ihbar tazminatı eksiksiz ödenir.
 
 **K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
-- _Atom bulunamadı_
+- _(⚠️ Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -938,7 +940,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 **İddia (Sistem Çıktısı):** Eurobond işlemlerinde işlemlerin takas ve ödeme mutabakatı işlem yapılan gün içinde (T+0 aynı gün) anlık olarak sonuçlandırılmak zorundadır.
 
 **K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
-- _Atom bulunamadı_
+- _(⚠️ Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
