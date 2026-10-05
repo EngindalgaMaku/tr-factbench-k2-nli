@@ -123,6 +123,7 @@
             color: #c0392b;
         }
         table code { color: #2980b9; font-weight: bold; }
+        pre { background-color: #f8f9f9; padding: 12px; border-radius: 5px; border: 1px solid #d5dbdb; font-family: 'Consolas', monospace; font-size: 8.5pt; color: #2c3e50; white-space: pre-wrap; word-wrap: break-word; }
     </style>
 </head>
 <body>
@@ -139,36 +140,44 @@
 <li><strong>K2 - Bileşen 2: Atomik NLI Doğrulayıcı (Gemma-4-2B + mDeBERTa):</strong> Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.</li>
 <li><strong>Meta-Hakem (Llama-3.3-70B):</strong> K1 ve K2 farklı kararlar verdiğinde (<em>Uyuşmazlık</em>) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.</li>
 </ol>
-<p><strong>Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):</strong>
-```text
-Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.</p>
-<p>GÖREV:
-Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşamamıştır. Bağlamı ve modellerin analizlerini inceleyerek hakem kararını ver.</p>
-<p>[...FEW-SHOT ÖRNEKLERİ...]</p>
-<p>ŞİMDİ KARAR VERMEN GEREKEN YENİ VAKA:</p>
-<p>BAĞLAM:
-'''{context}'''</p>
-<p>İDDİA:
-'''{claim}'''</p>
-<p>MODEL A'NIN ANALİZİ (Bileşen 1: Doğrudan Doğrulayıcı):
+<p><strong>Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):</strong></p>
+<pre><code class="language-text">Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
+
+GÖREV:
+Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşamamıştır. Bağlamı ve modellerin analizlerini inceleyerek hakem kararını ver.
+
+[...FEW-SHOT ÖRNEKLERİ...]
+
+ŞİMDİ KARAR VERMEN GEREKEN YENİ VAKA:
+
+BAĞLAM:
+'''{context}'''
+
+İDDİA:
+'''{claim}'''
+
+MODEL A'NIN ANALİZİ (Bileşen 1: Doğrudan Doğrulayıcı):
 - Karar: {k1_pred}
-- Açıklama: Cümlenin tamamını bağlamla birlikte tek seferde değerlendirmiştir.</p>
-<p>MODEL B'NİN ANALİZİ (Bileşen 2: Atomik NLI Doğrulayıcı):
+- Açıklama: Cümlenin tamamını bağlamla birlikte tek seferde değerlendirmiştir.
+
+MODEL B'NİN ANALİZİ (Bileşen 2: Atomik NLI Doğrulayıcı):
 - Karar: {k2_pred}
 - Ayrıştırdığı Önermeler ve NLI Sonuçları:
-{atoms_str}</p>
-<p>ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
+{atoms_str}
+
+ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
 1. supported: İddiadaki BÜTÜN bilgiler bağlam tarafından açıkça doğrulanmaktadır.
 2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir bilgi yer alıyorsa bu etiket ZORUNLUDUR.
 3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
-4. unverifiable: Bağlamda iddiaya dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.</p>
-<p>Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
+4. unverifiable: Bağlamda iddiaya dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.
+
+Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
 {{
-  "reasoning": "&lt;Önce bağlamdaki kanıtı ve modellerin analizini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe&gt;",
-  "favored_model": "<Model A | Model B | Neither>",
-  "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
+  &quot;reasoning&quot;: &quot;&lt;Önce bağlamdaki kanıtı ve modellerin analizini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe&gt;&quot;,
+  &quot;favored_model&quot;: &quot;&lt;Model A | Model B | Neither&gt;&quot;,
+  &quot;final_decision&quot;: &quot;&lt;supported | partially_supported | contradicted | unverifiable&gt;&quot;
 }}
-```</p>
+</code></pre>
 <h2>3. Kümülatif Performans Tablosu</h2>
 <table>
 <thead>
