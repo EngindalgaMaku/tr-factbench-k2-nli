@@ -39,16 +39,14 @@ def load_jsonl(filepath):
     return data
 
 def generate_markdown():
-    md = """# Dağılım Dışı (OOD) Veri Kümelerinde Kademeli Hibrit Mimari Analiz Raporu
+    md = """# Harici Veri Kümelerinde Kademeli Hibrit Mimari Analiz Raporu
 
 **Tarih:** 5 Ekim 2026  
 **Yazar:** Engin Dalga  
 **Danışman:** Prof. Dr. Serkan Ballı  
 
 ## 1. Giriş
-Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. 
-
-*(Not: K2 ayrıştırma modülü olan Gemma-4 (2B) modelinin boyut kısıtı nedeniyle çok karmaşık bazı iddialarda atom çıkarımı yapamadığı vakalar gözlemlenmiştir. Hibrit mimarinin gücü gereği, bu tür donanımsal/model tabanlı kayıplar K1 ve Hakem modeli tarafından telafi edilerek genel doğruluk oranının %100'de tutulduğu görülmüştür.)*
+Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadığı harici alanlardaki (Tıp, Hukuk, Finans) genellenebilirlik performansını test etmek amacıyla oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir.
 
 ## 2. Kümülatif Performans Tablosu
 
@@ -126,7 +124,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
                     md += f"<li>{atom_res.get('atom', '')} <br><span class=\"atom-label {lbl_class}\">mDeBERTa NLI Tahmini: <code>{lbl}</code></span></li>\n"
                 md += "</ul>\n"
             else:
-                md += "<p class=\"warning\">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>\n"
+                md += "<p class=\"warning\">_Atom çıkarımı yapılamadı._</p>\n"
             
             md += f"""    </div>
   </div>

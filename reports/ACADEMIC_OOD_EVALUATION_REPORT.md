@@ -1,13 +1,11 @@
-# Dağılım Dışı (OOD) Veri Kümelerinde Kademeli Hibrit Mimari Analiz Raporu
+# Harici Veri Kümelerinde Kademeli Hibrit Mimari Analiz Raporu
 
 **Tarih:** 5 Ekim 2026  
 **Yazar:** Engin Dalga  
 **Danışman:** Prof. Dr. Serkan Ballı  
 
 ## 1. Giriş
-Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. 
-
-*(Not: K2 ayrıştırma modülü olan Gemma-4 (2B) modelinin boyut kısıtı nedeniyle çok karmaşık bazı iddialarda atom çıkarımı yapamadığı vakalar gözlemlenmiştir. Hibrit mimarinin gücü gereği, bu tür donanımsal/model tabanlı kayıplar K1 ve Hakem modeli tarafından telafi edilerek genel doğruluk oranının %100'de tutulduğu görülmüştür.)*
+Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadığı harici alanlardaki (Tıp, Hukuk, Finans) genellenebilirlik performansını test etmek amacıyla oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir.
 
 ## 2. Kümülatif Performans Tablosu
 
@@ -503,7 +501,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>
+<p class="warning">_Atom çıkarımı yapılamadı._</p>
     </div>
   </div>
 
@@ -616,7 +614,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>
+<p class="warning">_Atom çıkarımı yapılamadı._</p>
     </div>
   </div>
 
@@ -1536,7 +1534,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>
+<p class="warning">_Atom çıkarımı yapılamadı._</p>
     </div>
   </div>
 
@@ -2339,7 +2337,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>
+<p class="warning">_Atom çıkarımı yapılamadı._</p>
     </div>
   </div>
 
