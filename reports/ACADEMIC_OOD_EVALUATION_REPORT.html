@@ -132,7 +132,44 @@
 <strong>Danışman:</strong> Prof. Dr. Serkan Ballı  </p>
 <h2>1. Giriş</h2>
 <p>Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadığı harici alanlardaki (Tıp, Hukuk, Finans) genellenebilirlik performansını test etmek amacıyla oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir.</p>
-<h2>2. Kümülatif Performans Tablosu</h2>
+<h2>2. Deney Kurulumu ve Kademeli Hibrit Mimari</h2>
+<p>Bu testler, halüsinasyon tespiti ve doğrulama (fact-checking) için önerilen <strong>Kademeli Hibrit Mimari</strong> kullanılarak gerçekleştirilmiştir. Mimari üç ana bileşenden oluşmaktadır:</p>
+<ol>
+<li><strong>K1 - Doğrudan Sınıflandırıcı (ELECTRA-TR):</strong> Cümleyi ve bağlamı bir bütün olarak değerlendiren, hızlı ve bütüncül (holistik) bir encoder (kodlayıcı) modeldir.</li>
+<li><strong>K2 - Atomik NLI Ayrıştırıcı (Gemma-4-2B + mDeBERTa):</strong> Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.</li>
+<li><strong>Meta-Hakem (Llama-3.3-70B):</strong> K1 ve K2 farklı kararlar verdiğinde (<em>Uyuşmazlık</em>) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.</li>
+</ol>
+<p><strong>Meta-Hakem (Llama-70B) için kullanılan Sistem İstem'i (Prompt):</strong>
+```text
+Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.</p>
+<p>GÖREV:
+Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşamamıştır. Bağlamı ve modellerin analizlerini inceleyerek hakem kararını ver.</p>
+<p>[...FEW-SHOT ÖRNEKLERİ...]</p>
+<p>ŞİMDİ KARAR VERMEN GEREKEN YENİ VAKA:</p>
+<p>BAĞLAM:
+'''{context}'''</p>
+<p>İDDİA:
+'''{claim}'''</p>
+<p>MODEL A'NIN ANALİZİ (Bileşen 1: Doğrudan Doğrulayıcı):
+- Karar: {k1_pred}
+- Açıklama: Cümlenin tamamını bağlamla birlikte tek seferde değerlendirmiştir.</p>
+<p>MODEL B'NİN ANALİZİ (Bileşen 2: Atomik NLI Doğrulayıcı):
+- Karar: {k2_pred}
+- Ayrıştırdığı Önermeler ve NLI Sonuçları:
+{atoms_str}</p>
+<p>ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
+1. supported: İddiadaki BÜTÜN bilgiler bağlam tarafından açıkça doğrulanmaktadır.
+2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir bilgi yer alıyorsa bu etiket ZORUNLUDUR.
+3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
+4. unverifiable: Bağlamda iddiaya dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.</p>
+<p>Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
+{{
+  "reasoning": "&lt;Önce bağlamdaki kanıtı ve modellerin analizini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe&gt;",
+  "favored_model": "<Model A | Model B | Neither>",
+  "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
+}}
+```</p>
+<h2>3. Kümülatif Performans Tablosu</h2>
 <table>
 <thead>
 <tr>
@@ -153,30 +190,30 @@
 </tr>
 <tr>
 <td style="text-align: left;">K2 Doğruluğu (Gemma-4+mDeBERTa)</td>
-<td style="text-align: center;">13/16 (%81.25)</td>
 <td style="text-align: center;">15/16 (%93.75)</td>
-<td style="text-align: center;">11/16 (%68.75)</td>
-<td style="text-align: center;">39/48 (%81.25)</td>
+<td style="text-align: center;">12/16 (%75.0)</td>
+<td style="text-align: center;">14/16 (%87.5)</td>
+<td style="text-align: center;">41/48 (%85.4)</td>
 </tr>
 <tr>
 <td style="text-align: left;">Doğrudan Uzlaşma (Hakemsiz) Oranı</td>
-<td style="text-align: center;">13/16 (%81.25)</td>
-<td style="text-align: center;">13/16 (%81.25)</td>
-<td style="text-align: center;">10/16 (%62.50)</td>
-<td style="text-align: center;">36/48 (%75.00)</td>
+<td style="text-align: center;">14/16 (%87.5)</td>
+<td style="text-align: center;">10/16 (%62.5)</td>
+<td style="text-align: center;">13/16 (%81.2)</td>
+<td style="text-align: center;">37/48 (%77.0)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Hibrit Mimari Nihai Doğruluğu</strong></td>
-<td style="text-align: center;"><strong>16/16 (%100.0)</strong></td>
-<td style="text-align: center;"><strong>16/16 (%100.0)</strong></td>
-<td style="text-align: center;"><strong>16/16 (%100.0)</strong></td>
-<td style="text-align: center;"><strong>48/48 (%100.0)</strong></td>
+<td style="text-align: center;"><strong>15/16 (%93.75)</strong></td>
+<td style="text-align: center;"><strong>15/16 (%93.75)</strong></td>
+<td style="text-align: center;"><strong>15/16 (%93.75)</strong></td>
+<td style="text-align: center;"><strong>45/48 (%93.75)</strong></td>
 </tr>
 </tbody>
 </table>
 <div class="page-break"></div>
 
-<h2>3. Vaka İncelemeleri</h2>
+<h2>4. Vaka İncelemeleri</h2>
 <h3>Bölüm: Tıp (Alzheimer) Alanı Vakaları</h3>
 <div class="case-container">
   <div class="case-header">
@@ -3041,5 +3078,31 @@
     </div>
   </div>
 </div>
+
+<div class="page-break"></div>
+
+<h2>5. Hata Analizi (Derinlemesine İnceleme)</h2>
+<p>Sistem, Dağılım Dışı (OOD) test setindeki 48 vakanın 45'ini kusursuz şekilde sınıflandırmış, ancak 3 vakada (1 Tıp, 1 Hukuk, 1 Finans) hata yapmıştır. Hibrit mimarinin zayıf noktalarını tespit etmek amacıyla bu 3 vakanın hata mekanizmaları aşağıda detaylandırılmıştır.</p>
+<h3>4.1. Tıp Vakası (ood_med_10)</h3>
+<ul>
+<li><strong>İddia:</strong> <em>Memantin bir kolinesteraz inhibitörü olup kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır.</em></li>
+<li><strong>Altın Etiket:</strong> Contradicted (Bağlamla Çelişiyor)</li>
+<li><strong>Sistem Kararı:</strong> Partially Supported (Kısmen Destekleniyor) ❌</li>
+<li><strong>Hata Mekanizması (Hakem Halüsinasyonu):</strong> İddianın tamamı bağlamla çelişmesine rağmen, K2 NLI modülü (mDeBERTa) iddiayı atomlarına böldükten sonra hatalı bir şekilde <code>[entailment, contradiction]</code> tahmini yapmış ve uyuşmazlık Hakem'e (Llama-3.3-70B) gitmiştir. Büyük dil modeli (Hakem) bağlamı okurken tıp domaini ile ilgili kendi içsel (pre-trained) bilgisini araya karıştırmış, memantinin bir kolinesteraz inhibitörü olduğunu zannederek iddianın ilk yarısını <em>doğru</em> kabul etmiş ve kararı <code>partially_supported</code> olarak onaylamıştır. Bu durum, Hakem modelinin aşırı özgüvenli halüsinasyonlarının sistemin doğruluğunu nasıl bozduğuna dair klasik bir örnektir.</li>
+</ul>
+<h3>4.2. Hukuk Vakası (ood_law_07)</h3>
+<ul>
+<li><strong>İddia:</strong> <em>İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır ancak dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir.</em></li>
+<li><strong>Altın Etiket:</strong> Partially Supported (Kısmen Destekleniyor)</li>
+<li><strong>Sistem Kararı:</strong> Contradicted (Bağlamla Çelişiyor) ❌</li>
+<li><strong>Hata Mekanizması (Kavramsal Yanılgı):</strong> İddia, bağlamda var olan DOĞRU bir bilgi ile bağlamla çelişen YANLIŞ bir bilginin birleşiminden oluştuğu için tam olarak <em>Partially Supported</em> etiketine uymaktadır. Ancak Hakem modeli (Llama), <em>"bir cümlenin içinde tek bir yalan varsa o cümlenin tamamı yalandır"</em> şeklinde katı bir mantıksal tümevarım (strict boolean logic) yürüterek kararı <code>contradicted</code> olarak bozmuştur. Model, <em>Kısmen Destekleniyor</em> etiketinin tanım sınırlarını esnetememiştir.</li>
+</ul>
+<h3>4.3. Finans Vakası (ood_fin_15)</h3>
+<ul>
+<li><strong>İddia:</strong> <em>Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler.</em></li>
+<li><strong>Altın Etiket:</strong> Unverifiable (Doğrulanamaz)</li>
+<li><strong>Sistem Kararı:</strong> Contradicted (Bağlamla Çelişiyor) ❌</li>
+<li><strong>Hata Mekanizması (Aşırı Çıkarım - Over-inference):</strong> Bağlamda Eurobondların <em>"genellikle ABD Doları veya Avro gibi para birimleri cinsinden ihraç edildiği"</em> bilgisi yer almaktadır. Bağlam, İsviçre frangını kesin bir dille yasaklamadığı için altın etiket <code>unverifiable</code> olmalıdır. Ancak K2 ve Hakem modeli, <em>"genellikle dolar veya avro ise, YALNIZCA İsviçre frangı olması imkansızdır"</em> şeklinde probabilistik (olasılıksal) bir mantık yürüterek bunu doğrudan çelişki (<code>contradicted</code>) olarak işaretlemiştir. Dil modellerinin, metinde verilmeyen bilgileri dünyevi mantıkla (world knowledge) çürütmeye çalışması bu hatanın temel sebebidir.</li>
+</ul>
 </body>
 </html>
