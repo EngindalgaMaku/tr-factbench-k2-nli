@@ -1,0 +1,11 @@
+{
+  "experiment_id": "K3-DEBIASED-NEUTRAL-ATOMS-LLAMA70B-v1",
+  "judge_model": "meta-llama/llama-3.3-70b-instruct",
+  "n_cases": 123,
+  "correct": 107,
+  "accuracy": 0.8699,
+  "macro_f1": 0.8804,
+  "mcc": 0.8279,
+  "end_to_end_480_correct": 444,
+  "end_to_end_480_accuracy": 0.925
+}
