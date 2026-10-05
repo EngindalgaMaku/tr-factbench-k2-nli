@@ -2,7 +2,7 @@
 analysis = '''
 <div class="page-break"></div>
 
-## 4. Hata Analizi (Derinlemesine İnceleme)
+## 5. Hata Analizi (Derinlemesine İnceleme)
 
 Sistem, Dağılım Dışı (OOD) test setindeki 48 vakanın 45'ini kusursuz şekilde sınıflandırmış, ancak 3 vakada (1 Tıp, 1 Hukuk, 1 Finans) hata yapmıştır. Hibrit mimarinin zayıf noktalarını tespit etmek amacıyla bu 3 vakanın hata mekanizmaları aşağıda detaylandırılmıştır.
 
@@ -74,7 +74,56 @@ def generate_markdown():
 ## 1. Giriş
 Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadığı harici alanlardaki (Tıp, Hukuk, Finans) genellenebilirlik performansını test etmek amacıyla oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir.
 
-## 2. Kümülatif Performans Tablosu
+
+## 2. Deney Kurulumu ve Kademeli Hibrit Mimari
+
+Bu testler, halüsinasyon tespiti ve doğrulama (fact-checking) için önerilen **Kademeli Hibrit Mimari** kullanılarak gerçekleştirilmiştir. Mimari üç ana bileşenden oluşmaktadır:
+
+1. **K1 - Doğrudan Sınıflandırıcı (ELECTRA-TR):** Cümleyi ve bağlamı bir bütün olarak değerlendiren, hızlı ve bütüncül (holistik) bir encoder (kodlayıcı) modeldir.
+2. **K2 - Atomik NLI Ayrıştırıcı (Gemma-4-2B + mDeBERTa):** Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.
+3. **Meta-Hakem (Llama-3.3-70B):** K1 ve K2 farklı kararlar verdiğinde (*Uyuşmazlık*) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.
+
+**Meta-Hakem (Llama-70B) için kullanılan Sistem İstem'i (Prompt):**
+```text
+Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.
+
+GÖREV:
+Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşamamıştır. Bağlamı ve modellerin analizlerini inceleyerek hakem kararını ver.
+
+[...FEW-SHOT ÖRNEKLERİ...]
+
+ŞİMDİ KARAR VERMEN GEREKEN YENİ VAKA:
+
+BAĞLAM:
+'''{context}'''
+
+İDDİA:
+'''{claim}'''
+
+MODEL A'NIN ANALİZİ (Bileşen 1: Doğrudan Doğrulayıcı):
+- Karar: {k1_pred}
+- Açıklama: Cümlenin tamamını bağlamla birlikte tek seferde değerlendirmiştir.
+
+MODEL B'NİN ANALİZİ (Bileşen 2: Atomik NLI Doğrulayıcı):
+- Karar: {k2_pred}
+- Ayrıştırdığı Önermeler ve NLI Sonuçları:
+{atoms_str}
+
+ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
+1. supported: İddiadaki BÜTÜN bilgiler bağlam tarafından açıkça doğrulanmaktadır.
+2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir bilgi yer alıyorsa bu etiket ZORUNLUDUR.
+3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
+4. unverifiable: Bağlamda iddiaya dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.
+
+Lütfen ÖNCE bağlamdaki kanıtı adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
+{{
+  "reasoning": "<Önce bağlamdaki kanıtı ve modellerin analizini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe>",
+  "favored_model": "<Model A | Model B | Neither>",
+  "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
+}}
+```
+
+## 3. Kümülatif Performans Tablosu
 
 | Metrik / Model | Tıp (Alzheimer) | Hukuk (İş Kanunu) | Finans (Eurobond) | Toplam (48 Vaka) |
 | :--- | :---: | :---: | :---: | :---: |
@@ -85,7 +134,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 
 <div class="page-break"></div>
 
-## 3. Vaka İncelemeleri
+## 4. Vaka İncelemeleri
 
 """
     is_first_domain = True
