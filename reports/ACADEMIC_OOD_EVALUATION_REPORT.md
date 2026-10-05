@@ -503,7 +503,6 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_09</code></h4>
     <div style="display: flex; gap: 10px;">
-      <span class="badge hakem">⚖️ Hakem Kararı</span>
       <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
     </div>
   </div>
@@ -520,7 +519,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">_Atom çıkarımı yapılamadı._</p>
+<ul>
+<li>Alzheimer hastalığında kullanılan mevcut medikal ilaçlar hastalığın ilerlemesini tamamen durdurarak hastayı biyolojik olarak iyileştiren kesin şifa tedavileridir. <br><span class="atom-label contradiction">mDeBERTa NLI Tahmini: <code>contradiction</code></span></li>
+</ul>
     </div>
   </div>
 
@@ -539,7 +540,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
           <tr>
             <td><code>contradicted</code></td>
             <td><code>contradicted</code></td>
-            <td><code>supported</code></td>
+            <td><code>contradicted</code></td>
           </tr>
         </tbody>
       </table>
@@ -550,8 +551,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-title">4. Nihai Karar ve Gerekçe</div>
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
-      <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, Alzheimer hastalığında kullanılan mevcut medikal ilaçların hastalığı tamamen durdurarak şifa veren tedaviler olduğunu iddia etmektedir. Bağlam ise bu ilaçların semptomları hafifletmeye yönelik semptomatik tedaviler olduğunu ve hastalığı tamamen durduran veya şifa veren tedaviler olmadığını açıkça belirtmektedir.</p>
+      <p><strong>Mekanizma:</strong> Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)</p>
+<p><strong>Açıklama:</strong> K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.</p>
     </div>
   </div>
 </div>
@@ -562,7 +563,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <h4>Vaka İncelemesi: <code>ood_med_10</code></h4>
     <div style="display: flex; gap: 10px;">
       <span class="badge hakem">⚖️ Hakem Kararı</span>
-      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+      <span class="badge yanliş">❌ Sistem Kararı: YANLIŞ</span>
     </div>
   </div>
 
@@ -610,9 +611,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">4. Nihai Karar ve Gerekçe</div>
     <div class="section-content">
-      <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
+      <p><strong>Nihai Karar:</strong> <code>partially_supported</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada memantinin bir kolinesteraz inhibitörü olduğu doğru bilgi ile kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanması bilgisi bir arada bulunmakta, ancak bağlam memantinin aslında kalsiyumun hücreye aşırı girişini engelleyerek eksitotoksisiteyi önlediğini belirtmektedir. Model B'nin atomik analizinin gösterdiği gibi, iddianın bir parçası (memantin bir kolinesteraz inhibitörü değildir, NMDA reseptör antagonistidir) doğrudan bağlam tarafından çelişmekte ve diğer parçası (eksitotoksisiteyi artırmak amacıyla uygulanması) da bağlamla çelişmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada memantinin bir kolinesteraz inhibitörü olduğu doğru bilgi ile kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır ifadesi yer almakta, bu ise bağlamda memantinin aşırı glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini ve eksitotoksisiteyi önlediği bilgisiyle doğrudan çelişmektedir. Model B'nin atomik analizinin gösterdiği gibi, iddianın bir parçası doğru (memantin ile ilgili) iken diğer parçası bağlamla çelişmektedir, bu nedenle partially_supported kararı verilmesi gerekir.</p>
     </div>
   </div>
 </div>
@@ -639,7 +640,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">_Atom çıkarımı yapılamadı._</p>
+<ul>
+<li>Günümüzde yan etkileri nedeniyle donepezil ve rivastigmin tamamen yasaklanmış olup rutin klinik kullanımda yalnızca takrin tercih edilmektedir. <br><span class="atom-label contradiction">mDeBERTa NLI Tahmini: <code>contradiction</code></span></li>
+</ul>
     </div>
   </div>
 
@@ -658,7 +661,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
           <tr>
             <td><code>contradicted</code></td>
             <td><code>partially_supported</code></td>
-            <td><code>supported</code></td>
+            <td><code>contradicted</code></td>
           </tr>
         </tbody>
       </table>
@@ -670,7 +673,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, donepezil ve rivastigmin'in tamamen yasaklandığını ve yalnızca takrin'in tercih edildiğini öne sürmektedir, ancak bağlamda bu bilgilerin hiçbirinin doğrulanmadığı görülmektedir. Ayrıca, bağlamda takrin'in artık kullanılmadığı bilgisi yer almaktadır, bu nedenle iddia doğrudan bağlamla çelişmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada yer alan donepezil ve rivastigmin'in tamamen yasaklanmış olduğu ve yalnızca takrin'in tercih edildiği bilgisi, bağlam tarafından doğrudan çelişmekte ve yan etkileri nedeniyle takrin'in artık kullanılmadığı belirtilmektedir. Model B'nin atomik analizinin gösterdiği gibi, iddia edilen bilgiler bağlamla doğrudan zıtlık içermektedir.</p>
     </div>
   </div>
 </div>
@@ -1206,7 +1209,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>supported</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, bağlamda açıkça belirtilen 'feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz' bilgisini doğrudan yansıtmaktadır. Model A, iddiayı bütün olarak değerlendirerek supported kararı vermiştir ve bu doğru bir yaklaşımdır.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, bağlamda açıkça belirtilen 'feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz' bilgisiyle tamamen uyumlu olup, her iki önerme de bağlam tarafından doğrudan doğrulanmaktadır. Model A, iddiayı doğru bir şekilde supported olarak değerlendirmiştir.</p>
     </div>
   </div>
 </div>
@@ -1337,7 +1340,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <h4>Vaka İncelemesi: <code>ood_law_07</code></h4>
     <div style="display: flex; gap: 10px;">
       <span class="badge hakem">⚖️ Hakem Kararı</span>
-      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+      <span class="badge yanliş">❌ Sistem Kararı: YANLIŞ</span>
     </div>
   </div>
 
@@ -1385,9 +1388,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">4. Nihai Karar ve Gerekçe</div>
     <div class="section-content">
-      <p><strong>Nihai Karar:</strong> <code>partially_supported</code></p>
+      <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada iki farklı önerme bulunmaktadır: 'İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır' ve 'dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir'. İlk önerme bağlam tarafından doğrulanırken, ikinci önerme bağlamda bulunmamaktadır ve doğrudan bir çelişki oluşturmamaktadır, ancak bağlamda böyle bir olanaktan da bahsedilmez. Dolayısıyla, iddianın bir kısmı bağlam tarafından desteklenirken, diğer kısmı bağlamda yer almayan bir duruma işaret etmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada doğru bir bilgi (işe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır) ile bağlamda olmayan veya çelişen bir bilgi (dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir) bir arada yer almaktadır. Model B'nin atomik analizinin gösterdiği gibi, ikinci parça bağlam tarafından doğrulanmamaktadır ve bu durum doğrudan bir çelişki oluşturmaktadır.</p>
     </div>
   </div>
 </div>
@@ -1507,7 +1510,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada yer alan ihbar süresinin sekiz hafta olarak uygulanması ifadesi, bağlamda belirtilen altı aydan az sürmüş işçi için iki hafta olan ihbar süresiyle doğrudan çelişmektedir. Model B'nin atomik olarak ayırdığı önerme doğrudan bağlamla çeliştiğinden, Model B'nin kararı doğru görünmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresinin sekiz hafta olduğunu iddia etmektedir, ancak bağlamda bu sürenin iki hafta olduğu açıkça belirtilmiştir. Model B'nin atomik analizinin ortaya koyduğu gibi, bu iddia bağlamla doğrudan çelişmektedir.</p>
     </div>
   </div>
 </div>
@@ -1569,7 +1572,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada yer alan 'kıdem tazminatına tam olarak hak kazanır' ifadesi, bağlamda belirtilen 'işçinin kıdem tazminatına hak kazanabilmesi için aynı işverenin işyerinde en az bir tam yıl çalışmış olması' şartıyla doğrudan çelişmektedir. Ayrıca, işçi kendi isteğiyle istifa ettiğinde kıdem tazminatı alamayacağı da belirtilmiştir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada yer alan 'kıdem tazminatına tam olarak hak kazanır' ifadesi, bağlamda belirtilen 'işçinin kıdem tazminatına hak kazanabilmesi için aynı işverenin işyerinde en az bir tam yıl (365 gün) çalışmış olması' şartıyla doğrudan çelişmektedir. Ayrıca, işçi istifa ettiğinden kıdem tazminatı alamayacağı da bağlamda belirtilmiştir.</p>
     </div>
   </div>
 </div>
@@ -1595,7 +1598,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">_Atom çıkarımı yapılamadı._</p>
+<ul>
+<li>İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına aykırılık gerekçesiyle işten çıkarılan personele işverence hem kıdem hem de ihbar tazminatı eksiksiz ödenir. <br><span class="atom-label contradiction">mDeBERTa NLI Tahmini: <code>contradiction</code></span></li>
+</ul>
     </div>
   </div>
 
@@ -1745,7 +1750,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>unverifiable</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlamda yıllık ücretli izin hakkına ilişkin bir bilgi bulunmamaktadır. Model B'nin kararı yanlıştır çünkü bağlamda bu bilgiye dair hiçbir kanıt veya doğrulama yoktur.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, yıllık ücretli izin hakkının en az on dört iş günü olduğunu belirtmektedir, ancak bağlamda bu bilgiye dair hiçbir kanıt veya doğrulama bulunmamaktadır. Model B'nin kararı, bağlamın yalnızca ihbar süreleri, kıdem tazminatı ve iş sözleşmesinin feshi ile ilgili hükümleri içerdiği gerçeğini göz ardı etmektedir.</p>
     </div>
   </div>
 </div>
@@ -1923,7 +1928,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>unverifiable</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlamda ihbar süresi boyunca işverenin işçiye yeni iş arama izni verme yükümlülüğü hakkında hiçbir bilgi bulunmamaktadır. Model B'nin kararı doğru olup, bağlamda bu konuya dair hiçbir bilgi bulunmadığından unverifiable kararı verilmesi gerekmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlamda ihbar süresi boyunca işverenin işçiye yeni iş arama izni verme yükümlülüğü hakkında hiçbir bilgi bulunmamaktadır. Model B'nin kararı olan 'unverifiable' doğru bir değerlendirmedir çünkü bağlamda bu konuya dair hiçbir bilgi yoktur.</p>
     </div>
   </div>
 </div>
@@ -2045,7 +2050,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>supported</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, bağlamda açıkça belirtilen 'Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır' bilgisini doğrudan tekrarlamaktadır. Model A'nın kararı, bağlamın iddianın tümünü desteklediğini doğru bir şekilde yansıtmaktadır.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddia, bağlamda açıkça belirtilen 'Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır' bilgisini doğrudan tekrarlamaktadır. Model A'nin kararı, bağlamın iddianın tümünü desteklediğini doğru bir şekilde yansıtmaktadır.</p>
     </div>
   </div>
 </div>
@@ -2429,7 +2434,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
     <div class="section-content">
-<p class="warning">_Atom çıkarımı yapılamadı._</p>
+<ul>
+<li>Eurobond işlemlerinde işlemlerin takas ve ödeme mutabakatı işlem yapılan gün içinde (T+0 aynı gün) anlık olarak sonuçlandırılmak zorundadır. <br><span class="atom-label contradiction">mDeBERTa NLI Tahmini: <code>contradiction</code></span></li>
+</ul>
     </div>
   </div>
 
@@ -2520,7 +2527,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <div class="section-content">
       <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlam, Hazine ihraçlı Eurobondlardan elde edilen kupon faiz gelirleri üzerinden yerli bireysel yatırımcılar için stopaj oranının yüzde sıfır (%0) olduğunu belirtmektedir. İddia ise yüzde yirmi beş oranında peşin stopaj vergisi kesildiğini öne sürmekte ve bu doğrudan bağlamla çelişmektedir.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> İddiada yer alan yüzde yirmi beş oranında peşin stopaj vergisi kesilmesi bilgisi, bağlamda belirtilen yüzde sıfır stopaj oranıyla doğrudan çelişmektedir. Model B'nin atomik olarak ayırdığı önerme de bu çelişkiyi doğrulamaktadır.</p>
     </div>
   </div>
 </div>
@@ -2768,7 +2775,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
     <h4>Vaka İncelemesi: <code>ood_fin_15</code></h4>
     <div style="display: flex; gap: 10px;">
       <span class="badge hakem">⚖️ Hakem Kararı</span>
-      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+      <span class="badge yanliş">❌ Sistem Kararı: YANLIŞ</span>
     </div>
   </div>
 
@@ -2815,9 +2822,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   <div class="section-box">
     <div class="section-title">4. Nihai Karar ve Gerekçe</div>
     <div class="section-content">
-      <p><strong>Nihai Karar:</strong> <code>unverifiable</code></p>
+      <p><strong>Nihai Karar:</strong> <code>contradicted</code></p>
       <p><strong>Mekanizma:</strong> Meta-Hakem (Llama-3.3-70B) Kararı</p>
-<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlamda Eurobond'lardan elde edilen kupon faiz gelirlerinin döviz cinsinden ödenmesiyle ilgili herhangi bir bilgi bulunmamaktadır. Model B'nin doğrudan çelişki kararı vermesi daha uygun görünmektedir çünkü iddia edilen durum bağlamda açıkça doğrulanmıyor veya reddedilmiyor, ancak bağlamda bulunan bilgilerle doğrudan çelişen bir durum da söz konusu değildir, sadece bilgi eksikliği vardır.</p>
+<p><strong>Hakem Gerekçesi (Reasoning):</strong> Bağlamda Eurobondların genellikle ABD Doları veya Avro gibi yabancı para birimleri cinsinden ihraç edildiği belirtilmektedir, ancak kupon faizlerinin yalnızca İsviçre frangı cinsinden talep edilebileceği bilgisi bulunmamaktadır. Model B'nin doğrudan çelişki kararı vermesi daha uygun görünmektedir çünkü iddia edilen durum bağlam tarafından doğrulanmamaktadır.</p>
     </div>
   </div>
 </div>
