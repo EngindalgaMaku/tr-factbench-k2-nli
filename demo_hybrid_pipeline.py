@@ -407,14 +407,20 @@ BİLİRKİŞİ MODELLERİNİN DEĞERLENDİRMELERİ:
 
 ETİKET KURALLARI VE DİKKAT EDİLECEK HUSUSLAR:
 1. supported: İddiadaki BÜTÜN önermeler bağlam tarafından açıkça doğrulanmaktadır.
-2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir önerme yer alıyorsa bu etiket ZORUNLUDUR.
+2. partially_supported: İddiada bağlamın doğruladığı en az bir gerçek eylem/bilgi varken, ek olarak bağlamda olmayan veya çelişen başka bir önerme yer alıyorsa bu etiket ZORUNLUDUR.
 3. contradicted: İddiada bağlam tarafından doğrulanan HİÇBİR parça yoksa ve doğrudan açık bir yalan/zıtlık varsa seçilir.
 4. unverifiable: Bağlamda önermelere dair ne doğrulama ne çürütme varsa (bilgi yokluğu) seçilir.
 
-Lütfen ÖNCE bağlamdaki kanıtı ve ayrıştırılmış önermeleri adım adım düşünerek analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
+*** ÇOK ÖNEMLİ: SEMANTİK YÜKLEM VE EYLEM KURALI ***
+- Bir cümlenin sadece öznesinin veya kavram adının bağlamda geçmesi o cümlenin "desteklenen parçası" SAYILMAZ!
+- Desteklenen bir parçadan söz edebilmek için, özneye yüklenen eylemin/özelliğin/hükmün de bağlamda açıkça doğrulanması gerekir.
+- Eğer iddiadaki önermelerin özneleri bağlamda geçiyor fakat iddia edilen eylemler/hükümler bağlamda yer almıyorsa (eylem doğrulanmıyorsa ve bağlamda bu konuda bir bilgi yoksa), karar kesinlikle partially_supported DEĞİL, 'unverifiable' OLMALIDIR!
+- Bir iddianın içinde hem doğrulanmış bir gerçek hem de açık bir zıtlık varsa asla contradicted deme, partially_supported seç!
+
+Lütfen ÖNCE bağlamdaki kanıtı ve ayrıştırılmış önermelerin yüklemlerini/eylemlerini adım adım analiz et, ARDINDAN kararını ver. SADECE aşağıdaki JSON formatında çıktı üret:
 ```json
 {{
-  "reasoning": "<Önce bağlamdaki kanıtı ve önermeleri tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe>",
+  "reasoning": "<Önce bağlamdaki kanıtı ve önermelerin eylemlerini tarafsızca değerlendiren en fazla 2 cümlelik mantıklı Türkçe gerekçe>",
   "favored_model": "<Model A | Model B | Neither>",
   "final_decision": "<supported | partially_supported | contradicted | unverifiable>"
 }}
