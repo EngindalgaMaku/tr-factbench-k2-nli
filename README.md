@@ -9,7 +9,17 @@
 > 1. [**Klinik Tıp (Alzheimer / Nöroloji) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_ALZHEIMER_CASE_STUDY_REPORT.md)  
 > 2. [**Türk İş Hukuku (4857 Sayılı Kanun) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_LEGAL_CASE_STUDY_REPORT.md)  
 > 3. [**Finans Piyasaları (Eurobond / Takas) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_FINANCE_CASE_STUDY_REPORT.md)  
-> *(Toplam 48 OOD Vaka: K1=%91.7, K2=%81.3, **Kademeli Hibrit=%100.0**, LLM Tasarrufu=%75.0)*
+> 📚 **BÖLÜM 2 LİTERATÜR VE TAKSONOMİ MATRİSİ:**  
+> Uluslararası (FEVER, FActScore, SAFE, MiniCheck) ve Türkçe (Budur vd., ImplicaTR, Turk-LettuceDetect) 15 çalışmanın 10 parametreli karşılaştırma matrisi ve tezin 4 temel araştırma boşluğu (research gap) analizi:  
+> 👉 [**`reports/LITERATURE_TAXONOMY_MATRIX_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/LITERATURE_TAXONOMY_MATRIX_REPORT.md)
+
+> ⚡ **DONANIM, GECİKME (LATENCY) VE VRAM PROFİLLEME RAPORU:**  
+> Tek tüketici dizüstü GPU'sunda (RTX 4060 8GB VRAM) 7.39 GB bellek tüketimi, K1'in 15ms hızı ve Frugal AI mühendislik analizi:  
+> 👉 [**`reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md)
+
+> 🔍 **44 HATA DETAYLI ADLİ TAKSONOMİ RAPORU (434/478 — %90.79):**  
+> 21 Konsensüs ve 23 Hakem hatasının her birinin tek tek iddia, bağlam, atom ve kök neden analiz dökümü:  
+> 👉 [**`reports/AUDIT_44_PIPELINE_ERRORS_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/AUDIT_44_PIPELINE_ERRORS_REPORT.md)
 
 Bu klasör, K1'deki task-specific ELECTRA hattından ayrı olarak K2'nin bilimsel ve tekrar üretilebilir deneylerini yürütür.
 K2'nin temel amacı, önceden atomize edilmiş claim'leri hazır çok dilli NLI modelleriyle doğrulamak ve atom kararlarını dört sınıflı claim kararına deterministik biçimde birleştirmektir.
