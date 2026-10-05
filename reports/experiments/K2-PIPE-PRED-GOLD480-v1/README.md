@@ -26,20 +26,20 @@ A strict four-class Macro-F1 is not reported because the failures do not belong 
 
 | Input claims | Scored claims | Atomizer failures | Coverage | Predicted atoms |
 | --- | --- | --- | --- | --- |
-| 480 | 478 | 2 | 0.9958 | 996 |
+| 480 | 480 | 0 | 1.0000 | 998 |
 
 | Gold label | Input | Scored | Failures |
 | --- | --- | --- | --- |
 | supported | 120 | 120 | 0 |
-| partially_supported | 119 | 118 | 1 |
+| partially_supported | 119 | 119 | 0 |
 | contradicted | 121 | 121 | 0 |
-| unverifiable | 120 | 119 | 1 |
+| unverifiable | 120 | 120 | 0 |
 
 ## Main results
 
 | Conditional accuracy | Conditional Macro-F1 | MCC | Strict accuracy | Truncated pairs |
 | --- | --- | --- | --- | --- |
-| 0.7824 | 0.7830 | 0.7136 | 0.7792 | 0 |
+| 0.7833 | 0.7838 | 0.7145 | 0.7833 | 0 |
 
 These results are descriptive for the atomizer test set. The label distribution is strongly imbalanced, so they must not be presented as the final balanced internal-evaluation result.
 
@@ -48,13 +48,13 @@ These results are descriptive for the atomizer test set. The label distribution 
 | Label | Precision | Recall | F1 | Support |
 | --- | --- | --- | --- | --- |
 | supported | 0.7803 | 0.8583 | 0.8175 | 120 |
-| partially_supported | 0.6714 | 0.7966 | 0.7287 | 118 |
-| contradicted | 0.8017 | 0.8017 | 0.8017 | 121 |
-| unverifiable | 0.9412 | 0.6723 | 0.7843 | 119 |
+| partially_supported | 0.6763 | 0.7899 | 0.7287 | 119 |
+| contradicted | 0.8033 | 0.8099 | 0.8066 | 121 |
+| unverifiable | 0.9310 | 0.6750 | 0.7826 | 120 |
 
 ## Atomizer failures
 
-Gemma failed to produce a usable atom list for **2** of **480** inputs. Full records are in `tables/atomizer_failures.csv` and the run-level `atomizer_failures.jsonl` file.
+Gemma failed to produce a usable atom list for **0** of **480** inputs. Full records are in `tables/atomizer_failures.csv` and the run-level `atomizer_failures.jsonl` file.
 
 ## Figures
 
@@ -66,10 +66,10 @@ Gemma failed to produce a usable atom list for **2** of **480** inputs. Full rec
 ## Interpretation notes
 
 - Evaluated on the exact 480 held-out gold test examples from TR-FactBench v1.0.
-- Claims were atomized using google/gemma-4-E2B-it + QLoRA adapter.
-- 478 out of 480 claims were validly atomized (99.58% coverage) yielding 996 atoms.
+- Claims were atomized using google/gemma-4-E2B-it + QLoRA adapter with robust token generation.
+- 480 out of 480 claims were validly atomized (100.0% coverage) yielding 998 atoms.
 - NLI verification was conducted with MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7.
-- Conditional Macro-F1 reached 0.7830 and accuracy reached 78.24%.
+- Macro-F1 reached 0.7838 and accuracy reached 78.33%.
 
 ## Limitations
 
@@ -85,7 +85,7 @@ Gemma failed to produce a usable atom list for **2** of **480** inputs. Full rec
 ## Reproducibility
 
 ```powershell
-C:\Python314\python.exe scripts\45_run_k2_from_gemma_atoms.py --input "k2_nli/data/processed/atom_level/gemma_predicted_gold480/k2_input.jsonl" --model "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" --run-id "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7" --runs-dir "k2_nli/runs" --batch-size 16 --max-length 512 --device cuda
+C:\Python314\python.exe scripts\45_run_k2_from_gemma_atoms.py --input "data\processed\atom_level\gemma_predicted_gold480\k2_input.jsonl" --model "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7" --run-id "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7" --runs-dir "runs" --batch-size 8 --max-length 512 --device None
 ```
 
 ```powershell

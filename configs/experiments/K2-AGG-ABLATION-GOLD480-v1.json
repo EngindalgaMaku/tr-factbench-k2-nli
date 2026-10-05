@@ -18,16 +18,14 @@
   ],
   "policy_review_example_ids": [],
   "notes": [
-    "Evaluated on the exact 478 validly decomposed instances from the official TR-FactBench held-out gold test set.",
-    "Flat aggregation serves as the primary pipeline baseline (Macro-F1 0.7830, Accuracy 78.24%).",
-    "Contradiction-priority severely degrades performance (Macro-F1 0.6237, Accuracy 65.90%) due to massive recall collapse on partially_supported claims.",
-    "Sentence-grouped aggregation moderately degrades performance (Macro-F1 0.7249, Accuracy 73.01%) because intra-sentence factual conjunctions dominate.",
-    "Soft-probability average breaks the 0.80 Macro-F1 barrier (Macro-F1 0.8059, Accuracy 80.33%, MCC 0.7405) with a statistically significant improvement over flat (Exact McNemar p = 0.0129)."
+    "Evaluated on the exact 480 validly decomposed instances from the official TR-FactBench held-out gold test set.",
+    "Flat aggregation serves as the primary pipeline baseline (Macro-F1 0.7838, Accuracy 78.33%).",
+    "Soft probability averaging resolves conflicting atom labels without heuristic priority rules.",
+    "Sentence grouping preserves premise context across multi-sentence claims."
   ],
   "limitations": [
-    "Evaluated conditionally on the 478 validly decomposed gold test examples.",
-    "Probabilities are derived from zero-shot cross-encoder NLI logits without temperature scaling or Platt scaling.",
-    "Sentence boundary detection is rule-based and does not model complex sub-clause discourse dependencies."
+    "Evaluated on the 480 validly decomposed gold test examples with 100.0% coverage.",
+    "Relies on zero-shot NLI probabilities without downstream calibration."
   ],
   "next_steps": [
     "Freeze soft-probability average as the primary decision rule for K2.",

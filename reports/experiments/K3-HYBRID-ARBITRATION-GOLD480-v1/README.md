@@ -6,7 +6,7 @@
 
 ## 1. Araştırma Sorusu ve Mimari Tasarım
 
-K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %74.9'luk alanda konsensüs kabul edilip, ayrıştığı 120 'gri alan' vakasında LLM Hakem devreye girdiğinde; sistemin uçtan uca doğruluğu, Oracle tavanına (%93.10) yaklaşma oranı ve hesaplama maliyet tasarrufu ne düzeydedir?
+K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %74.38'lik alanda konsensüs kabul edilip, ayrıştığı 123 'gri alan' vakasında LLM Hakem devreye girdiğinde; sistemin uçtan uca doğruluğu, Oracle tavanına (%93.33) yaklaşma oranı ve hesaplama maliyet tasarrufu ne düzeydedir?
 
 ```
                          Girdi Çifti (Kanıt Context, İddia Claim)
@@ -22,14 +22,14 @@ K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %7
                                            │
                    ┌───────────────────────┴───────────────────────┐
                    ▼                                               ▼
-              EVET (%74.90)                                  HAYIR (%25.10)
+              EVET (%74.38)                                  HAYIR (%25.62)
          [Konsensüs Kabul Edilir]                         [Bileşen 3: LLM Hakem]
-         (Doğruluk: %94.13, 0 API çağrısı)               (120 vakada kör hakem)
+         (Doğruluk: %94.40, 0 API çağrısı)               (123 vakada kör hakem)
                    │                                               │
                    └───────────────────────┬───────────────────────┘
                                            ▼
                                   FİNAL HİBRİT KARAR
-                  (En iyi hakemle: Doğruluk %92.26, Macro-F1 0.9221)
+                  (En iyi hakemle: Doğruluk %92.29, Macro-F1 0.9223)
 ```
 
 **Hakem tasarımı (kör / blind tie-breaker):** Hakem LLM, K1 ve K2 kararlarını GÖRMEZ. Her LLM, resmi TR-FactBench sistem istemi (`llm_baselines/prompts/system_tr_v1.txt`) ile yalnız bağlam + iddiayı bağımsız olarak sınıflandırmıştır (gerçek OpenRouter çağrıları, `results/llm_baselines/gold_v1.0/`). Ayrışma bölgesinde bu bağımsız karar nihai karar olarak kullanılır. Canlı bir dağıtımda LLM yalnızca ayrışma örnekleri için çağrılır.
@@ -38,38 +38,38 @@ K1 (doğrudan encoder) ve K2 (önerme-düzeyi NLI) modellerinin uzlaştığı %7
 
 ## 2. Konsensüs vs. Ayrışma Bölgesi Temel İstatistikleri
 
-- **Toplam Değerlendirilen Altın Örnek Sayısı:** 478
-- **Konsensüs Bölgesi (K1 == K2):** **358 örnek (74.90%)**
-  - Konsensüs Doğruluğu: **337/358 (94.13%)**; iki modelin aynı yanlış etikette uzlaştığı 21 örnek hakeme hiç ulaşmaz (sistemin indirgenemez hatası).
-- **Ayrışma Bölgesi (K1 != K2):** **120 örnek (25.10%)**
-  - Yalnızca K1 Doğru: 61 örnek
-  - Yalnızca K2 Doğru: 47 örnek
+- **Toplam Değerlendirilen Altın Örnek Sayısı:** 480
+- **Konsensüs Bölgesi (K1 == K2):** **357 örnek (74.38%)**
+  - Konsensüs Doğruluğu: **337/357 (94.40%)**; iki modelin aynı yanlış etikette uzlaştığı 20 örnek hakeme hiç ulaşmaz (sistemin indirgenemez hatası).
+- **Ayrışma Bölgesi (K1 != K2):** **123 örnek (25.62%)**
+  - Yalnızca K1 Doğru: 62 örnek
+  - Yalnızca K2 Doğru: 49 örnek
   - İkisi de Yanlış (ayrışma içinde): 12 örnek
-- **Teorik Oracle Üst Tavanı (Oracle Upper Bound):** **445/478 (%93.10)**
+- **Teorik Oracle Üst Tavanı (Oracle Upper Bound):** **448/480 (%93.33)**
 
 ## 3. Hibrit Triad Arbitrasyon Sonuçları
 
 | Hakem Modeli | Hibrit Acc | Hibrit F1 | Δ vs K1 | Δ vs K2 | Δ vs Standalone | Hakem Gri Alan Acc | Oracle Kapanış | McNemar p (vs K1) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Gemma-4-26B (Zero-Shot) | 0.9226 | 0.9221 | +0.0900 | +0.1192 | +0.0167 | 0.8667 | 91.5% | 0.0000 |
-| GPT-4.1-mini (Few-Shot 8) | 0.9142 | 0.9147 | +0.0816 | +0.1109 | +0.0021 | 0.8333 | 83.0% | 0.0000 |
-| Llama-3.3-70B (Few-Shot 8) | 0.9121 | 0.9120 | +0.0795 | +0.1088 | +0.0042 | 0.8250 | 80.9% | 0.0000 |
-| Gemma-4-26B (Few-Shot 8) | 0.9079 | 0.9075 | +0.0753 | +0.1046 | +0.0063 | 0.8083 | 76.6% | 0.0000 |
-| GPT-4.1-mini (Zero-Shot) | 0.9017 | 0.9021 | +0.0690 | +0.0983 | +0.1109 | 0.7833 | 70.2% | 0.0000 |
-| Qwen-2.5-72B (Few-Shot 8) | 0.9017 | 0.9011 | +0.0690 | +0.0983 | +0.0356 | 0.7833 | 70.2% | 0.0000 |
+| Gemma-4-26B (Zero-Shot) | 0.9229 | 0.9223 | +0.0917 | +0.1188 | +0.0188 | 0.8618 | 89.8% | 0.0000 |
+| GPT-4.1-mini (Few-Shot 8) | 0.9146 | 0.9149 | +0.0833 | +0.1104 | +0.0042 | 0.8293 | 81.6% | 0.0000 |
+| Llama-3.3-70B (Few-Shot 8) | 0.9146 | 0.9145 | +0.0833 | +0.1104 | +0.0062 | 0.8293 | 81.6% | 0.0000 |
+| Gemma-4-26B (Few-Shot 8) | 0.9083 | 0.9078 | +0.0771 | +0.1042 | +0.0083 | 0.8049 | 75.5% | 0.0000 |
+| Qwen-2.5-72B (Few-Shot 8) | 0.9042 | 0.9036 | +0.0729 | +0.1000 | +0.0375 | 0.7886 | 71.4% | 0.0000 |
+| GPT-4.1-mini (Zero-Shot) | 0.9021 | 0.9025 | +0.0708 | +0.0979 | +0.1125 | 0.7805 | 69.4% | 0.0000 |
 
-En yüksek hibrit başarıma **%92.26 Doğruluk** ve **0.9221 Macro-F1** ile **Gemma-4-26B (Zero-Shot)** hakemliğinde ulaşılmıştır.
+En yüksek hibrit başarıma **%92.29 Doğruluk** ve **0.9223 Macro-F1** ile **Gemma-4-26B (Zero-Shot)** hakemliğinde ulaşılmıştır.
 
 ## 4. Çıkarım Maliyeti ve Gecikme Tasarrufu (Efficiency Analysis)
 
 | Hakem Modeli | Tek Başına LLM Çağrısı | Hibrit LLM Çağrısı | Çağrı / Maliyet Tasarrufu (%) | Hibrit Doğruluk | Tek Başına LLM Doğruluk |
 | --- | --- | --- | --- | --- | --- |
-| Gemma-4-26B (Zero-Shot) | 478 | 120 | %74.90 | 0.9226 | 0.9059 |
-| Gemma-4-26B (Few-Shot 8) | 478 | 120 | %74.90 | 0.9079 | 0.9017 |
-| GPT-4.1-mini (Few-Shot 8) | 478 | 120 | %74.90 | 0.9142 | 0.9121 |
-| GPT-4.1-mini (Zero-Shot) | 478 | 120 | %74.90 | 0.9017 | 0.7908 |
-| Llama-3.3-70B (Few-Shot 8) | 478 | 120 | %74.90 | 0.9121 | 0.9079 |
-| Qwen-2.5-72B (Few-Shot 8) | 478 | 120 | %74.90 | 0.9017 | 0.8661 |
+| Gemma-4-26B (Zero-Shot) | 480 | 123 | %74.38 | 0.9229 | 0.9042 |
+| Gemma-4-26B (Few-Shot 8) | 480 | 123 | %74.38 | 0.9083 | 0.9000 |
+| GPT-4.1-mini (Few-Shot 8) | 480 | 123 | %74.38 | 0.9146 | 0.9104 |
+| GPT-4.1-mini (Zero-Shot) | 480 | 123 | %74.38 | 0.9021 | 0.7896 |
+| Llama-3.3-70B (Few-Shot 8) | 480 | 123 | %74.38 | 0.9146 | 0.9083 |
+| Qwen-2.5-72B (Few-Shot 8) | 480 | 123 | %74.38 | 0.9042 | 0.8667 |
 
 ## 5. Grafikler
 
@@ -77,15 +77,13 @@ En yüksek hibrit başarıma **%92.26 Doğruluk** ve **0.9221 Macro-F1** ile **G
 
 ## 6. Bilimsel Yorum ve Çıkarımlar
 
-- Konsensüs bölgesi (358/478 örnek, %74.90): K1 ve K2 hemfikir olduğunda doğruluk %94.13 seviyesindedir (337/358 doğru). Bu alanda LLM çağrısına ihtiyaç duyulmaz.
-- Ayrışma bölgesi (120/478 örnek, %25.10): Bu gri alanda K1 61, K2 47 doğru cevaba sahiptir; teorik Oracle tavanı %93.10'dur.
-- Gemma-4-26B zero-shot hakemliği ile hibrit sistem %92.26 doğruluğa ve 0.9221 Macro-F1'e ulaşarak Oracle tavanına (%93.10) sadece %0.84 mesafeye yaklaşmıştır.
-- Doğrudan LLM kullanımına göre API çağrılarında ve çıkarım gecikmesinde %74.90 net tasarruf sağlanmıştır.
+- Konsensüs bölgesi (357/480 örnek, %74.38): K1 ve K2 hemfikir olduğunda doğruluk %94.40 seviyesindedir (337/357 doğru). Bu alanda LLM çağrısına ihtiyaç duyulmaz.
+- Ayrışma bölgesi (123/480 örnek, %25.62): Bu gri alanda K1 62, K2 49 doğru cevaba sahiptir; teorik Oracle tavanı %93.33'tür (448/480).
+- Doğrudan LLM kullanımına göre API çağrılarında ve çıkarım gecikmesinde %74.38 net tasarruf sağlanmıştır.
 
 ## 7. Kısıtlar ve Gelecek Adımlar
 
-- Ayrışma vakalarında hakem istemi mevcut baseline tahminleri üzerinden test edilmiştir; K1 ve K2'nin önermelerini içeren meta-istem (meta-prompting) ayrıca incelenebilir.
-- Değerlendirme 478 geçerli ayrıştırılmış altın test örneği üzerinedir.
+- Değerlendirme 480 geçerli ayrıştırılmış altın test örneği üzerinedir (%100.0 kapsama).
 
 ### Gelecek Adımlar:
 

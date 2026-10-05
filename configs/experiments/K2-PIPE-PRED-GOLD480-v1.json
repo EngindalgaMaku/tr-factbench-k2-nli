@@ -12,10 +12,10 @@
   "run_id": "K2-PIPE-PRED-GOLD480-v1__mdeberta_base_2mil7",
   "notes": [
     "Evaluated on the exact 480 held-out gold test examples from TR-FactBench v1.0.",
-    "Claims were atomized using google/gemma-4-E2B-it + QLoRA adapter.",
-    "478 out of 480 claims were validly atomized (99.58% coverage) yielding 996 atoms.",
+    "Claims were atomized using google/gemma-4-E2B-it + QLoRA adapter with robust token generation.",
+    "480 out of 480 claims were validly atomized (100.0% coverage) yielding 998 atoms.",
     "NLI verification was conducted with MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7.",
-    "Conditional Macro-F1 reached 0.7830 and accuracy reached 78.24%."
+    "Macro-F1 reached 0.7838 and accuracy reached 78.33%."
   ],
   "limitations": [
     "Uses hard NLI labels with flat deterministic aggregation without probability calibration.",

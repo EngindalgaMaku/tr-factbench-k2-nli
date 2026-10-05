@@ -1,15 +1,15 @@
 {
-  "n_examples": 478,
+  "n_examples": 480,
   "labels": [
     "supported",
     "partially_supported",
     "contradicted",
     "unverifiable"
   ],
-  "accuracy": 0.7824267782426778,
-  "macro_f1": 0.7830272765137831,
-  "weighted_f1": 0.7832909363025155,
-  "mcc": 0.7136349295908043,
+  "accuracy": 0.7833333333333333,
+  "macro_f1": 0.7838338864487612,
+  "weighted_f1": 0.7839961826812555,
+  "mcc": 0.714525132080023,
   "classification_report": {
     "supported": {
       "precision": 0.7803030303030303,
@@ -18,35 +18,35 @@
       "support": 120.0
     },
     "partially_supported": {
-      "precision": 0.6714285714285714,
-      "recall": 0.7966101694915254,
+      "precision": 0.6762589928057554,
+      "recall": 0.7899159663865546,
       "f1-score": 0.7286821705426356,
-      "support": 118.0
+      "support": 119.0
     },
     "contradicted": {
-      "precision": 0.8016528925619835,
-      "recall": 0.8016528925619835,
-      "f1-score": 0.8016528925619835,
+      "precision": 0.8032786885245902,
+      "recall": 0.8099173553719008,
+      "f1-score": 0.8065843621399177,
       "support": 121.0
     },
     "unverifiable": {
-      "precision": 0.9411764705882353,
-      "recall": 0.6722689075630253,
-      "f1-score": 0.7843137254901961,
-      "support": 119.0
+      "precision": 0.9310344827586207,
+      "recall": 0.675,
+      "f1-score": 0.782608695652174,
+      "support": 120.0
     },
-    "accuracy": 0.7824267782426778,
+    "accuracy": 0.7833333333333333,
     "macro avg": {
-      "precision": 0.7986402412204552,
-      "recall": 0.7822163257374668,
-      "f1-score": 0.7830272765137831,
-      "support": 478.0
+      "precision": 0.7977187985979991,
+      "recall": 0.7832916637729472,
+      "f1-score": 0.7838338864487612,
+      "support": 480.0
     },
     "weighted avg": {
-      "precision": 0.7988806172906591,
-      "recall": 0.7824267782426778,
-      "f1-score": 0.7832909363025155,
-      "support": 478.0
+      "precision": 0.79798342296408,
+      "recall": 0.7833333333333333,
+      "f1-score": 0.7839961826812555,
+      "support": 480.0
     }
   },
   "confusion_matrix": [
@@ -60,19 +60,19 @@
       18,
       94,
       5,
-      1
+      2
     ],
     [
       5,
-      18,
-      97,
+      17,
+      98,
       1
     ],
     [
       6,
       15,
       18,
-      80
+      81
     ]
   ]
 }

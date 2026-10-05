@@ -250,9 +250,9 @@ def main() -> None:
     print(f"Loaded OpenRouter API Key (prefix: {api_key[:12]}...)")
     print(f"Target Judge Model: {MODEL_ID} (CoT Reasoning-First Meta-Judge)")
 
-    cases_path = Path("data/processed/arbitration/arbitration_cases_120.jsonl")
+    cases_path = Path("data/processed/arbitration/arbitration_cases_123.jsonl")
     if not cases_path.exists():
-        cases_path = Path("k2_nli/data/processed/arbitration/arbitration_cases_120.jsonl")
+        cases_path = Path("k2_nli/data/processed/arbitration/arbitration_cases_123.jsonl")
 
     cases = [json.loads(line) for line in cases_path.read_text(encoding="utf-8").splitlines() if line.strip()]
     print(f"Loaded {len(cases)} arbitration cases.")

@@ -4,7 +4,7 @@ tfb_ex_0002,tfb_ex_0002,finance,partially_supported,partially_supported,True,sco
 tfb_ex_0003,tfb_ex_0003,finance,contradicted,contradicted,True,scored,2,True,True
 tfb_ex_0004,tfb_ex_0004,finance,unverifiable,unverifiable,True,scored,2,True,True
 tfb_ex_0005,tfb_ex_0005,finance,supported,supported,True,scored,3,True,True
-tfb_ex_0006,tfb_ex_0006,finance,partially_supported,,False,atomizer_failure,0,False,False
+tfb_ex_0006,tfb_ex_0006,finance,partially_supported,unverifiable,False,scored,1,True,True
 tfb_ex_0007,tfb_ex_0007,finance,contradicted,partially_supported,False,scored,2,True,True
 tfb_ex_0008,tfb_ex_0008,finance,unverifiable,unverifiable,True,scored,2,True,True
 tfb_ex_0009,tfb_ex_0009,finance,supported,supported,True,scored,2,True,True
@@ -326,7 +326,7 @@ tfb_ex_0324,tfb_ex_0324,medical,unverifiable,contradicted,False,scored,2,True,Tr
 tfb_ex_0325,tfb_ex_0325,medical,supported,partially_supported,False,scored,3,True,True
 tfb_ex_0326,tfb_ex_0326,medical,partially_supported,supported,False,scored,2,True,True
 tfb_ex_0327,tfb_ex_0327,medical,contradicted,contradicted,True,scored,2,True,True
-tfb_ex_0328,tfb_ex_0328,medical,unverifiable,,False,atomizer_failure,0,False,False
+tfb_ex_0328,tfb_ex_0328,medical,unverifiable,unverifiable,True,scored,1,True,True
 tfb_ex_0329,tfb_ex_0329,medical,supported,supported,True,scored,2,True,True
 tfb_ex_0330,tfb_ex_0330,medical,partially_supported,partially_supported,True,scored,3,True,True
 tfb_ex_0331,tfb_ex_0331,medical,contradicted,contradicted,True,scored,2,True,True
@@ -361,7 +361,7 @@ tfb_ex_0359,tfb_ex_0359,medical,contradicted,contradicted,True,scored,2,True,Tru
 tfb_ex_0360,tfb_ex_0360,medical,unverifiable,contradicted,False,scored,2,True,True
 tfb_ex_0361,tfb_ex_0361,medical,supported,supported,True,scored,2,True,True
 tfb_ex_0362,tfb_ex_0362,medical,partially_supported,partially_supported,True,scored,3,True,True
-tfb_ex_0363,tfb_ex_0363,medical,contradicted,partially_supported,False,scored,2,True,True
+tfb_ex_0363,tfb_ex_0363,medical,contradicted,contradicted,True,scored,2,True,True
 tfb_ex_0364,tfb_ex_0364,medical,unverifiable,partially_supported,False,scored,2,True,True
 tfb_ex_0365,tfb_ex_0365,medical,supported,supported,True,scored,2,True,True
 tfb_ex_0366,tfb_ex_0366,medical,partially_supported,partially_supported,True,scored,3,True,True

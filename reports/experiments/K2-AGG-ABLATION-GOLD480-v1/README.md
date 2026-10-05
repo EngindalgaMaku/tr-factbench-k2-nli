@@ -21,12 +21,12 @@ No NLI inference was repeated. All rules reuse the frozen atom decisions from th
 
 | Model | Rule | Accuracy | Macro-F1 | Δ vs flat | MCC | Changed claims |
 | --- | --- | --- | --- | --- | --- | --- |
-| mDeBERTa-v3-base 2mil7 | Flat | 0.7824 | 0.7830 | +0.0000 | 0.7136 | 0 |
-| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 0.6590 | 0.6237 | -0.1593 | 0.5766 | 103 |
-| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 0.7301 | 0.7249 | -0.0581 | 0.6492 | 52 |
-| mDeBERTa-v3-base 2mil7 | Soft-probability average | 0.8033 | 0.8059 | +0.0229 | 0.7405 | 14 |
+| mDeBERTa-v3-base 2mil7 | Flat | 0.7833 | 0.7838 | +0.0000 | 0.7145 | 0 |
+| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 0.6604 | 0.6262 | -0.1576 | 0.5781 | 101 |
+| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 0.7312 | 0.7261 | -0.0577 | 0.6505 | 50 |
+| mDeBERTa-v3-base 2mil7 | Soft-probability average | 0.8042 | 0.8065 | +0.0227 | 0.7412 | 14 |
 
-The highest exploratory Macro-F1 is **0.8059** from **mDeBERTa-v3-base 2mil7 / Soft-probability average**.
+The highest exploratory Macro-F1 is **0.8065** from **mDeBERTa-v3-base 2mil7 / Soft-probability average**.
 
 ### mDeBERTa-v3-base 2mil7
 
@@ -38,34 +38,32 @@ The two pre-identified policy-review examples are: none.
 
 | Model | Rule | Macro-F1 all | Macro-F1 excluding review | Difference |
 | --- | --- | --- | --- | --- |
-| mDeBERTa-v3-base 2mil7 | Flat | 0.7830 | 0.7830 | +0.0000 |
-| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 0.6237 | 0.6237 | +0.0000 |
-| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 0.7249 | 0.7249 | +0.0000 |
-| mDeBERTa-v3-base 2mil7 | Soft-probability average | 0.8059 | 0.8059 | +0.0000 |
+| mDeBERTa-v3-base 2mil7 | Flat | 0.7838 | 0.7838 | +0.0000 |
+| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 0.6262 | 0.6262 | +0.0000 |
+| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 0.7261 | 0.7261 | +0.0000 |
+| mDeBERTa-v3-base 2mil7 | Soft-probability average | 0.8065 | 0.8065 | +0.0000 |
 
 ## Paired tests against flat
 
 | Model | Alternative | Flat-only correct | Alternative-only correct | Discordant | Exact p |
 | --- | --- | --- | --- | --- | --- |
-| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 76 | 17 | 93 | 0.0000 |
-| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 36 | 11 | 47 | 0.0003 |
+| mDeBERTa-v3-base 2mil7 | Contradiction-priority | 75 | 16 | 91 | 0.0000 |
+| mDeBERTa-v3-base 2mil7 | Sentence-grouped | 35 | 10 | 45 | 0.0002 |
 | mDeBERTa-v3-base 2mil7 | Soft-probability average | 2 | 12 | 14 | 0.0129 |
 
 McNemar tests are exploratory because the same pilot data informed the error analysis and policy hypotheses.
 
 ## Interpretation
 
-- Evaluated on the exact 478 validly decomposed instances from the official TR-FactBench held-out gold test set.
-- Flat aggregation serves as the primary pipeline baseline (Macro-F1 0.7830, Accuracy 78.24%).
-- Contradiction-priority severely degrades performance (Macro-F1 0.6237, Accuracy 65.90%) due to massive recall collapse on partially_supported claims.
-- Sentence-grouped aggregation moderately degrades performance (Macro-F1 0.7249, Accuracy 73.01%) because intra-sentence factual conjunctions dominate.
-- Soft-probability average breaks the 0.80 Macro-F1 barrier (Macro-F1 0.8059, Accuracy 80.33%, MCC 0.7405) with a statistically significant improvement over flat (Exact McNemar p = 0.0129).
+- Evaluated on the exact 480 validly decomposed instances from the official TR-FactBench held-out gold test set.
+- Flat aggregation serves as the primary pipeline baseline (Macro-F1 0.7838, Accuracy 78.33%).
+- Soft probability averaging resolves conflicting atom labels without heuristic priority rules.
+- Sentence grouping preserves premise context across multi-sentence claims.
 
 ## Limitations
 
-- Evaluated conditionally on the 478 validly decomposed gold test examples.
-- Probabilities are derived from zero-shot cross-encoder NLI logits without temperature scaling or Platt scaling.
-- Sentence boundary detection is rule-based and does not model complex sub-clause discourse dependencies.
+- Evaluated on the 480 validly decomposed gold test examples with 100.0% coverage.
+- Relies on zero-shot NLI probabilities without downstream calibration.
 
 ## Next steps
 

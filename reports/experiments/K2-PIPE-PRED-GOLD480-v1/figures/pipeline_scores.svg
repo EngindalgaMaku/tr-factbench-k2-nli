@@ -16,14 +16,14 @@
 <line x1="90" y1="70.0" x2="930" y2="70.0" stroke="#e5e7eb"/>
 <text x="78" y="74.0" text-anchor="end" font-family="Arial" font-size="12">1.00</text>
 <text x="230.0" y="438" text-anchor="middle" font-family="Arial" font-size="13">Conditional accuracy</text>
-<rect x="211.0" y="144.0" width="38.0" height="266.0" rx="3" fill="#2563eb"/>
-<text x="230.0" y="137.0" text-anchor="middle" font-family="Arial" font-size="11">0.782</text>
+<rect x="211.0" y="143.7" width="38.0" height="266.3" rx="3" fill="#2563eb"/>
+<text x="230.0" y="136.7" text-anchor="middle" font-family="Arial" font-size="11">0.783</text>
 <text x="510.0" y="438" text-anchor="middle" font-family="Arial" font-size="13">Conditional Macro-F1</text>
-<rect x="491.0" y="143.8" width="38.0" height="266.2" rx="3" fill="#2563eb"/>
-<text x="510.0" y="136.8" text-anchor="middle" font-family="Arial" font-size="11">0.783</text>
+<rect x="491.0" y="143.5" width="38.0" height="266.5" rx="3" fill="#2563eb"/>
+<text x="510.0" y="136.5" text-anchor="middle" font-family="Arial" font-size="11">0.784</text>
 <text x="790.0" y="438" text-anchor="middle" font-family="Arial" font-size="13">Strict accuracy</text>
-<rect x="771.0" y="145.1" width="38.0" height="264.9" rx="3" fill="#2563eb"/>
-<text x="790.0" y="138.1" text-anchor="middle" font-family="Arial" font-size="11">0.779</text>
+<rect x="771.0" y="143.7" width="38.0" height="266.3" rx="3" fill="#2563eb"/>
+<text x="790.0" y="136.7" text-anchor="middle" font-family="Arial" font-size="11">0.783</text>
 <rect x="379.0" y="473" width="14" height="14" rx="2" fill="#2563eb"/>
 <text x="399.0" y="485" font-family="Arial" font-size="12">mDeBERTa-v3-base 2mil7</text>
 <text x="22" y="240.0" transform="rotate(-90 22 240.0)" text-anchor="middle" font-family="Arial" font-size="13">Score</text>
