@@ -65,7 +65,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 """
     for domain in DOMAINS:
-        md += f"### {domain['name']} Alanı Vakaları\n\n"
+        md += f"### Bölüm: {domain['name']} Alanı Vakaları\n\n"
         
         original_data = load_jsonl(domain['data_file'])
         results_data = load_jsonl(domain['results_file'])
@@ -84,48 +84,82 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
             final = res.get('final_pred', '')
             reasoning = res.get('reasoning', '')
             is_consensus = res.get('is_consensus', False)
-            decision_source = res.get('decision_source', '')
-            atom_results = res.get('atom_results', [])
-            
-            md += f"#### Vaka: `{c_id}`\n\n"
-            md += f"**Bağlam:** {context}\n\n"
-            md += f"**Soru:** {question}\n\n"
-            md += f"**İddia (Sistem Çıktısı):** {claim}\n\n"
-            
-            # K2 Süreci Ayrıştırıldı
-            md += f"**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**\n"
-            if atom_results:
-                for idx, atom_res in enumerate(atom_results, 1):
-                    md += f"{idx}. {atom_res.get('atom', '')} _(mDeBERTa NLI Tahmini: `{atom_res.get('label', '')}`)_\n"
-            else:
-                md += "- _(⚠️ Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.)_\n"
-            md += "\n"
-            
-            # Modellerin Karar Tablosu
-            md += f"| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |\n"
-            md += f"| :--- | :--- | :--- |\n"
-            md += f"| `{gold}` | `{k1}` | `{k2}` |\n\n"
-            
-            # Nihai Gerekçeli Karar
-            md += f"**Nihai Karar ve Gerekçe:**\n"
-            md += f"- **Karar:** `{final}` "
-            if res.get('final_correct', False):
-                md += "✅ (Sistem doğru karara ulaştı.)\n"
-            else:
-                md += "❌ (Sistem yanlış karar verdi.)\n"
-            
             mechanism_text = "Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)" if is_consensus else "Meta-Hakem (Llama-3.3-70B) Kararı"
-            md += f"- **Mekanizma:** {mechanism_text}\n"
+            atom_results = res.get('atom_results', [])
+            correct_icon = "✅" if res.get('final_correct', False) else "❌"
+            correct_text = "DOĞRU" if res.get('final_correct', False) else "YANLIŞ"
             
-            if is_consensus:
-                md += f"- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.\n"
+            md += f"""<div class="page-break"></div>
+
+<div class="case-container">
+  <div class="case-header">
+    <h4>Vaka İncelemesi: <code>{c_id}</code></h4>
+    <span class="badge {correct_text.lower()}">{correct_icon} Sistem Kararı: {correct_text}</span>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">1. Girdi Verileri (Bağlam ve Test Edilen İddia)</div>
+    <div class="section-content">
+      <p><strong>Bağlam:</strong> {context}</p>
+      <p><strong>Soru:</strong> {question}</p>
+      <p><strong>İddia (Sistem Çıktısı):</strong> {claim}</p>
+    </div>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">2. K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama)</div>
+    <div class="section-content">
+"""
+            if atom_results:
+                md += "<ul>\n"
+                for idx, atom_res in enumerate(atom_results, 1):
+                    lbl = atom_res.get('label', '')
+                    lbl_class = lbl.lower()
+                    md += f"<li>{atom_res.get('atom', '')} <br><span class=\"atom-label {lbl_class}\">mDeBERTa NLI Tahmini: <code>{lbl}</code></span></li>\n"
+                md += "</ul>\n"
             else:
-                md += f"- **Hakem Gerekçesi (Reasoning):** {reasoning}\n"
-                
-            md += "\n---\n\n"
+                md += "<p class=\"warning\">⚠️ <em>Gemma-4 modeli bu karmaşık iddia için atom çıkarımı yapamadı. Hibrit mimari hata toleransı gereği Hakem mekanizması devreye girdi.</em></p>\n"
             
-        md += "<div class=\"page-break\"></div>\n\n"
-        
+            md += f"""    </div>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">3. Modellerin Karar Matrisi</div>
+    <div class="section-content">
+      <table>
+        <thead>
+          <tr>
+            <th>Zemin Gerçeği (Gold Label)</th>
+            <th>K1 Kararı (ELECTRA)</th>
+            <th>K2 Kararı (Gemma+mDeBERTa)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>{gold}</code></td>
+            <td><code>{k1}</code></td>
+            <td><code>{k2}</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="section-box">
+    <div class="section-title">4. Nihai Karar ve Gerekçe</div>
+    <div class="section-content">
+      <p><strong>Nihai Karar:</strong> <code>{final}</code></p>
+      <p><strong>Mekanizma:</strong> {mechanism_text}</p>
+"""
+            if is_consensus:
+                md += "<p><strong>Açıklama:</strong> K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.</p>\n"
+            else:
+                md += f"<p><strong>Hakem Gerekçesi (Reasoning):</strong> {reasoning}</p>\n"
+                
+            md += """    </div>
+  </div>
+</div>
+"""
     with open(OUTPUT_MD, 'w', encoding='utf-8') as f:
         f.write(md)
     return md
@@ -140,55 +174,124 @@ def convert_md_to_html(md_text):
     <style>
         @page {{
             size: A4;
-            margin: 20mm;
+            margin: 15mm;
         }}
         @media print {{
             .page-break {{ page-break-before: always; }}
-            h4 {{ page-break-after: avoid; }}
-            table {{ page-break-inside: avoid; }}
+            .case-container {{ page-break-inside: avoid; }}
         }}
         body {{
-            font-family: 'Times New Roman', Times, serif;
-            line-height: 1.4;
-            color: #000;
-            font-size: 11pt;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.5;
+            color: #2c3e50;
+            font-size: 10.5pt;
+        }}
+        h1 {{ font-size: 18pt; text-align: center; border-bottom: 2px solid #2980b9; padding-bottom: 10px; margin-bottom: 20px; color: #2980b9; }}
+        h2 {{ font-size: 14pt; margin-top: 20px; border-bottom: 1px solid #bdc3c7; padding-bottom: 5px; color: #34495e; }}
+        h3 {{ font-size: 12pt; margin-top: 20px; color: #16a085; text-transform: uppercase; letter-spacing: 1px; }}
+        
+        .case-container {{
+            border: 1px solid #ecf0f1;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }}
+        .case-header {{
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-bottom: 1px solid #ecf0f1;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        .case-header h4 {{
+            margin: 0;
+            font-size: 12pt;
+            color: #2c3e50;
+        }}
+        .badge {{
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 9pt;
+            font-weight: bold;
+            color: white;
+        }}
+        .badge.doğru {{ background-color: #27ae60; }}
+        .badge.yanliş {{ background-color: #e74c3c; }}
+        
+        .section-box {{
+            margin: 10px 15px;
+            border-left: 3px solid #3498db;
+            background-color: #ffffff;
+        }}
+        .section-title {{
+            font-weight: bold;
+            font-size: 10.5pt;
+            color: #2980b9;
+            margin-bottom: 5px;
+            padding-left: 10px;
+            text-transform: uppercase;
+        }}
+        .section-content {{
+            padding-left: 10px;
+            font-size: 10pt;
+            color: #34495e;
+        }}
+        .section-content p {{
+            margin: 4px 0;
             text-align: justify;
         }}
-        h1, h2, h3, h4 {{
-            font-family: Arial, sans-serif;
-            color: #000;
+        .section-content strong {{
+            color: #2c3e50;
         }}
-        h1 {{ font-size: 18pt; text-align: center; border-bottom: 1px solid #000; padding-bottom: 10px; margin-bottom: 30px; }}
-        h2 {{ font-size: 14pt; margin-top: 30px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }}
-        h3 {{ font-size: 13pt; margin-top: 25px; }}
-        h4 {{ font-size: 11pt; margin-top: 20px; font-weight: bold; background-color: #f0f0f0; padding: 5px; border-left: 3px solid #666; }}
-        p {{ margin-bottom: 10px; }}
+        
+        ul {{ margin: 5px 0 5px 15px; padding: 0; }}
+        li {{ margin-bottom: 8px; }}
+        
+        .atom-label {{
+            font-size: 9pt;
+            padding: 2px 5px;
+            border-radius: 3px;
+            display: inline-block;
+            margin-top: 3px;
+        }}
+        .atom-label.entailment {{ background-color: #d4efdf; color: #196f3d; }}
+        .atom-label.contradiction {{ background-color: #fadbd8; color: #943126; }}
+        .atom-label.neutral {{ background-color: #fdebd0; color: #b9770e; }}
+        
+        .warning {{
+            color: #d35400;
+            background-color: #fdf2e9;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #e67e22;
+        }}
+
         table {{
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 15px;
-            font-size: 10pt;
-            font-family: Arial, sans-serif;
+            margin-top: 5px;
         }}
         th, td {{
-            border: 1px solid #000;
+            border: 1px solid #bdc3c7;
             padding: 6px;
-            text-align: left;
+            text-align: center;
         }}
         th {{
-            background-color: #e6e6e6;
-            font-weight: bold;
+            background-color: #f2f6f8;
+            font-size: 9.5pt;
+            color: #34495e;
         }}
         code {{
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f9f9f9;
-            padding: 1px 3px;
-            border: 1px solid #ddd;
+            background-color: #f4f6f7;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: 'Consolas', monospace;
             font-size: 9.5pt;
+            color: #c0392b;
         }}
-        hr {{ border: 0; border-top: 1px solid #ccc; margin: 20px 0; }}
-        ul, ol {{ margin-bottom: 15px; padding-left: 25px; }}
-        li {{ margin-bottom: 5px; }}
+        table code {{ color: #2980b9; font-weight: bold; }}
     </style>
 </head>
 <body>
