@@ -30,8 +30,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer tedavisinde kullanılan donepezil, rivastigmin ve galantamin hafif ve orta evrede asetilkolin miktarını artırarak kolinerjik iletimi güçlendirir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Alzheimer tedavisinde kullanılan donepezil, rivastigmin ve galantamin hafif ve orta evrede asetilkolin miktarını artırarak kolinerjik iletimi güçlendirir. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Alzheimer tedavisinde kullanılan donepezil, rivastigmin ve galantamin hafif ve orta evrede asetilkolin miktarını artırarak kolinerjik iletimi güçlendirir. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -52,8 +52,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin orta ve ileri evre Alzheimer hastalığında glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini önleyen bir NMDA reseptör antagonistidir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Memantin orta ve ileri evre Alzheimer hastalığında glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini önleyen bir NMDA reseptör antagonistidir. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Memantin orta ve ileri evre Alzheimer hastalığında glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini önleyen bir NMDA reseptör antagonistidir. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -74,8 +74,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalığında mevcut ilaç tedavileri hastalığı tamamen durduran şifa verici nitelikte olmayıp semptomları hafifletmeye yönelik semptomatik tedavilerdir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Alzheimer hastalığında mevcut ilaç tedavileri hastalığı tamamen durduran şifa verici nitelikte olmayıp semptomları hafifletmeye yönelik semptomatik tedavilerdir _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Alzheimer hastalığında mevcut ilaç tedavileri hastalığı tamamen durduran şifa verici nitelikte olmayıp semptomları hafifletmeye yönelik semptomatik tedavilerdir _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -96,9 +96,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Orta ve ağır evre Alzheimer hastalarında kolinesteraz inhibitörleri ile memantin birlikte kullanılabilir ve bu kombinasyon kognitif semptomlarda ek fayda sağlayabilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Orta ve ağır evre Alzheimer hastalarında kolinesteraz inhibitörleri ile memantin birlikte kullanılabilir _(Tahmin: `entailment`)_
-2. bu kombinasyon kognitif semptomlarda ek fayda sağlayabilir _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Orta ve ağır evre Alzheimer hastalarında kolinesteraz inhibitörleri ile memantin birlikte kullanılabilir _(mDeBERTa NLI Tahmini: `entailment`)_
+2. bu kombinasyon kognitif semptomlarda ek fayda sağlayabilir _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -119,9 +119,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörleri hafif ve orta evrede asetilkolin miktarını artırır ve sinir hücrelerini gençleştirerek beyin dokusundaki yaşlanmayı tamamen geri döndürür.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Kolinesteraz inhibitörleri hafif ve orta evrede asetilkolin miktarını artırır. _(Tahmin: `entailment`)_
-2. Kolinesteraz inhibitörleri sinir hücrelerini gençleştirerek beyin dokusundaki yaşlanmayı tamamen geri döndürür. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Kolinesteraz inhibitörleri hafif ve orta evrede asetilkolin miktarını artırır. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Kolinesteraz inhibitörleri sinir hücrelerini gençleştirerek beyin dokusundaki yaşlanmayı tamamen geri döndürür. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -142,9 +142,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin orta ve ileri evre Alzheimer hastalığında kullanılır ve hastanın tansiyon ilaçlarını tamamen bırakmasını sağlayarak damar sertliğini iyileştirir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Memantin orta ve ileri evre Alzheimer hastalığında kullanılır. _(Tahmin: `entailment`)_
-2. Memantin hastanın tansiyon ilaçlarını tamamen bırakmasını sağlayarak damar sertliğini iyileştirir. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Memantin orta ve ileri evre Alzheimer hastalığında kullanılır. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Memantin hastanın tansiyon ilaçlarını tamamen bırakmasını sağlayarak damar sertliğini iyileştirir. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -165,9 +165,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer tedavisinde ilaç dışı bilişsel yaklaşımlar yer almalıdır fakat ilaç tedavisine başlanan hastanın nöroloji uzmanı kontrolüne gitmesine gerek yoktur.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Alzheimer tedavisinde ilaç dışı bilişsel yaklaşımlar yer almalıdır _(Tahmin: `entailment`)_
-2. ilaç tedavisine başlanan hastanın nöroloji uzmanı kontrolüne gitmesine gerek yoktur _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Alzheimer tedavisinde ilaç dışı bilişsel yaklaşımlar yer almalıdır _(mDeBERTa NLI Tahmini: `entailment`)_
+2. ilaç tedavisine başlanan hastanın nöroloji uzmanı kontrolüne gitmesine gerek yoktur _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -188,9 +188,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Donepezil ve rivastigmin hafif evre Alzheimer tedavisinde kullanılır; ayrıca bu ilaçlar takrin ile kombine edilerek günlük rutin tedavide verilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Donepezil ve rivastigmin hafif evre Alzheimer tedavisinde kullanılır _(Tahmin: `entailment`)_
-2. Bu ilaçlar takrin ile kombine edilerek günlük rutin tedavide verilir _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Donepezil ve rivastigmin hafif evre Alzheimer tedavisinde kullanılır _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Bu ilaçlar takrin ile kombine edilerek günlük rutin tedavide verilir _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -211,7 +211,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalığında kullanılan mevcut medikal ilaçlar hastalığın ilerlemesini tamamen durdurarak hastayı biyolojik olarak iyileştiren kesin şifa tedavileridir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
 - _Atom bulunamadı_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
@@ -233,9 +233,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin bir kolinesteraz inhibitörü olup kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Memantin bir kolinesteraz inhibitörü _(Tahmin: `entailment`)_
-2. kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Memantin bir kolinesteraz inhibitörü _(mDeBERTa NLI Tahmini: `entailment`)_
+2. kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -256,7 +256,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Günümüzde yan etkileri nedeniyle donepezil ve rivastigmin tamamen yasaklanmış olup rutin klinik kullanımda yalnızca takrin tercih edilmektedir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
 - _Atom bulunamadı_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
@@ -278,8 +278,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörleri sinaptik aralıktaki asetilkolin maddesinin miktarını azaltarak kolinerjik sinirsel iletimi tamamen durdurur.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Kolinesteraz inhibitörleri sinaptik aralıktaki asetilkolin maddesinin miktarını azaltarak kolinerjik sinirsel iletimi tamamen durdurur. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Kolinesteraz inhibitörleri sinaptik aralıktaki asetilkolin maddesinin miktarını azaltarak kolinerjik sinirsel iletimi tamamen durdurur. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -300,8 +300,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalarında günlük yüksek doz C vitamini kullanımı kolinesteraz inhibitörlerinin bağırsaktan emilimini iki katına çıkarır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Alzheimer hastalarında günlük yüksek doz C vitamini kullanımı kolinesteraz inhibitörlerinin bağırsaktan emilimini iki katına çıkarır _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Alzheimer hastalarında günlük yüksek doz C vitamini kullanımı kolinesteraz inhibitörlerinin bağırsaktan emilimini iki katına çıkarır _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -322,8 +322,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Donepezil tedavisi alan hastaların ilacı her sabah aç karnına taze sıkılmış greyfurt suyuyla birlikte tüketmesi tavsiye edilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Donepezil tedavisi alan hastaların ilacı her sabah aç karnına taze sıkılmış greyfurt suyuyla birlikte tüketmesi tavsiye edilir _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Donepezil tedavisi alan hastaların ilacı her sabah aç karnına taze sıkılmış greyfurt suyuyla birlikte tüketmesi tavsiye edilir _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -344,8 +344,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin tedavisi gören hastaların haftada en az üç gün açık havada 45 dakika tempolu kardiyo egzersizi yapması zorunludur.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Memantin tedavisi gören hastaların haftada en az üç gün açık havada 45 dakika tempolu kardiyo egzersizi yapması zorunludur. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Memantin tedavisi gören hastaların haftada en az üç gün açık havada 45 dakika tempolu kardiyo egzersizi yapması zorunludur. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -366,8 +366,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörlerinin eczane perakende satış fiyatları her takvim yılı başında merkezi ilaç komisyonu kararıyla güncellenir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Kolinesteraz inhibitörlerinin eczane perakende satış fiyatları her takvim yılı başında merkezi ilaç komisyonu kararıyla güncellenir _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Kolinesteraz inhibitörlerinin eczane perakende satış fiyatları her takvim yılı başında merkezi ilaç komisyonu kararıyla güncellenir _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -392,8 +392,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** 4857 sayılı İş Kanunu'na göre aynı işverenin işyerinde en az bir tam yıl çalışmış olan işçi, iş sözleşmesinin kanunda belirtilen haklı veya geçerli nedenlerle feshedilmesi halinde kıdem tazminatına hak kazanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. 4857 sayılı İş Kanunu'na göre aynı işverenin işyerinde en az bir tam yıl çalışmış olan işçi, iş sözleşmesinin kanunda belirtilen haklı veya geçerli nedenlerle feshedilmesi halinde kıdem tazminatına hak kazanır. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. 4857 sayılı İş Kanunu'na göre aynı işverenin işyerinde en az bir tam yıl çalışmış olan işçi, iş sözleşmesinin kanunda belirtilen haklı veya geçerli nedenlerle feshedilmesi halinde kıdem tazminatına hak kazanır. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -414,9 +414,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken iki haftalık ihbar süresine uyulması veya bu süreye ait ücretin ihbar tazminatı olarak ödenmesi gerekir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(Tahmin: `entailment`)_
-2. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(mDeBERTa NLI Tahmini: `entailment`)_
+2. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -437,8 +437,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesi İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına uymayan haller sebebiyle işverence feshedilen işçiye kıdem ve ihbar tazminatı ödenmez.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İş sözleşmesi İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına uymayan haller sebebiyle işverence feshedilen işçiye kıdem ve ihbar tazminatı ödenmez. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İş sözleşmesi İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına uymayan haller sebebiyle işverence feshedilen işçiye kıdem ve ihbar tazminatı ödenmez. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -459,9 +459,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur. _(Tahmin: `neutral`)_
-2. Doğrudan mahkemeye dava açılamaz. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur. _(mDeBERTa NLI Tahmini: `neutral`)_
+2. Doğrudan mahkemeye dava açılamaz. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -482,9 +482,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesinin feshinde işçinin kıdem tazminatına hak kazanması için en az bir yıl çalışması şarttır ve kıdem tazminatı tavan sınırı olmaksızın brüt ücretin iki katı üzerinden hesaplanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İş sözleşmesinin feshinde işçinin kıdem tazminatına hak kazanması için en az bir yıl çalışması şarttır. _(Tahmin: `entailment`)_
-2. Kıdem tazminatının hesaplanmasında tavan sınırı olmaksızın brüt ücretin iki katı üzerinden hesaplanır. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İş sözleşmesinin feshinde işçinin kıdem tazminatına hak kazanması için en az bir yıl çalışması şarttır. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Kıdem tazminatının hesaplanmasında tavan sınırı olmaksızın brüt ücretin iki katı üzerinden hesaplanır. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -505,9 +505,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Üç yıldan fazla kıdemi olan işçi için ihbar süresi sekiz haftadır ve bildirim şartına uymayan taraf ihbar tazminatının yanı sıra hapis cezasıyla cezalandırılır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Üç yıldan fazla kıdemi olan işçi için ihbar süresi sekiz haftadır. _(Tahmin: `entailment`)_
-2. Bildirim şartına uymayan taraf ihbar tazminatının yanı sıra hapis cezasıyla cezalandırılır. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Üç yıldan fazla kıdemi olan işçi için ihbar süresi sekiz haftadır. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Bildirim şartına uymayan taraf ihbar tazminatının yanı sıra hapis cezasıyla cezalandırılır. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -528,9 +528,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır ancak dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır _(Tahmin: `neutral`)_
-2. dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır _(mDeBERTa NLI Tahmini: `neutral`)_
+2. dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -551,9 +551,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşi altı aydan bir buçuk yıla kadar süren işçi için ihbar süresi dört haftadır; ayrıca 25/II maddesi gereğince ahlak kurallarına uymayan işçiye her durumda peşin ihbar tazminatı ödenmesi zorunludur.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İşi altı aydan bir buçuk yıla kadar süren işçi için ihbar süresi dört haftadır. _(Tahmin: `entailment`)_
-2. Ayrıca 25/II maddesi gereğince ahlak kurallarına uymayan işçiye her durumda peşin ihbar tazminatı ödenmesi zorunludur. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İşi altı aydan bir buçuk yıla kadar süren işçi için ihbar süresi dört haftadır. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Ayrıca 25/II maddesi gereğince ahlak kurallarına uymayan işçiye her durumda peşin ihbar tazminatı ödenmesi zorunludur. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -574,8 +574,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** 4857 sayılı İş Kanunu'na göre işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresi sekiz hafta olarak uygulanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. 4857 sayılı İş Kanunu'na göre işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresi sekiz hafta olarak uygulanır. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. 4857 sayılı İş Kanunu'na göre işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresi sekiz hafta olarak uygulanır. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -596,10 +596,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş yerinde sadece üç ay çalışmış olan ve kendi isteğiyle istifa eden bir işçi kıdem tazminatına tam olarak hak kazanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İş yerinde sadece üç ay çalışmış olan _(Tahmin: `contradiction`)_
-2. kendi isteğiyle istifa eden bir işçi _(Tahmin: `neutral`)_
-3. kıdem tazminatına tam olarak hak kazanır _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İş yerinde sadece üç ay çalışmış olan _(mDeBERTa NLI Tahmini: `contradiction`)_
+2. kendi isteğiyle istifa eden bir işçi _(mDeBERTa NLI Tahmini: `neutral`)_
+3. kıdem tazminatına tam olarak hak kazanır _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -620,7 +620,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına aykırılık gerekçesiyle işten çıkarılan personele işverence hem kıdem hem de ihbar tazminatı eksiksiz ödenir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
 - _Atom bulunamadı_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
@@ -642,8 +642,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesi feshedilen çalışan, arabulucuya başvurma şartı aranmaksızın doğrudan doğruya iş mahkemesinde dava açabilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İş sözleşmesi feshedilen çalışan, arabulucuya başvurma şartı aranmaksızın doğrudan doğruya iş mahkemesinde dava açabilir. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İş sözleşmesi feshedilen çalışan, arabulucuya başvurma şartı aranmaksızın doğrudan doğruya iş mahkemesinde dava açabilir. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -664,8 +664,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Aynı işverenin işyerinde bir yılı dolduran işçinin yıllık ücretli izin hakkı en az on dört iş günüdür.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Aynı işverenin işyerinde bir yılı dolduran işçinin yıllık ücretli izin hakkı en az on dört iş günüdür. _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Aynı işverenin işyerinde bir yılı dolduran işçinin yıllık ücretli izin hakkı en az on dört iş günüdür. _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -686,8 +686,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Haftalık kırk beş saati aşan fazla çalışma süreleri için işçiye normal saatlik ücretinin yüzde elli fazlası ödenir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Haftalık kırk beş saati aşan fazla çalışma süreleri için işçiye normal saatlik ücretinin yüzde elli fazlası ödenir. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Haftalık kırk beş saati aşan fazla çalışma süreleri için işçiye normal saatlik ücretinin yüzde elli fazlası ödenir. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -708,8 +708,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kıdem tazminatına esas teşkil eden tavan ücret her yıl Asgari Ücret Tespit Komisyonu tarafından oy birliğiyle belirlenir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Kıdem tazminatına esas teşkil eden tavan ücret her yıl Asgari Ücret Tespit Komisyonu tarafından belirlenir. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Kıdem tazminatına esas teşkil eden tavan ücret her yıl Asgari Ücret Tespit Komisyonu tarafından belirlenir. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -730,8 +730,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İhbar süresi boyunca işveren işçiye günde iki saatten az olmamak üzere yeni iş arama izni vermekle yükümlüdür.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. İhbar süresi boyunca işveren işçiye günde iki saatten az olmamak üzere yeni iş arama izni vermekle yükümlüdür _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. İhbar süresi boyunca işveren işçiye günde iki saatten az olmamak üzere yeni iş arama izni vermekle yükümlüdür _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -756,9 +756,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Türkiye Cumhuriyeti Hazinesi tarafından ihraç edilen Eurobondlar genellikle altı ayda bir ya da yılda bir kupon faizi ödemesi gerçekleştiren uzun vadeli borçlanma araçlarıdır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Türkiye Cumhuriyeti Hazinesi tarafından ihraç edilen Eurobondlar _(Tahmin: `entailment`)_
-2. genellikle altı ayda bir ya da yılda bir kupon faizi ödemesi gerçekleştiren uzun vadeli borçlanma araçlarıdır _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Türkiye Cumhuriyeti Hazinesi tarafından ihraç edilen Eurobondlar _(mDeBERTa NLI Tahmini: `entailment`)_
+2. genellikle altı ayda bir ya da yılda bir kupon faizi ödemesi gerçekleştiren uzun vadeli borçlanma araçlarıdır _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -779,8 +779,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -801,8 +801,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine ihraçlı Eurobondların kupon faiz gelirlerinde yerli bireysel yatırımcılara uygulanan stopaj oranı yüzde sıfırdır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Hazine ihraçlı Eurobondların kupon faiz gelirlerinde yerli bireysel yatırımcılara uygulanan stopaj oranı yüzde sıfırdır _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Hazine ihraçlı Eurobondların kupon faiz gelirlerinde yerli bireysel yatırımcılara uygulanan stopaj oranı yüzde sıfırdır _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -823,8 +823,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobondlar yatırımcılara fiziki olarak teslim edilmeyip Takasbank ile Euroclear veya Clearstream gibi merkezlerde kaydi sistemde saklanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobondlar yatırımcılara fiziki olarak teslim edilmeyip Takasbank ile Euroclear veya Clearstream gibi merkezlerde kaydi sistemde saklanır _(Tahmin: `entailment`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobondlar yatırımcılara fiziki olarak teslim edilmeyip Takasbank ile Euroclear veya Clearstream gibi merkezlerde kaydi sistemde saklanır _(mDeBERTa NLI Tahmini: `entailment`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -845,9 +845,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond alım satımında standart takas süresi T+2 olarak uygulanır ve alıcılar vadesi gelen tahvillerin fiziki senetlerini doğrudan banka şubesinden teslim alabilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobond alım satımında standart takas süresi T+2 olarak uygulanır _(Tahmin: `entailment`)_
-2. alıcılar vadesi gelen tahvillerin fiziki senetlerini doğrudan banka şubesinden teslim alabilir _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobond alım satımında standart takas süresi T+2 olarak uygulanır _(mDeBERTa NLI Tahmini: `entailment`)_
+2. alıcılar vadesi gelen tahvillerin fiziki senetlerini doğrudan banka şubesinden teslim alabilir _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -868,9 +868,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine Eurobondlarının kupon faiz gelirlerinde stopaj oranı yüzde sıfırdır ve elde edilen gelir tutarı ne kadar yüksek olursa olsun hiçbir şekilde yıllık vergi beyannamesine dahil edilmez.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Hazine Eurobondlarının kupon faiz gelirlerinde stopaj oranı yüzde sıfırdır _(Tahmin: `entailment`)_
-2. elde edilen gelir tutarı ne kadar yüksek olursa olsun hiçbir şekilde yıllık vergi beyannamesine dahil edilmez _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Hazine Eurobondlarının kupon faiz gelirlerinde stopaj oranı yüzde sıfırdır _(mDeBERTa NLI Tahmini: `entailment`)_
+2. elde edilen gelir tutarı ne kadar yüksek olursa olsun hiçbir şekilde yıllık vergi beyannamesine dahil edilmez _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -891,9 +891,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobondlar ulusal para birimi dışındaki yabancı para cinsinden ihraç edilir; ayrıca Hazine tarafından ihraç edilen her bir Eurobond için Merkez Bankası altın cinsinden yüzde yüz karşılık tutmak zorundadır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobondlar ulusal para birimi dışındaki yabancı para cinsinden ihraç edilir. _(Tahmin: `entailment`)_
-2. Hazine tarafından ihraç edilen her bir Eurobond için Merkez Bankası altın cinsinden yüzde yüz karşılık tutmak zorundadır. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobondlar ulusal para birimi dışındaki yabancı para cinsinden ihraç edilir. _(mDeBERTa NLI Tahmini: `entailment`)_
+2. Hazine tarafından ihraç edilen her bir Eurobond için Merkez Bankası altın cinsinden yüzde yüz karşılık tutmak zorundadır. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -914,9 +914,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond kupon ödemeleri altı ayda bir veya yılda bir yapılabilir; ayrıca vadeden önce ikincil piyasada yapılan satışlarda bankalarca anında yüzde kırk oranında kaynakta stopaj kesintisi yapılır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobond kupon ödemeleri altı ayda bir veya yılda bir yapılabilir _(Tahmin: `entailment`)_
-2. vadeden önce ikincil piyasada yapılan satışlarda bankalarca anında yüzde kırk oranında kaynakta stopaj kesintisi yapılır _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobond kupon ödemeleri altı ayda bir veya yılda bir yapılabilir _(mDeBERTa NLI Tahmini: `entailment`)_
+2. vadeden önce ikincil piyasada yapılan satışlarda bankalarca anında yüzde kırk oranında kaynakta stopaj kesintisi yapılır _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -937,7 +937,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond işlemlerinde işlemlerin takas ve ödeme mutabakatı işlem yapılan gün içinde (T+0 aynı gün) anlık olarak sonuçlandırılmak zorundadır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
 - _Atom bulunamadı_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
@@ -959,8 +959,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine ihraçlı Eurobond kupon gelirleri üzerinden yerli bireysel yatırımcılardan kupon ödeme anında yüzde yirmi beş oranında peşin stopaj vergisi kesilir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Hazine ihraçlı Eurobond kupon gelirleri üzerinden yerli bireysel yatırımcılardan kupon ödeme anında yüzde yirmi beş oranında peşin stopaj vergisi kesilir. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Hazine ihraçlı Eurobond kupon gelirleri üzerinden yerli bireysel yatırımcılardan kupon ödeme anında yüzde yirmi beş oranında peşin stopaj vergisi kesilir. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -981,8 +981,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond ihraçlarında belirlenen kupon faiz oranlarının ihraç esnasında değişken olarak belirlenmesi kanunen kesinlikle yasaklanmıştır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobond ihraçlarında belirlenen kupon faiz oranlarının ihraç esnasında değişken olarak belirlenmesi kanunen kesinlikle yasaklanmıştır. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobond ihraçlarında belirlenen kupon faiz oranlarının ihraç esnasında değişken olarak belirlenmesi kanunen kesinlikle yasaklanmıştır. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -1003,8 +1003,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Yatırımcılar satın aldıkları Eurobondları Takasbank kaydı yerine basılı kıymetli evrak olarak fiziki şekilde saklamakla yükümlüdür.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Yatırımcılar satın aldıkları Eurobondları Takasbank kaydı yerine basılı kıymetli evrak olarak fiziki şekilde saklamakla yükümlüdür. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Yatırımcılar satın aldıkları Eurobondları Takasbank kaydı yerine basılı kıymetli evrak olarak fiziki şekilde saklamakla yükümlüdür. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -1025,8 +1025,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Bankalar arası Eurobond işlemlerinde asgari işlem limiti genellikle iki yüz bin ABD Doları olarak uygulanır.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Bankalar arası Eurobond işlemlerinde asgari işlem limiti genellikle iki yüz bin ABD Doları olarak uygulanır. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Bankalar arası Eurobond işlemlerinde asgari işlem limiti genellikle iki yüz bin ABD Doları olarak uygulanır. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -1047,9 +1047,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Türkiye'nin beş yıllık kredi temerrüt takası (CDS) primi arttığında ihraç edilecek Eurobondların kupon faizleri yükselir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Türkiye'nin beş yıllık kredi temerrüt takası (CDS) primi arttığında _(Tahmin: `neutral`)_
-2. ihraç edilecek Eurobondların kupon faizleri yükselir _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Türkiye'nin beş yıllık kredi temerrüt takası (CDS) primi arttığında _(mDeBERTa NLI Tahmini: `neutral`)_
+2. ihraç edilecek Eurobondların kupon faizleri yükselir _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -1070,8 +1070,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler. _(Tahmin: `contradiction`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler. _(mDeBERTa NLI Tahmini: `contradiction`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |
@@ -1092,8 +1092,8 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kurumsal yatırımcıların portföylerindeki Eurobond tutarı Bankacılık Düzenleme ve Denetleme Kurumu tarafından üç ayda bir denetlenir.
 
-**K2 Atomları (Gemma-4 + mDeBERTa):**
-1. Kurumsal yatırımcıların portföylerindeki Eurobond tutarı Bankacılık Düzenleme ve Denetleme Kurumu tarafından üç ayda bir denetlenir. _(Tahmin: `neutral`)_
+**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**
+1. Kurumsal yatırımcıların portföylerindeki Eurobond tutarı Bankacılık Düzenleme ve Denetleme Kurumu tarafından üç ayda bir denetlenir. _(mDeBERTa NLI Tahmini: `neutral`)_
 
 | Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
 | :--- | :--- | :--- |

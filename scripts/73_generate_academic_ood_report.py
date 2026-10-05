@@ -90,11 +90,11 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
             md += f"**Soru:** {question}\n\n"
             md += f"**İddia (Sistem Çıktısı):** {claim}\n\n"
             
-            # K2 Atomları
-            md += f"**K2 Atomları (Gemma-4 + mDeBERTa):**\n"
+            # K2 Süreci Ayrıştırıldı
+            md += f"**K2 Süreci (Gemma-4 ile Ayrıştırma, mDeBERTa ile Doğrulama):**\n"
             if atom_results:
                 for idx, atom_res in enumerate(atom_results, 1):
-                    md += f"{idx}. {atom_res.get('atom', '')} _(Tahmin: `{atom_res.get('label', '')}`)_\n"
+                    md += f"{idx}. {atom_res.get('atom', '')} _(mDeBERTa NLI Tahmini: `{atom_res.get('label', '')}`)_\n"
             else:
                 md += "- _Atom bulunamadı_\n"
             md += "\n"
