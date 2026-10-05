@@ -25,7 +25,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_01</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -82,7 +84,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_02</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -139,7 +143,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_03</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -196,7 +202,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_04</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -254,7 +262,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_05</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -312,7 +322,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_06</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -370,7 +382,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_07</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -428,7 +442,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_08</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -486,7 +502,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_09</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -541,7 +560,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_10</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -599,7 +621,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_11</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -654,7 +679,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_12</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -711,7 +738,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_13</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -768,7 +797,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_14</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -825,7 +856,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_15</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -882,7 +915,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_16</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -941,7 +976,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_01</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -998,7 +1035,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_02</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1056,7 +1095,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_03</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1113,7 +1154,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_04</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1171,7 +1215,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_05</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1229,7 +1275,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_06</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1287,7 +1335,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_07</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1345,7 +1396,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_08</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1403,7 +1456,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_09</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1460,7 +1516,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_10</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1519,7 +1578,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_11</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1574,7 +1635,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_12</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1631,7 +1694,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_13</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1688,7 +1754,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_14</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1745,7 +1813,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_15</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1802,7 +1872,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_law_16</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1861,7 +1934,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_01</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1919,7 +1994,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_02</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -1976,7 +2054,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_03</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2033,7 +2113,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_04</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2090,7 +2172,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_05</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2148,7 +2232,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_06</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2206,7 +2292,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_07</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2264,7 +2352,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_08</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2322,7 +2412,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_09</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2377,7 +2469,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_10</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2434,7 +2529,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_11</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2491,7 +2588,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_12</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2548,7 +2647,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_13</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2605,7 +2706,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_14</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2663,7 +2766,10 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_15</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge hakem">⚖️ Hakem Kararı</span>
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">
@@ -2720,7 +2826,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_fin_16</code></h4>
-    <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    <div style="display: flex; gap: 10px;">
+      <span class="badge doğru">✅ Sistem Kararı: DOĞRU</span>
+    </div>
   </div>
 
   <div class="section-box">

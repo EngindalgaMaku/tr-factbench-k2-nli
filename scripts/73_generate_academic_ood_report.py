@@ -100,7 +100,13 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
             md += f"""<div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>{c_id}</code></h4>
-    <span class="badge {correct_text.lower()}">{correct_icon} Sistem Kararı: {correct_text}</span>
+    <div style="display: flex; gap: 10px;">
+"""
+            if not is_consensus:
+                md += '      <span class="badge hakem">⚖️ Hakem Kararı</span>\n'
+                
+            md += f"""      <span class="badge {correct_text.lower()}">{correct_icon} Sistem Kararı: {correct_text}</span>
+    </div>
   </div>
 
   <div class="section-box">
