@@ -46,7 +46,7 @@ def generate_markdown():
 **Danışman:** Prof. Dr. Serkan Ballı  
 
 ## 1. Giriş
-Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. Her vaka için sorulan soru, referans bağlam ve değerlendirilen iddia açıkça gösterilmiştir.
+Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. 
 
 ## 2. Kümülatif Performans Tablosu
 
@@ -65,11 +65,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
     for domain in DOMAINS:
         md += f"### {domain['name']} Alanı Vakaları\n\n"
         
-        # Load data
         original_data = load_jsonl(domain['data_file'])
         results_data = load_jsonl(domain['results_file'])
         
-        # Create lookups
         context_map = {item['id']: item.get('context', 'Bağlam bulunamadı.') for item in original_data}
         question_map = {item['id']: item.get('question', 'Soru bulunamadı.') for item in original_data}
         
@@ -83,19 +81,46 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
             k2 = res.get('k2_pred', '')
             final = res.get('final_pred', '')
             reasoning = res.get('reasoning', '')
-            correct = "✅ DOĞRU" if res.get('final_correct', False) else "❌ YANLIŞ"
+            is_consensus = res.get('is_consensus', False)
+            decision_source = res.get('decision_source', '')
+            atom_results = res.get('atom_results', [])
             
             md += f"#### Vaka: `{c_id}`\n\n"
             md += f"**Bağlam:** {context}\n\n"
             md += f"**Soru:** {question}\n\n"
             md += f"**İddia (Sistem Çıktısı):** {claim}\n\n"
             
-            md += f"| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |\n"
-            md += f"| :--- | :--- | :--- | :--- | :--- |\n"
-            md += f"| `{gold}` | `{k1}` | `{k2}` | `{final}` | **{correct}** |\n\n"
+            # K2 Atomları
+            md += f"**K2 Atomları (Gemma-4 + mDeBERTa):**\n"
+            if atom_results:
+                for idx, atom_res in enumerate(atom_results, 1):
+                    md += f"{idx}. {atom_res.get('atom', '')} _(Tahmin: `{atom_res.get('label', '')}`)_\n"
+            else:
+                md += "- _Atom bulunamadı_\n"
+            md += "\n"
             
-            md += f"**Hakem / Uzlaşma Gerekçesi:** {reasoning}\n\n"
-            md += "---\n\n"
+            # Modellerin Karar Tablosu
+            md += f"| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |\n"
+            md += f"| :--- | :--- | :--- |\n"
+            md += f"| `{gold}` | `{k1}` | `{k2}` |\n\n"
+            
+            # Nihai Gerekçeli Karar
+            md += f"**Nihai Karar ve Gerekçe:**\n"
+            md += f"- **Karar:** `{final}` "
+            if res.get('final_correct', False):
+                md += "✅ (Sistem doğru karara ulaştı.)\n"
+            else:
+                md += "❌ (Sistem yanlış karar verdi.)\n"
+            
+            mechanism_text = "Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)" if is_consensus else "Meta-Hakem (Llama-3.3-70B) Kararı"
+            md += f"- **Mekanizma:** {mechanism_text}\n"
+            
+            if is_consensus:
+                md += f"- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.\n"
+            else:
+                md += f"- **Hakem Gerekçesi (Reasoning):** {reasoning}\n"
+                
+            md += "\n---\n\n"
             
         md += "<div class=\"page-break\"></div>\n\n"
         
@@ -160,6 +185,8 @@ def convert_md_to_html(md_text):
             font-size: 9.5pt;
         }}
         hr {{ border: 0; border-top: 1px solid #ccc; margin: 20px 0; }}
+        ul, ol {{ margin-bottom: 15px; padding-left: 25px; }}
+        li {{ margin-bottom: 5px; }}
     </style>
 </head>
 <body>

@@ -5,7 +5,7 @@
 **Danışman:** Prof. Dr. Serkan Ballı  
 
 ## 1. Giriş
-Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. Her vaka için sorulan soru, referans bağlam ve değerlendirilen iddia açıkça gösterilmiştir.
+Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım Dışı / Out-of-Distribution) metinlerdeki performansını değerlendirmek amacıyla Tıp (Alzheimer), Hukuk (İş Kanunu) ve Finans (Eurobond) alanlarında oluşturulan toplam 48 vakanın analizi sunulmaktadır. Modellerin verdikleri yanıtlar, atomik bileşenler, hakem mekanizmasının kararları ve sonuçlar vaka bazında listelenmiştir. 
 
 ## 2. Kümülatif Performans Tablosu
 
@@ -30,11 +30,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer tedavisinde kullanılan donepezil, rivastigmin ve galantamin hafif ve orta evrede asetilkolin miktarını artırarak kolinerjik iletimi güçlendirir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Alzheimer tedavisinde kullanılan donepezil, rivastigmin ve galantamin hafif ve orta evrede asetilkolin miktarını artırarak kolinerjik iletimi güçlendirir. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -46,11 +52,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin orta ve ileri evre Alzheimer hastalığında glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini önleyen bir NMDA reseptör antagonistidir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Memantin orta ve ileri evre Alzheimer hastalığında glutamat aktivitesini bloke ederek kalsiyumun hücreye aşırı girişini önleyen bir NMDA reseptör antagonistidir. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -62,11 +74,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalığında mevcut ilaç tedavileri hastalığı tamamen durduran şifa verici nitelikte olmayıp semptomları hafifletmeye yönelik semptomatik tedavilerdir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Alzheimer hastalığında mevcut ilaç tedavileri hastalığı tamamen durduran şifa verici nitelikte olmayıp semptomları hafifletmeye yönelik semptomatik tedavilerdir _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -78,11 +96,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Orta ve ağır evre Alzheimer hastalarında kolinesteraz inhibitörleri ile memantin birlikte kullanılabilir ve bu kombinasyon kognitif semptomlarda ek fayda sağlayabilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Orta ve ağır evre Alzheimer hastalarında kolinesteraz inhibitörleri ile memantin birlikte kullanılabilir _(Tahmin: `entailment`)_
+2. bu kombinasyon kognitif semptomlarda ek fayda sağlayabilir _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -94,11 +119,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörleri hafif ve orta evrede asetilkolin miktarını artırır ve sinir hücrelerini gençleştirerek beyin dokusundaki yaşlanmayı tamamen geri döndürür.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Kolinesteraz inhibitörleri hafif ve orta evrede asetilkolin miktarını artırır. _(Tahmin: `entailment`)_
+2. Kolinesteraz inhibitörleri sinir hücrelerini gençleştirerek beyin dokusundaki yaşlanmayı tamamen geri döndürür. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -110,11 +142,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin orta ve ileri evre Alzheimer hastalığında kullanılır ve hastanın tansiyon ilaçlarını tamamen bırakmasını sağlayarak damar sertliğini iyileştirir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Memantin orta ve ileri evre Alzheimer hastalığında kullanılır. _(Tahmin: `entailment`)_
+2. Memantin hastanın tansiyon ilaçlarını tamamen bırakmasını sağlayarak damar sertliğini iyileştirir. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -126,11 +165,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer tedavisinde ilaç dışı bilişsel yaklaşımlar yer almalıdır fakat ilaç tedavisine başlanan hastanın nöroloji uzmanı kontrolüne gitmesine gerek yoktur.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Alzheimer tedavisinde ilaç dışı bilişsel yaklaşımlar yer almalıdır _(Tahmin: `entailment`)_
+2. ilaç tedavisine başlanan hastanın nöroloji uzmanı kontrolüne gitmesine gerek yoktur _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -142,11 +188,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Donepezil ve rivastigmin hafif evre Alzheimer tedavisinde kullanılır; ayrıca bu ilaçlar takrin ile kombine edilerek günlük rutin tedavide verilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Donepezil ve rivastigmin hafif evre Alzheimer tedavisinde kullanılır _(Tahmin: `entailment`)_
+2. Bu ilaçlar takrin ile kombine edilerek günlük rutin tedavide verilir _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -158,11 +211,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalığında kullanılan mevcut medikal ilaçlar hastalığın ilerlemesini tamamen durdurarak hastayı biyolojik olarak iyileştiren kesin şifa tedavileridir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `supported` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+- _Atom bulunamadı_
 
-**Hakem / Uzlaşma Gerekçesi:** İddia, Alzheimer hastalığında kullanılan mevcut medikal ilaçların hastalığı tamamen durdurarak şifa veren tedaviler olduğunu iddia etmektedir. Bağlam ise bu ilaçların semptomları hafifletmeye yönelik semptomatik tedaviler olduğunu ve hastalığı tamamen durduran veya şifa veren tedaviler olmadığını açıkça belirtmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddia, Alzheimer hastalığında kullanılan mevcut medikal ilaçların hastalığı tamamen durdurarak şifa veren tedaviler olduğunu iddia etmektedir. Bağlam ise bu ilaçların semptomları hafifletmeye yönelik semptomatik tedaviler olduğunu ve hastalığı tamamen durduran veya şifa veren tedaviler olmadığını açıkça belirtmektedir.
 
 ---
 
@@ -174,11 +233,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin bir kolinesteraz inhibitörü olup kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `partially_supported` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Memantin bir kolinesteraz inhibitörü _(Tahmin: `entailment`)_
+2. kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddiada memantinin bir kolinesteraz inhibitörü olduğu doğru bilgi ile kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanması bilgisi bir arada bulunmakta, ancak bağlam memantinin aslında kalsiyumun hücreye aşırı girişini engelleyerek eksitotoksisiteyi önlediğini belirtmektedir. Model B'nin atomik analizinin gösterdiği gibi, iddianın bir parçası (memantin bir kolinesteraz inhibitörü değildir, NMDA reseptör antagonistidir) doğrudan bağlam tarafından çelişmekte ve diğer parçası (eksitotoksisiteyi artırmak amacıyla uygulanması) da bağlamla çelişmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddiada memantinin bir kolinesteraz inhibitörü olduğu doğru bilgi ile kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanması bilgisi bir arada bulunmakta, ancak bağlam memantinin aslında kalsiyumun hücreye aşırı girişini engelleyerek eksitotoksisiteyi önlediğini belirtmektedir. Model B'nin atomik analizinin gösterdiği gibi, iddianın bir parçası (memantin bir kolinesteraz inhibitörü değildir, NMDA reseptör antagonistidir) doğrudan bağlam tarafından çelişmekte ve diğer parçası (eksitotoksisiteyi artırmak amacıyla uygulanması) da bağlamla çelişmektedir.
 
 ---
 
@@ -190,11 +256,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Günümüzde yan etkileri nedeniyle donepezil ve rivastigmin tamamen yasaklanmış olup rutin klinik kullanımda yalnızca takrin tercih edilmektedir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `partially_supported` | `supported` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+- _Atom bulunamadı_
 
-**Hakem / Uzlaşma Gerekçesi:** İddia, donepezil ve rivastigmin'in tamamen yasaklandığını ve yalnızca takrin'in tercih edildiğini öne sürmektedir, ancak bağlamda bu bilgilerin hiçbirinin doğrulanmadığı görülmektedir. Ayrıca, bağlamda takrin'in artık kullanılmadığı bilgisi yer almaktadır, bu nedenle iddia doğrudan bağlamla çelişmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `partially_supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddia, donepezil ve rivastigmin'in tamamen yasaklandığını ve yalnızca takrin'in tercih edildiğini öne sürmektedir, ancak bağlamda bu bilgilerin hiçbirinin doğrulanmadığı görülmektedir. Ayrıca, bağlamda takrin'in artık kullanılmadığı bilgisi yer almaktadır, bu nedenle iddia doğrudan bağlamla çelişmektedir.
 
 ---
 
@@ -206,11 +278,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörleri sinaptik aralıktaki asetilkolin maddesinin miktarını azaltarak kolinerjik sinirsel iletimi tamamen durdurur.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Kolinesteraz inhibitörleri sinaptik aralıktaki asetilkolin maddesinin miktarını azaltarak kolinerjik sinirsel iletimi tamamen durdurur. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -222,11 +300,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Alzheimer hastalarında günlük yüksek doz C vitamini kullanımı kolinesteraz inhibitörlerinin bağırsaktan emilimini iki katına çıkarır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Alzheimer hastalarında günlük yüksek doz C vitamini kullanımı kolinesteraz inhibitörlerinin bağırsaktan emilimini iki katına çıkarır _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -238,11 +322,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Donepezil tedavisi alan hastaların ilacı her sabah aç karnına taze sıkılmış greyfurt suyuyla birlikte tüketmesi tavsiye edilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Donepezil tedavisi alan hastaların ilacı her sabah aç karnına taze sıkılmış greyfurt suyuyla birlikte tüketmesi tavsiye edilir _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -254,11 +344,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Memantin tedavisi gören hastaların haftada en az üç gün açık havada 45 dakika tempolu kardiyo egzersizi yapması zorunludur.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Memantin tedavisi gören hastaların haftada en az üç gün açık havada 45 dakika tempolu kardiyo egzersizi yapması zorunludur. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -270,11 +366,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kolinesteraz inhibitörlerinin eczane perakende satış fiyatları her takvim yılı başında merkezi ilaç komisyonu kararıyla güncellenir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Kolinesteraz inhibitörlerinin eczane perakende satış fiyatları her takvim yılı başında merkezi ilaç komisyonu kararıyla güncellenir _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -290,11 +392,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** 4857 sayılı İş Kanunu'na göre aynı işverenin işyerinde en az bir tam yıl çalışmış olan işçi, iş sözleşmesinin kanunda belirtilen haklı veya geçerli nedenlerle feshedilmesi halinde kıdem tazminatına hak kazanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. 4857 sayılı İş Kanunu'na göre aynı işverenin işyerinde en az bir tam yıl çalışmış olan işçi, iş sözleşmesinin kanunda belirtilen haklı veya geçerli nedenlerle feshedilmesi halinde kıdem tazminatına hak kazanır. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -306,11 +414,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken iki haftalık ihbar süresine uyulması veya bu süreye ait ücretin ihbar tazminatı olarak ödenmesi gerekir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(Tahmin: `entailment`)_
+2. İşi altı aydan az sürmüş olan işçinin belirsiz süreli iş sözleşmesi feshedilirken fesih bildirimi nasıl yapılmalıdır? _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -322,11 +437,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesi İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına uymayan haller sebebiyle işverence feshedilen işçiye kıdem ve ihbar tazminatı ödenmez.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İş sözleşmesi İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına uymayan haller sebebiyle işverence feshedilen işçiye kıdem ve ihbar tazminatı ödenmez. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -338,11 +459,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `partially_supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur. _(Tahmin: `neutral`)_
+2. Doğrudan mahkemeye dava açılamaz. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddia, bağlamda açıkça belirtilen 'feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz' bilgisini doğrudan yansıtmaktadır. Model A, iddiayı bütün olarak değerlendirerek supported kararı vermiştir ve bu doğru bir yaklaşımdır.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddia, bağlamda açıkça belirtilen 'feshe karşı işe iade davası açmak isteyen işçinin, bildirim tebliğinden itibaren bir ay içinde arabulucuya başvurması zorunludur ve doğrudan mahkemeye dava açılamaz' bilgisini doğrudan yansıtmaktadır. Model A, iddiayı bütün olarak değerlendirerek supported kararı vermiştir ve bu doğru bir yaklaşımdır.
 
 ---
 
@@ -354,11 +482,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesinin feshinde işçinin kıdem tazminatına hak kazanması için en az bir yıl çalışması şarttır ve kıdem tazminatı tavan sınırı olmaksızın brüt ücretin iki katı üzerinden hesaplanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İş sözleşmesinin feshinde işçinin kıdem tazminatına hak kazanması için en az bir yıl çalışması şarttır. _(Tahmin: `entailment`)_
+2. Kıdem tazminatının hesaplanmasında tavan sınırı olmaksızın brüt ücretin iki katı üzerinden hesaplanır. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -370,11 +505,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Üç yıldan fazla kıdemi olan işçi için ihbar süresi sekiz haftadır ve bildirim şartına uymayan taraf ihbar tazminatının yanı sıra hapis cezasıyla cezalandırılır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Üç yıldan fazla kıdemi olan işçi için ihbar süresi sekiz haftadır. _(Tahmin: `entailment`)_
+2. Bildirim şartına uymayan taraf ihbar tazminatının yanı sıra hapis cezasıyla cezalandırılır. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -386,11 +528,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır ancak dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `contradicted` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır _(Tahmin: `neutral`)_
+2. dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddiada iki farklı önerme bulunmaktadır: 'İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır' ve 'dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir'. İlk önerme bağlam tarafından doğrulanırken, ikinci önerme bağlamda bulunmamaktadır ve doğrudan bir çelişki oluşturmamaktadır, ancak bağlamda böyle bir olanaktan da bahsedilmez. Dolayısıyla, iddianın bir kısmı bağlam tarafından desteklenirken, diğer kısmı bağlamda yer almayan bir duruma işaret etmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddiada iki farklı önerme bulunmaktadır: 'İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır' ve 'dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir'. İlk önerme bağlam tarafından doğrulanırken, ikinci önerme bağlamda bulunmamaktadır ve doğrudan bir çelişki oluşturmamaktadır, ancak bağlamda böyle bir olanaktan da bahsedilmez. Dolayısıyla, iddianın bir kısmı bağlam tarafından desteklenirken, diğer kısmı bağlamda yer almayan bir duruma işaret etmektedir.
 
 ---
 
@@ -402,11 +551,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İşi altı aydan bir buçuk yıla kadar süren işçi için ihbar süresi dört haftadır; ayrıca 25/II maddesi gereğince ahlak kurallarına uymayan işçiye her durumda peşin ihbar tazminatı ödenmesi zorunludur.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İşi altı aydan bir buçuk yıla kadar süren işçi için ihbar süresi dört haftadır. _(Tahmin: `entailment`)_
+2. Ayrıca 25/II maddesi gereğince ahlak kurallarına uymayan işçiye her durumda peşin ihbar tazminatı ödenmesi zorunludur. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -418,11 +574,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** 4857 sayılı İş Kanunu'na göre işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresi sekiz hafta olarak uygulanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `supported` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. 4857 sayılı İş Kanunu'na göre işi altı aydan az sürmüş bir işçinin fesih bildirimi için ihbar süresi sekiz hafta olarak uygulanır. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddiada yer alan ihbar süresinin sekiz hafta olarak uygulanması ifadesi, bağlamda belirtilen altı aydan az sürmüş işçi için iki hafta olan ihbar süresiyle doğrudan çelişmektedir. Model B'nin atomik olarak ayırdığı önerme doğrudan bağlamla çeliştiğinden, Model B'nin kararı doğru görünmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `supported` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddiada yer alan ihbar süresinin sekiz hafta olarak uygulanması ifadesi, bağlamda belirtilen altı aydan az sürmüş işçi için iki hafta olan ihbar süresiyle doğrudan çelişmektedir. Model B'nin atomik olarak ayırdığı önerme doğrudan bağlamla çeliştiğinden, Model B'nin kararı doğru görünmektedir.
 
 ---
 
@@ -434,11 +596,19 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş yerinde sadece üç ay çalışmış olan ve kendi isteğiyle istifa eden bir işçi kıdem tazminatına tam olarak hak kazanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `unverifiable` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İş yerinde sadece üç ay çalışmış olan _(Tahmin: `contradiction`)_
+2. kendi isteğiyle istifa eden bir işçi _(Tahmin: `neutral`)_
+3. kıdem tazminatına tam olarak hak kazanır _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddiada yer alan 'kıdem tazminatına tam olarak hak kazanır' ifadesi, bağlamda belirtilen 'işçinin kıdem tazminatına hak kazanabilmesi için aynı işverenin işyerinde en az bir tam yıl çalışmış olması' şartıyla doğrudan çelişmektedir. Ayrıca, işçi kendi isteğiyle istifa ettiğinde kıdem tazminatı alamayacağı da belirtilmiştir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddiada yer alan 'kıdem tazminatına tam olarak hak kazanır' ifadesi, bağlamda belirtilen 'işçinin kıdem tazminatına hak kazanabilmesi için aynı işverenin işyerinde en az bir tam yıl çalışmış olması' şartıyla doğrudan çelişmektedir. Ayrıca, işçi kendi isteğiyle istifa ettiğinde kıdem tazminatı alamayacağı da belirtilmiştir.
 
 ---
 
@@ -450,11 +620,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş Kanunu'nun 25/II maddesindeki ahlak ve iyi niyet kurallarına aykırılık gerekçesiyle işten çıkarılan personele işverence hem kıdem hem de ihbar tazminatı eksiksiz ödenir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+- _Atom bulunamadı_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -466,11 +642,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İş sözleşmesi feshedilen çalışan, arabulucuya başvurma şartı aranmaksızın doğrudan doğruya iş mahkemesinde dava açabilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İş sözleşmesi feshedilen çalışan, arabulucuya başvurma şartı aranmaksızın doğrudan doğruya iş mahkemesinde dava açabilir. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -482,11 +664,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Aynı işverenin işyerinde bir yılı dolduran işçinin yıllık ücretli izin hakkı en az on dört iş günüdür.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `supported` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Aynı işverenin işyerinde bir yılı dolduran işçinin yıllık ücretli izin hakkı en az on dört iş günüdür. _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** Bağlamda yıllık ücretli izin hakkına ilişkin bir bilgi bulunmamaktadır. Model B'nin kararı yanlıştır çünkü bağlamda bu bilgiye dair hiçbir kanıt veya doğrulama yoktur.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** Bağlamda yıllık ücretli izin hakkına ilişkin bir bilgi bulunmamaktadır. Model B'nin kararı yanlıştır çünkü bağlamda bu bilgiye dair hiçbir kanıt veya doğrulama yoktur.
 
 ---
 
@@ -498,11 +686,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Haftalık kırk beş saati aşan fazla çalışma süreleri için işçiye normal saatlik ücretinin yüzde elli fazlası ödenir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Haftalık kırk beş saati aşan fazla çalışma süreleri için işçiye normal saatlik ücretinin yüzde elli fazlası ödenir. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -514,11 +708,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kıdem tazminatına esas teşkil eden tavan ücret her yıl Asgari Ücret Tespit Komisyonu tarafından oy birliğiyle belirlenir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Kıdem tazminatına esas teşkil eden tavan ücret her yıl Asgari Ücret Tespit Komisyonu tarafından belirlenir. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -530,11 +730,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** İhbar süresi boyunca işveren işçiye günde iki saatten az olmamak üzere yeni iş arama izni vermekle yükümlüdür.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `contradicted` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. İhbar süresi boyunca işveren işçiye günde iki saatten az olmamak üzere yeni iş arama izni vermekle yükümlüdür _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** Bağlamda ihbar süresi boyunca işverenin işçiye yeni iş arama izni verme yükümlülüğü hakkında hiçbir bilgi bulunmamaktadır. Model B'nin kararı doğru olup, bağlamda bu konuya dair hiçbir bilgi bulunmadığından unverifiable kararı verilmesi gerekmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `contradicted` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** Bağlamda ihbar süresi boyunca işverenin işçiye yeni iş arama izni verme yükümlülüğü hakkında hiçbir bilgi bulunmamaktadır. Model B'nin kararı doğru olup, bağlamda bu konuya dair hiçbir bilgi bulunmadığından unverifiable kararı verilmesi gerekmektedir.
 
 ---
 
@@ -550,11 +756,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Türkiye Cumhuriyeti Hazinesi tarafından ihraç edilen Eurobondlar genellikle altı ayda bir ya da yılda bir kupon faizi ödemesi gerçekleştiren uzun vadeli borçlanma araçlarıdır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Türkiye Cumhuriyeti Hazinesi tarafından ihraç edilen Eurobondlar _(Tahmin: `entailment`)_
+2. genellikle altı ayda bir ya da yılda bir kupon faizi ödemesi gerçekleştiren uzun vadeli borçlanma araçlarıdır _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -566,11 +779,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `contradicted` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** İddia, bağlamda açıkça belirtilen 'Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır' bilgisini doğrudan tekrarlamaktadır. Model A'nın kararı, bağlamın iddianın tümünü desteklediğini doğru bir şekilde yansıtmaktadır.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** İddia, bağlamda açıkça belirtilen 'Eurobond alım satım işlemlerinde standart piyasa takas süresi işlem gününü izleyen ikinci iş günü (T+2) olarak uygulanır' bilgisini doğrudan tekrarlamaktadır. Model A'nın kararı, bağlamın iddianın tümünü desteklediğini doğru bir şekilde yansıtmaktadır.
 
 ---
 
@@ -582,11 +801,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine ihraçlı Eurobondların kupon faiz gelirlerinde yerli bireysel yatırımcılara uygulanan stopaj oranı yüzde sıfırdır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Hazine ihraçlı Eurobondların kupon faiz gelirlerinde yerli bireysel yatırımcılara uygulanan stopaj oranı yüzde sıfırdır _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -598,11 +823,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobondlar yatırımcılara fiziki olarak teslim edilmeyip Takasbank ile Euroclear veya Clearstream gibi merkezlerde kaydi sistemde saklanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `supported` | `supported` | `supported` | `supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobondlar yatırımcılara fiziki olarak teslim edilmeyip Takasbank ile Euroclear veya Clearstream gibi merkezlerde kaydi sistemde saklanır _(Tahmin: `entailment`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `supported` | `supported` | `supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -614,11 +845,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond alım satımında standart takas süresi T+2 olarak uygulanır ve alıcılar vadesi gelen tahvillerin fiziki senetlerini doğrudan banka şubesinden teslim alabilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobond alım satımında standart takas süresi T+2 olarak uygulanır _(Tahmin: `entailment`)_
+2. alıcılar vadesi gelen tahvillerin fiziki senetlerini doğrudan banka şubesinden teslim alabilir _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -630,11 +868,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine Eurobondlarının kupon faiz gelirlerinde stopaj oranı yüzde sıfırdır ve elde edilen gelir tutarı ne kadar yüksek olursa olsun hiçbir şekilde yıllık vergi beyannamesine dahil edilmez.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Hazine Eurobondlarının kupon faiz gelirlerinde stopaj oranı yüzde sıfırdır _(Tahmin: `entailment`)_
+2. elde edilen gelir tutarı ne kadar yüksek olursa olsun hiçbir şekilde yıllık vergi beyannamesine dahil edilmez _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -646,11 +891,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobondlar ulusal para birimi dışındaki yabancı para cinsinden ihraç edilir; ayrıca Hazine tarafından ihraç edilen her bir Eurobond için Merkez Bankası altın cinsinden yüzde yüz karşılık tutmak zorundadır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobondlar ulusal para birimi dışındaki yabancı para cinsinden ihraç edilir. _(Tahmin: `entailment`)_
+2. Hazine tarafından ihraç edilen her bir Eurobond için Merkez Bankası altın cinsinden yüzde yüz karşılık tutmak zorundadır. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -662,11 +914,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond kupon ödemeleri altı ayda bir veya yılda bir yapılabilir; ayrıca vadeden önce ikincil piyasada yapılan satışlarda bankalarca anında yüzde kırk oranında kaynakta stopaj kesintisi yapılır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `partially_supported` | `partially_supported` | `partially_supported` | `partially_supported` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobond kupon ödemeleri altı ayda bir veya yılda bir yapılabilir _(Tahmin: `entailment`)_
+2. vadeden önce ikincil piyasada yapılan satışlarda bankalarca anında yüzde kırk oranında kaynakta stopaj kesintisi yapılır _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `partially_supported` | `partially_supported` | `partially_supported` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `partially_supported` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -678,11 +937,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond işlemlerinde işlemlerin takas ve ödeme mutabakatı işlem yapılan gün içinde (T+0 aynı gün) anlık olarak sonuçlandırılmak zorundadır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+- _Atom bulunamadı_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -694,11 +959,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Hazine ihraçlı Eurobond kupon gelirleri üzerinden yerli bireysel yatırımcılardan kupon ödeme anında yüzde yirmi beş oranında peşin stopaj vergisi kesilir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `unverifiable` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Hazine ihraçlı Eurobond kupon gelirleri üzerinden yerli bireysel yatırımcılardan kupon ödeme anında yüzde yirmi beş oranında peşin stopaj vergisi kesilir. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** Bağlam, Hazine ihraçlı Eurobondlardan elde edilen kupon faiz gelirleri üzerinden yerli bireysel yatırımcılar için stopaj oranının yüzde sıfır (%0) olduğunu belirtmektedir. İddia ise yüzde yirmi beş oranında peşin stopaj vergisi kesildiğini öne sürmekte ve bu doğrudan bağlamla çelişmektedir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `unverifiable` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** Bağlam, Hazine ihraçlı Eurobondlardan elde edilen kupon faiz gelirleri üzerinden yerli bireysel yatırımcılar için stopaj oranının yüzde sıfır (%0) olduğunu belirtmektedir. İddia ise yüzde yirmi beş oranında peşin stopaj vergisi kesildiğini öne sürmekte ve bu doğrudan bağlamla çelişmektedir.
 
 ---
 
@@ -710,11 +981,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond ihraçlarında belirlenen kupon faiz oranlarının ihraç esnasında değişken olarak belirlenmesi kanunen kesinlikle yasaklanmıştır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobond ihraçlarında belirlenen kupon faiz oranlarının ihraç esnasında değişken olarak belirlenmesi kanunen kesinlikle yasaklanmıştır. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -726,11 +1003,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Yatırımcılar satın aldıkları Eurobondları Takasbank kaydı yerine basılı kıymetli evrak olarak fiziki şekilde saklamakla yükümlüdür.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `contradicted` | `contradicted` | `contradicted` | `contradicted` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Yatırımcılar satın aldıkları Eurobondları Takasbank kaydı yerine basılı kıymetli evrak olarak fiziki şekilde saklamakla yükümlüdür. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `contradicted` | `contradicted` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `contradicted` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -742,11 +1025,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Bankalar arası Eurobond işlemlerinde asgari işlem limiti genellikle iki yüz bin ABD Doları olarak uygulanır.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Bankalar arası Eurobond işlemlerinde asgari işlem limiti genellikle iki yüz bin ABD Doları olarak uygulanır. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -758,11 +1047,18 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Türkiye'nin beş yıllık kredi temerrüt takası (CDS) primi arttığında ihraç edilecek Eurobondların kupon faizleri yükselir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Türkiye'nin beş yıllık kredi temerrüt takası (CDS) primi arttığında _(Tahmin: `neutral`)_
+2. ihraç edilecek Eurobondların kupon faizleri yükselir _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
@@ -774,11 +1070,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `contradicted` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler. _(Tahmin: `contradiction`)_
 
-**Hakem / Uzlaşma Gerekçesi:** Bağlamda Eurobond'lardan elde edilen kupon faiz gelirlerinin döviz cinsinden ödenmesiyle ilgili herhangi bir bilgi bulunmamaktadır. Model B'nin doğrudan çelişki kararı vermesi daha uygun görünmektedir çünkü iddia edilen durum bağlamda açıkça doğrulanmıyor veya reddedilmiyor, ancak bağlamda bulunan bilgilerle doğrudan çelişen bir durum da söz konusu değildir, sadece bilgi eksikliği vardır.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `contradicted` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Meta-Hakem (Llama-3.3-70B) Kararı
+- **Hakem Gerekçesi (Reasoning):** Bağlamda Eurobond'lardan elde edilen kupon faiz gelirlerinin döviz cinsinden ödenmesiyle ilgili herhangi bir bilgi bulunmamaktadır. Model B'nin doğrudan çelişki kararı vermesi daha uygun görünmektedir çünkü iddia edilen durum bağlamda açıkça doğrulanmıyor veya reddedilmiyor, ancak bağlamda bulunan bilgilerle doğrudan çelişen bir durum da söz konusu değildir, sadece bilgi eksikliği vardır.
 
 ---
 
@@ -790,11 +1092,17 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 **İddia (Sistem Çıktısı):** Kurumsal yatırımcıların portföylerindeki Eurobond tutarı Bankacılık Düzenleme ve Denetleme Kurumu tarafından üç ayda bir denetlenir.
 
-| Zemin Gerçeği | K1 Kararı | K2 Kararı | Nihai Karar | Sonuç |
-| :--- | :--- | :--- | :--- | :--- |
-| `unverifiable` | `unverifiable` | `unverifiable` | `unverifiable` | **✅ DOĞRU** |
+**K2 Atomları (Gemma-4 + mDeBERTa):**
+1. Kurumsal yatırımcıların portföylerindeki Eurobond tutarı Bankacılık Düzenleme ve Denetleme Kurumu tarafından üç ayda bir denetlenir. _(Tahmin: `neutral`)_
 
-**Hakem / Uzlaşma Gerekçesi:** K1 ve K2 yerel modelleri hemfikir.
+| Zemin Gerçeği | K1 (ELECTRA) | K2 (Gemma+mDeBERTa) |
+| :--- | :--- | :--- |
+| `unverifiable` | `unverifiable` | `unverifiable` |
+
+**Nihai Karar ve Gerekçe:**
+- **Karar:** `unverifiable` ✅ (Sistem doğru karara ulaştı.)
+- **Mekanizma:** Yerel Modeller Arası Doğrudan Uzlaşma (LLM'e gidilmedi)
+- **Açıklama:** K1 ve K2 modelleri birbiriyle tam uyuştuğu için karar doğrudan kabul edilmiştir.
 
 ---
 
