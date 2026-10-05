@@ -1,3 +1,29 @@
+
+analysis = '''
+<div class="page-break"></div>
+
+## 4. Hata Analizi (Derinlemesine İnceleme)
+
+Sistem, Dağılım Dışı (OOD) test setindeki 48 vakanın 45'ini kusursuz şekilde sınıflandırmış, ancak 3 vakada (1 Tıp, 1 Hukuk, 1 Finans) hata yapmıştır. Hibrit mimarinin zayıf noktalarını tespit etmek amacıyla bu 3 vakanın hata mekanizmaları aşağıda detaylandırılmıştır.
+
+### 4.1. Tıp Vakası (ood_med_10)
+- **İddia:** *Memantin bir kolinesteraz inhibitörü olup kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır.*
+- **Altın Etiket:** Contradicted (Bağlamla Çelişiyor)
+- **Sistem Kararı:** Partially Supported (Kısmen Destekleniyor) ❌
+- **Hata Mekanizması (Hakem Halüsinasyonu):** İddianın tamamı bağlamla çelişmesine rağmen, K2 NLI modülü (mDeBERTa) iddiayı atomlarına böldükten sonra hatalı bir şekilde `[entailment, contradiction]` tahmini yapmış ve uyuşmazlık Hakem'e (Llama-3.3-70B) gitmiştir. Büyük dil modeli (Hakem) bağlamı okurken tıp domaini ile ilgili kendi içsel (pre-trained) bilgisini araya karıştırmış, memantinin bir kolinesteraz inhibitörü olduğunu zannederek iddianın ilk yarısını *doğru* kabul etmiş ve kararı `partially_supported` olarak onaylamıştır. Bu durum, Hakem modelinin aşırı özgüvenli halüsinasyonlarının sistemin doğruluğunu nasıl bozduğuna dair klasik bir örnektir.
+
+### 4.2. Hukuk Vakası (ood_law_07)
+- **İddia:** *İşe iade talebinde bulunan işçi fesih tebliğinden itibaren bir ay içinde arabulucuya başvurmalıdır ancak dileyen işçi arabulucuya gitmeden doğrudan noter kanalıyla tazminatını tahsil edebilir.*
+- **Altın Etiket:** Partially Supported (Kısmen Destekleniyor)
+- **Sistem Kararı:** Contradicted (Bağlamla Çelişiyor) ❌
+- **Hata Mekanizması (Kavramsal Yanılgı):** İddia, bağlamda var olan DOĞRU bir bilgi ile bağlamla çelişen YANLIŞ bir bilginin birleşiminden oluştuğu için tam olarak *Partially Supported* etiketine uymaktadır. Ancak Hakem modeli (Llama), *"bir cümlenin içinde tek bir yalan varsa o cümlenin tamamı yalandır"* şeklinde katı bir mantıksal tümevarım (strict boolean logic) yürüterek kararı `contradicted` olarak bozmuştur. Model, *Kısmen Destekleniyor* etiketinin tanım sınırlarını esnetememiştir.
+
+### 4.3. Finans Vakası (ood_fin_15)
+- **İddia:** *Eurobond satın alan yatırımcılar ilgili tahvilin kupon faizlerini yalnızca İsviçre frangı cinsinden talep edebilirler.*
+- **Altın Etiket:** Unverifiable (Doğrulanamaz)
+- **Sistem Kararı:** Contradicted (Bağlamla Çelişiyor) ❌
+- **Hata Mekanizması (Aşırı Çıkarım - Over-inference):** Bağlamda Eurobondların *"genellikle ABD Doları veya Avro gibi para birimleri cinsinden ihraç edildiği"* bilgisi yer almaktadır. Bağlam, İsviçre frangını kesin bir dille yasaklamadığı için altın etiket `unverifiable` olmalıdır. Ancak K2 ve Hakem modeli, *"genellikle dolar veya avro ise, YALNIZCA İsviçre frangı olması imkansızdır"* şeklinde probabilistik (olasılıksal) bir mantık yürüterek bunu doğrudan çelişki (`contradicted`) olarak işaretlemiştir. Dil modellerinin, metinde verilmeyen bilgileri dünyevi mantıkla (world knowledge) çürütmeye çalışması bu hatanın temel sebebidir.
+'''
 import os
 import json
 import markdown
@@ -172,6 +198,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim aşamasında hiç karşılaşmadı
   </div>
 </div>
 """
+    md += analysis
     with open(OUTPUT_MD, 'w', encoding='utf-8') as f:
         f.write(md)
     return md
