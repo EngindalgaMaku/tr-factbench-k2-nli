@@ -135,11 +135,11 @@
 <h2>2. Deney Kurulumu ve Kademeli Hibrit Mimari</h2>
 <p>Bu testler, halüsinasyon tespiti ve doğrulama (fact-checking) için önerilen <strong>Kademeli Hibrit Mimari</strong> kullanılarak gerçekleştirilmiştir. Mimari üç ana bileşenden oluşmaktadır:</p>
 <ol>
-<li><strong>K1 - Doğrudan Sınıflandırıcı (ELECTRA-TR):</strong> Cümleyi ve bağlamı bir bütün olarak değerlendiren, hızlı ve bütüncül (holistik) bir encoder (kodlayıcı) modeldir.</li>
-<li><strong>K2 - Atomik NLI Ayrıştırıcı (Gemma-4-2B + mDeBERTa):</strong> Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.</li>
+<li><strong>K1 - Bileşen 1: Doğrudan Doğrulayıcı (ELECTRA-TR):</strong> Cümleyi ve bağlamı bir bütün olarak değerlendiren, hızlı ve bütüncül (holistik) bir encoder (kodlayıcı) modeldir.</li>
+<li><strong>K2 - Bileşen 2: Atomik NLI Doğrulayıcı (Gemma-4-2B + mDeBERTa):</strong> Karmaşık iddiaları daha küçük yapıtaşlarına (atomlarına) bölen Gemma tabanlı bir LLM ile, bu atomları tek tek Doğal Dil Çıkarımı (NLI) yöntemiyle test eden mDeBERTa modelinin kombinasyonudur.</li>
 <li><strong>Meta-Hakem (Llama-3.3-70B):</strong> K1 ve K2 farklı kararlar verdiğinde (<em>Uyuşmazlık</em>) devreye giren son karar merciidir (Arbitrator). Her iki modelin de analizlerini görerek zincirleme mantık (Chain-of-Thought) yöntemiyle nihai kararı verir. K1 ve K2 anlaştığında Hakem'e gidilmez.</li>
 </ol>
-<p><strong>Meta-Hakem (Llama-70B) için kullanılan Sistem İstem'i (Prompt):</strong>
+<p><strong>Meta-Hakem (Llama-3.3-70B) için kullanılan Sistem İstem'i (Prompt):</strong>
 ```text
 Sen, iki farklı yapay zeka modelinin çelişkisini çözen tarafsız bir Baş Hakemsin.</p>
 <p>GÖREV:
@@ -3088,7 +3088,7 @@ Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşam
 <li><strong>İddia:</strong> <em>Memantin bir kolinesteraz inhibitörü olup kalsiyumun hücreye aşırı girişini hızlandırarak eksitotoksisiteyi artırmak amacıyla uygulanır.</em></li>
 <li><strong>Altın Etiket:</strong> Contradicted (Bağlamla Çelişiyor)</li>
 <li><strong>Sistem Kararı:</strong> Partially Supported (Kısmen Destekleniyor) ❌</li>
-<li><strong>Hata Mekanizması (Hakem Halüsinasyonu):</strong> İddianın tamamı bağlamla çelişmesine rağmen, K2 NLI modülü (mDeBERTa) iddiayı atomlarına böldükten sonra hatalı bir şekilde <code>[entailment, contradiction]</code> tahmini yapmış ve uyuşmazlık Hakem'e (Llama-3.3-70B) gitmiştir. Büyük dil modeli (Hakem) bağlamı okurken tıp domaini ile ilgili kendi içsel (pre-trained) bilgisini araya karıştırmış, memantinin bir kolinesteraz inhibitörü olduğunu zannederek iddianın ilk yarısını <em>doğru</em> kabul etmiş ve kararı <code>partially_supported</code> olarak onaylamıştır. Bu durum, Hakem modelinin aşırı özgüvenli halüsinasyonlarının sistemin doğruluğunu nasıl bozduğuna dair klasik bir örnektir.</li>
+<li><strong>Hata Mekanizması (Zincirleme Hata: NLI Yanılgısı + Hakem Halüsinasyonu):</strong> Hata zinciri K2'nin NLI bileşeniyle (mDeBERTa) başlamaktadır. Memantinin bir NMDA antagonisti olması gerekirken, mDeBERTa ilk atom için hatalı bir şekilde <code>entailment</code> vermiş ve etiketi <code>[entailment, contradiction]</code> olarak bozmuştur. Uyuşmazlık sonucunda devreye giren Hakem (Llama-3.3-70B) bu NLI hatasını düzeltmek yerine, kendi içsel tıp bilgisini halüsinasyonla araya karıştırmış ("memantinin bir kolinesteraz inhibitörü olduğu doğru bilgidir" diyerek) mDeBERTa'nın yalanını onaylamıştır. Sonuç olarak sistem, K1'in doğru olan <code>contradicted</code> kararını ezip yanlış bir şekilde <code>partially_supported</code> kararına varmıştır. Bu vaka, alt modellerin ürettiği zehirli/yanlış verinin üst karar mekanizmalarını nasıl manipüle edebildiğini açıkça göstermektedir.</li>
 </ul>
 <h3>4.2. Hukuk Vakası (ood_law_07)</h3>
 <ul>
@@ -3104,5 +3104,7 @@ Aşağıdaki BAĞLAM ve İDDİA üzerinde iki farklı doğrulama modeli uzlaşam
 <li><strong>Sistem Kararı:</strong> Contradicted (Bağlamla Çelişiyor) ❌</li>
 <li><strong>Hata Mekanizması (Aşırı Çıkarım - Over-inference):</strong> Bağlamda Eurobondların <em>"genellikle ABD Doları veya Avro gibi para birimleri cinsinden ihraç edildiği"</em> bilgisi yer almaktadır. Bağlam, İsviçre frangını kesin bir dille yasaklamadığı için altın etiket <code>unverifiable</code> olmalıdır. Ancak K2 ve Hakem modeli, <em>"genellikle dolar veya avro ise, YALNIZCA İsviçre frangı olması imkansızdır"</em> şeklinde probabilistik (olasılıksal) bir mantık yürüterek bunu doğrudan çelişki (<code>contradicted</code>) olarak işaretlemiştir. Dil modellerinin, metinde verilmeyen bilgileri dünyevi mantıkla (world knowledge) çürütmeye çalışması bu hatanın temel sebebidir.</li>
 </ul>
+<h3>5.4. mDeBERTa NLI Davranış Deseni Gözlemi (Neutral vs Contradiction)</h3>
+<p>Hata analizine ek olarak, K2 NLI (mDeBERTa) modülünün bağlam dışı bilgiler karşısındaki yapısal bir eğilimi tespit edilmiştir. Model, bağlamda HİÇ GEÇMEYEN uydurma bilgileri (örn. <code>ood_med_05</code> "yaşlanmayı geri döndürür" veya <code>ood_med_06</code> "tansiyon ilaçları") <code>neutral</code> (bağlamda yok) olarak etiketlemesi gerekirken sıklıkla <code>contradiction</code> olarak etiketlemektedir. Sistem, Kural 2'nin ("doğru + bağlamda olmayan/çelişen bilgi = partially_supported") esnekliği sayesinde bu alt-etiketleme hatalarından nihai kararda başarıyla kurtulmuş ve doğru sonuçlar üretmiştir. Ancak NLI modelinin "bilgi yokluğu" ile "aktif çelişkiyi" ayırt edememesi, MNLI/SNLI gibi veri setleriyle eğitilmiş modellerin (world-knowledge bias) kronik bir sorunudur ve ileri çalışmalarda kalibrasyona ihtiyaç duymaktadır.</p>
 </body>
 </html>
