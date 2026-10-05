@@ -24,8 +24,6 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 
 ### Bölüm: Tıp (Alzheimer) Alanı Vakaları
 
-<div class="page-break"></div>
-
 <div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>ood_med_01</code></h4>
@@ -938,9 +936,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
     </div>
   </div>
 </div>
-### Bölüm: Hukuk (İş Kanunu) Alanı Vakaları
-
 <div class="page-break"></div>
+
+### Bölüm: Hukuk (İş Kanunu) Alanı Vakaları
 
 <div class="case-container">
   <div class="case-header">
@@ -1858,9 +1856,9 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
     </div>
   </div>
 </div>
-### Bölüm: Finans (Eurobond) Alanı Vakaları
-
 <div class="page-break"></div>
+
+### Bölüm: Finans (Eurobond) Alanı Vakaları
 
 <div class="case-container">
   <div class="case-header">

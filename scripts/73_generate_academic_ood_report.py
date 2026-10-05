@@ -64,7 +64,12 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
 ## 3. Vaka İncelemeleri
 
 """
+    is_first_domain = True
     for domain in DOMAINS:
+        if not is_first_domain:
+            md += "<div class=\"page-break\"></div>\n\n"
+        is_first_domain = False
+        
         md += f"### Bölüm: {domain['name']} Alanı Vakaları\n\n"
         
         original_data = load_jsonl(domain['data_file'])
@@ -73,6 +78,7 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
         context_map = {item['id']: item.get('context', 'Bağlam bulunamadı.') for item in original_data}
         question_map = {item['id']: item.get('question', 'Soru bulunamadı.') for item in original_data}
         
+        is_first_case_in_domain = True
         for res in results_data:
             c_id = res['id']
             context = context_map.get(c_id, "Bağlam bulunamadı.")
@@ -89,9 +95,11 @@ Bu raporda, Kademeli Hibrit Mimarinin eğitim verisinde bulunmayan (Dağılım D
             correct_icon = "✅" if res.get('final_correct', False) else "❌"
             correct_text = "DOĞRU" if res.get('final_correct', False) else "YANLIŞ"
             
-            md += f"""<div class="page-break"></div>
-
-<div class="case-container">
+            if not is_first_case_in_domain:
+                md += "<div class=\"page-break\"></div>\n\n"
+            is_first_case_in_domain = False
+            
+            md += f"""<div class="case-container">
   <div class="case-header">
     <h4>Vaka İncelemesi: <code>{c_id}</code></h4>
     <span class="badge {correct_text.lower()}">{correct_icon} Sistem Kararı: {correct_text}</span>
