@@ -135,3 +135,11 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
   Yanıt uzunluğu "en fazla 150 kelime" talimatıyla sınırlı kalır; akıl yürütme modellerin varsayılanında bırakıldı.
 - Duman testi çıktıları `data/ap6/generation/smoke_test_v1.0/` altında saklandı, veri setine alınmadı.
 - Cümle bölmede Markdown biçim işaretleri (örn. `**kalın**`) temizlenir; metin içeriği değişmez.
+
+### v1.2 (2026-10-06, yanıtlar okunmadan önce)
+- **Çekimser cümleler (abstention):** Yalnızca kaynağın bir bilgiyi içermediğini söyleyen cümleler
+  (örn. "Kaynaklarda … belirtilmemiştir") 4 sınıflı ana değerlendirmeden ayrılır.
+  - `scripts/83_ap6_split_sentences.py` bu cümleleri önceden sabitlenmiş bir kalıpla işaretler; Anotatör A etiketleme sırasında doğrular/düzeltir.
+  - Ayrıca raporlanır: (1) model ve soru türü bazında çekimserlik oranı, (2) çekimserliğin doğruluğu (bilgi kaynakta gerçekten yok mu).
+  - Hem bilgi hem çekimserlik içeren karışık cümleler normal iddia olarak etiketlenir.
+- Cümle bölme kuralları yanıtlar okunmadan sabitlendi (script başlığında listelenmiştir).
