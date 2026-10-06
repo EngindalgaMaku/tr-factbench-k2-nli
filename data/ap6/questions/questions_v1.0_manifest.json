@@ -1,0 +1,19 @@
+{
+  "questions_version": "v1.0",
+  "frozen_at": "2026-10-06",
+  "n": 60,
+  "by_domain": {
+    "medical": 20,
+    "legal": 20,
+    "finance": 20
+  },
+  "by_type": {
+    "answerable": 24,
+    "multi_fact": 21,
+    "partial": 15
+  },
+  "drafting_llm": "Claude Opus 5.5 (Anthropic) — family distinct from responders and judges",
+  "drafting_rule": "Questions written from source texts only, without reference to system behaviour; partial-question missing parts verified absent by text search.",
+  "filtering": "Researcher (Annotator A) review: medical 9 rewritten for grammar/clarity, 0 removed; legal 0 changed; finance 0 changed.",
+  "sha256": "a225bb936b18808c6678ed426c8f42728322160adb70e35e19ed971f84e2cd75"
+}

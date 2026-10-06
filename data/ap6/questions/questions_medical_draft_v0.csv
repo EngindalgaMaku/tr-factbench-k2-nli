@@ -1,0 +1,21 @@
+question_id,domain,type,question,evidence_source,evidence_note,missing_part
+MED-A1,medical,answerable,Kene tutunan bir kişi kendini kaç gün boyunca hastalık belirtileri yönünden izlemelidir?,T1a;T1b,10 gün; halsizlik iştahsızlık ateş vb.,
+MED-A2,medical,answerable,Kene tutunmasından sonra Kırım Kongo Kanamalı Ateşi'nin kuluçka süresi en fazla kaç gün olabilir?,T1b,genellikle 1-3 gün; en fazla 9 gün,
+MED-A3,medical,answerable,Aşırı sıcak havalarda günde en az ne kadar sıvı tüketilmesi önerilir?,T2,2-2.5 litre (12-14 su bardağı),
+MED-A4,medical,answerable,Fibromiyalji en sık hangi yaş aralığında ve hangi cinsiyette görülür?,T3,25-55 yaş; kadınlarda daha sık,
+MED-A5,medical,answerable,Varis tedavisinde altın standart olarak kabul edilen yöntem nedir?,T4,basınçlı varis çorabı ile kompresyon tedavisi,
+MED-A6,medical,answerable,Sedef hastalığı bir kişiden diğerine bulaşır mı?,T5,bulaşıcı değil; mikropla gelişmez,
+MED-A7,medical,answerable,Türkiye'de Kırım Kongo Kanamalı Ateşi'ni bulaştıran asıl kene türü hangisidir?,T1b,Hyalomma marginatum,
+MED-A8,medical,answerable,Varis çorabı günün hangi saatinde giyilmelidir?,T4,sabah yataktan kalkmadan; değilse bacak 5-10 dk yukarıda tutulup giyilir,
+MED-B1,medical,multi_fact,Kırım Kongo Kanamalı Ateşi'nden korunmak için kene açısından riskli alanlara giderken ve bu alanlardan döndükten sonra nelere dikkat edilmelidir?,T1a;T1b,giysi; paçalar çorap içine; açık renk; vücut kontrolü (kulak arkası vb.); keneyi uygun malzemeyle çıkarma; sigara/kolonya dökmeme,
+MED-B2,medical,multi_fact,Aşırı sıcaklardan en çok hangi gruplar etkilenir?,T2,65 yaş üstü; 4 yaş altı; bakıma muhtaç; hamile; açık alanda çalışan; kilolu; kronik hasta; sürekli ilaç kullanan,
+MED-B3,medical,multi_fact,Fibromiyaljinin temel belirtileri nelerdir ve bu hastalığın tanısı nasıl konur?,T3,yaygın ağrı; tutukluk; yorgunluk; uyku bozukluğu; tanı anamnez + muayene; 3 aydan uzun ağrı; 18 noktanın 11'i,
+MED-B4,medical,multi_fact,Fibromiyalji tedavisinde hangi yaklaşımlar kullanılır?,T3,ilaç; fizik tedavi; psikososyal; tamamlayıcı; egzersiz haftada 3-4 kez 20-30 dk,
+MED-B5,medical,multi_fact,Varisin ameliyatsız ve ameliyatlı tedavi seçenekleri nelerdir?,T4,çorap; ilaç; skleroterapi; lazer; RF; stripping; EVLA; Moca; flebektomi; perforan ligasyon,
+MED-B6,medical,multi_fact,Sedef hastalığını tetikleyen veya kötüleştiren durumlar nelerdir?,T5,boğaz/deri enfeksiyonu; cilt hasarı; stres; sigara; alkol; D vitamini eksikliği; bazı ilaçlar,
+MED-B7,medical,multi_fact,Sedef hastalığının tipleri nelerdir ve her bir tipin belirgin özelliği nedir?,T5,plak; guttat; palmoplantar; püstüler; eritrodermik,
+MED-C1,medical,partial,Vücuda tutunan bir kene nasıl çıkarılmalıdır? Kene çıkarıldıktan sonra tutunduğu bölge hangi antiseptikle temizlenmelidir?,T1a;T1b,çıkarma yöntemi var,antiseptik/dezenfeksiyon bilgisi yok
+MED-C2,medical,partial,Kırım Kongo Kanamalı Ateşi'nin tedavisinde hangi ilaç kullanılır ve hastalar genellikle kaç gün hastanede kalır?,T1b,spesifik ilaç yok; destek tedavisi,hastanede kalış süresi yok
+MED-C3,medical,partial,Aşırı sıcaklarda hangi içecekler tercih edilmelidir ve sıcak çarpması geçiren bir kişiye nasıl ilk yardım yapılır?,T2,içecek tercihi var,ilk yardım bilgisi yok
+MED-C4,medical,partial,Endovenöz lazer (EVLA) yöntemiyle yapılan varis tedavisinde hastanede yatmak gerekir mi? Bu işlem kaç dakika sürer?,T4,yatış gerekmez,işlem süresi yok
+MED-C5,medical,partial,Sedef hastalığında biyolojik tedaviler hangi hastalara uygulanır ve bu ilaçların başlıca yan etkileri nelerdir?,T5,kime uygulandığı var,yan etkiler yok

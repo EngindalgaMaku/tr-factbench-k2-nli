@@ -1,0 +1,21 @@
+question_id,domain,type,question,evidence_source,evidence_note,missing_part
+LEG-A1,legal,answerable,Sürücü belgesi olmadan motorlu araç kullanan bir kişiye ne kadar idari para cezası verilir?,H2 md.36,40.000 TL,
+LEG-A2,legal,answerable,Bir yıl içinde 100 ceza puanını ilk kez dolduran sürücünün sürücü belgesi ne kadar süreyle geri alınır?,H2 md.118,2 ay; ayrıca eğitime tabi tutulur,
+LEG-A3,legal,answerable,Elektrikli skuter kullanabilmek için en az kaç yaşını bitirmiş olmak gerekir?,H2 md.37,15 yaş,
+LEG-A4,legal,answerable,Gerçek bir kişi tarafından verilen kefalet sözleşmenin kurulmasından itibaren kaç yıl geçince kendiliğinden sona erer?,H5 md.598,10 yıl,
+LEG-A5,legal,answerable,Evli bir kişinin kefil olabilmesi için eşinin rızası hangi şekilde ve en geç ne zaman verilmelidir?,H5 md.584,yazılı rıza; en geç sözleşmenin kurulması anında,
+LEG-A6,legal,answerable,Yönetim planında bir toplantı zamanı belirtilmemişse kat malikleri kurulu yılın hangi ayında toplanır?,H3 md.29,her takvim yılının ilk ayı,
+LEG-A7,legal,answerable,Bir apartmanda yönetici atanması hangi durumda zorunludur?,H3 md.34,sekiz veya daha fazla bağımsız bölüm varsa,
+LEG-A8,legal,answerable,Bir idari para cezasına karşı sulh ceza mahkemesine kaç gün içinde başvurulabilir?,H4 md.27,tebliğ veya tefhimden itibaren 15 gün,
+LEG-B1,legal,multi_fact,Sürücü belgesi almak isteyen bir kişinin taşıması gereken şartlar nelerdir?,H2 md.41,yaş ve deneyim; en az ilkokul; sağlık şartları; kurs ve sınav ile sertifika; adli sicil; aynı sınıf belgenin olmaması; geri alınan belgenin iade edilmiş olması,
+LEG-B2,legal,multi_fact,Bir yıl içinde 100 ceza puanını birinci, ikinci ve üçüncü kez dolduran sürücülere hangi yaptırımlar uygulanır?,H2 md.118,1.: 2 ay + eğitim; 2.: 4 ay + psiko-teknik ve psikiyatri muayenesi; 3.: süresiz iptal,
+LEG-B3,legal,multi_fact,Adi kefalette alacaklı hangi durumlarda borçluya başvurmadan doğrudan kefile başvurabilir?,H5 md.585,kesin aciz belgesi; Türkiye'de takibin imkânsızlaşması; iflas; konkordato mehli,
+LEG-B4,legal,multi_fact,Kat maliklerinin apartmanın ortak giderlerine katılım payları nasıl belirlenir ve payını ödemeyen kat malikine hangi yaptırımlar uygulanabilir?,H3 md.20,kapıcı vb. giderlere eşit; diğer giderlere arsa payı oranında; dava ve icra takibi; aylık %5 gecikme tazminatı,
+LEG-B5,legal,multi_fact,Hayvanları Koruma Kanunu'na göre hayvanlara yönelik yasaklanmış davranışlar nelerdir?,H1 md.14,kötü davranma; gücünü aşan işe zorlama; 16 yaş altına satış; terk; işkence vb.,
+LEG-B6,legal,multi_fact,Ödeme süresi kanununda düzenlenmemiş bir idari para cezası ne kadar sürede ödenmelidir? Süresinde ödeme yapılırsa ne kadar indirim uygulanır ve ödeme yapmak itiraz hakkını etkiler mi?,H4 md.17,tebliğden itibaren bir ay; %25 indirim; itiraz hakkını etkilemez,
+LEG-B7,legal,multi_fact,Kat malikleri kurulunun kararlarına karşı iptal davası hangi sürelerde ve hangi mahkemede açılabilir?,H3 md.33,aykırı oy veren: karar tarihinden 1 ay; katılmayan: öğrenmeden 1 ay; her halde 6 ay; sulh mahkemesi,
+LEG-C1,legal,partial,Bir hayvana çarparak zarar veren sürücünün yasal yükümlülüğü nedir? Hayvanın tedavi masraflarını kim karşılar?,H1 md.21,en yakın veteriner hekime götürme yükümlülüğü var,tedavi masrafının kime ait olduğu yok
+LEG-C2,legal,partial,Geçerlilik süresi dolmuş sürücü belgesiyle araç kullanan bir sürücüye hangi yaptırım uygulanır? Sürücü belgesini yenilemek için hangi sağlık raporu alınmalıdır?,H2 md.39,343 TL idari para cezası ve belgenin geri alınması var,yenileme için gereken sağlık raporu yok (yönetmeliğe bırakılmış)
+LEG-C3,legal,partial,Kat malikleri kurulunun ilk toplantısında yeter sayı sağlanamazsa ikinci toplantı ne zaman yapılır? Kurul toplantıları çevrim içi olarak yapılabilir mi?,H3 md.29-30,ikinci toplantı en geç 15 gün sonra; iki toplantı arası en az 7 gün,çevrim içi toplantı bilgisi yok
+LEG-C4,legal,partial,Borcu ödeyen kefil asıl borçluya rücu edebilir mi? Kefilin rücu hakkı kaç yıllık zamanaşımına tabidir?,H5 md.596,rücu hakkı var; zamanaşımı ödeme anında başlar,zamanaşımı süresi yok
+LEG-C5,legal,partial,Belediyeler hayvan bakımevleri için bütçelerinden ne kadar kaynak ayırmak zorundadır? Bir hayvan bakımevinde en fazla kaç hayvan barındırılabilir?,H1 geçici md.,bütçe gelirlerinin binde beşi (büyükşehirde binde üç),bakımevi kapasite sınırı yok
