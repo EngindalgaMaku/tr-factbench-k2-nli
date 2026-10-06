@@ -1,0 +1,31 @@
+{
+  "prompt_version": "v1.1",
+  "status": "frozen",
+  "system": "Sen bir soru-cevap asistanısın. Kullanıcının sorusunu yalnızca aşağıda verilen kaynak metinlere dayanarak Türkçe yanıtla. Kaynaklarda sorunun bir kısmına ilişkin bilgi yoksa bunu açıkça belirt. Yanıtını en fazla 150 kelimelik akıcı paragraflar hâlinde yaz; madde işareti, başlık veya kaynak numarası kullanma.",
+  "user_template": "KAYNAKLAR:\n[1] {chunk_1}\n\n[2] {chunk_2}\n\n[3] {chunk_3}\n\nSORU: {question}",
+  "decoding": {
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 2000
+  },
+  "models": [
+    "mistralai/ministral-3b-2512",
+    "qwen/qwen3-8b",
+    "deepseek/deepseek-v4-pro"
+  ],
+  "design_notes": [
+    "Standart bir kurumsal RAG istemi: kaynağa bağlı kal, bilgi yoksa söyle. Halüsinasyonu kışkırtmaz, bastırmak için aşırı katı da değildir.",
+    "Paragraf biçimi ve madde işareti yasağı, cümle düzeyinde bölmeyi ve etiketlemeyi kolaylaştırmak içindir.",
+    "Kaynak numarası yasağı, [1] gibi atıfların iddia cümlelerine karışmasını önler.",
+    "150 kelime sınırı, cevap başına ~4-8 cümle ve etiketleme yükünü kontrol altında tutmak içindir."
+  ],
+  "frozen_at": "2026-10-06",
+  "sha256_of_system_and_template": "1e8295c4d7af9c4e742750fb2fe6c94b13c2a95801b850afd341cc83319858fc",
+  "amendment_v1_1": {
+    "date": "2026-10-06",
+    "before_main_generation": true,
+    "change": "max_tokens 400 -> 2000; system prompt and template unchanged (same hash)",
+    "reason": "Smoke test (MED-A1, 1 answer per model): qwen3-8b and deepseek-v4-pro are reasoning models; on OpenRouter hidden reasoning tokens count against max_tokens (179 and 278 of 400). DeepSeek's visible answer was cut mid-sentence (finish=length). Answer length remains bounded by the '<=150 words' instruction; reasoning left at model defaults.",
+    "smoke_test_outputs": "data/ap6/generation/smoke_test_v1.0/ (kept for record, excluded from the dataset)"
+  }
+}

@@ -123,3 +123,15 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 3. Soru türü oranları ve soruları kimin yazacağı
 4. Kesin model listesi
 5. Rastgele örneklem boyutu
+
+---
+
+## Değişiklik kaydı
+
+### v1.1 (2026-10-06, ana üretimden önce)
+- `max_tokens` 400 → 2000. Sistem istemi ve şablon değişmedi (aynı hash).
+- Gerekçe: Duman testinde (MED-A1, model başına 1 yanıt) qwen3-8b ve deepseek-v4-pro'nun gizli akıl yürütme
+  tokenları `max_tokens` bütçesinden düştü (400'ün 179 ve 278'i). DeepSeek'in yanıtı cümle ortasında kesildi.
+  Yanıt uzunluğu "en fazla 150 kelime" talimatıyla sınırlı kalır; akıl yürütme modellerin varsayılanında bırakıldı.
+- Duman testi çıktıları `data/ap6/generation/smoke_test_v1.0/` altında saklandı, veri setine alınmadı.
+- Cümle bölmede Markdown biçim işaretleri (örn. `**kalın**`) temizlenir; metin içeriği değişmez.
