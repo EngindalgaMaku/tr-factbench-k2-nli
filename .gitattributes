@@ -1,0 +1,3 @@
+
+# AP6 provenance: raw downloads must keep their exact bytes (SHA-256 in source_manifest.csv)
+data/ap6/sources/raw/** -text
