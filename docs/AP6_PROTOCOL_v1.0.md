@@ -143,3 +143,10 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
   - Ayrıca raporlanır: (1) model ve soru türü bazında çekimserlik oranı, (2) çekimserliğin doğruluğu (bilgi kaynakta gerçekten yok mu).
   - Hem bilgi hem çekimserlik içeren karışık cümleler normal iddia olarak etiketlenir.
 - Cümle bölme kuralları yanıtlar okunmadan sabitlendi (script başlığında listelenmiştir).
+
+### v1.3 (2026-10-07, yanıtlar üretildi; doğrulayıcılar çalıştırılmadan ve etiketleme yapılmadan önce)
+- **Atıf işaretleri:** İsteme rağmen 5 cümlede görülen "(Kaynak [2])" vb. işaretler biçim kabul edilerek silinir (v1.1 biçim kuralının uzantısı). İçerik değişmez.
+- **Bağlama bağımlı cümleler:** Cümleler olduğu gibi bırakılır (bağımsızlaştırma yapılmaz).
+  - Doğrulayıcılara cümle, soru ve bağlamla birlikte verilir.
+  - Anotatör soruyu ve yanıtın tamamını görür, hedef cümle vurgulanır; göndermeler yanıta göre çözülerek cümlenin söyledikleri etiketlenir.
+  - "Bu/Bunlar/Söz konusu…" ile başlayan cümleler `back_reference` olarak işaretlenir ve ayrı alt küme olarak raporlanır.

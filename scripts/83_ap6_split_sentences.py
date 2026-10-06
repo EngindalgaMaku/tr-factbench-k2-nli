@@ -34,7 +34,12 @@ ABSTENTION_RE = re.compile(
 )
 
 
+BACKREF_RE = re.compile(r"^(Ancak |Ayrıca |Fakat |Buna göre )?(Bu|Bunlar|Bunun|Bunlara|Söz konusu|Anılan|Şu)\b")
+CITATION_RE = re.compile(r"\s*\(?\s*[Kk]aynak(lar)?\s*\[\d+\](\s*(ve|,)\s*\[\d+\])*\s*\)?|\s*\[\d+\]")
+
+
 def strip_markdown(text: str) -> str:
+    text = CITATION_RE.sub("", text)  # protocol v1.3: citation markers are formatting, not content
     text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
     text = re.sub(r"(?<!\w)\*(.+?)\*(?!\w)", r"\1", text)
     text = re.sub(r"^\s*(?:[-*•]|\d+[.)])\s+", "", text, flags=re.MULTILINE)
@@ -67,13 +72,15 @@ def main() -> None:
                 "question_id": a["question_id"], "domain": a["domain"], "question_type": a["type"],
                 "model": a["model_requested"], "position": k, "sentence": sent,
                 "abstention": bool(ABSTENTION_RE.search(sent)),
+                "back_reference": bool(BACKREF_RE.match(sent)),
                 "answer_finish_reason": a["finish_reason"],
             })
     with (GEN / "sentences.jsonl").open("w", encoding="utf-8", newline="\n") as f:
         for s in out:
             f.write(json.dumps(s, ensure_ascii=False) + "\n")
     n_abs = sum(s["abstention"] for s in out)
-    print(f"answers={len(answers)} sentences={len(out)} abstention_flagged={n_abs}")
+    n_ref = sum(s["back_reference"] for s in out)
+    print(f"answers={len(answers)} sentences={len(out)} abstention_flagged={n_abs} back_reference={n_ref}")
 
 
 if __name__ == "__main__":
