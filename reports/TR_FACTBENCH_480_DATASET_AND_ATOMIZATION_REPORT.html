@@ -414,16 +414,86 @@
 <div class="page-break"></div>
 
 <hr />
-<h2>6. Veri Kümesinin Zorluk Seviyesi ve Sistemik Modellenme İhtiyacı</h2>
+<h2>6. Derin Dilbilimsel ve Ampirik İnceleme: Tek Atomda "Kısmen Destek" Paradoksu (%6.52 / 3 Vaka)</h2>
+<p>Mantık ve biçimsel anlambilim kuralları gereğince: <strong>Bölünemez tek bir atomik önermede kısmi destek (<code>partially_supported</code>) tanım gereği imkansızdır.</strong> Bir atomik yargı bağlam tarafından ya doğrudan doğrulanır (<code>supported</code>), ya çürütülür (<code>contradicted</code>), ya da bağlamda bu konuda hüküm yoktur (<code>unverifiable</code>).</p>
+<p>Buna rağmen 480 vakalık altın kümede, 1 atom olarak çıkarılan 46 vakanın <strong>3'ünde (%6.52; tüm veri kümesinin ise yalnızca %0.625'inde)</strong> altın etiketin <code>partially_supported</code> olduğu saptanmıştır. Bu bölüm, söz konusu 3 vakanın dilbilimsel kökenini ve modellerimizin bu vakalardaki ampirik davranışını incelemektedir.</p>
+<h3>6.1. Sentaktik Neden: Gemma-4'ün Yetersiz Ayrıştırma (Under-Atomization) Sınırı</h3>
+<p>Bu 3 vaka incelendiğinde, iddiaların aslında <strong>iki ayrı olgu içerdiği</strong> ancak açık koordinatif bağlaçlar (<code>ve</code>, <code>;</code>) yerine, Türkçedeki <strong>sıfat-fiil (<code>-an / -en</code>)</strong> veya <strong>zıtlık zarf-fiili (<code>-se de</code>)</strong> ekleriyle tek bir sentaktik kabuk içine örüldüğü görülmüştür:</p>
+<ol>
+<li><strong>Vaka 1 (<code>tfb_ex_0006</code> - Finans):</strong></li>
+<li><em>İddia:</em> <em>"Üyeler ile müşteriler arasındaki değerleme uyuşmazlıklarının çözümüne </em><em>yardımcı olan</em><em> Meslek Birliği A Değerlendirme Komitesinin bu uyuşmazlıklara ilişkin </em><em>kararları mahkemeler açısından bağlayıcıdır</em><em>."</em></li>
+<li><em>İç Yapı:</em> Birinci parça (Komitenin yardımcı olduğu) bağlamda açıkça <strong>doğrulanmaktadır</strong>; ikinci parça (kararların bağlayıcılığı) ise bağlam dışıdır. Gemma-4, sıfat-fiil grubunu tek yüklem sayarak 1 atom üretmiştir.</li>
+<li><strong>Vaka 2 (<code>tfb_ex_0010</code> - Finans):</strong></li>
+<li><em>İddia:</em> <em>"Sigorta şirketinin iflasında maddi ve bedensel zararları </em><em>karşılayan</em><em> Sigorta Fonu A, mahkeme kararıyla hükmedilen </em><em>manevi zararları da ödeyebilir</em><em>."</em></li>
+<li><em>İç Yapı:</em> Birinci parça (iflasta maddi ve bedensel zararların karşılandığı) bağlamda <strong>doğrulanmaktadır</strong>; ikinci parça (manevi zararların ödenebileceği) ise bağlamdaki <em>"manevi zararlar karşılanmaz"</em> hükmüyle <strong>taban tabana çelişmektedir</strong>. Gemma-4 sıfat-fiil nedeniyle tek atom üretmiştir.</li>
+<li><strong>Vaka 3 (<code>tfb_ex_0406</code> - Tıp):</strong></li>
+<li><em>İddia:</em> <em>"DEXA için çoğu zaman özel hazırlık </em><em>gerekmese de</em><em> gebelik bilgisi </em><em>çekim bittikten sonra kaydedilir</em><em>."</em></li>
+<li><em>İç Yapı:</em> Birinci parça (özel hazırlık gerekmediği) bağlamda <strong>vardır</strong>; ikinci parça (çekimden sonra kaydedildiği) bağlamdaki <em>"önceden bildirilmelidir"</em> hükmüyle <strong>çelişmektedir</strong>. Gemma-4 zıtlık zarf-fiilini (<code>-se de</code>) bağlaç olarak görmeyip tek atom bırakmıştır.</li>
+</ol>
+<h3>6.2. Modellerin Ampirik Performans Karşılaştırması</h3>
+<p>Bu 3 sınır vakada sistem bileşenlerimizin test kayıtlarındaki ham performansları şöyledir:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Vaka ID</th>
+<th style="text-align: center;">Altın Etiket</th>
+<th style="text-align: center;">K1 (ELECTRA-TR Bütüncül)</th>
+<th style="text-align: center;">K2 (Gemma+mDeBERTa Atomik)</th>
+<th style="text-align: center;">Meta-Hakem (Llama-70B V4)</th>
+<th style="text-align: center;">Hakem Tercihi</th>
+<th style="text-align: center;">Nihai Durum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>tfb_ex_0006</code></td>
+<td style="text-align: center;"><code>partially_supported</code></td>
+<td style="text-align: center;"><strong><code>partially_supported</code> (%91.62)</strong></td>
+<td style="text-align: center;"><code>unverifiable</code> ❌</td>
+<td style="text-align: center;"><code>unverifiable</code> ❌</td>
+<td style="text-align: center;">Model B</td>
+<td style="text-align: center;">Boru Hattı Hatası ❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tfb_ex_0010</code></td>
+<td style="text-align: center;"><code>partially_supported</code></td>
+<td style="text-align: center;"><strong><code>partially_supported</code> (%99.47)</strong></td>
+<td style="text-align: center;"><code>unverifiable</code> ❌</td>
+<td style="text-align: center;"><code>unverifiable</code> ❌</td>
+<td style="text-align: center;">Model B</td>
+<td style="text-align: center;">Boru Hattı Hatası ❌</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>tfb_ex_0406</code></td>
+<td style="text-align: center;"><code>partially_supported</code></td>
+<td style="text-align: center;"><strong><code>partially_supported</code> (%96.59)</strong></td>
+<td style="text-align: center;"><code>supported</code> ❌</td>
+<td style="text-align: center;"><strong><code>partially_supported</code></strong></td>
+<td style="text-align: center;">Model A</td>
+<td style="text-align: center;"><strong>DOĞRU KURTARILDI</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>6.3. Temel Bilimsel Çıkarımlar</h3>
+<ol>
+<li><strong>K1 Encoder'ının Gizli Önerme Ayrıştırma Gücü:</strong> ELECTRA-TR'a metin dize düzeyinde bölünmeden verilmesine rağmen, 12 katmanlı Transformer mimarisinin öz-dikkat (<em>self-attention</em>) ve çapraz-dikkat (<em>cross-attention</em>) mekanizmaları, sıfat-fiil ve zarf-fiillerle kurulan alt önerme sınırlarını gizli uzayda başarıyla modellemiş ve <strong>3 vakanın 3'ünde de (%100.0) %91.6 ile %99.5 arasında ezici bir güvenle <code>partially_supported</code> etiketini doğru tahmin etmiştir.</strong></li>
+<li><strong>K2 Boru Hattının Kırılganlığı:</strong> Sembolik ayrıştırıcı (Gemma-4) bir cümleyi tek atom bıraktığında, mDeBERTa karmaşık cümlenin parçalı doğasını kavrayamayarak 3 vakada da (%0.0) başarısız olmuştur.</li>
+<li><strong>Meta-Hakemin Bilişsel Çelişkisi:</strong> <code>tfb_ex_0010</code> vakasında Meta-Hakem, kendi ürettiği akıl yürütme (reasoning) günlüğünde <em>"İddiada doğru olan Sigorta Fonu A'nın maddi zararları karşıladığı bilgisi bulunmaktadır, ancak manevi zararlar konusunda bağlamla çelişmektedir"</em> diyerek cümlenin kısmen desteklendiğini <strong>kelimesi kelimesine teşhis etmesine rağmen</strong>, önünde tek bir atom görmesi sebebiyle Model B'nin <code>unverifiable</code> etiketini seçerek K1'in %99.5 güvenli doğru kararını ezmiştir.</li>
+<li><strong>Boru Hattına Etkisi:</strong> Tüm 480 vakalık testte kalan 33 boru hattı hatasının 2 tanesi (<code>tfb_ex_0006</code> ve <code>tfb_ex_0010</code>) doğrudan bu dilbilimsel ayrıştırma sınırından kaynaklanmaktadır.</li>
+</ol>
+<div class="page-break"></div>
+
+<hr />
+<h2>7. Veri Kümesinin Zorluk Seviyesi ve Sistemik Modellenme İhtiyacı</h2>
 <p>TR-FactBench 480'in zorluk seviyesi, yerel modellerin tekil performansları ve uyuşmazlık oranlarıyla ölçülmektedir:</p>
-<h3>6.1. Tekil Modellerin Yetersizliği ve Uyuşmazlık</h3>
+<h3>7.1. Tekil Modellerin Yetersizliği ve Uyuşmazlık</h3>
 <ul>
 <li><strong>K1 Modeli (ELECTRA-TR):</strong> Tek başına bütüncül girdi aldığında <strong>81 hata</strong> yapmakta ve <strong>%83.12</strong> doğrulukta kalmaktadır. Özellikle kısmi destek ve ince olumsuzlukları kaçırmaktadır.</li>
 <li><strong>K2 Modeli (Gemma + mDeBERTa):</strong> Tek başına atomik girdi aldığında <strong>94 hata</strong> yapmakta ve <strong>%80.42</strong> doğruluk üretmektedir.</li>
 <li><strong>Uyuşmazlık Alanı (Disagreement):</strong> K1 ve K2 modelleri 480 vakanın <strong>123'ünde (%25.62)</strong> birbiriyle taban tabana zıt kararlar vermiştir.</li>
 <li>Bu 123 uyuşmazlığın <strong>%85.9'u</strong> doğrudan <code>unverifiable</code> (36 vaka), <code>partially_supported</code> (35 vaka) ve <code>contradicted</code> (32 vaka) sınıflarındadır. Modeller <code>supported</code> gibi açık olgularda uzlaşırken, anlamsal sınır bölgelerinde ayrışmaktadır.</li>
 </ul>
-<h3>6.2. Kademeli Hibrit Mimari ve Meta-Hakem V4 Başarımı</h3>
+<h3>7.2. Kademeli Hibrit Mimari ve Meta-Hakem V4 Başarımı</h3>
 <p>K1 ve K2 modellerinin tek başına yetersiz kaldığı bu 123 uyuşmazlık vakasında Meta-Hakem Llama-3.3-70B devreye girdiğinde sistemik başarım dramatik biçimde yükselmiştir:</p>
 <table>
 <thead>
@@ -499,7 +569,7 @@
 <p><strong>Zirve Noktası:</strong> V4 istemi ile Meta-Hakem, 123 uyuşmazlığın 110'unu doğru çözerek (%89.43 hakem doğruluğu), boru hattını <strong>%93.13'e</strong> ulaştırmış ve kuramsal Oracle sınırına (%93.33) yalnızca <strong>1 vaka mesafede</strong> kalarak veri kümesindeki zorluk eşiğini aşmıştır.</p>
 </blockquote>
 <hr />
-<h2>7. Sonuç ve Doktora Tezi İçin Çıkarımlar</h2>
+<h2>8. Sonuç ve Doktora Tezi İçin Çıkarımlar</h2>
 <ol>
 <li><strong>Özgün Kıyaslama Gücü:</strong> TR-FactBench 480, sıradan genel kültür soruları yerine yüksek teknik bilgi yoğunluğuna sahip 3 kritik alanda (Finans, Hukuk, Tıp) kurgulanmış, sıfır sınıf yanlılığına sahip güvenilir bir altın veri kümesidir.</li>
 <li><strong>İddiaların Gerçekçiliği:</strong> İddiaların ortalama 17.3 kelime olması ve %85.8'inin 13 kelimeden uzun bulunması, benchmark'ın gerçek hayattaki LLM halüsinasyonlarını başarıyla simüle ettiğini gösterir.</li>
