@@ -1,0 +1,27 @@
+{
+  "policy_set_id": "K3-ROUTING-POLICIES-v1",
+  "frozen_at": "2026-10-06",
+  "status": "frozen_before_AP6",
+  "note": "Policies were designed after inspecting Gold-480 consensus errors (design analysis, not a held-out result). They must not be changed before the one-time AP6 evaluation.",
+  "base_system": {
+    "disagreement_judge": "meta-llama/llama-3.3-70b-instruct with V4 predicate-aware prompt (scripts/75_run_predicate_aware_debiased_arbitration.py)",
+    "consensus_check_judge": "blind judge: google/gemma-4-26b-a4b-it, zero-shot, official TR-FactBench system prompt; K1/K2 outputs are NOT shown"
+  },
+  "policies": {
+    "P0_no_consensus_check": {
+      "description": "Current hybrid: only K1 != K2 cases go to the judge."
+    },
+    "PA_label_ps_or_c": {
+      "description": "Also route consensus cases whose agreed label is partially_supported or contradicted.",
+      "route_if": {"consensus_label_in": ["partially_supported", "contradicted"]}
+    },
+    "PB_medical_and_label_ps_or_c": {
+      "description": "Also route consensus cases from the medical domain whose agreed label is partially_supported or contradicted (risk-based policy for high-stakes domains).",
+      "route_if": {"domain_in": ["medical"], "consensus_label_in": ["partially_supported", "contradicted"]}
+    }
+  },
+  "rejected_on_gold480": {
+    "route_all_consensus": "net negative (14 fixed, 23 broken)",
+    "k1_confidence_threshold": "11/20 consensus errors have K1 confidence >= 0.96; threshold 0.95 gives net 0"
+  }
+}
