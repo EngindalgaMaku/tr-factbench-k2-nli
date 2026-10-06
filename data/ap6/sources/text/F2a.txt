@@ -1,0 +1,521 @@
+Mevduat Sigortacılığı Hakkında Sıkça Sorulan Sorular
+
+Mevduat ve katılım fonu sigortası nedir?
+
+Mevduat ve katılım fonu sigortası, mevduat ve katılım fonu toplamaya yetkili mevduat ve katılım bankalarının (kredi kuruluşlarının) Bankacılık Düzenleme ve Denetleme Kurumu tarafından faaliyet izinlerinin kaldırılması durumunda, mevduat ve katılım fonu hak sahiplerinin maruz kalacağı kayıpların devlet veya bu amaçla kurulmuş bir kurum tarafından kısmen ya da tamamen ödenmesinin garanti edilmesidir. Türkiye’de mevduatın ve katılım fonlarının sigortalanması yetki ve görevi kamu tüzel kişiliğini haiz Tasarruf Mevduatı Sigorta Fonuna (TMSF / Fon) aittir.
+
+Türkiye'de hangi bankalar mevduat ve katılım fonu sigorta sistemine dahildir?
+
+Türkiye’de faaliyet gösteren, mevduat ve katılım fonu kabulüne yetkili yerli ve yabancı tüm kredi kuruluşları ile merkezi yurt dışında bulunan kredi kuruluşlarının Türkiye’deki şubeleri, zorunlu olarak sigorta sistemine dâhildir.
+
+Türkiye'de mevduat ve katılım fonuna ilişkin sigorta limiti ne kadardır?
+
+2026 yılı için sigortaya tabi mevduat ve katılım fonu limiti her bir kredi kuruluşunda her bir kişi için 1.200.000 Türk Lirası (TL) dır. Bu tutar, her yıl , bir önceki yıla ilişkin olarak ilan edilen yeniden değerleme oranı dikkate alınarak takvim yılı başından geçerli olmak üzere Fon Kurulu tarafından artırılır.
+
+Yıllar itibarıyla sigorta limiti tutarı şu şekilde değişmiştir:
+
+YIL
+
+SİGORTA LİMİTİ (TL)
+
+15.02.2013 - 25.09.2019
+
+100.000
+
+25.09.2019 - 31.12.2021
+
+150.000
+
+2022
+
+200.000
+
+2023
+
+400.000
+
+2024
+
+650.000
+
+2025
+
+950.000
+
+2026
+
+1.200.000
+
+Türkiye'de hangi mevduatlar ve katılım fonları sigorta kapsamındadır?
+
+Türkiye’de faaliyet gösteren bir kredi kuruluşunun yurt içi şubelerinde
+
+resmi kuruluşlar, kredi kuruluşları ve finansal kuruluşlara ait olanlar haricindeki
+
+Türk Lirası, döviz ve kıymetli maden cinsinden;
+
+1. Mevduat hesaplarının anaparaları ile bu hesaplara ilişkin faiz reeskontları toplamının,
+
+2. Katılma hesapları birim hesap değerlerinin ve özel cari hesapların
+
+her bir kişi için 1.200.000 TL’ye * kadar olan kısmı sigorta kapsamındadır.
+
+* Bu tutar, 5411 sayılı Bankacılık Kanunu'nun 63 üncü maddesinin üçüncü fıkrası uyarınca, 7/11/2006 tarihli ve 26339 sayılı Resmi Gazete’de yayımlanan “ Sigortaya Tabi Mevduat ve Katılım Fonları ile Tasarruf Mevduatı Sigorta Fonunca Tahsil Olunacak Primlere Dair Yönetmeliğin ” 4 üncü maddesinin ikinci fıkrasında belirtildiği üzere her yıl , bir önceki yıla ilişkin olarak ilan edilen yeniden değerleme oranı dikkate alınarak takvim yılı başından geçerli olmak üzere Fon Kurulu tarafından artırılır.
+
+Yurt dışında yaşayan kişilerin mevduat veya katılım fonları sigorta kapsamında mıdır?
+
+Evet. Yurtdışında yaşayan yerli veya yabancı kişilere ait yurtiçi şubelerde bulunan mevduat hesaplarının anaparaları ile bu hesaplara ilişkin faiz reeskontları toplamı, katılma hesapları birim hesap değerleri ve özel cari hesapları 1.200.000 TL’ye kadar sigorta kapsamındadır.
+
+Türkiye'de faaliyet gösteren kredi kuruluşlarının yurt dışı şubelerinde açılan mevduat, katılma ya da özel cari hesapları sigorta kapsamına dahil midir?
+
+Hayır. Türkiye’de faaliyet gösteren kredi kuruluşlarının yurt dışı şubelerinde açılan mevduat, katılma ya da özel cari hesapları sigorta kapsamında değildir .
+
+Ticari nitelikteki mevduat ve katılım fonları sigorta kapsamında mıdır?
+
+Evet. Türkiye’de faaliyet gösteren kredi kuruluşlarının yurt içi şubelerindeki r esmi kuruluşlar, kredi kuruluşları ve finansal kuruluşlara ait olanlar haricindeki mevduat ve katılım fonları (tasarruf mevduatı, ticari kuruluşlar mevduatı ve diğer kuruluşlar mevduatı) sigorta kapsamındadır.
+
+Kıyı Bankacılığı (Off-Shore) faaliyetinde bulunan kredi kuruluşlarında açılan hesaplar sigortaya tabi midir?
+
+Hayır. Kıyı Bankacılığı (Off-Shore)
+
+kredi kuruluşlarında açılan hesaplar sigorta kapsamında değildir .
+
+Türkiye'de faaliyet gösteren mevduat ve katılım fonu kabulüne yetkili bulunan kredi kuruluşları, yurt dışında kurulu ortaklıkları, başka banka veya finansal kuruluşlar adına Türkiye'de ikamet eden kişilerden mevduat veya katılım fonu kabul edebilirler mi?
+
+Hayır. Türkiye'de faaliyet gösteren ve mevduat ve katılım fonu kabulüne yetkili bulunan kredi kuruluşlarının yurt dışında kurulu ortaklıkları, başka banka veya finansal kuruluşlar adına Türkiye'de ikamet eden kişilerden mevduat veya katılım fonu kabul etmeleri, evrak ya da cüzdan bulundurmaları, personel istihdam etmeleri, bu kuruluşların reklamını yaptırmak suretiyle müşterilerini anılan kuruluşlara yönlendirmeleri, bu ve benzeri yöntemler kullanarak yurt dışında kurulu kuruluşlar adına mevduat ve katılım fonu kabul etmeleri yasaktır.
+
+Mevduat ve katılım fonu sigortasına tabi olmayan diğer hesaplar hangileridir?
+
+5411 sayılı Bankacılık Kanunu'nun 63 üncü maddesinin üçüncü fıkrası uyarınca, 07.11.2006 tarihli ve 26339 sayılı Resmi Gazete'de yayımlanan “Sigortaya Tabi Mevduat ve Katılım Fonları ile Tasarruf Mevduatı Sigorta Fonunca Tahsil Olunacak Primlere Dair Yönetmeliğin” 5 inci maddesi ve aynı Kanunun 64 üncü maddesi uyarınca;
+
+i. İlgili kredi kuruluşunun hâkim ortakları ya da nitelikli pay sahiplerine, bunların kontrolünde bulunan tüzel kişilere, gerçek kişi hâkim ortakların ana, baba, eş ve velâyet altındaki çocuklarına ait mevduat ve katılım fonu ile diğer hesaplar,
+
+ii. İlgili kredi kuruluşunun yönetim veya müdürler kurulu başkan ve üyeleri, genel müdür ve yardımcıları ile bunların tek başına veya birlikte kontrol ettiği tüzel kişiler ve ortaklıklar ile ana, baba, eş ve velâyet altındaki çocuklarına ait mevduat ve katılım fonu ile diğer hesaplar,
+
+iii. 26/9/2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 282 nci maddesindeki suçtan kaynaklanan malvarlığı değerleri kapsamına giren mevduat ve katılım fonu ile diğer hesaplar,
+
+iv. Türkiye'de münhasıran kıyı bankacılığı faaliyeti göstermek üzere kurulan kredi kuruluşlarında bulunan mevduat ve katılım fonları,
+
+v. Fon Kurulu tarafından Bankacılık Düzenleme ve Denetleme Kurulunun görüşü alınmak suretiyle belirlenen diğer mevduat, katılım fonu ve hesaplar,
+
+sigortaya tabi değildir .
+
+Kredi kuruluşları tarafından satışına aracılık edilen devlet tahvili, hazine bonosu, yatırım fonu gibi yatırım araçları ile kripto varlıklar sigorta kapsamında mıdır?
+
+Hayır. Kredi kuruluşları tarafından satışına aracılık edilen devlet tahvili, hazine bonosu, yatırım fonu gibi yatırım araçları ile
+
+kripto varlıklar Tasarruf Mevduatı Sigorta Fonu tarafından sigorta edilmemektedir.
+
+Serbest bölgelerde kurulu kredi kuruluşlarında bulunan mevduat, katılma ya da özel cari hesaplar sigorta kapsamında mıdır?
+
+Evet. Serbest bölgelerdeki bankacılık faaliyetlerinin 5411 sayılı Bankacılık Kanunu kapsamında bulunmasından hareketle, kredi kuruluşlarının serbest bölgelerdeki şubeleri nezdindeki mevduat ve katılma fonu hesapları da sigorta kapsamındadır .
+
+Veli ya da vasi tarafından ergin olmayan (18 yaşından küçük) veya vesayet altındaki kişiler adına açılmış mevduat ve katılım fonu hesapları sigorta kapsamında mıdır?
+
+Evet. Bu hesaplar da sigorta kapsamındadır. Veli ya da vasinin aynı kredi kuruluşunda kendisine ait başka bir mevduat veya katılma hesabı var ise velinin / vasinin kendi hesabı da ayrıca sigorta kapsamındadır. Küçük ile veli mevduat güvence tutarından ayrı ayrı yararlanır.
+
+Bir kişinin birden fazla mevduat bankasında hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin birden fazla mevduat bankasındaki hesaplarının sigorta tutarı her bir banka için ayrı ayrı hesaplanır. Yani hesaplarının anaparaları ile bu hesaplara ilişkin faiz reeskontları toplamı 1.200.000 TL'ye kadar olan kısmı her bir mevduat bankası için ayrı ayrı sigorta kapsamındadır.
+
+A Mevduat Bankası
+
+Sigortaya Tabi Kısım
+
+B Mevduat Bankası
+
+Sigortaya Tabi Kısım
+
+Sigortalanan Toplam Mevduat
+
+Mete
+
+100.000 TL
+
+100.000 TL
+
+460.000 TL
+
+460.000 TL
+
+560.000 TL
+
+A Limited Şti.
+
+200.000 TL
+
+200.000 TL
+
+160.000 TL
+
+160.000 TL
+
+360.000 TL
+
+B Kooperatifi
+
+500.000 TL
+
+500.000 TL
+
+1.000.000 TL
+
+1.000.000 TL
+
+1.500.000 TL
+
+Bir kişinin birden fazla katılım bankasında hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin birden fazla katılım bankasındaki hesaplarına ilişkin sigorta tutarı her bir katılım bankası için ayrı ayrı hesaplanır. Yani katılma hesapları birim hesap değerleri ve özel cari hesapları toplamı 1.200.000 TL'ye kadar olan kısmı her bir katılım bankası için ayrı ayrı sigorta kapsamındadır.
+
+A Katılım Bankası
+
+Sigortaya Tabi Kısım
+
+B Katılım Bankası
+
+Sigortaya Tabi Kısım
+
+Sigortalanan Toplam Katılım Fonu
+
+Cengiz
+
+60.000 TL
+
+60.000 TL
+
+480.000 TL
+
+480.000 TL
+
+540.000 TL
+
+Emre
+
+210.000 TL
+
+210.000 TL
+
+220.000 TL
+
+220.000 TL
+
+430.000 TL
+
+D Anonim Şirketi
+
+640.000 TL
+
+640.000 TL
+
+1.000.000 TL
+
+1.000.000 TL
+
+1.640.000 TL
+
+Bir kişinin bir mevduat bankasında birden fazla hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin bir mevduat bankasında aynı veya farklı şubelerinde birden fazla mevduat hesabı bulunması halinde o kişiye ait tüm mevduat hesapları toplamının 1.200.000 TL'ye kadar olan kısmı sigorta kapsamındadır.
+
+A Mevduat Bankası Adana Şubesi
+
+A Mevduat Bankası Rize Şubesi
+
+A Mevduat Bankası Kars Şubesi
+
+A Mevduat Bankası Toplam Mevduat Tutarı
+
+A Mevduat Bankası Sigortalı Mevduat Tutarı
+
+E Kollektif Şirketi
+
+200.000 TL
+
+220.000 TL
+
+160.000 TL
+
+580.000 TL
+
+580.000 TL
+
+Hakan
+
+350.000 TL
+
+400.000 TL
+
+550.000 TL
+
+1.300.000 TL
+
+1.200.000 TL
+
+Bir kişinin bir katılım bankasında birden fazla hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin bir katılım bankasında aynı veya farklı şubelerinde birden fazla katılım ya da özel cari hesabı bulunması halinde o kişiye ait tüm katılma ve özel cari hesapları toplamının 1.200.000 TL'ye kadar olan kısmı sigorta kapsamındadır.
+
+A Katılım Bankası Trabzon Şubesi (Katılım Hesabı Birim Hesap Değeri)
+
+A Katılım Bankası Taksim Şubesi (Özel Cari Hesabı
+
+A Katılım Bankası Malatya Şubesi (Katılım Hesabı Birim Hesap Değeri)
+
+A Katılım Bankasındaki Katılım Hesabı Birim Hesap Değeri ve Özel Cari Hesapları Tutarı
+
+A Katılım Bankasındaki Sigortalı Katılım Hesabı Birim Hesap Değeri ve Özel Cari Hesapları Tutarı
+
+F Komandit Şirketi
+
+200.000 TL
+
+140.000 TL
+
+140.000 TL
+
+480.000 TL
+
+480.000 TL
+
+Tunç
+
+200.000 TL
+
+300.000 TL
+
+750.000 TL
+
+1.250.000 TL
+
+1.200.000 TL
+
+Bir kişinin hem mevduat bankasında hem de katılım bankasında hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin hem mevduat hem de katılım bankasında bulunan hesaplarına ilişkin sigorta tutarı her bir kredi kuruluşu için ayrı ayrı hesaplanır; yani mevduat hesaplarının anaparaları ve bu hesaplara ilişkin faiz reeskontları toplamı ile katılma hesapları birim hesap değerleri ve özel cari hesapları toplamı 1.200.000 TL'ye kadar olan kısmı ayrı ayrı sigorta kapsamındadır.
+
+A Mevduat Bankası
+
+Sigortaya Tabi Kısım
+
+B Katılım Bankası
+
+Sigortaya Tabi Kısım
+
+Toplam Sigortalı Mevduat ve Katılım Fonu
+
+G Apartman Yönetim Hesabı
+
+500.000 TL
+
+500.000 TL
+
+360.000 TL
+
+360.000 TL
+
+860.000 TL
+
+Elif
+
+1.200.000 TL
+
+1.200.000 TL
+
+500.000 TL
+
+500.000 TL
+
+1.700.000 TL
+
+Ortak hesap sahipleri sigorta sisteminden nasıl faydalanır?
+
+Ortak hesap sahiplerinin sigorta kapsamı hesaba ortak olanların her biri için ayrı ayrı hesaplanır. Ortak hesapta hesap sahiplerinin payları belirtilmemiş ise her hesap sahibinin eşit oranda paya sahip olduğu kabul edilir.
+
+A Mevduat Bankası (Ortak Hesap)
+
+Sigortaya Tabi Kısım
+
+B Katılım Bankası
+
+(Ortak Hesap)
+
+Sigortaya Tabi Kısım
+
+İlanur
+
+2.500.000 TL
+
+1.200.000 TL
+
+200.000 TL
+
+100.000 TL
+
+Oya
+
+1.200.000 TL
+
+100.000 TL
+
+Ortak hesap sahiplerinin aynı bankada ayrı ayrı başka hesapları da var ise ortak hesaptaki tutar ile diğer hesaplardaki tutarların toplamının 1 milyon 200 bin TL'ye kadar olan kısmı sigorta kapsamında olacaktır.
+
+A Mevduat Bankası
+
+(Ortak Hesap)
+
+A Mevduat Bankası
+
+(İkinci Mevduat Hesabı)
+
+*Hesaplar Toplamı
+
+Sigortaya Tabi Kısım
+
+Cemal
+
+1.800.000 TL
+
+400.000 TL
+
+1.300.000 TL
+
+1.200.000 TL
+
+Mertcan
+
+60.000 TL
+
+960.000 TL
+
+960.000 TL
+
+* Bu örnekte ortak hesaptaki hesap sahiplerinin eşit oranda paya sahip olduğu kabul edilmiştir. Buna göre, Cemal ve Mertcan’ın 1.800.000 TL içindeki payları her biri için 900.000 TL’dir.
+
+Bir kişinin mevduat bankasında hem tasarruf mevduatı hesabı hem de gerçek kişi ticari işletmesine ait hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin mevduat bankasında bulunan tasarruf mevduatı hesabı ile gerçek kişi ticari işletmesine (eczane, bakkal, berber dükkânı vb.) ait hesabı için sigorta tutarı hesaplanırken, kişi tasarruf mevduatı hesabı için bir gerçek kişi, ticari nitelikteki hesabı için ise bir gerçek kişi ticari işletme sahibi olmak üzere iki ayrı kişi olarak dikkate alınır. Yani, mevduat bankasında hem tasarruf mevduatı hesabı hem de gerçek kişi ticari işletmesine ait hesabı bulunan kişi söz konusu hesapları için iki ayrı kişi olarak değerlendirilir ve sigorta limiti her bir kişi için ayrı ayrı hesaplanır. Böylece, kişinin hem tasarruf mevduatının anaparası ile bu hesaba ilişkin faiz reeskontu toplamının 1.200.000 TL’ye kadar olan kısmı, hem de gerçek kişi ticari işletmesine ait hesabının anaparası ile bu hesaba ilişkin faiz reeskontu toplamının 1.200.000 TL’ye kadar olan kısmı sigorta kapsamındadır.
+
+A Mevduat Bankası (Tasarruf Mevduatı Hesabı)
+
+Sigortaya Tabi Kısım
+
+A Mevduat Bankası
+
+(Gerçek Kişi Ticari İşletmesine Ait Hesap)
+
+Sigortaya Tabi Kısım
+
+Sigortalanan Toplam Mevduat
+
+Neşe
+
+200.000 TL
+
+200.000 TL
+
+460.000 TL
+
+460.000 TL
+
+660.000 TL
+
+Başak
+
+600.000 TL
+
+600.000 TL
+
+300.000 TL
+
+300.000 TL
+
+900.000 TL
+
+Kaan
+
+1.500.000 TL
+
+1.200.000 TL
+
+100.000 TL
+
+100.000 TL
+
+1.300.000 TL
+
+Bir kişinin katılım bankasında hem katılma hesabı/özel cari hesabı hem de gerçek kişi ticari işletmesine ait hesabı bulunması halinde sigorta tutarı nasıl hesaplanır?
+
+Bir kişinin katılım bankasında bulunan katılma hesabı/özel cari hesabı ile gerçek kişi ticari işletmesine ait hesabı için sigorta tutarı hesaplanırken, kişi katılma hesabı/özel cari hesabı için bir gerçek kişi, ticari nitelikli hesabı için ise bir gerçek kişi ticari işletme sahibi olmak üzere iki ayrı kişi olarak dikkate alınır. Yani, katılım bankasında hem katılma hesabı/özel cari hesabı hem de gerçek kişi ticari işletmesine ait hesabı bulunan kişi söz konusu hesapları için iki ayrı kişi olarak değerlendirilir ve sigorta limiti her bir kişi için ayrı ayrı hesaplanır. Böylece, kişinin hem katılma hesabı birim hesap değeri ve özel cari hesabının toplamının 1.200.000 TL’ye kadar olan kısmı, hem de gerçek kişi ticari işletmesine ait katılma hesabı birim hesap değeri ve özel cari hesabının toplamının 1.200.000 TL’ye kadar olan kısmı sigorta kapsamındadır.
+
+A Katılım Bankası
+
+(Katılma Hesabı/Özel Cari Hesabı )
+
+Sigortaya Tabi Kısım
+
+A Katılım Bankası
+
+(Gerçek Kişi Ticari İşletmesine Ait Hesap)
+
+Sigortaya Tabi Kısım
+
+Sigortalanan Toplam Katılım Fonu
+
+Teoman
+
+150.000 TL
+
+150.000 TL
+
+700.000 TL
+
+700.000 TL
+
+850.000 TL
+
+Batu
+
+600.000 TL
+
+600.000 TL
+
+1.300.000 TL
+
+1.200.000 TL
+
+1.800.000 TL
+
+Yiğit
+
+200.000 TL
+
+200.000 TL
+
+300.000 TL
+
+300.000 TL
+
+500.000 TL
+
+TMSF tarafından bankacılık faaliyetine devam etmekte olan bir kredi kuruluşundaki mevduat/katılım fonu ile ilgili olarak sigorta kapsamında ödeme yapılır mı?
+
+Hayır. TMSF, 5411 sayılı Bankacılık Kanununun 63 üncü maddesinin altıncı fıkrası uyarınca yalnızca faaliyet izni kaldırılan kredi kuruluşları nezdinde bulunan mevduat ve katılım fonunun sigorta kapsamındaki kısmını öder.
+
+Sigorta kapsamındaki mevduat, katılma ve özel cari hesaplara dair ödemeler hangi para cinsinden yapılır?
+
+Sigorta kapsamındaki tüm ödemeler TL olarak yapılır.
+
+Döviz hesaplarının TL karşılıkları ilgili kredi kuruluşunun faaliyet izninin kaldırıldığı tarihteki T.C. Merkez Bankası AŞ’nin döviz alış kurları esas alınarak, kıymetli maden cinsinden açılan hesapların karşılıkları ise ilgili kredi kuruluşunun faaliyet izninin kaldırıldığı tarihteki İstanbul Altın Borsası seans kapanış fiyatı ve T.C. Merkez Bankası AŞ’nin döviz alış kurları esas alınarak belirlenir.
+
+Sigortalı mevduat, katılım fonu ödemeleri ne kadar sürede yapılır?
+
+23/2/2007 tarihli ve 26443 sayılı Resmi Gazete’ de yayımlanan “Faaliyet İzni Kaldırılan Bankalardaki Sigortalı Mevduat ve Sigortalı Katılım Fonunun ödenmesi ile Bu Bankaların İflas ve Tasfiyesine İlişkin Usul ve Esaslar Hakkında Yönetmeliğin” 10 uncu maddesinin üçüncü fıkrası uyarınca, doğruluğu hiç bir şüpheye yer vermeyecek şekilde tespit edilen mevduat ve katılım fonunun sigorta kapsamındaki kısmının tespiti ve ödeme süresi, bankanın faaliyet izninin kaldırıldığı tarihten itibaren 3 aydır. Gerektiğinde bu süre üç ay uzatılabilir. Zorunlu nedenlerle üç aylık uzatma süresinin yetersiz kalması halinde bu süre Fon Kurulu tarafından her biri üç ayı geçmemek üzere iki kez daha uzatılabilir. Ödemeler, Fon Kurulu kararı ile doğrudan veya TMSF tarafından ilan edilecek bir banka aracılığıyla gerçekleştirilir.
+
+Mevduat ve katılım fonunun sigorta limitini aşan kısmı talep edilebilir mi?
+
+Kredi kuruluşlarının iflası halinde mevduat ve katılım fonu sahipleri, TMSF’nin imtiyazlı alacaklarından ve Devlet ile sosyal güvenlik kuruluşlarının 6183 sayılı Amme Alacaklarının Tahsil Usulü Hakkında Kanun kapsamındaki alacaklarından sonra gelmek üzere sigortaya tâbi olmayan kısım için 2004 sayılı İcra ve İflas Kanununun 206 ncı maddesindeki üçüncü sıradaki imtiyazlı alacaklıdırlar. Bu alacakların iflas masasında ilgili sırasına kaydedilebilmesi için alacaklının yazılı talebi gerekir.
+
+Kredi kuruluşlarının sigorta kapsamında bulunan mevduat ve katılım fonlarının sigortalanmasına ilişkin ilan yükümlülüğü var mıdır?
+
+Evet. 7/11/2006 tarihli ve 26339 sayılı Resmi Gazete’de yayımlanan “ Sigortaya Tabi Mevduat ve Katılım Fonları ile Tasarruf Mevduatı Sigorta Fonunca Tahsil Olunacak Primlere Dair Yönetmeliğin” 10 uncu maddesine göre kredi kuruluşları, mevduat ve katılım fonu hesaplarının sigortalanmasına ilişkin olarak içeriği TMSF tarafından belirlenecek yazılı açıklamayı şubelerinin görünen bir yerinde ve dijital ortamda ilan etmek zorundadır.

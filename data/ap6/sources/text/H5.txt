@@ -1,0 +1,233 @@
+TÜRK BORÇLAR KANUNU
+
+Kanun Numarası : 6098
+
+Kabul Tarihi : 11/1/2011
+
+Yayımlandığı Resmî Gazete : Tarih : 4/2/2011 Sayı : 27836
+
+Yayımlandığı Düstur : Tertip : 5 Cilt : 50
+
+Kefalet Sözleşmesi
+
+A. Tanımı
+
+MADDE 581- Kefalet sözleşmesi, kefilin alacaklıya karşı, borçlunun borcunu ifa etmemesinin sonuçlarından kişisel olarak sorumlu olmayı üstlendiği sözleşmedir.
+
+B. Koşulları
+
+I. Asıl borç
+
+MADDE 582- Kefalet sözleşmesi, mevcut ve geçerli bir borç için yapılabilir. Ancak, gelecekte doğacak veya koşula bağlı bir borç için de, bu borç doğduğunda veya koşul gerçekleştiğinde hüküm ifade etmek üzere kefalet sözleşmesi kurulabilir.
+
+Yanılma veya ehliyetsizlik sebebiyle borçlunun sorumlu olmadığı bir borç için kişisel güvence veren kişi, yükümlülük altına girdiği sırada, sözleşmeyi sakatlayan eksikliği biliyorsa, kefaletle ilgili kanun hükümlerine göre sorumlu olur. Aynı kural, borçlu yönünden zamanaşımına uğramış bir borca kefil olan kişi hakkında da uygulanır.
+
+Kanundan aksi anlaşılmadıkça kefil, bu bölümde kendisine tanınan haklardan önceden feragat edemez.
+
+II. Şekil
+
+MADDE 583- Kefalet sözleşmesi, yazılı şekilde yapılmadıkça ve kefilin sorumlu olacağı azamî miktar ile kefalet tarihi belirtilmedikçe geçerli olmaz. Kefilin, sorumlu olduğu azamî miktarı, kefalet tarihini ve müteselsil kefil olması durumunda, bu sıfatla veya bu anlama gelen herhangi bir ifadeyle yükümlülük altına girdiğini kefalet sözleşmesinde kendi el yazısıyla belirtmesi şarttır.
+
+Kendi adına kefil olma konusunda özel yetki verilmesi ve diğer tarafa veya bir üçüncü kişiye kefil olma vaadinde bulunulması da aynı şekil koşullarına bağlıdır. Taraflar, yazılı şekle uyarak kefilin sorumluluğunu borcun belirli bir miktarıyla sınırlandırmayı kararlaştırabilirler.
+
+Kefalet sözleşmesinde sonradan yapılan ve kefilin sorumluluğunu artıran değişiklikler, kefalet için öngörülen şekle uyulmadıkça hüküm doğurmaz.
+
+III. Eşin rızası
+
+MADDE 584- Eşlerden biri mahkemece verilmiş bir ayrılık kararı olmadıkça veya yasal olarak ayrı yaşama hakkı doğmadıkça, ancak diğerinin yazılı rızasıyla kefil olabilir; bu rızanın sözleşmenin kurulmasından önce ya da en geç kurulması anında verilmiş olması şarttır.
+
+Kefalet sözleşmesinde sonradan yapılan ve kefilin sorumlu olacağı miktarın artmasına veya adi kefaletin müteselsil kefalete dönüşmesine ya da kefil yararına olan güvencelerin önemli ölçüde azalmasına sebep olmayan değişiklikler için eşin rızası gerekmez.
+
+(Ek fıkra: 28/3/2013-6455/77 md.) Ticaret siciline kayıtlı ticari işletmenin sahibi veya ticaret şirketinin ortak ya da yöneticisi tarafından işletme veya şirketle ilgili olarak verilecek kefaletler, mesleki faaliyetleri ile ilgili olarak esnaf ve sanatkârlar siciline kayıtlı esnaf veya sanatkârlar tarafından verilecek kefaletler, 27/12/2006 tarihli ve 5570 sayılı Kamu Sermayeli Bankalar Tarafından Yürütülen Faiz Destekli Kredi Kullandırılmasına Dair Kanun kapsamında kullanılacak kredilerde verilecek kefaletler ile tarım kredi, tarım satış ve esnaf ve sanatkârlar kredi ve kefalet kooperatifleri ile kamu kurum ve kuruluşlarınca kooperatif ortaklarına kullandırılacak kredilerde verilecek kefaletler için eşin rızası aranmaz.
+
+C. İçeriği
+
+I. Türlerine göre
+
+1. Adi kefalet
+
+MADDE 585- Adi kefalette alacaklı, borçluya başvurmadıkça, kefili takip edemez; ancak, aşağıdaki hâllerde doğrudan doğruya kefile başvurabilir:
+
+1. Borçlu aleyhine yapılan takibin sonucunda kesin aciz belgesi alınması.
+
+2. Borçlu aleyhine Türkiye’de takibatın imkânsız hâle gelmesi veya önemli ölçüde güçleşmesi.
+
+3. Borçlunun iflasına karar verilmesi.
+
+4. Borçluya konkordato mehli verilmiş olması.
+
+Alacak, kefaletten önce veya kefalet sırasında rehinle de güvence altına alınmışsa, adi kefalette kefil, alacağın öncelikle rehin konusundan alınmasını isteyebilir. Ancak, borçlunun iflasına veya kendisine konkordato mehli verilmesine karar verilmişse, bu hüküm uygulanmaz.
+
+Sadece açığın kapatılması için kefil olunmuşsa, borçlu aleyhine yapılan takibin kesin aciz belgesi alınmasıyla sonuçlanması veya borçlu aleyhine Türkiye’de takibatın imkânsız hâle gelmesi ya da konkordatonun kesinleşmesi durumlarında, doğrudan doğruya kefile başvurulabilir. Sözleşmede, bu durumlarda alacaklının, önce asıl borçluya başvurmak zorunda olduğu kararlaştırılabilir.
+
+2. Müteselsil kefalet
+
+MADDE 586- Kefil, müteselsil kefil sıfatıyla veya bu anlama gelen herhangi bir ifadeyle yükümlülük altına girmeyi kabul etmişse alacaklı, borçluyu takip etmeden veya taşınmaz rehnini paraya çevirmeden kefili takip edebilir. Ancak, bunun için borçlunun, ifada gecikmesi ve ihtarın sonuçsuz kalması veya açıkça ödeme güçsüzlüğü içinde olması gerekir.
+
+Alacak, teslime bağlı taşınır rehni veya alacak rehni ile güvenceye alınmışsa, rehnin paraya çevrilmesinden önce kefile başvurulamaz. Ancak, alacağın rehnin paraya çevrilmesi yoluyla tamamen karşılanamayacağının önceden hâkim tarafından belirlenmesi veya borçlunun iflas etmesi ya da konkordato mehli verilmesi hâllerinde, rehnin paraya çevrilmesinden önce de kefile başvurulabilir.
+
+3. Birlikte kefalet
+
+MADDE 587- Birden çok kişi, aynı borca birlikte kefil oldukları takdirde, her biri kendi payı için adi kefil gibi, diğerlerinin payı için de kefile kefil gibi sorumlu olur.
+
+Borçluyla birlikte veya kendi aralarında müteselsil kefil olarak yükümlülük altına giren kefillerden her biri, borcun tamamından sorumlu olur. Ancak, bir kefil, kendisiyle birlikte daha önce veya aynı zamanda müteselsilen yükümlü bulunan ve Türkiye’de takip edilebilen bütün kefillere karşı takibe girişilmiş olmadıkça, kendi payından fazlasını ödemekten kaçınabilir. Bir kefil, bu hakkı, diğer kefillerin kendi paylarını ödemiş veya ayni güvence sağlamış olmaları durumunda da kullanabilir.
+
+Aksine anlaşmalar saklı kalmak kaydıyla, borcu ödeyen kefil, kendi paylarını daha önce ödememiş olmaları ölçüsünde, diğer kefillere karşı rücu hakkına sahiptir. Bu hak, borçluya rücudan önce de kullanılabilir.
+
+Alacaklı, kefilin aynı alacak için başka kişilerin de kefil olduğunu veya olacağını varsayarak kefalet ettiğini biliyor veya bilmesi gerekiyorsa, bu varsayımın sonradan gerçekleşmemesi veya kefillerden birinin alacaklı tarafından kefalet borcundan kurtarılması ya da kefaletinin hükümsüz olduğuna karar verilmesi durumunda kefil, kefalet borcundan kurtulur.
+
+Birbirlerinden bağımsız olarak aynı borç için kefil olanlardan her biri, kefalet borcunun tamamından sorumlu olur. Ancak, borcu ödeyen kefil aksine anlaşma olmadıkça, diğerlerine toplam kefalet miktarındaki payı oranında rücu hakkına sahiptir.
+
+4. Kefile kefil ve rücua kefil
+
+MADDE 588- Alacaklıya, kefilin borcu için güvence veren kefile kefil, kefil ile birlikte, adi kefil gibi sorumludur.
+
+Rücua kefil, kefilin borçludan rücu alacağı için güvence veren kefildir.
+
+II. Ortak hükümler
+
+1. Kefil ile alacaklı arasındaki ilişki
+
+a. Sorumluluğun kapsamı
+
+MADDE 589- Kefil, her durumda kefalet sözleşmesinde belirtilen azamî miktara kadar sorumludur.
+
+Aksi sözleşmede kararlaştırılmamışsa kefil, belirtilen azamî miktarla sınırlı olmak üzere, aşağıdakilerden sorumludur:
+
+1. Asıl borç ile borçlunun kusur veya temerrüdünün yasal sonuçları.
+
+2. Alacaklının, kefile, onun borcu ödeyerek yapılmalarını önleyebileceği uygun bir zaman önce bildirmesi koşuluyla, borçluya karşı yönelttiği takip ve davaların masrafları ile gerektiğinde rehinlerin kefile tesliminin ve rehin haklarının devrinin sebep olduğu masraflar.
+
+3. İşlemiş bir yıllık ve işlemekte olan yıla ait akdî faizler ile gerektiğinde tahvil karşılığında ödünç verilen anaparanın işlemiş bir yıllık ve işlemekte olan yıla ait faizleri.
+
+Sözleşmede açıkça kararlaştırılmamışsa kefil, borçlunun sadece kefalet sözleşmesinin kurulmasından sonraki
+
+borçlarından sorumludur.
+
+Kefilin, asıl borç ilişkisinin hükümsüz hâle gelmesinin sebep olduğu zarardan ve ceza koşulundan sorumlu olacağına ilişkin anlaşmalar kesin olarak hükümsüzdür.
+
+b. Kefilin takibi
+
+MADDE 590- Borçlunun iflası sebebiyle asıl borç daha önce muaccel olsa bile, belirlenen vadeden önce kefile karşı takibat yapılamaz.
+
+Bütün kefalet türlerinde kefil, ayni güvence karşılığında hâkimden, mevcut rehinler paraya çevrilinceye ve borçlu aleyhine yapılan takip sonucunda kesin aciz belgesi alınıncaya veya konkordato kararına kadar kendisine karşı yöneltilen takibin durdurulmasına karar verilmesini isteyebilir.
+
+Asıl borcun muaccel olması, alacaklı veya borçlunun önceden süre içeren bildirimde bulunmasına bağlıysa, kefalet borcu için bu süre, bildirimin kefile yapıldığı tarihte işlemeye başlar.
+
+Yerleşim yeri yabancı bir ülkede olan borçlunun borcunu ödemesi, döviz işlemleri veya havale ile ilgili yasaklar
+
+gibi sebeplerle, o yabancı ülkenin yasal düzenlemeleri gereği imkânsız hâle gelmiş veya sınırlandırılmışsa, yerleşim yeri Türkiye’de olan kefil, takibe bu sebeple itiraz edebilir.
+
+c. Def’iler
+
+MADDE 591- Kefil, asıl borçluya veya mirasçılarına ait olan ve asıl borçlunun ödeme güçsüzlüğünden doğmayan bütün def’ileri alacaklıya karşı ileri sürme hakkına sahip olduğu gibi, bunları ileri sürmek zorundadır. Yanılma veya sözleşme yapma ehliyetsizliği ya da zamanaşımına uğramış bir borç sebebiyle borçlunun yükümlü olmadığı bir borca bilerek kefalet hâli bu hükmün dışındadır.
+
+Asıl borçlu kendisine ait olan bir def’iden vazgeçmiş olsa bile kefil, yine de bu def’iî alacaklıya karşı ileri sürebilir.
+
+Kefil, asıl borçluya ait def’ilerin varlığını bilmeksizin ödemede bulunursa, rücu hakkına sahip olur. Buna karşılık asıl borçlu, kefilin bu def’ileri bildiğini veya bilmesi gerektiğini ispat ederse kefil, bunlar ileri sürülmüş olsaydı ödemeden kurtulacağı ölçüde rücu hakkını kaybeder.
+
+Kumar veya bahisten doğan bir borca kefalette kefil, borcun bu niteliğini bilmiş olsa bile, asıl borçlunun sahip olduğu def’ileri ileri sürebilir.
+
+d. Özen gösterme, rehin ve borç senetlerinin teslimi
+
+MADDE 592- Alacaklı, kefalet sırasında var olan veya daha sonra asıl borçludan alacağın özel güvencesi olmak üzere elde ettiği rehin haklarını, güvenceyi ve rüçhan haklarını kefilin zararına olarak azaltırsa, zararın daha az olduğu alacaklı tarafından ispat edilmedikçe, kefilin sorumluluğu da buna uygun düşen bir miktarda azalır. Kefilin fazladan ödediği miktarın geri verilmesini isteme hakkı saklıdır.
+
+Çalışanlara kefalet hâlinde alacaklı, çalışanlar üzerinde yükümlü olduğu gözetimi ihmal eder veya kendisinden beklenebilen özeni göstermezse ve borç da bu sebeple doğmuş ya da bu özeni göstermesi hâlinde ulaşamayacağı ölçüde artmış olursa, bu borcu veya borcun artan kısmını kefilden isteyemez.
+
+Alacaklı, borcu ödeyen kefile haklarını kullanmasına yarayabilecek borç senetlerini teslim etmek ve gerekli bilgileri vermekle yükümlüdür. Alacaklı, kefalet sırasında var olan veya asıl borçlu tarafından alacak için sonradan sağlanan rehinleri ve diğer güvenceleri de kefile teslim etmek veya bunların devri için gerekli işlemleri yapmak zorundadır. Alacaklının, diğer alacakları sebebiyle sahip olduğu rehin ve hapis hakları, kefilin haklarından sıraca önce geldikleri ölçüde saklıdır.
+
+Alacaklı, haklı bir sebep olmaksızın yükümlülüklerini yerine getirmez, ağır kusuruyla
+
+mevcut belgeleri veya rehinleri ya da sorumlu olduğu diğer güvenceleri elinden çıkarırsa, kefil borcundan kurtulur. Bu durumda kefil, ödediğinin geri verilmesini ve varsa ek zararının giderilmesini isteyebilir.
+
+e. Ödemenin kabulünü isteme
+
+MADDE 593- Borçlunun iflası sebebiyle olsa bile, borç muaccel olduğu takdirde kefil, alacaklıdan yapacağı ödemeyi kabul etmesini her zaman isteyebilir. Bir borca birden çok kişinin kefil olması durumunda alacaklı, kefillerden biri tarafından yapılacak kısmi ödemeyi, bunu öneren kefile düşen paydan az olmamak koşuluyla, kabul etmek zorundadır.
+
+Alacaklı haklı bir sebep olmaksızın ödemeyi kabul etmekten kaçınırsa, kefil borcundan kurtulur; birlikte müteselsil kefalette ise, kefillerin sorumluluğu kendilerine düşen pay miktarınca azalır.
+
+Alacaklının rızası varsa kefil, asıl borcu muaccel olmasından önce de ödeyebilir. Ancak, bu durumda kefil, asıl borçluya karşı rücu hakkını borcun muaccel olmasından önce kullanamaz.
+
+f. Bildirim, iflasta ve konkordatoda kayıt
+
+MADDE 594- Asıl borçlu, anaparanın veya yarım yıllık döneme ait faizin ödenmesinde ya da yıldan yıla yapılması öngörülen anapara ödemelerinde altı ay gecikirse, alacaklının durumu kefile bildirmesi gerekir. İstek hâlinde alacaklı, her zaman asıl borcun kapsamı hakkında kefile bilgi vermek zorundadır.
+
+Asıl borçlunun iflasına karar verilmiş veya borçlu konkordato istemişse alacaklı, alacağını kaydettirmek ve hakla rının korunması için gerekeni yapmak zorundadır. Alacaklının, borçlunun iflas ettiğini veya borçluya konkordato mehli verildiğini öğrendiği anda, durumu kefile bildirmesi gerekir.
+
+Alacaklı, yukarıdaki fıkralarda öngörülen gereklerden birini yerine getirmezse, bundan dolayı kefilin uğradığı zarar miktarınca ona karşı haklarını kaybeder.
+
+2. Kefil ile borçlu arasındaki ilişki
+
+a. Güvence verilmesini ve borçtan kurtarılmasını isteme hakkı
+
+MADDE 595- Kefil, aşağıdaki durumlarda asıl borçludan güvence verilmesini ve borç muaccel olmuşsa, borçtan kurtarılmasını isteyebilir:
+
+1. Asıl borçlu, kefile karşı üstlendiği yükümlülüklere, özellikle belli bir süre içinde kendisini borçtan kurtarma vaadine aykırı davranmışsa.
+
+2. Asıl borçlu temerrüde düşmüşse veya yerleşim yerini diğer bir ülkeye nakletmesi yüzünden takibat önemli ölçüde güçleşmişse.
+
+3. Asıl borçlunun mali durumunun kötüleşmesi, güvencelerin değer kaybetmesi veya borçlunun kusuru sonucunda kefil için mevcut tehlike, kefaletin yapıldığı tarihe göre önemli ölçüde artmışsa.
+
+b. Kefilin rücu hakkı
+
+MADDE 596- Kefil, alacaklıya ifada bulunduğu ölçüde, onun haklarına halef olur. Kefil, bu hakları asıl borç muaccel olunca kullanabilir.
+
+Kefil, aksi kararlaştırılmamışsa, rehin hakları ile aynı alacak için sağlanmış diğer güvencelerden sadece kefalet anında var olan veya bizzat asıl borçlu tarafından, sonradan özellikle bu alacak için verilmiş bulunanlara halef olur. Alacaklıya kısmen ifada bulunan kefil, rehin hakkının sadece bunu karşılayan kısmına halef olur. Alacaklının rehin konusu üzerinde geriye kalan alacak hakkı, kefilin rehin hakkından ön sırada gelir.
+
+Kefil ile asıl borçlu arasındaki hukuki ilişkiden doğan istem ve def’iler saklıdır.
+
+Bir alacağın güvencesini oluşturan rehin paraya çevrildiği veya borç rehin veren malik tarafından ödendiği takdirde malik, kefile karşı rücu hakkını, ancak kefil ile kendisi arasında böyle bir anlaşma varsa ya da rehin sonradan bir üçüncü kişi tarafından verilmişse kullanabilir.
+
+Kefilin rücu hakkına ilişkin zamanaşımı, kefilin alacaklıya ifada bulunduğu anda işlemeye başlar.
+
+Kefil, dava hakkı vermeyen veya yanılma ya da ehliyetsizlik sebebiyle asıl borçluyu bağlamayan bir borç için ödemede bulunduğu takdirde, asıl borçluya karşı rücu hakkına sahip değildir. Ancak, kefil zamanaşımına uğramış bir asıl borçtan sorumlu olmayı borçlunun vekili sıfatıyla üstlenmişse asıl borçlu, ona karşı vekâlet sözleşmesi hükümleri uyarınca sorumlu olur.
+
+c. Kefilin bildirim yükü
+
+MADDE 597- Borcu tamamen veya kısmen ödeyen kefil, durumu borçluya bildirmek zorundadır.
+
+Kefil, bu bildirimde bulunmazsa ve ödemeyi bilmeyen veya bilmesi gerekmeyen borçlu da alacaklıya ifada bulunursa, rücu hakkını kaybeder.
+
+Kefilin, alacaklıya karşı sebepsiz zenginleşmeden doğan dava hakkı saklıdır.
+
+D. Sona ermesi
+
+I. Kanun gereğince
+
+MADDE 598- Hangi sebeple olursa olsun, asıl borç sona erince, kefil de borcundan kurtulur.
+
+Borçlu ve kefil sıfatı aynı kişide birleşmiş olursa, alacaklı için kefaletten doğan özel yararlar saklı kalır.
+
+Bir gerçek kişi tarafından verilmiş olan her türlü kefalet, buna ilişkin sözleşmenin kurulmasından başlayarak on yılın geçmesiyle kendiliğinden ortadan kalkar.
+
+Kefalet, on yıldan fazla bir süre için verilmiş olsa bile, uzatılmış veya yeni bir kefalet verilmiş olmadıkça kefil, ancak on yıllık süre doluncaya kadar takip edilebilir.
+
+Kefalet süresi, en erken kefaletin sona ermesinden bir yıl önce yapılmak kaydıyla, kefilin kefalet sözleşmesinin şekline uygun yazılı açıklamasıyla, azamî on yıllık yeni bir dönem için uzatılabilir.
+
+II. Kefaletten dönme
+
+MADDE 599- Gelecekte doğacak bir borca kefalette, borçlunun borcun doğumundan önceki mali durumu, kefalet sözleşmesinin yapılmasından sonra önemli ölçüde bozulmuşsa veya mali durumunun, kefalet sırasında kefilin iyiniyetle varsay dığından çok daha kötü olduğu ortaya çıkmışsa, kefil alacaklıya yazılı bir bildirimde bulunarak, borç doğmadığı sürece
+
+her zaman kefalet sözleşmesinden dönebilir.
+
+Kefil, alacaklının kefalete güvenmesi sebebiyle uğradığı zararı gidermekle yükümlüdür.
+
+III. Süreli kefalette
+
+MADDE 600 - Süreli kefalette kefil, sürenin sonunda borcundan kurtulur.
+
+IV. Süreli olmayan kefalette
+
+MADDE 601- Süreli olmayan kefalette kefil, asıl borç muaccel olunca, adi kefalette her zaman ve müteselsil kefalette ise, kanunun öngördüğü hâllerde, alacaklıdan, bir ay içinde borçluya karşı dava ve takip haklarını kullanmasını, varsa rehnin paraya çevrilmesi yoluyla takibe geçmesini ve ara vermeden takibe devam etmesini isteyebilir.
+
+Borç, alacaklının borçluya yapacağı bildirim sonucunda muaccel olacaksa kefil, kefalet sözleşmesinin kurulduğu tarihten bir yıl sonra alacaklıdan, bu bildirimi yapmasını ve borç bu suretle muaccel olunca, yukarıdaki fıkra hükümleri uyarınca takip ve dava haklarını kullanmasını isteyebilir.
+
+Alacaklı, kefilin bu istemlerini yerine getirmezse, kefil borcundan kurtulur.
+
+V. Çalışanlara kefalette
+
+MADDE 602- Çalışanlara süreli olmayan kefalette kefil, her üç yılda bir, ertesi yılın sonunda geçerli olmak üzere sözleşmeyi feshettiğini bildirebilir.
+
+E. Uygulama alanı
+
+MADDE 603- Kefaletin şekline, kefil olma ehliyetine ve eşin rızasına ilişkin hükümler, gerçek kişilerce, kişisel güvence verilmesine ilişkin olarak başka ad altında yapılan diğer sözleşmelere de uygulanır.

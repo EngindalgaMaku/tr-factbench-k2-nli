@@ -1,0 +1,2805 @@
+
+    <style>
+        * {
+            font-size: 12pt !important;
+            line-height: 127% !important;
+        }
+
+        @media print {
+            a {
+                visibility: hidden;
+            }
+
+            #section-to-print, #section-to-print * {
+                visibility: visible;
+            }
+
+            #section-to-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        /*aşağıda js kodu var table width değiştirmek için*/
+        table {
+            width: 100% !important;
+            page-break-inside: initial !important;
+            white-space: initial !important;
+            padding: 0 !important;
+            text-indent: 0 !important;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            tr, p, table {
+                width: initial !important;
+                page-break-inside: initial !important;
+                white-space: initial !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            table {
+                width: 100% !important;
+            }
+
+
+            td {
+                /*white-space: nowrap !important;*/
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <link href="/lib/tooltip/tooltip.css" rel="stylesheet" />
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=Windows-1254">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Yu Gothic";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\30D2\30E9\30AE\30CE\660E\671D Pro W3";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Times;
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+h1
+	{mso-style-link:"Başlık 1 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"Arial",sans-serif;}
+h2
+	{mso-style-link:"Başlık 2 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:"Times",serif;
+	letter-spacing:.5pt;}
+h3
+	{mso-style-link:"Başlık 3 Char";
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+h4
+	{mso-style-link:"Başlık 4 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	line-height:12.3pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times",serif;
+	font-weight:normal;
+	font-style:italic;}
+h5
+	{mso-style-link:"Başlık 5 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:13.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;
+	font-style:italic;}
+h6
+	{mso-style-link:"Başlık 6 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	line-height:11.2pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times",serif;
+	text-decoration:underline;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-link:"Başlık 7 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-link:"Başlık 8 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;
+	text-decoration:underline;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-link:"Başlık 9 Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-indent:19.85pt;
+	line-height:11.0pt;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Dipnot Metni Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-link:"Üstbilgi Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Altbilgi Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Gövde Metni Char";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{mso-style-link:"Gövde Metni 2 Char";
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{mso-style-link:"Gövde Metni 3 Char";
+	margin-top:0cm;
+	margin-right:66.6pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:distribute-all-lines;
+	line-height:9.0pt;
+	font-size:9.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balon Metni Char";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma",sans-serif;
+	font-weight:normal;}
+span.Balk1Char
+	{mso-style-name:"Başlık 1 Char";
+	mso-style-link:"Başlık 1";
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+span.Balk2Char
+	{mso-style-name:"Başlık 2 Char";
+	mso-style-link:"Başlık 2";
+	font-family:"Times",serif;
+	letter-spacing:.5pt;
+	font-weight:bold;}
+span.Balk3Char
+	{mso-style-name:"Başlık 3 Char";
+	mso-style-link:"Başlık 3";
+	font-family:"Times New Roman",serif;}
+span.Balk4Char
+	{mso-style-name:"Başlık 4 Char";
+	mso-style-link:"Başlık 4";
+	font-family:"Times",serif;
+	font-style:italic;}
+span.Balk5Char
+	{mso-style-name:"Başlık 5 Char";
+	mso-style-link:"Başlık 5";
+	font-family:"Times New Roman",serif;
+	font-style:italic;}
+span.Balk6Char
+	{mso-style-name:"Başlık 6 Char";
+	mso-style-link:"Başlık 6";
+	font-family:"Times",serif;
+	font-weight:bold;
+	text-decoration:underline;}
+span.Balk7Char
+	{mso-style-name:"Başlık 7 Char";
+	mso-style-link:"Başlık 7";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.Balk8Char
+	{mso-style-name:"Başlık 8 Char";
+	mso-style-link:"Başlık 8";
+	font-family:"Times New Roman",serif;
+	text-decoration:underline;}
+span.Balk9Char
+	{mso-style-name:"Başlık 9 Char";
+	mso-style-link:"Başlık 9";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.stbilgiChar
+	{mso-style-name:"Üstbilgi Char";
+	mso-style-link:Üstbilgi;
+	font-family:"Times New Roman",serif;}
+span.AltbilgiChar
+	{mso-style-name:"Altbilgi Char";
+	mso-style-link:Altbilgi;
+	font-family:"Times New Roman",serif;}
+span.GvdeMetniChar
+	{mso-style-name:"Gövde Metni Char";
+	mso-style-link:"Gövde Metni";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.msobodytextindent, li.msobodytextindent, div.msobodytextindent
+	{mso-style-name:msobodytextindent;
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.GvdeMetni2Char
+	{mso-style-name:"Gövde Metni 2 Char";
+	mso-style-link:"Gövde Metni 2";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+span.GvdeMetni3Char
+	{mso-style-name:"Gövde Metni 3 Char";
+	mso-style-link:"Gövde Metni 3";
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.msobodytextindent2, li.msobodytextindent2, div.msobodytextindent2
+	{mso-style-name:msobodytextindent2;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:168.85pt;
+	margin-bottom:.0001pt;
+	text-indent:-168.85pt;
+	font-size:8.0pt;
+	font-family:"Times",serif;
+	font-weight:normal;}
+p.msobodytextindent3, li.msobodytextindent3, div.msobodytextindent3
+	{mso-style-name:msobodytextindent3;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	font-size:8.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+p.ksmblmalt, li.ksmblmalt, div.ksmblmalt
+	{mso-style-name:ksmblmalt;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;
+	font-style:italic;}
+p.nor, li.nor, div.nor
+	{mso-style-name:nor;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.baslk, li.baslk, div.baslk
+	{mso-style-name:baslk;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:12.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.kantab, li.kantab, div.kantab
+	{mso-style-name:kantab;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.ksmblm, li.ksmblm, div.ksmblm
+	{mso-style-name:ksmblm;
+	margin-top:2.85pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.ksmblmalt0, li.ksmblmalt0, div.ksmblmalt0
+	{mso-style-name:ksmblmalt0;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;
+	font-style:italic;}
+p.nor0, li.nor0, div.nor0
+	{mso-style-name:nor0;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.dipnot, li.dipnot, div.dipnot
+	{mso-style-name:dipnot;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.45pt;
+	margin-bottom:.0001pt;
+	text-indent:-18.45pt;
+	font-size:8.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;
+	font-style:italic;}
+p.maddebasl, li.maddebasl, div.maddebasl
+	{mso-style-name:maddebasl;
+	margin-top:5.65pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;
+	font-style:italic;}
+p.talik, li.talik, div.talik
+	{mso-style-name:talik;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;
+	font-style:italic;}
+p.kantab0, li.kantab0, div.kantab0
+	{mso-style-name:kantab0;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.ksmblm0, li.ksmblm0, div.ksmblm0
+	{mso-style-name:ksmblm0;
+	margin-top:2.85pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.nor00, li.nor00, div.nor00
+	{mso-style-name:nor00;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.nor1, li.nor1, div.nor1
+	{mso-style-name:nor1;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.h2, li.h2, div.h2
+	{mso-style-name:h2;
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.nor2, li.nor2, div.nor2
+	{mso-style-name:nor2;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.ksmblm1, li.ksmblm1, div.ksmblm1
+	{mso-style-name:ksmblm1;
+	margin-top:2.85pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.h20, li.h20, div.h20
+	{mso-style-name:h20;
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	layout-grid-mode:char;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	font-weight:bold;}
+p.nor3, li.nor3, div.nor3
+	{mso-style-name:nor3;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.ksmblm2, li.ksmblm2, div.ksmblm2
+	{mso-style-name:ksmblm2;
+	margin-top:2.85pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.3-normalyaz, li.3-normalyaz, div.3-normalyaz
+	{mso-style-name:3-normalyaz;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+p.nor4, li.nor4, div.nor4
+	{mso-style-name:nor4;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.char, li.char, div.char
+	{mso-style-name:char;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	font-weight:normal;}
+p.nor5, li.nor5, div.nor5
+	{mso-style-name:nor5;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.char0, li.char0, div.char0
+	{mso-style-name:char0;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	font-weight:normal;}
+p.nor6, li.nor6, div.nor6
+	{mso-style-name:nor6;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;
+	font-weight:normal;}
+p.3-NormalYaz0, li.3-NormalYaz0, div.3-NormalYaz0
+	{mso-style-name:"3-Normal Yazı";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:9.5pt;
+	font-family:"Times New Roman",serif;
+	font-weight:normal;}
+p.CharChar, li.CharChar, div.CharChar
+	{mso-style-name:"Char Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	font-weight:normal;}
+span.BalonMetniChar
+	{mso-style-name:"Balon Metni Char";
+	mso-style-link:"Balon Metni";
+	font-family:"Tahoma",sans-serif;}
+p.CharChar0, li.CharChar0, div.CharChar0
+	{mso-style-name:"Char Char";
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;
+	font-weight:normal;}
+span.DipnotMetniChar
+	{mso-style-name:"Dipnot Metni Char";
+	mso-style-link:"Dipnot Metni";
+	font-family:"Times New Roman",serif;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+<script type="text/javascript">window.av = { database:'1' , rnApp:'False' }</script><script src="https://www.mevzuat.gov.tr/lib/jquery/dist/jquery.js"></script><script src="https://www.mevzuat.gov.tr/js/iframescript.min.js?v=1.05"></script><style><!--* {font-family:inherit!important;}--></style></head>
+
+<body lang=TR>
+
+<div class=WordSection1>
+
+<h1 align=center style='margin:0cm;margin-bottom:.0001pt;text-align:center;
+line-height:127%;page-break-after:auto'><span style='font-size:12.0pt;
+line-height:127%;font-family:"Times New Roman",serif'>KABAHATLER KANUNU</span></h1>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=kantab0 style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'>Kanun
+Numarası                    : 5326</span></p>
+
+<p class=kantab0 style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'>Kabul
+Tarihi                           : 30/3/2005</span></p>
+
+<p class=kantab0 style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'>Yayımlandığı
+Resmî Gazete  : Tarih  : 31/3/2005        Sayı  : 25772 (Mükerrer)</span></p>
+
+<p class=kantab0 style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'>Yayımlandığı
+Düstur              : Tertip : 5                      Cilt   : 44</span></p>
+
+<p class=kantab0 align=center style='text-align:center;line-height:127%'><span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>BİRİNCİ KISIM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>Genel Hükümler</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>BİRİNCİ BÖLÜM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>Amaç ve Kapsam, Tanım, Kanunîlik
+İlkesi ve Kanunun Uygulama Alanı</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Amaç ve kapsam</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 1-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Bu Kanunda; toplum düzenini, genel
+ahlâkı, genel sağlığı, çevreyi ve ekonomik düzeni korumak amacıyla; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>a) Kabahatlere ilişkin genel
+ilkeler, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>b) Kabahatler karşılığında
+uygulanabilecek olan idarî yaptırımların türleri ve sonuçları, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>c) Kabahatler dolayısıyla
+karar alma süreci, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>d) İdarî yaptırıma ilişkin
+kararlara karşı kanun yolu, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>e) İdarî yaptırım kararlarının
+yerine getirilmesine ilişkin esaslar, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>Belirlenmiş ve çeşitli kabahatler
+tanımlanmıştır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Tanım </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.1pt'>Madde
+2</span></b><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.1pt'>-
+(1) Kabahat deyiminden; kanunun, karşılığında idarî yaptırım uygulanmasını
+öngördüğü haksızlık anlaşılır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Genel kanun niteliği </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 3-</span></b><span style='font-size:12.0pt;line-height:127%'> <b>(Değişik: 6/12/2006-5560/31 md.) </b></span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%'>(1) Bu Kanunun;</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%'>a) İdarî yaptırım kararlarına karşı kanun
+yoluna ilişkin hükümleri, diğer kanunlarda aksine hüküm bulunmaması halinde,</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%'>b) Diğer genel hükümleri, idarî para cezası
+veya mülkiyetin kamuya geçirilmesi yaptırımını gerektiren bütün fiiller hakkında,</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><span style='font-size:12.0pt;line-height:127%'>uygulanır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Kanunîlik ilkesi </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 4-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Hangi fiillerin kabahat oluşturduğu,
+kanunda açıkça tanımlanabileceği gibi; kanunun kapsam ve koşulları bakımından belirlediği
+çerçeve hükmün içeriği, idarenin genel ve düzenleyici işlemleriyle de doldurulabilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(2) Kabahat karşılığı olan
+yaptırımların türü, süresi ve miktarı, ancak kanunla belirlenebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Zaman bakımından
+uygulama</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 5</span></b><span style='font-size:12.0pt;line-height:125%'>- (1) 26.9.2004 tarihli ve 5237 sayılı
+Türk Ceza Kanununun zaman bakımından uygulamaya ilişkin hükümleri kabahatler bakımından
+da uygulanır. Ancak, kabahatler karşılığında öngörülen idarî yaptırımlara ilişkin
+kararların yerine getirilmesi bakımından derhal uygulama kuralı geçerlidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(2) Kabahat, failin icraî
+veya ihmali davranışı gerçekleştirdiği zaman işlenmiş sayılır. Neticenin oluştuğu
+zaman, bu bakımdan dikkate alınmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Yer bakımından
+uygulama</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 6-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) 5237 sayılı Türk Ceza Kanununun yer
+bakımından uygulamaya ilişkin 8 inci maddesi hükümleri, kabahatler bakımından da
+uygulanır. Ancak, kanunlarda aksine hüküm bulunan haller saklıdır. </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b><span style='font-size:12.0pt;line-height:125%'>İKİNCİ BÖLÜM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b><span style='font-size:12.0pt;line-height:125%'>Kabahatten Dolayı Sorumluluğun
+Esasları</span></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:125%'><b><span style='font-size:12.0pt;line-height:125%'>Kabahatin ihmali davranışla işlenmesi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 7-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Kabahat, icraî veya ihmali davranışla
+işlenebilir. İhmali davranışla işlenmiş kabahatin varlığı için kişi açısından belli
+bir icraî davranışta bulunma hususunda hukukî yükümlülüğün varlığı gereklidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Organ veya temsilcinin
+davranışından dolayı sorumluluk</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 8-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Organ veya temsilcilik görevi yapan
+ya da organ veya temsilci olmamakla birlikte, tüzel kişinin faaliyeti çerçevesinde
+görev üstlenen kişinin bu görevi kapsamında işlemiş bulunduğu kabahatten dolayı
+tüzel kişi hakkında da idarî yaptırım uygulanabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%;letter-spacing:-.1pt'>(2)
+Temsilci sıfatıyla hareket eden kişinin bu sıfatla bağlantılı olarak işlemiş
+bulunduğu kabahatten dolayı temsil edilen gerçek kişi hakkında da idarî
+yaptırım uygulanabilir. Gerçek kişiye ait bir işte çalışan kişinin bu faaliyeti
+çerçevesinde işlemiş bulunduğu kabahatten dolayı, iş sahibi kişi hakkında da
+idarî yaptırım uygulanabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(3) Kanunun, organ veya temsilcide
+ya da temsil edilen kişide özel nitelikler aradığı hallerde de yukarıdaki fıkralar
+hükümleri uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(4) Birinci ve ikinci fıkra
+hükümleri, organ veya temsilcilik ya da hizmet ilişkisinin dayanağını oluşturan
+işlemin hukuken geçerli olmaması halinde de uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Kast veya taksir</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 9-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Kabahatler, kanunda açıkça hüküm
+bulunmayan hallerde, hem kasten hem de taksirle işlenebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Hata</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 10-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Türk Ceza Kanununun hata hallerine
+ilişkin hükümleri, ancak kasten işlenen kabahatler bakımından uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Sorumluluk</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 11-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Fiili işlediği sırada onbeş yaşını
+doldurmamış çocuk hakkında idarî para cezası uygulanamaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Akıl hastalığı nedeniyle,
+işlediği fiilin hukukî anlam ve sonuçlarını algılayamayan veya bu fiille ilgili
+olarak davranışlarını yönlendirme yeteneği önemli derecede azalmış olan kişi hakkında
+idarî para cezası uygulanmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Hukuka uygunluk
+nedenleri ile kusurluluğu ortadan kaldıran nedenler </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 12-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Bu Kanunda aksine hüküm bulunmayan
+hallerde, Türk Ceza Kanununun hukuka uygunluk nedenleri ile kusurluluğu ortadan
+kaldıran nedenlere ilişkin hükümleri, kabahatler bakımından da uygulanır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Teşebbüs</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 13- </span></b><span style='font-size:12.0pt;line-height:127%'>(1) Kabahate teşebbüs
+cezalandırılmaz. Ancak, teşebbüsün de cezalandırılabileceğine dair ilgili
+kanunda hüküm bulunan haller saklıdır. Bu durumda, Türk Ceza Kanununun suça
+teşebbüse ve gönüllü vazgeçmeye ilişkin hükümleri, kabahatler bakımından da
+uygulanır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>İştirak</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 14</span></b><span style='font-size:12.0pt;line-height:127%'>- (1) Kabahatin işlenişine birden fazla
+kişinin iştirak etmesi halinde bu kişilerin her biri hakkında, fail olarak idarî
+para cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Özel faillik niteliğinin
+arandığı durumlarda, kabahate iştirak eden ve bu niteliği taşımayan kişi hakkında
+da fail olarak idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Kabahate iştirak için
+kasten ve hukuka aykırı işlenmiş bir fiilin varlığı yeterlidir. Kabahatin işlenişine
+iştirak eden kişi hakkında, diğerlerinin sorumlu olup olmadığı göz önünde bulundurulmaksızın
+idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) Kanunda özel faillik niteliğini
+taşıyan kişi açısından suç, diğer kişiler açısından kabahat olarak tanımlanan fiilin,
+bu niteliği taşıyan ve taşımayan kişiler tarafından ortaklaşa işlenmesi halinde
+suça iştirake ilişkin hükümler uygulanır. </span></p>
+
+<h1 style='margin:0cm;margin-bottom:.0001pt;text-indent:35.45pt;line-height:
+127%;page-break-after:auto'><i><span style='font-size:12.0pt;line-height:127%;
+font-family:"Times New Roman",serif;font-weight:normal'>&nbsp;</span></i></h1>
+
+<h1 style='margin:0cm;margin-bottom:.0001pt;text-indent:35.45pt;line-height:
+127%;page-break-after:auto'><span style='font-size:12.0pt;line-height:127%;
+font-family:"Times New Roman",serif'>İçtima </span></h1>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 15</span></b><span style='font-size:12.0pt;line-height:127%'>- (1) Bir fiil ile birden fazla kabahatin
+işlenmesi halinde bu kabahatlere ilişkin tanımlarda sadece idarî para cezası öngörülmüşse,
+en ağır idarî para cezası verilir. Bu kabahatlerle ilgili olarak kanunda idarî para
+cezasından başka idarî yaptırımlar da öngörülmüş ise, bu yaptırımların her birinin
+uygulanmasına karar verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) Aynı kabahatin birden
+fazla işlenmesi halinde her bir kabahatle ilgili olarak ayrı ayrı idarî para cezası
+verilir. Kesintisiz fiille işlenebilen kabahatlerde, bu nedenle idarî yaptırım kararı
+verilinceye kadar fiil tek sayılır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(3) Bir fiil hem kabahat hem
+de suç olarak tanımlanmış ise, sadece suçtan dolayı yaptırım uygulanabilir. Ancak,
+suçtan dolayı yaptırım uygulanamayan hallerde kabahat dolayısıyla yaptırım uygulanır.
+</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>ÜÇÜNCÜ BÖLÜM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>İdarî Yaptırımlar</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Yaptırım türleri </span></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 16</span></b><span style='font-size:12.0pt;line-height:120%'>- (1) Kabahatler karşılığında uygulanacak
+olan idarî yaptırımlar, idarî para cezası ve idarî tedbirlerden ibarettir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) İdarî tedbirler, mülkiyetin
+kamuya geçirilmesi ve ilgili kanunlarda yer alan diğer tedbirlerdir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>İdarî para cezası </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 17-</span></b><span style='font-size:12.0pt;line-height:120%'> (1) İdarî para cezası, maktu veya nispi
+olabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) İdarî para cezası, kanunda
+alt ve üst sınırı gösterilmek suretiyle de belirlenebilir. Bu durumda, idarî para
+cezasının miktarı belirlenirken işlenen kabahatin haksızlık içeriği ile failin kusuru
+ve ekonomik durumu birlikte göz önünde bulundurulur. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(3) <b>(Değişik: 6/12/2006-5560/32
+md.) </b>10/12/2003 tarihli ve 5018 sayılı Kamu Mali Yönetimi ve Kontrol Kanununa
+ekli (I), (II) ve (III) sayılı cetvellerde yer alan kamu idareleri tarafından verilen
+idarî para cezalarının ilgili kanunlarında 1/6/2005 tarihinden sonra belirlenen
+oranın dışındaki kısmı ile Cumhuriyet başsavcılıkları ve mahkemeler tarafından verilen
+idarî para cezaları Genel Bütçeye gelir kaydedilir. Sosyal güvenlik kurumları ile
+mahalli idareler tarafından verilen idarî para cezaları kendi bütçelerine gelir
+kaydedilir. Diğer kamu kurum ve kuruluşları tarafından verilen idarî para cezaları
+ise, ilgili kanunlarındaki hükümler saklı kalmak kaydıyla, Genel Bütçeye gelir kaydedilir.
+Kamu kurumu niteliğindeki meslek kuruluşlarının verdiği para cezaları, kendi kanunlarındaki
+hükümlere tâbidir. Kişinin ekonomik durumunun müsait olmaması halinde, idarî para
+cezasının, ilk taksitinin peşin ödenmesi koşuluyla, bir yıl içinde ve dört eşit
+taksit halinde ödenmesine karar verilebilir. Taksitlerin zamanında ve tam olarak
+ödenmemesi halinde, idarî para cezasının kalan kısmının tamamı tahsil edilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(4) <b>(Değişik: 6/12/2006-5560/32
+md.) </b>Genel Bütçeye gelir kaydedilmesi gereken idarî para cezalarına ilişkin
+kesinleşen kararlar, 21/7/1953 tarihli ve 6183 sayılı Amme Alacaklarının Tahsil
+Usulü Hakkında Kanun hükümlerine göre tahsil edilmek üzere Maliye Bakanlığınca belirlenecek
+tahsil dairelerine gönderilir. Sosyal güvenlik kurumları ve mahalli idareler tarafından
+verilen idarî para cezaları, ilgili kanunlarında aksine hüküm bulunmadığı takdirde,
+Amme Alacaklarının Tahsil Usulü Hakkında Kanun hükümlerine göre kendileri tarafından
+tahsil olunur. Diğer kamu kurum ve kuruluşları tarafından verilen ve Genel Bütçeye
+gelir kaydedilmesi gerekmeyen idarî para cezaları, ilgili kanunlarında özel hüküm
+bulunmadığı takdirde genel hükümlere göre tahsil olunur.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(5) İdarî para cezası tamamen
+tahsil edildikten itibaren en geç bir ay içinde durum, ilgili kamu kurum ve kuruluşuna
+bildirilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(6) Kabahat dolayısıyla
+idarî para cezası veren kamu görevlisi, ilgilinin rıza göstermesi halinde bunun
+tahsilatını derhal kendisi gerçekleştirir.<b> (Değişik cümleler:
+1/7/2022-7417/46 md.)</b> Kanunlarında ödeme süresi düzenlenmemiş olan idari
+para cezaları, tebliğinden itibaren bir ay içinde ödenir. İdari para cezasının
+ödeme süresi içinde ödenmesi halinde, cezadan %25 oranında indirim yapılır. <b>(Ek
+cümle: 1/7/2022-7417/46 md.)</b> Ödeme yapılması, kişinin bu karara karşı kanun
+yoluna başvurma hakkını etkilemez.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(7) İdarî para cezaları her
+takvim yılı başından geçerli olmak üzere o yıl için 4.1.1961 tarihli ve 213 sayılı
+Vergi Usul Kanununun mükerrer 298 inci maddesi hükümleri uyarınca tespit ve ilân
+edilen yeniden değerleme oranında artırılarak uygulanır. Bu suretle idarî para cezasının
+hesabında bir Türk Lirasının küsuru dikkate alınmaz. Bu fıkra hükmü, nispi nitelikteki
+idarî para cezaları açısından uygulanmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Mülkiyetin kamuya
+geçirilmesi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 18-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Kabahatin konusunu oluşturan veya
+işlenmesi suretiyle elde edilen eşyanın mülkiyetinin kamuya geçirilmesine, ancak
+kanunda açık hüküm bulunan hallerde karar verilebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(2) Mülkiyetin kamuya geçirilmesine
+ilişkin karar, eşyanın;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>a) Kullanılmaz hale getirilmesi,
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>b) Niteliğinin değiştirilmesi,
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>c) Ancak belli bir surette
+kullanılması,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>Koşullarından birinin yerine
+getirilmesine bağlı olarak belli bir süre geciktirilebilir. Belirlenen süre zarfında
+koşulun yerine getirilmemesi halinde eşyanın mülkiyetinin kamuya geçirilmesine karar
+verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(3) Mülkiyetin kamuya geçirilmesine
+ilişkin karar kesinleşinceye kadar ilgili kamu kurum ve kuruluşu tarafından eşyaya
+elkonulabileceği gibi; eşya, kişilerin muhafazasına da bırakılabilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(4) Eşyanın mülkiyeti, kanunda
+açık hüküm bulunan hallerde ilgili kamu kurum ve kuruluşuna, aksi takdirde Devlete
+geçer. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(5) Eşyanın mülkiyetinin kamuya
+geçirilmesine karar verilebilmesi için fail hakkında idarî para cezası veya başka
+bir idarî yaptırım kararı verilmiş olması şart değildir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(6) Kaim değerin mülkiyetinin
+kamuya geçirilmesine de karar verilebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(7) Mülkiyeti kamuya geçirilen
+eşya, başka suretle değerlendirilmesi mümkün olmazsa imha edilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%;letter-spacing:-.2pt'>(8)
+Mülkiyetin kamuya geçirilmesine ilişkin karar, kesinleşmesi halinde yerine
+getirilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Saklı tutulan hükümler
+</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 19-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Diğer kanunlarda kabahat karşılığında
+öngörülen belirli bir süre için; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>a) Bir meslek ve sanatın yerine
+getirilmemesi, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>b) İşyerinin kapatılması,
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>c) Ruhsat veya ehliyetin geri
+alınması, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%;letter-spacing:-.25pt'>d) Kara,
+deniz veya hava nakil aracının trafikt</span><span style='font-size:12.0pt;
+line-height:129%'>en veya seyrüseferden alıkonulması,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>gibi yaptırımlara ilişkin
+hükümler, ilgili kanunlarda bu Kanun hükümlerine uygun değişiklik yapılıncaya kadar
+saklıdır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><i><span style='font-size:12.0pt;line-height:129%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><b><span style='font-size:12.0pt;line-height:129%'>Soruşturma zamanaşımı</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><b><span style='font-size:12.0pt;line-height:129%'>Madde 20-</span></b><span style='font-size:12.0pt;line-height:129%'> (1) Soruşturma zamanaşımının dolması
+halinde kabahatten dolayı kişi hakkında idarî para cezasına karar verilemez. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>(2) <b>(Değişik: 6/12/2006-5560/33
+md.)</b> Soruşturma zamanaşımı süresi; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>a) Yüzbin Türk Lirası veya
+daha fazla idarî para cezasını gerektiren kabahatlerde beş,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>b) Ellibin Türk Lirası veya
+daha fazla idarî para cezasını gerektiren kabahatlerde dört, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>c) Ellibin Türk Lirasından
+az idarî para cezasını gerektiren kabahatlerde üç,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>yıldır. <b>(Ek cümle: 13/2/2011-6111/22
+md.) </b>Ancak, 89 uncu maddesi hariç olmak üzere 1111 sayılı Askerlik Kanunu, 2839
+sayılı Milletvekili Seçimi Kanunu, 2918 sayılı Karayolları Trafik Kanunu, 2972 sayılı
+Mahalli İdareler ile Mahalle Muhtarlıkları ve <span style='color:black'>İhtiyar
+Heyetleri Seçimi Hakkında Kanun, 3376 sayılı Anayasa Değişikliklerinin Halkoyuna
+Sunulması Hakkında Kanun, 4925 sayılı Karayolu Taşıma Kanunu, 5490 sayılı Nüfus
+Hizmetleri Kanunu ve 6001 sayılı Karayolları Genel Müdürlüğünün Teşkilat ve Görevleri
+Hakkında Kanunda belirtilen ve idari para cezasını gerektiren fiilin işlendiği tarihi
+takip eden takvim yılının son günü bitimine kadar idari para cezası verilerek tebliğ
+edilmediği takdirde idari yaptırım kararı verilemez, verilmiş olanlar düşer.</span><a href="#_ftn1" name="_ftnref1" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[1]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>(3) Nispî idarî para cezasını
+gerektiren kabahatlerde zamanaşımı süresi sekiz yıldır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>(4) Zamanaşımı süresi, kabahate
+ilişkin tanımdaki fiilin işlenmesiyle veya neticenin gerçekleşmesiyle işlemeye başlar.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>(5) Kabahati oluşturan fiilin
+aynı zamanda suç oluşturması halinde suça ilişkin dava zamanaşımı hükümleri uygulanır.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><i><span style='font-size:12.0pt;line-height:129%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><b><span style='font-size:12.0pt;line-height:129%'>Yerine getirme
+zamanaşımı</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><b><span style='font-size:12.0pt;line-height:129%'>Madde 21-</span></b><span style='font-size:12.0pt;line-height:129%'> (1) Yerine getirme zamanaşımının dolması
+halinde idarî para cezasına veya mülkiyetin kamuya geçirilmesine ilişkin karar artık
+yerine getirilemez. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>(2) Yerine getirme zamanaşımı
+süresi; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>a) Ellibin Türk Lirası veya
+daha fazla idarî para cezasına karar verilmesi halinde yedi, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%;letter-spacing:-.2pt'>b)
+Yirmibin Türk Lirası veya daha fazla idarî para cezasına karar verilmesi
+halinde beş, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>c) Onbin Türk Lirası veya
+daha fazla idarî para cezasına karar verilmesi halinde dört, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>d) Onbin Türk Lirasından az
+idarî para cezasına karar verilmesi halinde üç, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+129%'><span style='font-size:12.0pt;line-height:129%'>Yıldır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Mülkiyetin kamuya geçirilmesine
+ilişkin zamanaşımı süresi on yıldır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) <b>(Değişik: 23/7/2010-6009/37
+md.) </b><span style='color:black'>Zamanaşımı süresi, kararın kesinleşmesinin rastladığı
+takvim yılını takip eden takvim yılı başından itibaren işlemeye başlar.</span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(5) Kanun hükmü gereği olarak
+idarî yaptırımın yerine getirilmesine başlanamaması veya yerine getirilememesi halinde
+zamanaşımı işlemez.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>DÖRDÜNCÜ BÖLÜM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>Karar Verme Yetkisi ve Kanun Yolları</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>İdarî yaptırım kararı
+verme yetkisi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 22-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Kabahat dolayısıyla idarî yaptırım
+kararı vermeye ilgili kanunda açıkça gösterilen idarî kurul, makam veya kamu görevlileri
+yetkilidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Kanunda açık hüküm bulunmayan
+hallerde ilgili kamu kurum ve kuruluşunun en üst amiri bu konuda yetkilidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) İdarî kurul, makam veya
+kamu görevlileri, ancak ilgili kamu kurum ve kuruluşunun görev alanına giren yerlerde
+işlenen kabahatler dolayısıyla idarî yaptırım kararı vermeye yetkilidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) 4.12.2004 tarihli ve 5271
+sayılı Ceza Muhakemesi Kanununun yer bakımından yetki kuralları kabahatler açısından
+da geçerlidir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Cumhuriyet savcısının
+karar verme yetkisi </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 23-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Cumhuriyet savcısı, kanunda açıkça
+hüküm bulunan hallerde bir kabahat dolayısıyla idarî yaptırım kararı vermeye yetkilidir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Bir suç dolayısıyla başlatılan
+soruşturma kapsamında bir kabahatin işlendiğini öğrenmesi halinde Cumhuriyet savcısı
+durumu ilgili kamu kurum ve kuruluşuna bildirebileceği gibi, kendisi de idarî yaptırım
+kararı verebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Soruşturma konusu fiilin
+kabahat oluşturduğunun anlaşılması halinde Cumhuriyet savcısı bu nedenle idarî yaptırım
+kararı verir. Ancak, bunun için ilgili kamu kurum ve kuruluşu tarafından idarî yaptırım
+kararı verilmemiş olması gerekir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Mahkemenin karar verme
+yetkisi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 24</span></b><span style='font-size:12.0pt;line-height:127%'>- (1) Kovuşturma konusu fiilin kabahat
+oluşturduğunun anlaşılması halinde mahkeme tarafından idarî yaptırım kararı verilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>İdarî yaptırım kararı </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 25-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) İdarî yaptırım kararına ilişkin tutanakta;
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>a) Hakkında idarî yaptırım
+kararı verilen kişinin kimlik ve adresi, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>b) İdarî yaptırım kararı verilmesini
+gerektiren kabahat fiili,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>c) Bu fiilin işlendiğini ispata
+yarayacak bütün deliller, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>d) Karar tarihi ve kararı
+veren kamu görevlilerinin kimliği,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>Açık bir şekilde yazılır.
+Tutanakta, ayrıca kabahati oluşturan fiil, işlendiği yer ve zaman gösterilerek açıklanır.
+</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:127%'><b><span style='font-size:12.0pt;line-height:127%'>Kararların tebliği </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 26-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) İdarî yaptırım kararı, 11.2.1959
+tarihli ve 7201 sayılı Tebligat Kanunu hükümlerine göre ilgili kişiye tebliğ edilir.
+Tebligat metninde bu karara karşı başvurulabilecek kanun yolu, mercii ve süresi
+açık bir şekilde belirtilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.1pt'>(2)
+İdarî yaptırım kararının ilgili gerçek kişinin huzurunda verilmesi halinde
+tutanakta bu husus açıkça belirtilir. Bu karara karşı başvurabileceği kanun
+yolu, mercii ve süresine ilişkin olarak bilgilendirildikten sonra kişinin karar
+tutanağını imzalaması istenir. İmzadan kaçınılması halinde bu durum tutanakta
+açıkça belirtilir. Karar tutanağının bir örneği kişiye verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Tüzel kişi hakkında verilen
+idarî yaptırım kararları her halde ilgili tüzel kişiye tebliğ edilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) <b>(Ek: 18/5/2017-7020/15
+md.) </b>İdari yaptırım kararları, Maliye Bakanlığı ile idari yaptırım kararı verenler
+arasında yapılacak protokoller çerçevesinde, kararı verenler adına 213 sayılı Kanunun
+107/A maddesi hükümlerine göre kurulan teknik altyapı kullanılmak suretiyle Maliye
+Bakanlığı tarafından elektronik ortamda tebliğ edilebilir. Elektronik ortamda yapılan
+tebligat, muhatabın elektronik adresine ulaştığı tarihi izleyen beşinci günün sonunda
+yapılmış sayılır. Bu şekilde yapılan tebligatlar, birinci fıkra kapsamındaki tebliğ
+yerine geçer.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Başvuru yolu </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 27-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) İdarî para cezası ve mülkiyetin kamuya
+geçirilmesine ilişkin idarî yaptırım kararına karşı, kararın tebliği veya tefhimi
+tarihinden itibaren en geç onbeş gün içinde, sulh ceza mahkemesine başvurulabilir.
+Bu süre içinde başvurunun yapılmamış olması halinde idarî yaptırım kararı kesinleşir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.1pt'>(2)
+Mücbir sebebin varlığı dolayısıyla bu sürenin geçirilmiş olması halinde bu
+sebebin ortadan kalktığı tarihten itibaren en geç yedi gün içinde karara karşı
+başvuruda bulunulabilir. Bu başvuru, kararın kesinleşmesini engellemez; ancak,
+mahkeme yerine getirmeyi durdurabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Başvuru, bizzat kanunî
+temsilci veya avukat tarafından sulh ceza mahkemesine verilecek bir dilekçe ile
+yapılır. Başvuru dilekçesi, iki nüsha olarak verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) Başvuru dilekçesinde,
+idarî yaptırım kararına ilişkin bilgiler, bu karara karşı ileri sürülen deliller
+açık bir şekilde gösterilir. Dilekçede ayrıca, başvurunun süresinde yapılmasını
+engelleyen mücbir sebep dayanaklarıyla gösterilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(5) <b>(Değişik: 6/12/2006-5560/34
+md.) </b>İdarî yaptırım kararının mahkeme tarafından verilmesi halinde, bu karara
+karşı ancak itiraz yoluna gidilebilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(6) <b>(Ek: 6/12/2006-5560/34
+md.) </b>Soruşturma konusu fiilin suç değil de kabahat oluşturduğu gerekçesiyle
+idarî yaptırım kararı verilmesi halinde; kovuşturmaya yer olmadığı kararına itiraz
+edildiği takdirde, idarî yaptırım kararına karşı başvuru da bu itiraz merciinde
+incelenir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(7) <b>(Ek: 6/12/2006-5560/34
+md.)</b> Kovuşturma konusu fiilin suç değil de kabahat oluşturduğu gerekçesiyle
+idarî yaptırım kararı verilmesi halinde; fiilin suç oluşturmaması nedeniyle verilen
+beraat kararına karşı kanun yoluna gidildiği takdirde, idarî yaptırım kararına karşı
+itiraz da bu kanun yolu merciinde incelenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(8) <b>(Ek: 6/12/2006-5560/34
+md.)</b> İdarî yaptırım kararının verildiği işlem kapsamında aynı kişi ile ilgili
+olarak idarî yargının görev alanına giren kararların da verilmiş olması halinde;
+idarî yaptırım kararına ilişkin hukuka aykırılık iddiaları bu işlemin iptali talebiyle
+birlikte idarî yargı merciinde görülür.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i><span style='font-size:12.0pt;line-height:125%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Başvurunun incelenmesi
+</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='font-size:12.0pt;line-height:125%'>Madde 28-</span></b><span style='font-size:12.0pt;line-height:125%'> (1) Başvuru üzerine mahkemece yapılan
+ön inceleme sonucunda; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>a) Yetkili olmadığının anlaşılması
+halinde dosyanın yetkili sulh ceza mahkemesine gönderilmesine,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>b) Başvurunun süresi içinde
+yapılmadığının, başvuru konusu idarî yaptırım kararının sulh ceza mahkemesinde incelenebilecek
+kararlardan olmadığının veya başvuranın buna hakkı bulunmadığının anlaşılması halinde,
+bu nedenlerle başvurunun reddine,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>c) (a) ve (b) bentlerinde
+sayılan nedenlerin bulunmaması halinde başvurunun usulden kabulüne, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>Karar verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(2) Başvurunun usulden kabulü
+halinde mahkeme dilekçenin bir örneğini ilgili kamu kurum ve kuruluşuna tebliğ eder.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(3) İlgili kamu kurum ve kuruluşu,
+başvuru dilekçesinin tebliği tarihinden itibaren en geç onbeş gün içinde mahkemeye
+cevap verir. Başvuru konusu idarî yaptırıma ilişkin işlem dosyasının tamamının bir
+örneği, cevap dilekçesi ile birlikte mahkemeye verilir. Mahkeme, işlem dosyasının
+aslını da ilgili kamu kurum ve kuruluşundan isteyebilir. Cevap dilekçesi, idarî
+yaptırım kararına karşı başvuruda bulunan kişi sayısından bir fazla nüsha olarak
+verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(4) Mahkeme, başvuruda bulunan
+kişilere cevap dilekçesinin bir örneğini tebliğ eder; talep üzerine veya re'sen
+tarafları çağırarak belli bir gün ve saatte dinleyebilir. Dinleme için belirlenen
+günle tebligatın yapılacağı gün arasında en az bir haftalık zaman olmasına dikkat
+edilir. Dinleme sırasında taraflar veya avukatları hazır bulunur. Mazeretsiz olarak
+hazır bulunmama, yokluklarında karar verilmesine engel değildir. Bu husus, tebligat
+yazısında açıkça belirtilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(5) Ceza Muhakemesi Kanununun
+tanıklığa, bilirkişi incelemesine ve keşfe ilişkin hükümleri, bu başvuru ile ilgili
+olarak da uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%;letter-spacing:-.25pt'>(6)
+Dinlemede sırasıyla; hazır bulunan başvuru sahibi ve avukatı, ilgili kamu kurum
+ve kuruluşunun temsilcisi, varsa tanıklar dinlenir, bilirkişi raporu okunur,
+diğer deliller ortaya konulur. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='font-size:12.0pt;line-height:125%'>(7) Mahkeme, ilgilileri dinledikten
+ve bütün delilleri ortaya koyduktan sonra aleyhinde idarî yaptırım kararı verilen
+ve hazır bulunan tarafa son sözünü sorar. Son söz hakkı, aleyhinde idarî yaptırım
+kararı verilen tarafın kanunî temsilcisi veya avukatı tarafından da kullanılabilir.
+Mahkeme son kararını hazır bulunan tarafların huzurunda açıklar. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(8) Mahkeme, son karar olarak
+idarî yaptırım kararının; </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>a) Hukuka uygun olması nedeniyle,
+&quot;başvurunun reddine&quot;, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>b) Hukuka aykırı olması nedeniyle,
+&quot;idarî yaptırım kararının kaldırılmasına&quot;, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>Karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(9) <b>(Ek: 6/12/2006-5560/35
+md.) </b>İdarî para cezasının alt ve üst sınırının kanunda gösterildiği kabahatler
+dolayısıyla verilmiş idarî para cezasına karşı başvuruda bulunulması halinde, mahkeme
+idarî para cezasının miktarında değişiklik yaparak da başvurunun kabulüne karar
+verebilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(10) Onbeşbin Türk Lirası
+dahil idarî para cezalarına karşı başvuru üzerine verilen kararlar kesindir.<a href="#_ftn2" name="_ftnref2" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[2]</span></span></span></a><a href="#_ftn3" name="_ftnref3" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[3]</span></span></span></a><a name="_Ref161141619"></a><a href="#_ftn4" name="_ftnref4" title=""><span class=MsoFootnoteReference><span style='color:black'><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>[4]</span></span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>İtiraz yolu </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 29- </span></b><span style='font-size:12.0pt;line-height:127%'>(1) Mahkemenin verdiği son karara karşı,
+Ceza Muhakemesi Kanununa göre itiraz edilebilir. Bu itiraz, kararın tebliği tarihten
+itibaren en geç iki hafta içinde yapılır.<a href="#_ftn5" name="_ftnref5" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[5]</span></span></span></a><a href="#_ftn6" name="_ftnref6" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[6]</span></span></span></a>
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) İtirazla ilgili karar,
+dosya üzerinden inceleme yapılarak verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Mahkeme, her bir itirazla
+ilgili olarak “itirazın kabulüne” veya “itirazın reddine” karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(4) Mahkemenin verdiği karar
+taraflara tebliğ edilir. Vekil olarak avukatla temsil edilme halinde ayrıca taraflara
+tebligat yapılmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.2pt'>(5) <b>(Değişik:
+31/3/2011-6217/27 md.) </b>İdarî yaptırım kararının ağır ceza mahkemesi
+tarafından verilmesi halinde bu karara karşı Ceza Muhakemesi Kanununa göre
+itiraz edilebilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Vazgeçme ve kabul </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 30 -</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Kanun yoluna başvuran kişi, bu konuda
+karar verilinceye kadar başvurusundan vazgeçebilir. Vazgeçme halinde bir daha aynı
+konuda başvuruda bulunulamaz.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) İlgili kamu kurum ve kuruluşu
+da mahkeme tarafından karar verilinceye kadar kanun yolu başvurusunu kabul ederek
+idarî yaptırım kararını geri alabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Masrafların ve vekalet
+ücretinin ödenmesi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 31 -</span></b><span style='font-size:12.0pt;line-height:127%'> (1) İdarî yaptırım kararına karşı başvuru
+yolu harca tâbi değildir.<a href="#_ftn7" name="_ftnref7" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[7]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Kanun yoluna başvuru dolayısıyla
+oluşan bütün masraflar ve vekalet ücreti, başvurusu veya savunması reddedilen tarafça
+ödenir. </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:130%'><b><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:130%'><b><span style='font-size:12.0pt;line-height:130%'>İKİNCİ KISIM</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:130%'><b><span style='font-size:12.0pt;line-height:130%'>Çeşitli Kabahatler</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Emre aykırı davranış </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Madde 32 -</span></b><span style='font-size:12.0pt;line-height:130%'> (1) Yetkili makamlar tarafından adlî
+işlemler nedeniyle ya da kamu güvenliği, kamu düzeni veya genel sağlığın korunması
+amacıyla, hukuka uygun olarak verilen emre aykırı hareket eden kişiye yüz Türk Lirası
+idarî para cezası verilir. Bu cezaya emri veren makam tarafından karar verilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%'>(2) Bu madde, ancak ilgili
+kanunda açıkça hüküm bulunan hallerde uygulanabilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%'>(3) 1.3.1926 tarihli ve 765
+sayılı Türk Ceza Kanununun 526 ncı maddesine diğer kanunlarda yapılan yollamalar,
+bu maddeye yapılmış sayılır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Dilencilik</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%;letter-spacing:-.1pt'>Madde
+33 -</span></b><span style='font-size:12.0pt;line-height:130%;letter-spacing:
+-.1pt'> (1) Dilencilik yapan kişiye, elli Türk Lirası idarî para cezası
+verilir. Ayrıca, dilencilikten elde edilen gelire elkonularak mülkiyetin kamuya
+geçirilmesine karar verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%;letter-spacing:-.1pt'>(2)
+Bu kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk veya belediye
+zabıta görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir veya belediye
+encümeni karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Kumar </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%;letter-spacing:-.1pt'>Madde
+34 -</span></b><span style='font-size:12.0pt;line-height:130%;letter-spacing:
+-.1pt'> (1) Kumar oynayan kişiye, bin Türk Lirası idarî para cezası verilir.
+Ayrıca, kumardan elde edilen gelire elkonularak mülkiyetin kamuya geçirilmesine
+karar verilir.<a href="#_ftn8" name="_ftnref8" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.1pt'>[8]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%'>(2) Bu kabahat dolayısıyla
+idarî para cezasına ve elkoymaya kolluk görevlileri, mülkiyetin kamuya geçirilmesine
+mülkî amir karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Sarhoşluk</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Madde 35 -</span></b><span style='font-size:12.0pt;line-height:130%'> (1) Sarhoş olarak başkalarının huzur
+ve sükununu bozacak şekilde davranışlarda bulunan kişiye, kolluk görevlileri tarafından
+elli Türk Lirası idarî para cezası verilir. Kişi, ayrıca sarhoşluğun etkisi geçinceye
+kadar kontrol altında tutulur. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Gürültü</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='font-size:12.0pt;line-height:130%'>Madde 36 </span></b><span style='font-size:12.0pt;line-height:130%'>- (1) Başkalarının huzur ve sükununu bozacak
+şekilde gürültüye neden olan kişiye, elli Türk Lirası idarî para cezası verilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%'>(2) Bu fiilin bir ticarî işletmenin
+faaliyeti çerçevesinde işlenmesi halinde işletme sahibi gerçek veya tüzel kişiye
+bin Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='font-size:12.0pt;line-height:130%'>(3) Bu kabahat dolayısıyla
+idarî para cezasına kolluk veya belediye zabıta görevlileri karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i><span style='font-size:12.0pt;line-height:130%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Rahatsız etme</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 37-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Mal veya hizmet satmak için başkalarını
+rahatsız eden kişi, elli Türk Lirası idarî para cezası ile cezalandırılır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Bu kabahat dolayısıyla
+idarî para cezası vermeye kolluk veya belediye zabıta görevlileri yetkilidir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>İşgal</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 38-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Yetkili makamların açık ve yazılı
+izni olmaksızın meydan, cadde, sokak veya yayaların gelip geçtiği kaldırımları işgal
+eden veya buralarda mal satışa arz eden kişiye, belediye zabıta görevlileri tarafından
+elli Türk Lirası idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Yetkili makamların açık
+ve yazılı izni olmaksızın meydan, cadde, sokak veya yayaların gelip geçtiği kaldırımlar
+üzerine inşaat malzemesi yığan kişiye, belediye zabıta görevlileri tarafından yüz
+Türk Lirasından beşyüz Türk Lirasına kadar idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(3) Özel kanunlardaki hükümler
+saklıdır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Tütün mamullerinin
+tüketilmesi</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 39-</span></b><span style='font-size:12.0pt;line-height:127%'> (1) Kamu hizmet binalarının kapalı alanlarında
+tütün mamulü tüketen kişiye, ilgili idarî birim amirinin yetkili kıldığı kamu görevlileri
+tarafından elli Türk Lirası idarî para cezası verilir. Bu fıkra hükmü, tütün mamulü
+tüketilmesine tahsis edilen alanlarda uygulanmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'>(2) Toplu taşıma araçlarında
+tütün mamulü tüketen kişiye, elli Türk Lirası idarî para cezası verilir. Kabahatin
+özel hukuk kişileri tarafından işletilen toplu taşıma araçlarında işlenmesi halinde
+bu ceza ilk başvurulan kolluk birim yetkilileri tarafından verilir. Kamuya ait toplu
+taşıma araçlarında işlenmesi halinde idarî para cezası verme yetkisi bakımından
+birinci fıkra hükmü uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%'> (3) Özel hukuk kişilerine
+ait olan ve herkesin girebileceği binaların kapalı alanlarında, tütün mamullerinin
+tüketilemeyeceğini belirtir açık bir işarete yer verilmesine rağmen, bu yasağa aykırı
+hareket eden kişiye, elli Türk Lirası idarî para cezası verilir. Bu ceza, şikâyet
+üzerine en yakın kolluk birimi yetkililerince verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i><span style='font-size:12.0pt;line-height:127%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Kimliği bildirmeme </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='font-size:12.0pt;line-height:127%'>Madde 40</span></b><span style='font-size:12.0pt;line-height:127%'>- (1) Görevle bağlantılı olarak sorulması
+halinde kamu görevlisine kimliği veya adresiyle ilgili bilgi vermekten kaçınan veya
+gerçeğe aykırı beyanda bulunan kişiye, bu görevli tarafından elli Türk Lirası idarî
+para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='font-size:12.0pt;line-height:127%;letter-spacing:-.2pt'>(2)
+Açıklamada bulunmaktan kaçınması veya gerçeğe aykırı beyanda bulunması
+dolayısıyla kimliği belirlenemeyen kişi tutularak durumdan derhal Cumhuriyet
+savcısı haberdar edilir. Bu kişi, kimliği açık bir şekilde anlaşılıncaya kadar
+gözaltına alınır ve gerekirse tutuklanır. Gözaltına ve tutuklamaya karar verme
+yetkisi ve usulü bakımından Ceza Muhakemesi Kanunu hükümleri uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(3) Kişinin kimliğinin belirlenmesi
+durumunda, bu nedenle gözaltına alınma veya tutuklanma haline derhal son verilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><i><span style='font-size:12.0pt;line-height:132%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b><span style='font-size:12.0pt;line-height:132%'>Çevreyi kirletme</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b><span style='font-size:12.0pt;line-height:132%'>Madde 41</span></b><span style='font-size:12.0pt;line-height:132%'>- (1) Evsel atık ve artıkları, bunların
+toplanmasına veya depolanmasına özgü yerler dışına atan kişiye, yirmi Türk Lirası
+idarî para cezası verilir. Bireysel atık ve artıkların atılması halinde de bu fıkra
+hükmü uygulanır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(2) Fiilin yemek pişirme ve
+servis yerlerinde işlenmesi halinde işletme sahibi gerçek veya tüzel kişiye, beşyüz
+Türk Lirasından beşbin Türk Lirasına kadar idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(3) Hayvan kesimine tahsis
+edilen yerler dışında hayvan kesen veya kesilen hayvan atıklarını sokağa veya kamuya
+ait sair bir alana bırakan kişiye, elli Türk Lirası idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(4) İnşaat atık ve artıklarını
+bunların toplanmasına veya depolanmasına özgü yerler dışına atan kişiye, yüz Türk
+Lirasından üçbin Türk Lirasına kadar idarî para cezası verilir. İnşaat faaliyetinin
+bir tüzel kişi adına yürütülmesi halinde bu tüzel kişi hakkında verilecek idarî
+para cezasının üst sınırı beşbin Türk Lirasıdır. Bu atık ve artıkların kaldırılmasına
+ilişkin masraf da ayrıca kişiden tahsil edilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(5) Kullanılamaz hale gelen
+veya ihtiyaç fazlası ev eşyasını bunların toplanmasına ilişkin olarak belirlenen
+günün dışında sokağa veya kamuya ait sair bir yere bırakan kişiye elli Türk Lirası
+idarî para cezası verilir. Bu eşyanın toplanması hususunda belediye tarafından belirli
+aralıklarla yılda üç günden az olmamak üzere belirlenen günler önceden uygun araçlarla
+ilân olunur. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(6) Kullanılamaz hale gelen
+motorlu kara veya deniz nakil araçlarını ya da bunların mütemmim cüzlerini sokağa
+veya kamuya ait sair bir yere bırakan kişiye ikiyüzelli Türk Lirası idarî para cezası
+verilir. Bunların kaldırılmasına ilişkin masraf da kişiden ayrıca tahsil edilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(7)<b> (Değişik:6/12/2019-7196/60
+md.) </b>Bu kabahatler dolayısıyla idarî para cezasına belediye sınırları içerisinde
+belediye zabıta görevlileri, belediye sınırları dışında kolluk görevlileri karar
+verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%;letter-spacing:-.1pt'>(8)
+Bu kabahatler dolayısıyla meydana gelen kirliliğin kişi tarafından derhal
+giderilmesi halinde idarî para cezasına karar verilmeyebilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(9) <b>(Mülga:6/12/2019-7196/60
+md.)</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><span style='font-size:12.0pt;line-height:132%'>(10) Özel kanunlardaki hükümler
+saklıdır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><i><span style='font-size:12.0pt;line-height:132%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b><span style='font-size:12.0pt;line-height:132%'>Afiş asma </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b><span style='font-size:12.0pt;line-height:132%'>Madde 42-</span></b><span style='font-size:12.0pt;line-height:132%'> (1) Meydanlara veya parklara, cadde veya
+sokak kenarlarındaki kamuya ait duvar veya alanlara, rızası olmaksızın özel kişilere
+ait alanlara bez, kâğıt ve benzeri afiş ve ilân asan kişiye, yüz Türk Lirasından
+üçbin Türk Lirasına kadar idarî para cezası verilir. Aynı içerikteki afiş ve ilânlar,
+tek fiil sayılır. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) Birinci fıkra hükmü, yetkili
+makamlardan alınan açık ve yazılı izne dayalı olarak asılan afiş ve ilânlar açısından
+uygulanmaz. Bu izinde, afiş ve ilânın asılacağı zaman dilimi açık bir şekilde gösterilir.
+Bu afiş ve ilânlar izin verilen gerçek veya tüzel kişi tarafından bu sürenin dolmasını
+müteakip derhal toplatılır. Toplatma yükümlülüğüne aykırı hareket edilmesi halinde
+birinci fıkra hükmüne göre idarî para cezası verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(3) Bu afiş ve ilânların kaldırılmasına
+ilişkin masraflar da ilgili kişilerden ayrıca tahsil edilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(4) Bu kabahatler dolayısıyla
+idarî para cezasına, kolluk veya belediye zabıta görevlileri karar verir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(5) Özel kanunlardaki hükümler
+saklıdır.</span></p>
+
+<p class=MsoNormalCxSpMiddle style='text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>Asılsız çağrı ve asılsız ihbar </span></b></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 42/A- (2/7/2018-KHK-703/20 md.)
+(Başlığı ile Birlikte Değişik:8/5/2025-7547/13 md.) </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(1) 112 Acil Çağrı
+Merkezini meşgul etmek amacıyla arayarak görevlilerle konuşan veya ısrarla
+çağrı bırakan kişiye, il valileri tarafından binbeşyüz Türk Lirası idari para
+cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) 112 Acil Çağrı
+Merkezine yapılan ihbarın asılsız olduğunun olay yerine giden ekiplerce
+tutanakla tespit edilmesi halinde kişiye, il valileri tarafından onbeşbin Türk
+Lirası idari para cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(3) Bu maddede yazılı
+fiillerin bir yıl içinde tekrarı halinde idari para cezası iki katı olarak
+uygulanır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Silah taşıma </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 43-</span></b><span style='font-size:12.0pt;line-height:120%'> (1) Yetkili makamlardan ruhsat almaksızın
+kanuna göre yasak olmayan silahları park, meydan, cadde veya sokaklarda görünür
+bir şekilde taşıyan kişiye, kolluk tarafından elli Türk Lirası idarî para cezası
+verilir. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Tüzel kişilerin
+sorumluluğu</span></b><a href="#_ftn9" name="_ftnref9" title=""><span class=MsoFootnoteReference><span style='font-size:12.0pt;line-height:120%;
+letter-spacing:-.25pt'><span class=MsoFootnoteReference><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif;letter-spacing:-.25pt'>[9]</span></span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 43/A- (Ek: 26/6/2009-5918/9
+md.)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(1) Daha ağır idarî para cezasını
+gerektiren bir kabahat oluşturmadığı hallerde, <span style='color:black'>bir
+tüzel kişinin</span></span><span style='font-size:12.0pt;line-height:120%'>
+organ veya temsilcisi ya da organ veya temsilci olmamakla birlikte bu tüzel kişinin
+faaliyeti çerçevesinde görev üstlenen bir kişi tarafından;<a href="#_ftn10" name="_ftnref10" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[10]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>a) 5237 sayılı Türk Ceza Kanununun;
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>1) 157 nci ve 158 inci maddelerinde
+tanımlanan dolandırıcılık suçunun, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>2) <b>(Ek:27/12/2020-7262/19
+md.) </b>188 inci maddesinde tanımlanan uyuşturucu veya uyarıcı madde imal ve ticareti
+suçunun,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>3) 235 inci maddesinde tanımlanan
+ihaleye fesat karıştırma suçunun, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>4) 236 ncı maddesinde tanımlanan
+edimin ifasına fesat karıştırma suçunun,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>5) 252 nci maddesinde tanımlanan
+rüşvet suçunun, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%;letter-spacing:-.35pt'>6)
+282 nci maddesinde tanımlanan suçtan kaynaklanan malvarlığı değerlerini aklama
+suçunun, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>b) 19/10/2005 tarihli ve 5411
+sayılı Bankacılık Kanununun 160 ıncı maddesinde tanımlanan zimmet suçunun,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>c) 21/3/2007 tarihli ve 5607
+sayılı Kaçakçılıkla Mücadele Kanununda tanımlanan kaçakçılık suçlarının,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>ç) 4/12/2003 tarihli ve 5015
+sayılı Petrol Piyasası Kanununun Ek 5 inci maddesinde tanımlanan suçun,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>d) <b>(Değişik:27/12/2020-7262/19
+md.) </b>7/2/2013 tarihli ve 6415 sayılı Terörizmin Finansmanının Önlenmesi
+Hakkında Kanunun 4 üncü maddesinde tanımlanan terörizmin finansmanı suçunun, </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%;letter-spacing:-.25pt'>tüzel
+kişinin yararına olarak işlenmesi halinde, ayrıca bu tüzel kişiye onbin Türk
+Lirasından elli milyon Türk Lirasına kadar idarî para cezası verilir. <b>(Ek
+cümle:27/12/2020-7262/19 md.)</b> Ancak idari para cezası, işleme veya eyleme
+konu menfaatin iki katından az olamaz.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(2) Bu madde hükümlerine göre
+idari para cezasına karar vermeye, birinci fıkrada sayılan suçlardan dolayı yargılama
+yapmakla görevli mahkeme yetkilidir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%;letter-spacing:-.1pt'>(3) <b>(Ek:27/12/2020-7262/19
+md.) (İptal fıkra: Anayasa Mahkemesinin 18/1/2024 Tarihli ve E: 2021/28, K:
+2024/11 Sayılı Kararı ile.)</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Tüzel kişilerin
+bildirim yükümlülüğü</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 43/B –</span></b><span style='font-size:12.0pt;line-height:120%'> <b>(Ek: 2/7/2012-6352/102 md.)</b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%'>(1) 5411 sayılı Kanunun 3
+üncü maddesinde tanımlanan; bankalara, finansal kuruluşlara veya paranın sayım ve
+incelemesini yaparak bankalara destek hizmeti veren kuruluşlar ile mevzuat çerçevesinde
+dövize ilişkin işlemler yapmasına izin verilen şirketlere, her ne amaçla olursa
+olsun ibraz edilen paranın sahte olduğunun anlaşılması halinde, 5237 sayılı Kanunun
+278 inci maddesinde düzenlenen bildirim yükümlülüğü yerine getirilmediği takdirde,
+bu maddede sayılan tüzel kişilere Cumhuriyet savcısı tarafından bin Türk Lirasından
+beşbin Türk Lirasına kadar idarî para cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>Amaç dışı
+bıçak taşıma</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>Madde 43/C-
+</span></b><a name="_Hlk237260906"><b><span style='font-size:12.0pt;line-height:
+120%'>(Ek:8/8/2026-7593/8 md.)</span></b></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(1) Her ne ad
+altında olursa olsun, 10/7/1953 tarihli ve 6136 sayılı Ateşli Silahlar ve
+Bıçaklar ile Diğer Aletler Hakkında Kanun kapsamı dışında kalan her tür bıçak
+ile diğer kesici, delici veya bereleyici aletlerin;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>a) 11/9/1981
+tarihli ve 2521 sayılı Avda ve Sporda Kullanılan Tüfekler, Nişan Tabancaları ve
+Av Bıçaklarının Yapımı, Alımı, Satımı ve Bulundurulmasına Dair Kanuna göre
+ruhsatlandırılan yerler ile ilgili yönetmeliğe göre ruhsatlandırılan işyerleri
+dışında satışı ve sergilenmesi,<a href="#_ftn11" name="_ftnref11" title=""><span class=MsoFootnoteReference><span style='color:red'><span class=MsoFootnoteReference><span lang=EN-GB style='font-size:12.0pt;font-family:
+"Times New Roman",serif;color:red'>[11]</span></span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>b) Onsekiz
+yaşından küçük çocuklara satılması ve çocuklar tarafından satın alınması veya
+taşınması,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>yasaktır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(2) Birinci
+fıkrada sayılan yasaklara uymayan kişiye beşbin Türk Lirası, kabahate konu
+bıçak veya aletlerin sayı veya nitelik bakımından vahim olması halinde ise
+onbin Türk Lirası idarî para cezası verilir. Ayrıca bu kabahatin işlendiğini
+öğrenen işletici veya sorumlunun yetkili makamlara bildirim yapmaması halinde
+beşbin Türk Lirası idarî para cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(3) Birinci
+fıkrada sayılan kabahatin konusunu oluşturan veya işlenmesi suretiyle elde
+edilen eşyanın mülkiyetinin kamuya geçirilmesine karar verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(4) Birinci
+fıkrada sayılan kabahat dolayısıyla idarî para cezasına ve elkoymaya kolluk
+görevlileri, mülkiyetin kamuya geçirilmesine mülkî amir tarafından karar
+verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(5) Birinci
+fıkradaki kabahati işlediği sırada onbeş yaşını doldurmamış çocuk hakkında
+çocuğun üstün yararı gözetilerek, 3/7/2005 tarihli ve 5395 sayılı Çocuk Koruma
+Kanunu hükümleri uyarınca koruyucu, destekleyici ve yönlendirme tedbirlerine
+karar verilmesi amacıyla mülkî amir tarafından çocuk hâkiminden tedbir
+talebinde bulunulur.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(6) Bu madde
+hükümleri internet satışları ve mesafeli satışlar için de uygulanır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span lang=EN-GB style='font-size:12.0pt;line-height:120%'>(7) Bir sanat
+veya mesleğin icrası ve eğitim için gerekli bıçak, şiş ve benzerlerinin icra
+yerinde ve icra eden kişilerce kullanılması, bulundurulması ve taşınması bu
+madde hükümlerine tabi değildir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Ek Madde 1- (Ek: 11/5/2005-5348/5
+md.)</span></b><span style='font-size:12.0pt;line-height:120%'> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='font-size:12.0pt;line-height:120%;letter-spacing:-.1pt'>(1)
+4.1.1961 tarihli ve 213 sayılı Vergi Usul Kanununda yer alan vergi
+mahkemelerinin görevine ilişkin hükümler saklıdır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Geçici Madde 1- </span></b><span style='font-size:12.0pt;line-height:120%'>(1) Bu Kanunda ve 1 Haziran 2005 tarihinden
+sonra yürürlüğe giren diğer kanunlardaki idarî para cezaları ile ilgili olarak geçen
+&quot;Türk Lirası&quot; ibaresi karşılığında, uygulamada, 28.1.2004 tarihli ve 5083
+sayılı Türkiye Cumhuriyeti Devletinin Para Birimi Hakkında Kanun hükümlerine göre
+ülkede tedavülde bulunan para &quot;Yeni Türk Lirası&quot; olarak adlandırıldığı
+sürece bu ibare kullanılır.<a href="#_ftn12" name="_ftnref12" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[12]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Geçici Madde 2-</span></b><span style='font-size:12.0pt;line-height:120%'> (1) Bu Kanun hükümleri, yürürlüğe girdiği
+tarih itibarıyla idare mahkemelerinde dava açılarak iptali istenen idarî yaptırım
+kararları hakkında uygulanmaz. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Geçici Madde 3-</span></b><span style='font-size:12.0pt;line-height:120%'> (1) Daha önce verilmiş olan idarî para
+cezasına ilişkin kararlara karşı henüz iptal davası açılmamış olmakla birlikte dava
+açma süresinin geçmemiş olması halinde, bu Kanunun yürürlüğe girdiği tarihten itibaren
+onbeş gün içinde 27 nci madde hükümlerine göre sulh ceza mahkemesine başvuruda bulunulabilir.
+</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Yürürlük</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 44</span></b><span style='font-size:12.0pt;line-height:120%'>- (1) Bu Kanun 1 Haziran 2005 tarihinde
+yürürlüğe girer.<a href="#_ftn13" name="_ftnref13" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[13]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:120%'><i><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-indent:35.45pt;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>Yürütme</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b><span style='font-size:12.0pt;line-height:120%'>Madde 45-</span></b><span style='font-size:12.0pt;line-height:120%'> (1) Bu Kanun hükümlerini Bakanlar Kurulu
+yürütür.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><span style='font-size:12.0pt;line-height:120%'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>5326 SAYILI KANUNA EK VE DEĞİŞİKLİK
+GETİREN MEVZUATIN VEYA</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>ANAYASA MAHKEMESİ TARAFINDAN İPTAL EDİLEN
+HÜKÜMLERİN</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b><span style='font-size:12.0pt;line-height:120%'>YÜRÜRLÜĞE GİRİŞ TARİHİNİ GÖSTERİR LİSTE</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50%;
+text-autospace:none'><span style='font-size:12.0pt;line-height:50%'>&nbsp;</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=0 style='width:16.0cm;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;padding:
+  0cm 1.4pt 0cm 1.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><b><span style='font-size:12.0pt;line-height:120%'>Değiştiren
+  Kanunun/ KHK’nin İptal Eden Anayasa Mahkemesinin Kararının Numarası</span></b></p>
+  </td>
+  <td width=246 style='width:184.25pt;border:solid windowtext 1.5pt;border-left:
+  none;padding:0cm 1.4pt 0cm 1.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><b><span style='font-size:12.0pt;line-height:120%'>5326 Sayılı
+  Kanunun Değişen veya İptal Edilen Maddeleri</span></b></p>
+  </td>
+  <td width=189 style='width:141.7pt;border:solid windowtext 1.5pt;border-left:
+  none;padding:0cm 1.4pt 0cm 1.4pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><b><span style='font-size:12.0pt;line-height:120%'>Yürürlüğe
+  Giriş Tarihi</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>5328</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>44</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>31/3/2005</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>5348</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>Ek Madde
+  1</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>18/5/2005</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>5560</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>3, 17, 20,
+  27, 28, Geçici Madde 1</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>19/12/2006</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>5918</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>9/7/2009</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>6009</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>21</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>1/8/2010</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>6111</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>20</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>25/2/2011</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>6217</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>20, 28, 29,
+  31</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>14/4/2011</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>6352</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/B</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>5/7/2012</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7020</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>26</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>27/5/2017</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>KHK/703</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>42/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%;letter-spacing:-.2pt'>24/6/2018 tarihinde birlikte yapılan Türkiye Büyük
+  Millet Meclisi ve Cumhurbaşkanlığı seçimleri sonucunda Cumhurbaşkanının
+  andiçerek göreve başladığı tarihte (9/7/2018)</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7196</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>34, 41</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>24/12/2019</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7262</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>31/12/2020</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7417</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>17</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>5/7/2022</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7445</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>5/4/2023</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>Anayasa
+  Mahkemesinin 18/1/2024 Tarihli ve E: 2021/28, K: 2024/11 Sayılı Kararı</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>3/4/2024</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7499</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>28, 29</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>1/6/2024</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 style='width:127.65pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7547</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>42/A</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>16/5/2025</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=170 rowspan=2 style='width:127.65pt;border:solid windowtext 1.5pt;
+  border-top:none;padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>7593</span></p>
+  </td>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/C
+  maddesinin birinci fıkrasının (a) bendi hükmü</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>1/12/2026</span></p>
+  </td>
+ </tr>
+ <tr style='height:17.75pt'>
+  <td width=246 style='width:184.25pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span style='font-size:12.0pt;line-height:120%'>43/C
+  maddesinin birinci fıkrasının (a) bendi dışındaki hükümleri</span></p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 1.4pt 0cm 1.4pt;height:17.75pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:120%;
+  text-autospace:none'><span lang=EN-GB style='font-size:12.0pt;line-height:
+  120%'>18/8/2026</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:5%'><span style='font-size:12.0pt;line-height:5%'>&nbsp;</span></p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=ftn1>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref1" name="_ftn1" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[1]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 31/3/2011 tarihli ve 6217 sayılı Kanunun 27 nci
+maddesiyle, bu fıkrada yer alan “Ancak” ibaresinden sonra gelmek üzere “, 89
+uncu maddesi hariç olmak üzere” ibaresi eklenmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn2>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref2" name="_ftn2" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[2]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 6/12/2006 tarihli ve 5560 sayılı Kanunun 35 inci
+maddesiyle sekizinci fıkradan sonra gelmek üzere (9) numaralı fıkra eklenmiş ve
+diğer fıkra numarası buna göre (10) olarak teselsül ettirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn3>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref3" name="_ftn3" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[3]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 31/3/2011 tarihli ve 6217 sayılı Kanunun 27 nci
+maddesiyle, bu fıkrada yer alan “İkibin” ibaresi “Üçbin” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn4>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref4" name="_ftn4" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt;color:black'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif;color:black'>[4]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt;color:black'> 2/3/2024 tarihli ve 7499 sayılı Kanunun
+37 nci maddesi ile bu fıkrada yer alan “Üçbin” ibaresi “Onbeşbin” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn5>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref5" name="_ftn5" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[5]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 31/3/2011 tarihli ve 6217 sayılı Kanunun 27 nci
+maddesiyle, bu fıkrada yer alan “yargı çevresinde yer aldığı ağır ceza
+mahkemesine” ibaresi “Ceza Muhakemesi Kanununa göre” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn6>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref6" name="_ftn6" title=""><span class=MsoFootnoteReference><span style='font-size:
+11.0pt'><span class=MsoFootnoteReference><span style='font-size:11.0pt;
+font-family:"Times New Roman",serif'>[6]</span></span></span></span></a><span style='font-size:11.0pt'> <i>2/3/2024 tarihli ve 7499 sayılı Kanunun 37 nci
+maddesi ile bu fıkrada yer alan “yedi gün” ibaresi “iki hafta” şeklinde
+değiştirilmiştir.</i></span></p>
+
+</div>
+
+<div id=ftn7>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref7" name="_ftn7" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[7]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 31/3/2011 tarihli ve 6217 sayılı Kanunun 27 nci
+maddesiyle, bu fıkrada yer alan “kanun yoluna başvurulması” ibaresi “başvuru
+yolu” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn8>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref8" name="_ftn8" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[8]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 6/12/2019 tarihli ve 7196 sayılı Kanunun 59 uncu
+maddesiyle, bu fıkrada yer alan “yüz” ibaresi “bin” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn9>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref9" name="_ftn9" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[9]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 27/12/2020 tarihli ve 7262 sayılı Kanunun 19 uncu
+maddesiyle fıkranın (a) bendine (1) numaralı alt bendinden sonra gelmek üzere
+aşağıdaki alt bent eklenmiş, diğer alt bent numaraları buna göre teselsül
+ettirilmiş, fıkrada yer alan “ikimilyon” ibaresi “elli milyon” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn10>
+
+<p class=MsoFootnoteText><a href="#_ftnref10" name="_ftn10" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[10]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>28/3/2023 &nbsp;tarihli ve 7445
+sayılı Kanunun 26 ncı maddesiyle bu&nbsp;fıkrada yer alan </span></i><i><span style='font-size:11.0pt;color:black'>&nbsp;“bir özel hukuk tüzel kişisinin”
+ibaresi “bir tüzel kişinin” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn11>
+
+<p class=MsoFootnoteText><a href="#_ftnref11" name="_ftn11" title=""><span class=MsoFootnoteReference><span style='color:red'><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+color:red'>[11]</span></span></span></span></a><span style='color:red'> </span><i><span style='font-size:11.0pt;color:red'>Bu bent 1/12/2026 tarihinde yürürlüğe
+girecektir.</span></i></p>
+
+</div>
+
+<div id=ftn12>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref12" name="_ftn12" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[12]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 6/12/2006 tarihli ve 5560 sayılı Kanunun 36 ncı
+maddesiyle bu maddede yer alan &quot;Bu Kanunda&quot; ibaresinden sonra gelmek
+üzere &quot;ve 1 Haziran 2005 tarihinden sonra yürürlüğe giren diğer
+kanunlardaki idarî para cezaları ile ilgili olarak&quot; ibaresi eklenmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn13>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref13" name="_ftn13" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[13]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> Bu maddede yer alan &quot;1 Nisan 2005“ ibaresi,
+31/3/2005 tarihli ve 5328 sayılı Kanunun Geçici 1 inci maddesiyle &quot;1
+Haziran 2005“ şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+    <p id="page-end"></p>
+    <script src="/lib/tooltip/tooltip.js"></script>
+    <script>
+        $(document).ready(function () {
+            jQuery('table').each(function (cmp) {
+                var parent = this.parentNode;
+                var wrapper = document.createElement('div');
+
+                parent.replaceChild(wrapper, this);
+                wrapper.appendChild(this);
+                this.parentElement.style.overflowX = 'auto';
+            });
+            if (window.location.search.indexOf("2709") != -1 || window.location.search.indexOf("MevzuatTur=19") != -1) {
+                var tableCss = document.styleSheets[0].cssRules[2].style;
+                tableCss.cssText = tableCss.cssText.replace("100%", "initial");
+            }
+            //$('.tooltip').tooltipster();
+            //replaceTable();
+            //$(window).on('resize', function () {
+            //    replaceTable();
+            //});
+            //replaceTable();
+        });
+            //function replaceTable() {
+            //    //if (window.location.search.indexOf("MevzuatTur=19") == -1) {
+            //    //    var iframe = document.getElementsByTagName("td");
+            //    //    var value = $('body').width() - 10;
+            //    //    for (var i = 0; i < iframe.length; i++) {
+            //    //        iframe[i].style.width = "initial !important";
+            //    //    }
+            //    //}
+
+
+            //    //var iframe = document.getElementsByClassName("MsoNormalTable");
+            //    //var value = $('body').width() - 10;
+            //
+            //    //for (var i = 0; i < iframe.length; i++) {
+            //    //    iframe[i].style.width = value;
+            //    //}
+
+            //    //var iframe2 = document.getElementsByClassName("MsoNormal");
+            //    ////for (var j = 0; j < iframe2.length; j++) {
+            //    ////    iframe2[j].style.width = value;
+            //    ////}
+            //}
+    </script>
+
+
+

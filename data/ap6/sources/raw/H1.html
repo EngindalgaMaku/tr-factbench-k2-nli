@@ -1,0 +1,2119 @@
+
+    <style>
+        * {
+            font-size: 12pt !important;
+            line-height: 127% !important;
+        }
+
+        @media print {
+            a {
+                visibility: hidden;
+            }
+
+            #section-to-print, #section-to-print * {
+                visibility: visible;
+            }
+
+            #section-to-print {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        /*aşağıda js kodu var table width değiştirmek için*/
+        table {
+            width: 100% !important;
+            page-break-inside: initial !important;
+            white-space: initial !important;
+            padding: 0 !important;
+            text-indent: 0 !important;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            tr, p, table {
+                width: initial !important;
+                page-break-inside: initial !important;
+                white-space: initial !important;
+                padding: 0 !important;
+                text-indent: 0 !important;
+            }
+
+            table {
+                width: 100% !important;
+            }
+
+
+            td {
+                /*white-space: nowrap !important;*/
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <link href="/lib/tooltip/tooltip.css" rel="stylesheet" />
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=Windows-1254">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Courier;
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:"Tms Rmn";
+	panose-1:2 2 6 3 4 5 5 2 3 4;}
+@font-face
+	{font-family:Helv;
+	panose-1:2 11 6 4 2 2 2 3 2 4;}
+@font-face
+	{font-family:"New York";
+	panose-1:2 4 5 3 6 5 6 2 3 4;}
+@font-face
+	{font-family:System;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:Batang;
+	panose-1:2 3 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimSun;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 1 6 1 0 1 1 1 1 1;}
+@font-face
+	{font-family:"MS Gothic";
+	panose-1:2 11 6 9 7 2 5 8 2 4;}
+@font-face
+	{font-family:Dotum;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:SimHei;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 1 6 9 0 1 1 1 1 1;}
+@font-face
+	{font-family:Mincho;
+	panose-1:2 2 6 9 4 3 5 8 3 5;}
+@font-face
+	{font-family:Gulim;
+	panose-1:2 11 6 0 0 1 1 1 1 1;}
+@font-face
+	{font-family:Century;
+	panose-1:2 4 6 4 5 5 5 2 3 4;}
+@font-face
+	{font-family:"Angsana New";
+	panose-1:2 2 6 3 5 4 5 2 3 4;}
+@font-face
+	{font-family:"Cordia New";
+	panose-1:2 11 3 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Mangal;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Latha;
+	panose-1:2 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sylfaen;
+	panose-1:1 10 5 2 5 3 6 3 3 3;}
+@font-face
+	{font-family:Vrinda;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Raavi;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Shruti;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Sendnya;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Gautami;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Tunga;
+	panose-1:0 0 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Estrangelo Edessa";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Yu Gothic";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Calibri Light";
+	panose-1:2 15 3 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Palatino Linotype";
+	panose-1:2 4 5 2 5 5 5 3 3 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:"Segoe UI Emoji";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+@font-face
+	{font-family:"TR Arial";}
+@font-face
+	{font-family:"Segoe UI";
+	panose-1:2 11 5 2 4 2 4 2 2 3;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Dipnot Metni Char";
+	margin:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Balon Metni Char";
+	margin:0cm;
+	font-size:9.0pt;
+	font-family:"Segoe UI",sans-serif;}
+p.kantab, li.kantab, div.kantab
+	{mso-style-name:kantab;
+	margin:0cm;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.kantab0, li.kantab0, div.kantab0
+	{mso-style-name:kantab0;
+	margin:0cm;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.nor, li.nor, div.nor
+	{mso-style-name:nor;
+	margin:0cm;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;}
+p.ksmblm, li.ksmblm, div.ksmblm
+	{mso-style-name:ksmblm;
+	margin-top:2.85pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	text-align:justify;
+	font-size:9.0pt;
+	font-family:"New York",serif;}
+p.kantab1, li.kantab1, div.kantab1
+	{mso-style-name:kantab1;
+	margin:0cm;
+	text-align:justify;
+	font-size:11.0pt;
+	font-family:"New York",serif;
+	font-weight:bold;}
+p.char, li.char, div.char
+	{mso-style-name:char;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:0cm;
+	line-height:12.0pt;
+	font-size:10.0pt;
+	font-family:"Verdana",sans-serif;}
+span.normal1
+	{mso-style-name:normal1;
+	font-family:"TR Arial";}
+span.BalonMetniChar
+	{mso-style-name:"Balon Metni Char";
+	mso-style-link:"Balon Metni";
+	font-family:"Segoe UI",sans-serif;}
+p.metin, li.metin, div.metin
+	{mso-style-name:metin;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.grame
+	{mso-style-name:grame;}
+span.spelle
+	{mso-style-name:spelle;}
+span.DipnotMetniChar
+	{mso-style-name:"Dipnot Metni Char";
+	mso-style-link:"Dipnot Metni";
+	font-family:"Times New Roman",serif;}
+span.msoIns
+	{mso-style-name:"";
+	text-decoration:underline;
+	color:teal;}
+span.msoDel
+	{mso-style-name:"";
+	text-decoration:line-through;
+	color:red;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+<script type="text/javascript">window.av = { database:'1' , rnApp:'False' }</script><script src="https://www.mevzuat.gov.tr/lib/jquery/dist/jquery.js"></script><script src="https://www.mevzuat.gov.tr/js/iframescript.min.js?v=1.05"></script><style><!--* {font-family:inherit!important;}--></style></head>
+
+<body lang=TR style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>HAYVANLARI
+KORUMA KANUNU</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=kantab style='text-indent:35.45pt;line-height:125%'><span style='font-size:12.0pt;line-height:125%;font-family:"Times New Roman",serif'>Kanun
+Numarası                    : 5199</span></p>
+
+<p class=kantab style='text-indent:35.45pt;line-height:125%'><span style='font-size:12.0pt;line-height:125%;font-family:"Times New Roman",serif'>Kabul
+Tarihi                           : 24/6/2004</span></p>
+
+<p class=kantab style='text-indent:35.45pt;line-height:125%'><span style='font-size:12.0pt;line-height:125%;font-family:"Times New Roman",serif'>Yayımlandığı
+Resmî Gazete  : Tarih: 1/7/2004            Sayı: 25509</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Yayımlandığı Düstur              : Tertip: 5                       Cilt:
+43</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>BİRİNCİ
+KISIM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>Genel
+Hükümler</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>BİRİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>Amaç,
+Kapsam, Tanımlar ve İlkeler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Amaç</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 1- </b>Bu Kanunun amacı; insan, hayvan ve çevre sağlığı
+gözetilmek kaydıyla hayvanların rahat yaşamlarını ve hayvanlara iyi ve uygun muamele
+edilmesini temin etmek, hayvanların acı, ıstırap ve eziyet çekmelerine karşı en
+iyi şekilde korunmalarını, her türlü mağduriyetlerinin önlenmesini sağlamaktır.<a href="#_ftn1" name="_ftnref1" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[1]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Kapsam</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 2- </b>Bu Kanun, amaç maddesi doğrultusunda yapılacak düzenlemeleri,
+alınacak önlemleri, sağlanacak eşgüdümü, denetim, sınırlama ve yükümlülükler ile
+tâbi olunacak cezaî hükümleri kapsar.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Tanımlar</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 3- </b>Bu Kanunda geçen terimlerden;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>a) Yaşama ortamı: Bir hayvanın veya hayvan topluluğunun doğal olarak yaşadığı
+yeri,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>b) Etoloji: Bir hayvan türünün doğuştan gelen, kendine özgü davranışlarını
+inceleyen bilim dalını,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>c) Ekosistem: Canlıların kendi aralarında ve cansız çevreleriyle ilişkilerini
+bir düzen içinde yürüttükleri biyolojik, fiziksel ve kimyasal sistemi,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>d) Tür: Birbirleriyle çiftleşebilen ve üreme yeteneğine sahip verimli döller
+verebilen populasyonları,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>e) Evcil hayvan: İnsan tarafından kültüre alınmış ve eğitilmiş hayvanları,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>f) <b><span style='color:black'>(Değişik: 30/7/2024-7527/2 md.) </span></b>Sahipsiz
+hayvan: Sahipli hayvanlar dışında kalan evcil hayvanları,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>g) Güçten düşmüş hayvan: Bulaşıcı ve salgın hayvan hastalıkları haricinde
+yaşlanma, sakatlanma, yaralanma ve hastalanma gibi çeşitli nedenlerle fizikî olarak
+iş yapabilme yeteneğini kaybetmiş binek ve yük hayvanlarını,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>h) Yabani hayvan: Doğada serbest yaşayan evcilleştirilmemiş ve kültüre alınmamış
+omurgalı ve omurgasız hayvanları,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>ı) <b>(Değişik:9/7/2021-7332/1 md.) </b>Ev hayvanı: Gerçek veya tüzel kişiler
+tarafından özellikle evde, iş yerlerinde ya da arazisinde özel ilgi ve refakat amacıyla
+muhafaza edilen, bakımı ve sorumluluğu sahiplerince üstlenilen her türlü hayvanı,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='letter-spacing:-.2pt'>j) <b><span style='color:black'>(Değişik:
+30/7/2024-7527/2 md.) </span></b> Sahipli hayvan: Bir kişi, kuruluş, kurum ya
+da tüzel kişilik tarafından sahiplenilen, bakımı, aşıları, periyodik sağlık
+kontrolleri yapılan ve Bakanlık veri tabanına kaydedilen ev hayvanlarını,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>k) <b>(Değişik:9/7/2021-7332/1 md.)</b> Hayvan bakımevi: Bakanlıktan izin
+alınmak suretiyle kurulan, hayvanların sahiplendirilinceye kadar barındırıldığı
+ve&nbsp;rehabilite&nbsp;edildiği bir tesisi,<a href="#_ftn2" name="_ftnref2" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[2]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>l) Deney: Herhangi bir hayvanın acı, eziyet, üzüntü veya uzun süreli hasara
+neden olacak deneysel ya da diğer bilimsel amaçlarla kullanılmasını,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>m) Deney hayvanı: Deneyde kullanılan ya da kullanılacak olan hayvanı,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>n) Kesim hayvanı: Gıda amaçlı kesimi yapılan hayvanları,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>o) Bakanlık: Tarım ve Orman Bakanlığını, </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='letter-spacing:-.25pt'>p) <b>(Ek:9/7/2021-7332/1 md.)</b>
+Rehabilitasyon: Sahipsiz hayvanların tedavi ve parazit mücadelesinin
+yapılmasını, aşılanmasını, kısırlaştırılmasını ve dijital kimliklendirme
+yöntemleriyle işaretlenmesini,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>ifade eder.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>İlkeler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='letter-spacing:-.2pt'>Madde 4- </span></b><span style='letter-spacing:-.2pt'>Hayvanların korunmasına ve rahat yaşamalarına
+ilişkin temel ilkeler şunlardır:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>a) Bütün hayvanlar eşit doğar ve bu Kanun hükümleri çerçevesinde yaşama hakkına
+sahiptir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>b) <b><span style='color:black'>(Mülga: 30/7/2024-7527/3 md.) </span></b> </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>c) Hayvanların korunması, gözetilmesi, bakımı ve kötü muamelelerden uzak tutulması
+için gerekli önlemler alınmalıdır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>d) Hiçbir maddî kazanç ve menfaat amacı gütmeksizin, sadece insanî ve vicdanî
+sorumluluklarla, sahipsiz ve güçten düşmüş hayvanları sahiplenmek isteyen ve bu
+Kanunda öngörülen koşulları taşıyan gerçek ve tüzel kişilerin teşviki ve bu kapsamda
+eşgüdüm sağlanması esastır.<a href="#_ftn3" name="_ftnref3" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[3]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>e) Nesli yok olma tehlikesi altında bulunan tür ve bunların yaşama ortamlarının
+korunması esastır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>f) Yabani hayvanların yaşama ortamlarından koparılmaması, doğada serbestçe
+yaşayan bir hayvanın yakalanıp özgürlükten yoksun bırakılmaması esastır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>g) Hayvanların korunması ve rahat yaşamalarının sağlanmasında; insanlarla
+diğer hayvanların hijyen, sağlık ve güvenlikleri de dikkate alınmalıdır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>h) Hayvanların türüne özgü şartlarda bakılması, beslenmesi, barındırılma ve
+taşınması esastır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>ı) Hayvanları taşıyan ve taşıtanlar onları türüne ve özelliğine uygun ortam
+ve şartlarda taşımalı, taşıma sırasında beslemeli ve bakımını yapmalıdırlar.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>j) <b>(Değişik:9/7/2021-7332/2 md.)</b> Yerel yönetimler, gönüllü kuruluşlarla
+iş birliği içerisinde, sahipsiz hayvanların sahiplendirilinceye kadar
+bakılmaları için hayvan bakımevleri kurarak onların bakımlarını ve tedavilerini
+sağlar ve eğitim çalışmaları yapar. Ayrıca yerel yönetimler, ilgili karar organının
+uygun görmesi halinde hayvan hastanesi kurar.<a href="#_ftn4" name="_ftnref4" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[4]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='letter-spacing:-.2pt'>k) Kontrolsüz üremeyi önlemek amacıyla,
+toplu yaşanan yerlerde beslenen ve barındırılan kedi ve köpeklerin sahiplerince
+kısırlaştırılması esastır. <b>(Değişik ikinci cümle: 9/7/2021-7332/2 md.)</b>
+Kedi ve köpek sahipleri, hayvanlarını dijital kimliklendirme yöntemleriyle
+kayıt altına aldırmakla yükümlüdürler.<span style='color:black'> <b>(Ek cümle: 9/7/2021-7332/2
+md.)</b> </span>Dijital kimliklendirme yöntemlerine ilişkin usul ve esaslar
+Bakanlıkça yürürlüğe konulacak yönetmelikle belirlenir.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>İKİNCİ
+KISIM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>Koruma
+Tedbirleri</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>BİRİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>Hayvanların
+Sahiplenilmesi, Bakımı ve Korunması</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Hayvanların sahiplenilmesi ve bakımı</b><a name="_Ref159248617"></a><a href="#_ftn5" name="_ftnref5" title=""><span class=MsoFootnoteReference><span style='letter-spacing:-.25pt'><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.25pt'>[5]</span></span></span></span></a><a name="_Ref173491379"></a><a href="#_ftn6" name="_ftnref6" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[6]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='letter-spacing:-.25pt'>Madde 5- </span></b><span style='letter-spacing:-.25pt'>Bir hayvanı, (…)</span><span class=MsoFootnoteReference>5</span><span style='letter-spacing:-.25pt'> sahiplenen (…)</span><span class=MsoFootnoteReference>6</span><span style='letter-spacing:-.25pt'> kişi,
+hayvanı barındırmak, hayvanın türüne ve üreme yöntemine uygun olan etolojik
+ihtiyaçlarını temin etmek, sağlığına dikkat etmek, insan, hayvan ve çevre
+sağlığı açısından gerekli tüm önlemleri almakla yükümlüdür. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>Hayvan sahipleri, sahip oldukları hayvanlardan kaynaklanan çevre kirliliğini
+ve insanlara verilebilecek zarar ve rahatsızlıkları önleyici tedbirleri almakla
+yükümlü olup; zamanında ve yeterli seviyede tedbir alınmamasından kaynaklanan zararları
+tazmin etmek zorundadırlar.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><span style='letter-spacing:-.2pt'>Ev (…)</span><sup><span class=MsoFootnoteReference>5</span></sup><span style='letter-spacing:-.2pt'> hayvanı satan
+kişiler, bu hayvanların bakımı ve korunması ile ilgili olarak yerel yönetimler tarafından
+düzenlenen eğitim programlarına katılarak sertifika almakla yükümlüdürler.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>(Değişik dördüncü fıkra:9/7/2021-7332/3 md.)</b> Ev hayvanı (…)<span class=MsoFootnoteReference>6</span> sahiplenme şartları, hayvan bakımı ve korunması
+konularında verilecek eğitim ile ilgili usul ve esaslar ile sahiplenilerek bakılan
+hayvanların çevreye verecekleri zarar ve rahatsızlıkları önleyici tedbirler, Bakanlıkça
+çıkarılacak yönetmelikle belirlenir. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'>Ticarî amaç güdülmeden (…)<sup><span class=MsoFootnoteReference>5</span></sup>
+bakılan ev (…)<sup><span class=MsoFootnoteReference>5</span></sup> hayvanları sahiplerinin
+borcundan dolayı haczedilemezler.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>(Mülga altıncı fıkra:9/7/2021-7332/3 md.) </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>(Mülga yedinci fıkra:9/7/2021-7332/3 md.)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Sahipsiz ve güçten düşmüş hayvanların korunması</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 6- </b>Sahipsiz ya da güçten düşmüş hayvanların kanuni
+istisnalar hariç öldürülmeleri yasaktır.<a href="#_ftn7" name="_ftnref7" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[7]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'>Güçten düşmüş hayvanlar ticarî ve gösteri amaçlı veya herhangi bir şekilde
+binicilik ve taşımacılık amacıyla çalıştırılamaz.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'>Sahipsiz hayvanların korunması, bakılması ve gözetimi için yürürlükteki mevzuat
+hükümleri çerçevesinde, yerel yönetimler yetki ve sorumluluklarına ilişkin düzenlemeler
+ile insan ve çevre sağlığı için oluşabilecek olumsuz etkilerini gidermeye yönelik
+tedbirler, <span style='color:black'>Çevre, Şehircilik ve İklim Değişikliği
+Bakanlığı</span> ve İçişleri Bakanlığı ile eşgüdüm sağlanarak, diğer ilgili kuruluşların
+da görüşü alınmak suretiyle Bakanlıkça çıkarılacak yönetmelikle belirlenir.<a href="#_ftn8" name="_ftnref8" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[8]</span></span></span></a><a href="#_ftn9" name="_ftnref9" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[9]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'>Sahipsiz veya güçten düşmüş hayvanların en hızlı şekilde yerel yönetimlerce
+kurulan veya izin verilen hayvan bakımevlerine götürülmesi zorunludur. Bu hayvanların
+öncelikle söz konusu merkezlerde oluşturulacak müşahede yerlerinde tutulması sağlanır.
+<b><span style='color:black'>(Değişik son cümle: 30/7/2024-7527/4 md.) </span></b> Bakımevlerine
+alınan hayvanlar Bakanlık veri sistemine kaydedilir ve rehabilite edilen
+köpekler, sahiplendirilinceye kadar hayvan bakımevlerinde barındırılır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'>Sahipsiz veya güçten düşmüş hayvanların toplatılması ve hayvan bakımevlerinin
+çalışma <span style='color:black'>usul ve esasları ile burada çalışan personelin
+niteliğine ilişkin hususlar</span> ilgili kurum ve kuruluşların görüşleri alınarak
+Bakanlıkça çıkarılacak yönetmelikle belirlenir. Hayvan bakımevleri ve hastanelerin
+kurulması amacıyla Hazineye ait araziler öncelikle tahsis edilir. Amacı dışında
+kullanıldığı tespit edilen arazilerin tahsisi iptal edilir.<a href="#_ftn10" name="_ftnref10" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[10]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'>Hiçbir kazanç ve menfaat sağlamamak kaydıyla sadece insanî ve vicdanî amaçlarla
+sahipsiz ve güçten düşmüş hayvanları hayvan bakımevi kurarak sahiplenmek isteyen
+ve bu Kanunda öngörülen şartları taşıyan gerçek ve tüzel kişilere; belediyeler,
+orman idareleri, Maliye Bakanlığı, Özelleştirme İdaresi Başkanlığı tarafından, mülkiyeti
+idarelerde kalmak koşuluyla arazi ve buna ait binalar ve demirbaşlar tahsis edilebilir.
+Tahsis edilen arazilerin üzerinde amaca uygun tesisler ilgili Bakanlığın/İdarenin
+izni ile yapılır.<a href="#_ftn11" name="_ftnref11" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[11]</span></span></span></a></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>İKİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>Hayvanlara
+Müdahaleler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Cerrahi müdahaleler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b><span style='letter-spacing:-.1pt'>Madde 7- </span></b><span style='letter-spacing:-.1pt'>Hayvanlara tıbbî ve cerrahi müdahaleler sadece
+veteriner hekimler tarafından yapılır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span style='letter-spacing:-.2pt'>Kontrolsüz üremenin önlenmesi için,
+hayvanlara acı vermeden kısırlaştırma müdahaleleri yapılır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Yasak müdahaleler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 8- </b>Bir hayvan neslini yok edecek her türlü müdahale yasaktır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Hayvanların, yaşadıkları sürece, tıbbî amaçlar dışında organ veya dokularının
+tümü ya da bir bölümü çıkarılıp alınamaz veya tahrip edilemez.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Ev (…)<a href="#_ftn12" name="_ftnref12" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[12]</span></span></span></a><sup>
+</sup>hayvanının dış görünüşünü değiştirmeye yönelik veya diğer tedavi edici olmayan
+kuyruk ve kulak kesilmesi, ses tellerinin alınması ve tırnak ve dişlerinin sökülmesine
+yönelik cerrahi müdahale yapılması yasaktır. Ancak bu yasaklamalara; bir veteriner
+hekimin, veteriner hekimliği uygulamaları ile ilgili tıbbî sebepler veya özel bir
+hayvanın yararı için gerektiğinde tedavi edici olmayan müdahaleyi gerekli görmesi
+veya üremenin önlenmesi durumlarında izin verilebilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='letter-spacing:-.2pt'>Bir hayvana tıbbî amaçlar dışında,
+onun türüne ve etolojik özelliklerine aykırı hale getirecek şekilde ve dozda
+hormon ve ilaç vermek, çeşitli maddelerle doping yapmak, hayvanların türlerine
+has davranış ve fizikî özelliklerini yapay yöntemlerle değiştirmek yasaktır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Hayvan deneyleri</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Madde 9- </b>Hayvanlar, bilimsel olmayan teşhis, tedavi ve deneylerde kullanılamazlar.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Tıbbî ve bilimsel deneylerin uygulanması ve deneylerin hayvanları
+koruyacak şekilde yapılması ve deneylerde kullanılacak hayvanların uygun
+biçimde bakılması ve barındırılması esastır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Başkaca bir seçenek olmaması halinde, hayvanlar bilimsel çalışmalarda deney
+hayvanı olarak kullanılabilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Hayvan deneyi yapan kurum ve kuruluşlarda bu deneylerin yapılmasına kendi
+bünyelerinde kurulmuş ve kurulacak etik kurullar yoluyla izin verilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'>Etik kurulların kuruluşu, çalışma usul ve esasları, (…)<a name="_Ref159248702"></a><a href="#_ftn13" name="_ftnref13" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[13]</span></span></span></a>
+Sağlık Bakanlığının ve ilgili kuruluşların görüşleri alınarak Bakanlıkça çıkarılacak
+yönetmelikle belirlenir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><span style='letter-spacing:-.2pt'>Deney hayvanlarının yetiştirilmesi,
+beslenmesi, barındırılması, bakılması, deney hayvanı besleyen, tedarik eden ve
+kullanıcı işletmelerin tescil edilmesi, çalışan personelin nitelikleri,
+tutulacak kayıtlar, ne tür hayvanların yetiştirileceği ve deney hayvanı
+besleyen, tedarik eden ve kullanıcı işletmelerin uyacağı esaslar Bakanlıkça çıkarılacak
+yönetmelikle belirlenir.</span><span class=MsoFootnoteReference>13</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b>ÜÇÜNCÜ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b>Hayvanların
+Ticareti ve Eğitilmesi</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:120%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Hayvanların ticareti</b><a href="#_ftn14" name="_ftnref14" title=""><span class=MsoFootnoteReference><span style='letter-spacing:-.25pt'><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+letter-spacing:-.25pt'>[14]</span></span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Madde 10- </b>Satılırken; hayvanların sağlıklarının iyi, barındırıldıkları
+yerin temiz ve sağlık şartlarına uygun olması zorunludur. <b>(Ek cümle:
+9/7/2021-7332/4 md.)</b> Ev hayvanı satış yerlerinde kedi ve köpek
+bulundurulamaz, ancak buralarda Bakanlıkça izin verilen ev hayvanı üretim
+yerlerindeki kedi ve köpeklerin satışı yapılabilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><span style='letter-spacing:-.25pt'>Çiftlik hayvanlarının bakımı,
+beslenmesi, nakliyesi ve kesimi esnasında hayvanların refahı ve güvenliğinin
+sağlanması hususundaki düzenlemeler Bakanlıkça çıkarılacak yönetmelikle
+belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><span style='letter-spacing:-.2pt'>Yabani hayvanların ticaretine ilişkin
+düzenlemeler Bakanlıkça çıkarılacak yönetmelikle belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Ev hayvanlarının üretimini ve ticaretini yapanlar, hayvanların sağlığını tehlikeye
+atmamak için gerekli anatomik, fizyolojik ve davranış karakteristikleri ile ilgili
+önlemleri almakla yükümlüdür.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Hayvanların ticarî amaçla film çekimi ve reklam için kullanılması ile ilgili
+hususlar izne tâbidir. Bu izne ait usul ve esaslar ilgili kuruluşların görüşü alınarak
+Bakanlıkça çıkarılacak yönetmelikle belirlenir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Bir hayvan; acı, ıstırap ya da zarar görecek şekilde, film çekimi, gösteri,
+reklam ve benzeri işler için kullanılamaz.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Deney hayvanlarının ithalat ve ihracatı izne tâbidir. Bu izin, Bakanlıkça
+verilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Hasta, sakat ve yaşlı durumda bulunan veya iyileşemeyecek derecede ağrısı
+veya acısı olan bir hayvanı usulüne uygun kesmek ya da ağrısız öldürme amacından
+başka bir amaçla birine devretmek, satmak veya almak yasaktır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><b>Eğitim</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><b>Madde 11- </b>Hayvanlar, doğal kapasitesini veya gücünü aşacak şekilde
+veya yaralanmasına, gereksiz acı çekmesine, kötü alışkanlıklara özendirilmesine
+neden olacak yöntemlerle eğitilemez.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'>Hayvanları başka bir canlı hayvanla dövüştürmek yasaktır. Folklorik amaca
+yönelik, şiddet içermeyen geleneksel gösteriler, Bakanlığın uygun görüşü alınarak
+il hayvanları koruma kurullarından izin alınmak suretiyle düzenlenebilir.</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:119%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:119%'><b>DÖRDÜNCÜ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:119%'><b>Hayvanların
+Kesimi, Ötanazisi ve Yasaklar</b><a href="#_ftn15" name="_ftnref15" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[15]</span></span></span></a></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:119%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><b>Hayvanların kesimi</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><b>Madde 12- </b>Hayvanların kesilmesi; dini kuralların gerektirdiği özel
+koşullar dikkate alınarak hayvanı korkutmadan, ürkütmeden, en az acı verecek şekilde,
+hijyenik kurallara uyularak ve usulüne uygun olarak bir anda yapılır. Hayvanların
+kesiminin ehliyetli kişilerce yapılması sağlanır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><span style='letter-spacing:-.2pt'>Dini amaçla kurban kesmek isteyenlerin
+kurbanlarını dini hükümlere, sağlık şartlarına, çevre temizliğine uygun olarak,
+hayvana en az acı verecek şekilde bir anda kesimi, kesim yerleri, ehliyetli
+kesim yapacak kişiler ve ilgili diğer hususlar Bakanlık, kurum ve kuruluşların
+görüşü alınarak, Diyanet İşleri Başkanlığının bağlı olduğu Bakanlıkça
+çıkarılacak yönetmelikle belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+119%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b>Hayvanların ötanazisi <span style='color:black'>(Değişik başlık: 30/7/2024-7527/5
+md.) </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b>Madde 13- <span style='color:black'>(Ek: 30/7/2024-7527/5 md.) </span> </b>Bakımevine
+alınan köpeklerden; insan ve hayvanların hayatı ve sağlığı için tehlike teşkil
+eden ve olumsuz davranışları kontrol edilemeyen, bulaşıcı veya tedavi
+edilemeyen hastalığı bulunan ya da sahiplenilmesi yasak olanlara 11/6/2010
+tarihli ve 5996 sayılı Veteriner Hizmetleri, Bitki Sağlığı, Gıda ve Yem
+Kanununun 9 uncu maddesinin üçüncü fıkrasında belirtilen tedbir uygulanır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b><span style='color:black'>(Ek: 30/7/2024-7527/5 md.) </span> </b>Yerel
+yönetimler sahipsiz köpeklere ilişkin yürüttüğü iş ve işlemlerde Bakanlar
+Kurulunun 28/8/2003 tarihli ve 2003/6168 sayılı Kararı ile onaylanan Ev
+Hayvanlarının Korunmasına Dair Avrupa Sözleşmesi kapsamında gerekli idari tedbirleri
+almaya yetkilidir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>Kanunî istisnalar ile tıbbî ve bilimsel gerekçeler ve gıda amaçlı olmayan,
+insan ve çevre sağlığına yönelen önlenemez tehditler bulunan acil durumlar dışında
+yavrulama, gebelik ve süt anneliği dönemlerinde hayvanlar öldürülemez.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='letter-spacing:-.1pt'>Öldürme işleminden sorumlu kişi ve
+kuruluşlar, hayvanın kesin olarak öldüğünden emin olunduktan sonra, hayvanın
+ölüsünü usulüne uygun olarak bertaraf etmek veya ettirmekle yükümlüdürler. Öldürme
+ve&nbsp;ötanazi&nbsp;işlemine ilişkin esas ve usuller Bakanlıkça çıkarılacak
+yönetmelikle belirlenir.<a href="#_ftn16" name="_ftnref16" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.1pt'>[16]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b>Yasaklar</b><a name="_Ref159248803"></a><a href="#_ftn17" name="_ftnref17" title=""><span class=MsoFootnoteReference><span style='letter-spacing:-.2pt'><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.2pt'>[17]</span></span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><b>Madde 14- </b>Hayvanlarla ilgili yasaklar şunlardır:</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='letter-spacing:-.2pt'>a) Hayvanlara kasıtlı olarak kötü davranmak,
+(…)</span><span class=MsoFootnoteReference>17</span><span style='letter-spacing:
+-.2pt'> dövmek, aç ve susuz bırakmak, aşırı soğuğa ve sıcağa maruz bırakmak,
+bakımlarını ihmal etmek, fiziksel ve psikolojik acı çektirmek.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>b) Hayvanları, gücünü aştığı açıkça görülen fiillere zorlamak.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>c) Hayvan bakımı eğitimi almamış kişilerce ev (…)<sup><span class=MsoFootnoteReference>17</span></sup> hayvanı satmak.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>d) Ev (…)<sup><span class=MsoFootnoteReference>17</span></sup> hayvanlarını
+onaltı yaşından küçüklere satmak.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>e) Hayvanların kesin olarak öldüğü anlaşılmadan, vücutlarına tedavi maksatlı
+olmayan müdahalelerde bulunmak.<sup><span class=MsoFootnoteReference>17</span></sup></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'><span style='letter-spacing:-.1pt'>f) Kesim hayvanları ve 4915 sayılı
+Kanun çerçevesinde avlanmasına ve özel üretim çiftliklerinde kesim hayvanı
+olarak üretimine izin verilen av hayvanları ile ticarete konu yabani hayvanlar
+dışındaki hayvanları, et ihtiyacı amacıyla kesip ya da öldürüp piyasaya sürmek.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>g) Kesim için yetiştirilmiş hayvanlar dışındaki hayvanları ödül, ikramiye
+ya da prim olarak dağıtmak.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>h) Kanunî ve tıbbî gerekçeler hariç hayvanlara ya da onların ana karnındaki
+yavrularına veya havyar üretimi hariç yumurtalarına zarar verebilecek sunî müdahaleler
+yapmak, yabancı maddeler vermek.<a href="#_ftn18" name="_ftnref18" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[18]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>ı) Hayvanları hasta, gebelik süresinin 2/3’ünü tamamlamış gebe ve yeni ana
+iken çalıştırmak, uygun olmayan koşullarda barındırmak.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>j) <b>(Değişik:9/7/2021-7332/5 md.)</b> Hayvanlara cinsel saldırıda bulunmak
+veya tecavüz etmek.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>k) Sağlık nedenleri ile gerekli olmadıkça bir hayvana zor kullanarak yem yedirmek,
+acı, ıstırap ya da zarar veren yiyecekler ile alkollü içki, sigara, uyuşturucu ve
+bunun gibi bağımlılık yapan yiyecek veya içecekler vermek.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+130%'>l) <b>(Değişik:9/7/2021-7332/5 md.)</b> Bakanlıkça belirlenen tehlike arz
+eden hayvanları üretmek, sahiplenmek, sahiplendirmek, barındırmak, beslemek, takas
+etmek, sergilemek, hediye etmek ve bunların ülkemize girişini, satışını ve reklamını
+yapmak.</p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'><span style='color:black'>m) <b>(Ek:9/7/2021-7332/5 md.) </b>Hayvanlara
+işkence yapmak veya acımasız ve zalimce muamelede bulunmak.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'><span style='color:black'>n) <b>(Ek:9/7/2021-7332/5 md.) </b>Ev
+hayvanını terk etmek.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'><span style='color:black'>o) <b>(Ek: 30/7/2024-7527/6 md.) </b>Yerel
+yönetimler adına toplanan sahipsiz hayvanları bakımevi dışında bir yere terk
+etmek veya bakımevinde barındırılan köpekleri bakımevi dışında bir yere
+bırakmak.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>ÜÇÜNCÜ
+KISIM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>Hayvan
+Koruma Yönetimi</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>BİRİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>Mahallî
+Hayvan Koruma Kurulları Teşkilât, Görev ve Sorumluluklar</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:124%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'><b>İl hayvanları koruma kurulu</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'><b>Madde 15- </b>Her ilde il hayvanları koruma kurulu, valinin başkanlığında,
+sadece hayvanların korunması ve mevcut sorunlar ile çözümlerine yönelik olmak üzere
+toplanır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>Bu toplantılara;<a href="#_ftn19" name="_ftnref19" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[19]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>a) Büyükşehir belediyesi olan illerde büyükşehir belediye başkanları, büyükşehire
+bağlı ilçe belediye başkanları, büyükşehir olmayan illerde belediye başkanları,</p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'>b) <b>(Değişik:9/7/2021-7332/6 md.)</b> <span style='color:black'>Doğa koruma ve milli parklar il şube müdürü,</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'><span style='color:black'>c) </span><b>(Değişik:9/7/2021-7332/6
+md.) </b><span style='color:black'>Tarım ve orman il müdürü,</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:124%'><span style='color:black'>d) <b>(Ek:9/7/2021-7332/6 md.)<sup>
+</sup></b>Çevre ve şehircilik il müdürü,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>e) İl sağlık müdürü,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>f) İl millî eğitim müdürü,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>g) İl müftüsü,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>h) Belediyelerin veteriner işleri müdürü,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>ı) Veteriner fakülteleri olan yerlerde fakülte temsilcisi,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>j) Münhasıran hayvanları koruma ile ilgili faaliyet gösteren gönüllü kuruluşlardan
+valilik tarafından seçilecek en çok iki temsilci,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>k) İl veya bölge veteriner hekimler odasından bir temsilci,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'><span style='color:black'>1) <b>(Ek:9/7/2021-7332/6 md.)</b> İl baro temsilcisi
+veya ildeki barolardan birer temsilci,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>katılır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>Kurul başkanı gerekli gördüğü durumlarda konuyla ilgili olarak diğer kurum
+ve kuruluşlardan yetkili isteyebilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+124%'>İl hayvan koruma kurulu sekretaryasını, doğa koruma ve milli parklar il şube
+müdürlüğü yürütür. Kurul, çalışmalarının sonucunu, önemli politika, strateji, uygulama,
+inceleme ve görüşleri Bakanlığa bildirir. İllerde temsilciliği bulunmayan kuruluş
+var ise il hayvan koruma kurulları diğer üyelerden oluşur. <b>(Değişik cümle:9/7/2021-7332/6
+md.)</b> Kurul en geç üç ayda bir başkanın çağrısı üzerine toplanır.<b> (Ek cümle:9/7/2021-7332/6
+md.) </b><span style='color:black'>Gerektiğinde olağanüstü toplantılar yapılabilir.<a href="#_ftn20" name="_ftnref20" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>[20]</span></span></span></a></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='letter-spacing:-.2pt'>İl hayvan koruma kurulunun çalışma
+esas ve usulleri Bakanlıkça çıkarılacak yönetmelikle belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b>İl hayvanları koruma kurulunun görevleri</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b><span style='letter-spacing:-.1pt'>Madde 16- </span></b><span style='letter-spacing:-.1pt'>Hayvanları koruma kurulu münhasıran hayvanların
+korunması, sorunların tespiti ve çözümlerini karara bağlamak üzere; av ve yaban
+hayvanlarının ve yaşama alanlarının korunması ve avcılığın düzenlenmesi
+hususlarında alınmış olan Merkez Av Komisyonu kararlarını göz önünde
+bulundurarak;</span><a href="#_ftn21" name="_ftnref21" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[21]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>a) Hayvanların korunması ve kullanılmasında onların yasal temsilciliği niteliği
+ile bu Kanunda belirtilen görevleri yerine getirmek,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>b) <b><span style='color:black'>(Değişik: 30/7/2024-7527/7 md.) </span></b> İl
+sınırları içinde hayvanların korunmasına ilişkin ve sahipsiz hayvanlardan
+kaynaklı sorunları belirleyip, sorunların çözüm tekliflerini içeren yıllık, beş
+yıllık ve on yıllık plan ve projeler yapmak, yıllık hedef raporları hazırlayıp
+Bakanlığın uygun görüşüne sunmak, Bakanlığın olumlu görüşünü alarak insan,
+hayvan ve çevre sağlığına ilişkin her türlü önlemi almak,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='letter-spacing:-.1pt'>c) Hazırlanan uygulama programlarının
+uygulanmasını sağlamak ve sonuçtan Bakanlığa bilgi vermek,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>d) Hayvanların korunması ile ilgili olarak çeşitli kişi, kurum ve kuruluşların
+il düzeyindeki faaliyetlerini izlemek, yönlendirmek ve bu konuda gerekli eşgüdümü
+sağlamak,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>e) İlde kurulacak olan hayvan bakımevleri ve hayvan hastanelerini desteklemek,
+geliştirmek, denetlemek ve gerekli önlemleri almak,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>f) <b><span style='color:black'>(Mülga: 30/7/2024-7527/7 md.)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>g) Hayvan sevgisi, korunması ve yaşatılması ile ilgili eğitici faaliyetler
+düzenlemek,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><span style='color:black;letter-spacing:-.2pt'>h) <b>(Ek:9/7/2021-7332/7
+md.) </b>Kanunda belirtilen faaliyet ve görevleri yerel yönetimler ve tarım ve
+orman il müdürlükleri ile eşgüdüm sağlayarak yaptırmak,</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>ı) Bu Kanuna göre çıkarılacak mevzuatla verilecek görevleri yapmak,</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>İle görevli ve yükümlüdür.</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b> </b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b>İKİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b>Denetim
+</b>(…)<a href="#_ftn22" name="_ftnref22" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[22]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b>Denetim</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'><b>Madde 17-</b> Bu Kanun hükümlerine uyulup uyulmadığını denetleme yetkisi
+Bakanlığa aittir. Gerektiğinde bu yetki Bakanlıkça mahallin en büyük mülkî amirine
+yetki devri suretiyle devredilebilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+127%'>Denetim elemanlarının nitelikleri ve denetime ilişkin usul ve esaslar ile
+kayıt ve izleme sistemi kurma, bildirim yükümlülüğü ile bunları verecekler hakkındaki
+usul ve esaslar Bakanlıkça çıkarılacak yönetmelikle belirlenir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'>Yerel yönetimler, (…)<a href="#_ftn23" name="_ftnref23" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[23]</span></span></span></a>
+sahipsiz hayvanların kayıt altına alınması ile ilgili işlemleri yapmakla yükümlüdürler.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Yerel hayvan koruma görevlilerinin sorumlulukları</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Madde 18- <span style='color:black'>(Mülga: 30/7/2024-7527/15 md.) </span></b> </p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>ÜÇÜNCÜ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>Hayvanların
+Korunmasının Desteklenmesi </b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Mali destek</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Madde 19- <span style='color:black'>(Değişik birinci cümle: 30/7/2024-7527/8
+md.)  </span></b>İnsan, hayvan ve çevre sağlığının korunması amacıyla
+bakımevleri, hastaneler ve ameliyathaneler kurmak, bunlara ilişkin ilaç, alet
+ve ekipmanları temin etmek ile bakımevlerinde bakım,&nbsp;rehabilitasyon&nbsp;ve
+sahiplendirme gibi faaliyetleri yürütmek için, başta yerel yönetimler olmak
+üzere diğer ilgili kurum ve kuruluşlara teşvik veya Bakanlıkça uygun görülen
+miktarlarda mali destek sağlanır. Bu amaçla Bakanlık bütçesine gerekli ödenek konulur.
+Bu ödeneğin kullanımına ilişkin esas ve usuller, Hazine ve Maliye Bakanlığının olumlu
+görüşü alınmak suretiyle Bakanlıkça çıkarılacak yönetmelikle belirlenir.<a href="#_ftn24" name="_ftnref24" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[24]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b><span style='color:black'>(Ek ikinci fıkra:9/7/2021-7332/8 md.)</span></b><span style='color:black'> Birinci fıkra kapsamındaki faaliyetlerde kullanılmak üzere,
+gerçek ve tüzel kişilerce ayni veya nakdî bağış Bakanlığa ve yerel yönetimlere yapılabilir.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>DÖRDÜNCÜ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>Diğer
+Hükümler</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:125%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Eğitici yayınlar</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 20- </b>Hayvanların korunması ve refahı amacıyla; yaygın ve örgün
+eğitime yönelik programların yapılması, radyo ve televizyon programlarında bu konuya
+yer verilmesi esastır. Türkiye Radyo ve Televizyon Kurumu ile özel televizyon kanallarına
+ait televizyon programlarında ayda en az iki saat, özel radyo kanallarının programlarında
+ise ayda en az yarım saat eğitici yayınların yapılması zorunludur. Bu yayınların
+% 20'sinin izlenme ve dinlenme oranı en yüksek saatlerde yapılması esastır. Radyo
+ve Televizyon Üst Kurulu görev alanına giren hususlarda bu maddenin takibi ile yükümlüdür.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='color:black'>(Ek ikinci fıkra:9/7/2021-7332/9 md.) </span></b><span style='color:black'>Bu madde hakkında <span class=grame>15/2/2011</span> tarihli
+ve 6112 sayılı Radyo ve Televizyonların Kuruluş ve Yayın Hizmetleri Hakkında Kanunun
+48 inci maddesinin ikinci fıkrası hükmü uygulanmaz.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Trafik kazaları</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 21- </b>Bir hayvana çarpan ve ona zarar veren sürücü, onu en yakın
+veteriner hekim ya da tedavi ünitesine götürmek veya götürülmesini sağlamak zorundadır.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Hayvanat bahçeleri ve doğal yaşam parkları</b><a href="#_ftn25" name="_ftnref25" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[25]</span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b><span style='letter-spacing:-.2pt'>Madde 22- </span></b><span style='letter-spacing:-.2pt'>İşletme sahipleri ve belediyeler hayvanat
+bahçelerini, doğal yaşama ortamına en uygun şekilde tanzim etmekle ve
+ettirmekle yükümlüdürler. <b>(Mülga ikinci cümle: 9/7/2021-7332/10 md.) </b></span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><b><span style='color:black'>(Ek ikinci fıkra:9/7/2021-7332/10
+md.)</span></b><span style='color:black'> Gerçek veya tüzel kişiler, hayvanların
+etolojisine ve habitatına uygun, serbest dolaşımlarına <span class=grame>imkan</span>
+sağlayan doğal yaşam parkları kurabilir.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><b><span style='color:black;letter-spacing:-.2pt'>(Ek üçüncü
+fıkra:9/7/2021-7332/10 md.) </span></b><span style='color:black;letter-spacing:
+-.2pt'>Hayvanat bahçeleri ile doğal yaşam parklarının kuruluşu ile çalışma usul
+ve esasları Bakanlıkça çıkarılacak yönetmelikle belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Yasak ve izinler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 23- (Mülga: 11/6/2010-5996/47 md.)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Koruma altına alma</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+125%'><b>Madde 24- </b>Bu Kanunun hayvanları korumaya yönelik hükümlerine aykırı
+hareket eden veya sahiplendiği hayvanların bakımını ciddi şekilde ihmal eden ya
+da onlara ağrı, acı veya zarar veren kişilerin denetimle yetkili merci tarafından
+hayvan bulundurması yasaklanır ve hayvanlarına el konulur. <b><span style='color:black'>(Değişik son cümle: 30/7/2024-7527/9 md.) </span></b> Söz
+konusu hayvanlardan sahiplendirilme niteliği olanlar sahiplendirilinceye kadar hayvan
+bakımevinde barındırılır.<a href="#_ftn26" name="_ftnref26" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[26]</span></span></span></a></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt;
+line-height:125%'>&nbsp;</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>DÖRDÜNCÜ
+KISIM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>Cezai
+Hükümler</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>BİRİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:122%'><b>İdari
+Para Cezası Verme Yetkisi, Cezalar, Ödeme Süresi, Tahsil ve İtiraz</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>İdarî para cezası verme yetkisi</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 25- </b>Bu Kanunda öngörülen idarî para cezaları bu Kanunun 17 nci
+maddesinde belirtilen denetime yetkili merci tarafından verilir.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>İdari para cezalarına itiraz</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 26- (Mülga: 23/1/2008 – 5728/578 md.)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>İdarî para cezalarının ödenme süresi ve tahsili</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 27- (Mülga: 23/1/2008 – 5728/578 md.)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span class=normal1><i><span style='font-family:"Times New Roman",serif;
+color:black'>&nbsp;</span></i></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span class=normal1><b><span style='font-family:"Times New Roman",serif;
+color:black'>İdarî para cezaları</span></b></span><a href="#_ftn27" name="_ftnref27" title=""><span class=MsoFootnoteReference><span style='color:black'><span class=MsoFootnoteReference><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>[27]</span></span></span></span></a><a name="_Ref173490275"></a><a href="#_ftn28" name="_ftnref28" title=""><span class=MsoFootnoteReference><span style='color:black'><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>[28]</span></span></span></span></a></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 28- (Değişik:9/7/2021-7332/11 md.) </b></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>Bu Kanun hükümlerine aykırı davrananlara
+aşağıdaki idarî para cezaları verilir:</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>a) 4 üncü maddenin birinci fıkrasının
+(k) bendinin ikinci cümlesine aykırı davrananlara hayvan başına bin iki yüz Türk
+lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black;letter-spacing:-.1pt'>b) 5 inci
+maddenin birinci ve ikinci fıkralarında öngörülen hayvanların sahiplenilmesi ve
+bakımı ile ilgili yasaklara ve yükümlülüklere uymayan ve alınması gereken
+önlemleri almayanlara hayvan başına bin Türk lirası; üçüncü fıkrasına aykırı
+davranan işletme sahiplerine beş bin Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>c) 7 <span class=spelle>nci</span> maddede
+yazılan cerrahi amaçlı müdahaleler ile ilgili hükümlere aykırı davrananlara hayvan
+başına bin Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>d) Fiil suç teşkil etmediği takdirde,
+8 inci maddenin birinci fıkrasında yazılı, bir hayvan neslini yok edecek müdahalede
+bulunanlara hayvan başına otuz beş bin Türk lirası; ikinci, üçüncü ve dördüncü fıkralarına
+uymayanlara hayvan başına dört bin beş yüz Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>e) 9 uncu maddede ve çıkarılacak yönetmeliklerinde
+belirtilen hususlara uymayanlara hayvan başına bin iki yüz Türk lirası; yetkisi
+olmadığı hâlde hayvan deneyi yapanlara hayvan başına dört bin beş yüz Türk lirası
+idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span class=grame><span style='color:black'>f) 10 uncu maddenin
+birinci fıkrasının birinci cümlesine aykırı davrananlara beş yüz Türk lirası; birinci
+fıkrasının ikinci cümlesine aykırı davrananlara hayvan başına bin beş yüz Türk lirası;
+dördüncü fıkrasındaki yükümlülüklere aykırı davrananlara hayvan başına beş yüz Türk
+lirası; beşinci fıkrası uyarınca çıkarılacak yönetmelik hükümlerine aykırı davrananlara
+beş bin Türk lirası; altıncı fıkrasına aykırı davrananlara üç bin Türk lirası; sekizinci
+fıkrasına aykırı davrananlara hayvan başına bin Türk lirası idarî para cezası.</span></span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>g) 11 inci maddenin birinci fıkrasındaki
+eğitim ile ilgili yasaklara aykırı davrananlara beş bin beş yüz Türk lirası idarî
+para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>h) 12 <span class=spelle>nci</span>
+maddenin birinci fıkrasına aykırı hareket edenlere hayvan başına iki bin yüz Türk
+lirası; ikinci fıkrasına aykırı hareket edenlere hayvan başına beş bin iki yüz elli
+Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>ı) 13 üncü maddenin dördüncü fıkrası
+hükmüne aykırı davrananlara hayvan başına iki bin iki yüz Türk lirası; aykırı davranışların
+işletmelerce gösterilmesi hâlinde hayvan başına beş bin beş yüz Türk lirası idarî
+para cezası. </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span class=grame><span style='color:black'>j) 14 üncü maddenin
+birinci fıkrasının (a), (b), (e), (g), (h), (ı) ve (k) bentlerine aykırı davrananlara
+hayvan başına bin beş yüz Türk lirası; (f) ve (1) bentlerine aykırı davrananlara
+hayvan başına on bir bin Türk lirası; (d) bendine aykırı davrananlara iki bin Türk
+lirası; (n) bendine aykırı davrananlara </span></span><span style='color:black'>hayvan
+başına altmış bin<span class=grame> Türk lirası</span>; (o) bendine aykırı
+davrananlara hayvan başına elli bin Türk lirası idarî para cezası<span class=grame>.</span> </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>k) Radyo ve Televizyon Üst Kurulunun
+takibi sonucunda 20 <span class=spelle>nci</span> maddeye aykırı hareket ettiği
+tespit edilen ulusal radyo ve televizyon kurum ve kuruluşlarına maddenin ihlal edildiği
+her ay için yirmi bir bin Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>1) 21 inci maddeye aykırı hareket edenlere
+hayvan başına bin beş yüz Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>m) 22 <span class=spelle>nci</span>
+maddede belirtilen yükümlülüğe ve çıkarılacak yönetmelikte belirlenen hükümlere
+aykırı davrananlara hayvan başına iki bin beş yüz Türk lirası idarî para cezası.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>Maddede düzenlenen kabahatlerin veteriner
+hekim, veteriner sağlık teknisyeni, (…)</span><span class=MsoFootnoteReference>28</span><span style='color:black'> hayvan koruma derneği
+üyeleri, hayvan koruma vakfı üyeleri veya hayvanlara bakmak veya onları korumakla
+görevlendirilen kişiler tarafından işlenmesi durumunda verilecek ceza iki kat artırılarak
+uygulanır. </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>Maddede düzenlenen kabahatlere konu
+olan ve 24 üncü madde uyarınca el konulan kedi ve köpekler ile Bakanlıkça uygun
+görülen diğer hayvanlar koruma altına alınarak bakımevi bulunan en yakın belediye
+tarafından hayvan bakımevine götürülür.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><i><span style='color:black'>&nbsp;</span></i></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><b><span style='color:black'>Adli cezalar</span></b></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><b><span style='color:black'>MADDE 28/A –</span></b><span style='color:black'> <b>(Ek:9/7/2021-7332/12 md.)</b> </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>Nesli yok olma tehlikesi altında olan
+bir hayvanı öldüren kişi bir yıldan beş yıla kadar hapis cezası; bir hayvan neslini
+yok eden kişi beş yıldan on yıla kadar hapis cezası ile cezalandırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>12 <span class=spelle>nci</span> madde
+kapsamındaki hayvan kesimleri ile 13 üncü maddenin birinci, ikinci ve üçüncü fıkrasında
+belirtilen hususlar dışında bir ev hayvanını veya evcil hayvanı kasten öldüren kişi
+altı aydan dört yıla kadar hapis cezası ile cezalandırılır.<a href="#_ftn29" name="_ftnref29" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+color:black'>[29]</span></span></span></a></span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>Hayvanlara cinsel saldırıda bulunan
+veya tecavüz eden kişi altı aydan üç yıla kadar hapis ve yüz günden az olmamak üzere
+adli para cezası ile cezalandırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:125%'><span style='color:black'>14 üncü maddenin birinci fıkrasının
+(m) bendinde düzenlenen yasağa aykırı davranmak suretiyle bir ev hayvanına veya
+evcil hayvana işkence eden veya acımasız ve zalimce muamelede bulunan kişi altı
+aydan üç yıla kadar hapis cezası ile cezalandırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><span style='color:black'>11 inci maddenin ikinci fıkrasının ikinci
+cümlesi saklı kalmak üzere, hayvanları dövüştüren kişi üç aydan iki yıla kadar hapis
+veya adli para cezası ile cezalandırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><span style='color:black'>Maddede düzenlenen suçların birden fazla
+hayvana karşı aynı anda işlenmesi durumunda verilecek ceza yarı oranında artırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><span style='color:black'>Maddede düzenlenen suçların veteriner
+hekim, veteriner sağlık teknisyeni, (…)<a href="#_ftn30" name="_ftnref30" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif;color:black'>[30]</span></span></span></a>
+hayvan koruma derneği üyeleri, hayvan koruma vakfı üyeleri veya hayvanlara bakmak
+yahut onları korumakla görevlendirilen kişiler tarafından işlenmesi durumunda verilecek
+ceza yarı oranında artırılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><span style='color:black'>Sahibi tarafından işlenen suçlar da
+<span class=grame>dahil</span> olmak üzere bu maddede belirtilen suçların işlenmesi
+halinde soruşturma yapılması Tarım ve Orman Bakanlığının il veya ilçe müdürlükleri
+tarafından Cumhuriyet başsavcılığına yazılı başvuruda bulunulmasına bağlıdır. Bu
+başvuru muhakeme şartı niteliğindedir. Suçüstü halinde ise soruşturma genel hükümlere
+göre yapılır. İkinci, üçüncü, dördüncü ve beşinci fıkralarda belirtilen suçların
+başka bir kişi tarafından sahipli hayvana karşı işlenmesi halinde hayvan sahibinin
+<span class=grame>şikayeti</span> üzerine de soruşturma yapılır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><span style='color:black'>Maddede düzenlenen suçlara konu olan
+ve 24 üncü madde uyarınca el konulan kedi ve köpekler ile Bakanlıkça uygun görülen
+diğer hayvanlar koruma altına alınarak bakımevi bulunan en yakın belediye tarafından
+hayvan bakımevine götürülür.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>BEŞİNCİ
+KISIM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>Çeşitli,
+Son ve Geçici Hükümler</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>BİRİNCİ
+BÖLÜM</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>Çeşitli
+Hükümler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Birden fazla hükmün ihlâli</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Madde 29- (Mülga: 23/1/2008 – 5728/578 md.)</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Fiillerin tekrarı</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Madde 30- </b>Bu Kanunda, ceza hükmü altına alınmış fiillerin tekrarı halinde
+para cezaları bir kat, daha fazla tekrarı halinde üç kat artırılarak verilir.</p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>İKİNCİ
+BÖLÜM </b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:132%'><b>Son
+ve Geçici Hükümler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Saklı hükümler</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+132%'><b>Madde 31- </b>4915 sayılı Kara Avcılığı Kanunu, 5996 sayılı Kanun ile 1380
+sayılı Su Ürünleri Kanunu hükümleri saklıdır.<a href="#_ftn31" name="_ftnref31" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[31]</span></span></span></a></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:132%'><i><span style='color:black'>&nbsp;</span></i></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><b><span style='color:black'>Yerel yönetimlerin sorumluluğu (Değişik
+başlık: 30/7/2024-7527/13 md.)</span></b><a name="_Ref173491064"></a><a href="#_ftn32" name="_ftnref32" title=""><span class=MsoFootnoteReference><span style='color:black'><span class=MsoFootnoteReference><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif;color:black'>[32]</span></span></span></span></a><b><span style='color:black'> </span></b><b><span style='color:black'> </span></b></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><b><span style='color:black'>Ek Madde 1 –</span></b><span style='color:black'> <b>(Ek:9/7/2021-7332/13 md.)</b> </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='color:black'>Büyükşehir belediyeleri, il belediyeleri
+ve nüfusu yirmi beş bini aşan (…)</span><span class=MsoFootnoteReference>32</span><span style='color:black'> belediyeler, sahipsiz
+veya güçten düşmüş ya da tehlike arz eden hayvanların korunması ve sahiplendirilinceye
+kadar bakımının yapılması ile <span class=grame>rehabilitasyonunun</span> sağlanması
+amacıyla hayvan bakımevleri kurar. </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='color:black;letter-spacing:-.1pt'>Birinci
+fıkrada belirtilen hayvanlar, ilgili belediyeler tarafından hayvan bakımevine
+götürülür. Hayvan bakımevi kurma zorunluluğu olmayan belediyeler ile il özel
+idareleri ise sorumluluk alanındaki bu hayvanları en yakın hayvan bakımevine
+götürür. <b>(Değişik üçüncü ve dördüncü cümle: 30/7/2024-7527/13 md.) </b> Bakımevlerine
+alınan hayvanlar Bakanlık veri sistemine kaydedilir.&nbsp;Rehabilite&nbsp;edilen
+köpekler, sahiplendirilinceye kadar hayvan bakımevlerinde barındırılır. </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span class=spelle><b><span style='color:black;letter-spacing:
+-.2pt'>(Değişik: 30/7/2024-7527/13 md.) </span></b><span style='color:black;
+letter-spacing:-.2pt'> Büyükşehir belediyeleri, il belediyeleri ve nüfusu yirmi
+beş bini aşan belediyeler bakımından, geçici 4 üncü maddenin ikinci fıkrasında
+belirtilen kaynağı ayırmayan belediye başkanı ve meclis üyeleri ile ayrılan
+kaynağı hayvan bakımevi kurmak, sahipsiz hayvanları toplamak, rehabilite etmek
+veya sahiplendirilinceye kadar bakmak için sarf etmeyen ya da bu kaynağı başka
+amaçlar için sarf eden belediye başkanı ve belediye yetkililerine altı aydan
+iki yıla kadar hapis cezası verilir</span></span><span style='color:black;
+letter-spacing:-.2pt'>.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><b><span style='color:black'>Ek Madde 2 –</span></b><span style='color:black'> <b>(Ek:9/7/2021-7332/14 md.)</b> </span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='color:black'>Bu maddenin yürürlüğe girdiği tarihten
+sonra hayvanların kullanıldığı kara ve su sirkleri ile yunus parklarının kurulması
+yasaktır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='color:black'>Mevcut işletmeler, herhangi bir nedenle
+eksilen hayvan sayısını tamamlama ya da artırma, yeni şube açma gibi yollarla kapasite
+artırımına gidemez, üretim yapamaz, Bakanlığın izni olmadan işletme hakkını devredemez,
+on yılın sonunda faaliyetine son verir. Bu işletmelerin hayvanların etolojisine
+uygun olarak faaliyet göstermesini sağlayacak <span class=grame>kriterler</span>,
+bu maddenin yürürlüğe girdiği tarihten itibaren altı ay içinde Bakanlık tarafından
+çıkarılacak yönetmelikle belirlenir.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span style='color:black'>Bu maddede belirtilen yasaklara aykırı
+davrananlara hayvan başına yirmi beş bin Türk lirası idarî para cezası verilir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Geçici Madde 1- </b>Bu Kanunun 14 üncü maddesinin (l) bendinde belirtilen
+hayvanlardan, yurda bu Kanunun yürürlüğe girdiği tarihten önce sokulmuş olanların
+sahipleri; üç ay içerisinde hayvan koruma kurullarına bildirimde bulunarak bunları
+kayıt altına aldırmak; altı ay içerisinde kısırlaştırarak kısırlaştırıldıklarına
+ilişkin belgeleri il hayvan koruma kurullarına teslim etmek zorundadırlar.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+120%'><b>Geçici Madde 2- </b>Bu Kanun gereğince çıkarılması gerekli bulunan yönetmelikler,
+Kanunun yürürlüğe girdiği tarihten itibaren bir yıl içinde hazırlanır.</p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span class=grame><b><span style='color:black'>&nbsp;</span></b></span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span class=grame><b><span style='color:black'>Geçici Madde 3
+–</span></b><span style='color:black'> <b>(Ek:9/7/2021-7332/15 md.)</b> </span></span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:120%'><span class=grame><span style='color:black'>14 üncü maddenin birinci
+fıkrasının (1) bendi uyarınca, tehlike arz eden hayvanların belirlenmesine ilişkin
+Bakanlıkça yapılacak düzenleme yürürlüğe konuluncaya kadar; </span></span><span class=spelle><span style='color:black'>Pitbull</span></span><span class=grame><span style='color:black'> </span></span><span class=spelle><span style='color:black'>Terrier</span></span><span class=grame><span style='color:black'>, </span></span><span class=spelle><span style='color:black'>Japanese</span></span><span class=grame><span style='color:black'> Tosa, </span></span><span class=spelle><span style='color:black'>Dogo</span></span><span class=grame><span style='color:
+black'> </span></span><span class=spelle><span style='color:black'>Argentino</span></span><span class=grame><span style='color:black'>, </span></span><span class=spelle><span style='color:black'>Fila</span></span><span class=grame><span style='color:
+black'> </span></span><span class=spelle><span style='color:black'>Brasilerio</span></span><span class=grame><span style='color:black'> türlerini veya bunların melezlerini üreten,
+sahiplenen, sahiplendiren, barındıran, besleyen, takas eden, sergileyen, hediye
+eden ve bunların ülkemize girişini, satışını ve reklamını yapana hayvan başına on
+bir bin Türk lirası idarî para cezası verilir. </span></span><span style='color:black'>Bu hayvanlara el konulur ve bu hayvanlar belediyeler tarafından
+hayvan bakımevine götürülür.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span class=grame><span style='color:black'>Birinci fıkra kapsamına
+giren hayvanları bu madde yürürlüğe girinceye kadar sahiplenmiş olanlardan, maddenin
+yürürlüğe girdiği tarihten itibaren altı aylık süre içinde hayvanlarını kısırlaştıran
+ve buna dair belgeyle birlikte Bakanlığa başvurarak veri tabanına kayıt ettirenler
+hakkında, birinci fıkrada veya 28 inci maddenin birinci fıkrasının (j) bendinde
+öngörülen idari yaptırım hükümleri uygulanmaz. </span></span><span style='color:black'>Kısırlaştırma işlemi için maddenin yürürlüğe girmesinden önce
+gebe kalmış hayvanların doğum yapması, yavruların dört aylık olması beklenir. Bu
+hayvanların ölümü halinde Bakanlığa bilgi verilir ve kayıttan düşürülür.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>Kısırlaştırılan ve kayıt altına alınan
+bu hayvanlar kayıt belgesiz, ağızlıksız ve tasmasız olarak dolaştırılamaz, halkın
+yoğun olarak bulunduğu yerler ile çocuk oyun alanları ve parklarına sokulamaz. Ağızlık
+ve tasma takma zorunluluğu ile halkın yoğun olarak bulunduğu yerlere ve çocuk oyun
+alanları ve parklarına girme yasağı maddenin yürürlüğe girmesiyle birlikte uygulanmaya
+başlanır. Bu fıkra hükümlerine aykırı hareket edenlere, on bir bin Türk lirası idarî
+para cezası verilir. Bu fıkrada belirtilen yasaklara aykırılığın tekrarı halinde,
+idarî para cezası verilir ve hayvanlara el konulur ve hayvan, konulabileceği bakımevi
+bulunan en yakın belediye tarafından hayvan bakımevine götürülür.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>Bu madde kapsamında hayvan sahibi olanlar,
+hayvanlarını en yakın bakımevine bırakabilirler. Bu hayvanların sokağa terki halinde
+otuz bin Türk lirası idarî para cezası verilir.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>Yerel yönetimler tarafından kurulan
+hayvan bakımevleri, bu madde uyarınca teslim edilen hayvanları kabul etmek zorundadır.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><span style='color:black'>Bu Kanun uyarınca çıkarılacak yönetmelikler,
+Kanunun yürürlüğe girdiği tarihten itibaren altı ay içinde yürürlüğe konulur.</span></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><b><span style='color:black'>&nbsp;</span></b></p>
+
+<p class=metin style='margin:0cm;text-align:justify;text-indent:35.45pt;
+line-height:122%'><b><span style='color:black'>Geçici Madde 4 –</span></b><span style='color:black'> <b>(Ek:9/7/2021-7332/16 md.) (Değişik: 30/7/2024-7527/14
+md.)  </b></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span style='color:black'>Büyükşehir belediyeleri, il belediyeleri ve nüfusu
+yirmi beş bini aşan belediyeler 31/12/2028 tarihine kadar ek 1 inci maddenin
+birinci fıkrasında belirtilen hayvan bakımevlerini kurmakla ve mevcut
+bakımevlerinin koşullarını iyileştirmekle yükümlüdür.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span style='color:black'>Belediyeler 31/12/2028 tarihine kadar birinci
+fıkra gereğince hayvan bakımevleri kurmak, rehabilitasyon işlemlerini
+gerçekleştirmek ve sahipsiz hayvanlara sahiplendirilinceye kadar bakmak için
+kesinleşmiş en son bütçe gelirlerinin binde beşi oranında kaynak ayırır. Bu
+oran büyükşehir belediyelerinde binde üç olarak uygulanır. Bu fıkra uyarınca
+ayrılan ödenekler başka bir amaç için kullanılamaz.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span style='color:black'>Belediyelerce bu maddenin ikinci fıkrasında
+belirlenen oranların üzerinde yapılan harcamaların yüzde 40’ı, tevsik edilmesi
+kaydıyla ilgili belediyeye Hazine ve Maliye Bakanlığınca aktarılır. Ancak,
+aktarılacak tutar hiçbir şekilde ikinci fıkrada belirlenen oranların yüzde
+40’ını geçemez. Bu fıkranın uygulanmasına ilişkin usul ve esaslar Hazine ve
+Maliye Bakanlığınca belirlenir.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><span style='color:black'>Kedi ve köpek sahipleri, hayvanlarını en geç 31/12/2025
+tarihine kadar dijital kimliklendirme yöntemleriyle kayıt altına aldırmak zorundadır.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Yürürlük</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 32- </b>Bu Kanun yayımı tarihinde yürürlüğe girer.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><i>&nbsp;</i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Yürütme</b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt;line-height:
+122%'><b>Madde 33- </b>Bu Kanun hükümlerini Bakanlar Kurulu yürütür.</p>
+
+<span style='font-size:12.0pt;line-height:127%;font-family:"Times New Roman",serif'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'><b>5199
+SAYILI KANUNA EK VE DEĞİŞİKLİK GETİREN MEVZUATIN</b></p>
+
+<p class=ksmblm align=center style='margin-top:0cm;text-align:center;
+line-height:127%'><b><span style='font-size:12.0pt;line-height:127%;font-family:
+"Times New Roman",serif'>YÜRÜRLÜĞE GİRİŞ TARİHİNİ GÖSTERİR LİSTE</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:50%'>&nbsp;</p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=605 style='width:16.0cm;border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=189 style='width:141.8pt;border:solid windowtext 1.5pt;padding:
+  1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'><b>Değiştiren Kanunun/ KHK’nin veya İptal Eden Anayasa Mahkemesi
+  Kararının Numarası</b></p>
+  </td>
+  <td width=227 style='width:6.0cm;border:solid windowtext 1.5pt;border-left:
+  none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'><b>5199 Sayılı Kanunun Değişen veya İptal Edilen Maddeleri</b></p>
+  </td>
+  <td width=189 style='width:141.7pt;border:solid windowtext 1.5pt;border-left:
+  none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'><b>Yürürlüğe Giriş Tarihi</b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=189 style='width:141.8pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>5728</p>
+  </td>
+  <td width=227 style='width:6.0cm;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;padding:1.4pt 2.85pt 1.4pt 2.85pt;
+  height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>26, 27, 28, 29</p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>8/2/2008</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=189 style='width:141.8pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>5996</p>
+  </td>
+  <td width=227 style='width:6.0cm;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;padding:1.4pt 2.85pt 1.4pt 2.85pt;
+  height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>23</p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>13/12/2010</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=189 rowspan=2 style='width:141.8pt;border:solid windowtext 1.5pt;
+  border-top:none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>7332</p>
+  </td>
+  <td width=227 style='width:6.0cm;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;padding:1.4pt 2.85pt 1.4pt 2.85pt;
+  height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>3, 4, 5, 6, 8, 9, 10, 14, 15, 16, 17, 19, 20, 22, 28, 28/A,
+  Ek Madde 1, Ek Madde 2, Geçici Madde 3, Geçici Madde 4</p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>14/7/2021</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=227 style='width:6.0cm;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;padding:1.4pt 2.85pt 1.4pt 2.85pt;
+  height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>10 uncu maddenin birinci fıkrasına eklenen cümle</p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>yayımı tarihinden bir yıl sonra</p>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>(14/7/2022)</p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=189 style='width:141.8pt;border:solid windowtext 1.5pt;border-top:
+  none;padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>7527</p>
+  </td>
+  <td width=227 style='width:6.0cm;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;padding:1.4pt 2.85pt 1.4pt 2.85pt;
+  height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>1, 3, 4, 5, 6, İkinci Kısım Dördüncü Bölüm Başlığı,
+  Üçüncü Kısım İkinci Bölüm Başlığı, 13, 14, 16, 17, 18, 19, 24, 28, 28/A, 31,
+  Ek Madde 1, Geçici Madde 4</p>
+  </td>
+  <td width=189 style='width:141.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:1.4pt 2.85pt 1.4pt 2.85pt;height:1.0pt'>
+  <p class=MsoNormal align=center style='text-align:center;line-height:127%;
+  text-autospace:none'>2/8/2024</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:127%'>&nbsp;</p>
+
+</div>
+
+<div><br clear=all>
+
+<hr align=left size=1 width="33%">
+
+<div id=ftn1>
+
+<p class=MsoNormal style='text-align:justify'><a href="#_ftnref1" name="_ftn1" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>[1]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 1 inci maddesiyle, bu fıkrada yer alan “Kanunun amacı;” ibaresinden
+sonra gelmek üzere “insan, hayvan ve çevre sağlığı gözetilmek kaydıyla” ibaresi
+eklenmiştir.</span></i></p>
+
+<p class=MsoFootnoteText>&nbsp;</p>
+
+</div>
+
+<div id=ftn2>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref2" name="_ftn2" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[2]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 2 nci maddesiyle, bu bentte yer alan “ve hayvanların&nbsp;rehabilite&nbsp;edileceği”
+ibaresi “, hayvanların sahiplendirilinceye kadar barındırıldığı ve&nbsp;rehabilite&nbsp;edildiği”
+şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn3>
+
+<p class=MsoFootnoteText><a href="#_ftnref3" name="_ftn3" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[3]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 3 üncü maddesiyle, bu bentte yer alan “hayvanlara bakan veya bakmak”
+ibaresi “hayvanları sahiplenmek” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn4>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref4" name="_ftn4" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[4]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 3 üncü maddesiyle, bu bentte yer alan “ve güçten düşmüş hayvanların
+korunması” ibaresi “hayvanların sahiplendirilinceye kadar bakılmaları” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn5>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref5" name="_ftn5" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt;letter-spacing:-.2pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.2pt'>[5]</span></b></span></span></i></span></a><i><span style='font-size:
+11.0pt;letter-spacing:-.2pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 3 üncü
+maddesiyle, birinci fıkrada yer alan “bakımının gerektirdiği yaygın eğitim
+programına katılarak” ibaresi, üçüncü ve beşinci fıkralarda yer alan “ve süs”
+ibareleri ile beşinci fıkrasında yer alan “bilhassa ev ve bahçesi içerisinde”
+ibaresi madde metninden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn6>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref6" name="_ftn6" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[6]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 15 inci maddesiyle, bu maddenin birinci fıkrasında yer alan “veya ona bakan”
+ibaresi ve dördüncü fıkrasında yer alan “ve kontrollü hayvanları bulundurma ve”
+ibaresi metinden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn7>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref7" name="_ftn7" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[7]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 4 üncü maddesiyle, bu fıkrada yer alan</span></i> <i><span style='font-size:11.0pt;color:black'>“, 3285 sayılı Hayvan Sağlığı Zabıtası
+Kanununda öngörülen durumlar dışında” ibaresi “kanuni istisnalar hariç”
+şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn8>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref8" name="_ftn8" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[8]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 17 nci
+maddesiyle, bu fıkrada yer alan “Tarım ve Köyişleri” ibaresi “Çevre ve
+Şehircilik” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn9>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref9" name="_ftn9" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[9]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 4 üncü maddesiyle, bu fıkrada yer alan</span></i> <i><span style='font-size:11.0pt;color:black'>“çevreye olabilecek” ibaresi “insan ve
+çevre sağlığı için oluşabilecek” şeklinde ve “Çevre ve Şehircilik Bakanlığı”
+ibaresi “Çevre, Şehircilik ve İklim Değişikliği Bakanlığı” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn10>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref10" name="_ftn10" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt;letter-spacing:-.2pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif;letter-spacing:
+-.2pt'>[10]</span></b></span></span></i></span></a><i><span style='font-size:
+11.0pt;letter-spacing:-.2pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 17 nci
+maddesiyle, bu fıkrada yer alan “usul ve esasları,” ibaresi “usul ve esasları
+ile burada çalışan personelin niteliğine ilişkin hususlar” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn11>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref11" name="_ftn11" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[11]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 4 üncü maddesiyle, bu fıkrada yer alan</span></i> <i><span style='font-size:11.0pt;color:black'>“hayvanlara bakan veya bakmak” ibaresi
+“hayvanları hayvan bakımevi kurarak sahiplenmek” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn12>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref12" name="_ftn12" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[12]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 17 nci
+maddesiyle, bu fıkrada yer alan “ve süs” ibaresi madde metninden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn13>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref13" name="_ftn13" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[13]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 17 nci
+maddesiyle, beşinci fıkrada yer alan “Tarım ve Köyişleri Bakanlığı ile” ibaresi
+madde metninden çıkarılmış ve altıncı fıkrada yer alan “Tarım ve Köyişleri
+Bakanlığınca” ibaresi “Bakanlıkça” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn14>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref14" name="_ftn14" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[14]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 4 üncü
+maddesiyle, ikinci fıkrada yer alan “Tarım ve Köyişleri Bakanlığınca” ibaresi
+“Bakanlıkça” şeklinde, dördüncü fıkrada yer alan “Ev ve süs hayvanlarının üretimini
+ve ticaretini yapanlar, annenin ve yavrularının” ibaresi “Ev hayvanlarının
+üretimini ve ticaretini yapanlar, hayvanların” şeklinde, yedinci fıkrada yer
+alan “Bakanlığın görüşü alınarak Tarım ve Köyişleri Bakanlığınca” ibaresi
+“Bakanlıkça” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn15>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref15" name="_ftn15" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[15]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 5 inci maddesiyle, bu bölüm başlığında yer alan </span></i>“<i><span style='font-size:11.0pt;color:black'>Öldürülmesi” ibaresi “Ötanazisi” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn16>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref16" name="_ftn16" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[16]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 5 inci maddesiyle, bu fıkranın ikinci cümlesinde yer alan “Öldürme esas
+ve usulleri” ibaresi “Öldürme ve ötanazi işlemine ilişkin esas ve usuller”
+şeklinde değiştirilmiştir.</span></i>  </p>
+
+</div>
+
+<div id=ftn17>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref17" name="_ftn17" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[17]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 5 inci maddesiyle,
+(a) bendinde yer alan “acımasız ve zalimce işlem yapmak,” ibaresi ve (c) ve (d)
+bentlerinde yer alan “ve süs” ibareleri madde metninden çıkarılmış, (e) bendine
+“vücutlarına” ibaresinden sonra gelmek üzere “tedavi maksatlı olmayan” ibaresi
+eklenmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn18>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref18" name="_ftn18" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[18]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 6 ncı maddesiyle, bu bentte yer alan</span></i><i><span style='font-size:11.0pt'> “Tıbbî” ibaresi “Kanunî ve tıbbî” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn19>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref19" name="_ftn19" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[19]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 6 ncı maddesiyle,
+bu fıkraya (c) bendinden sonra gelmek üzere (d) bendi eklenmiş ve diğer bentler
+buna göre teselsül ettirilmiş, fıkranın mevcut (ı) bendinde yer alan “takdiri
+ile” ibaresi “tarafından” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn20>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref20" name="_ftn20" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[20]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 6 ncı
+maddesiyle, bu fıkrada yer alan “il çevre ve orman” ibaresi “doğa koruma ve
+milli parklar il şube” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn21>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref21" name="_ftn21" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[21]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 7 nci
+maddesiyle, (e) bendine “geliştirmek” ibaresinden sonra gelmek üzere “, denetlemek”
+ibaresi ve fıkraya (g) bendinden sonra gelmek üzere (h) bendi eklenmiş, diğer
+bent buna göre (ı) bendi olarak teselsül ettirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn22>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref22" name="_ftn22" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[22]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 15 inci maddesiyle, bu bölüm başlığında yer alan “ve Hayvan Koruma Gönüllüleri”
+ibaresi metinden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn23>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref23" name="_ftn23" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[23]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 15 inci maddesiyle, bu fıkrada yer alan “ev hayvanları ile” ibaresi
+metinden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn24>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref24" name="_ftn24" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[24]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 8 inci
+maddesiyle, bu fıkrada yer alan “Ev ve süs hayvanlarının” ibaresi “Hayvanların”
+şeklinde değiştirilmiş, fıkraya “kurum ve kuruluşlara” ibaresinden sonra gelmek
+üzere “teşvik veya” ibaresi ve “esas ve usuller,” ibaresinden sonra gelmek
+üzere “Hazine ve” ibaresi eklenmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn25>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref25" name="_ftn25" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[25]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 9/7/2021 tarihli ve 7332 sayılı Kanunun 10 uncu
+maddesiyle, bu madde başlığı “Hayvanat bahçeleri” iken metne işlendiği şekilde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn26>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref26" name="_ftn26" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[26]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 9 uncu maddesiyle, bu fıkrada yer alan</span></i> <i><span style='font-size:11.0pt;color:black'>“ve bu suretle bulundurduğu” ibaresi “veya
+sahiplendiği” şeklinde değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn27>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref27" name="_ftn27" title=""><span class=MsoFootnoteReference><i><span style='font-size:11.0pt'><span class=MsoFootnoteReference><b><span style='font-size:11.0pt;font-family:"Times New Roman",serif'>[27]</span></b></span></span></i></span></a><i><span style='font-size:11.0pt'> 23/1/2008 tarihli ve 5728 sayılı Kanunun 553 üncü
+maddesiyle bu maddenin “Cezalar” olan başlığı “İdarî para cezaları” olarak
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn28>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref28" name="_ftn28" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[28]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 10 uncu maddesiyle, bu </span></i><i><span style='font-size:11.0pt'>maddenin
+birinci fıkrasının (ı) bendinde yer alan “ikinci” ibaresi “dördüncü” şeklinde,
+(j) bendinde yer alan “hayvan başına iki bin” ibaresi “hayvan başına altmış
+bin” şeklinde ve aynı bentte yer alan “idarî para cezası.” ibaresi “; (o) bendine
+aykırı davrananlara hayvan başına elli bin Türk lirası idarî para cezası.”
+şeklinde değiştirilmiş, ikinci fıkrasında yer alan “hayvan koruma gönüllüsü,”
+ibaresi madde metninden çıkarılmıştır.<span style='color:black'> </span></span></i></p>
+
+</div>
+
+<div id=ftn29>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref29" name="_ftn29" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[29]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 11 inci maddesiyle, bu fıkraya “birinci” ibaresinden sonra gelmek üzere
+“, ikinci ve üçüncü” ibaresi eklenmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn30>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref30" name="_ftn30" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[30]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 11 inci maddesiyle, bu fıkrada yer alan “hayvan koruma gönüllüsü,”
+ibaresi madde metninden çıkarılmıştır.</span></i></p>
+
+</div>
+
+<div id=ftn31>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref31" name="_ftn31" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[31]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 12 nci maddesiyle, bu maddede yer alan</span></i> <i><span style='font-size:11.0pt;color:black'>“3285 sayılı Hayvan Sağlığı ve Zabıtası
+Kanunu, 4631 sayılı Hayvan Islahı Kanunu” ibaresi “5996 sayılı Kanun” şeklinde
+değiştirilmiştir.</span></i></p>
+
+</div>
+
+<div id=ftn32>
+
+<p class=MsoFootnoteText style='text-align:justify'><a href="#_ftnref32" name="_ftn32" title=""><span class=MsoFootnoteReference><span class=MsoFootnoteReference><span style='font-size:10.0pt;font-family:"Times New Roman",serif'>[32]</span></span></span></a>
+<i><span style='font-size:11.0pt;color:black'>30/7/2024 tarihli ve 7527 sayılı
+Kanunun 13 üncü maddesiyle, bu maddenin birinci fıkrasında yer alan “büyükşehir
+ilçe belediyeleri ile diğer” ibaresi madde metninden çıkarılmış, fıkraya “korunması
+ve” ibaresinden sonra gelmek üzere “sahiplendirilinceye kadar” ibaresi, ikinci
+fıkrasının ikinci cümlesinde yer alan “olmayan belediyeler” ibaresinden sonra
+gelmek üzere “ile il özel idareleri” ibaresi eklenmiştir.</span></i> </p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+    <p id="page-end"></p>
+    <script src="/lib/tooltip/tooltip.js"></script>
+    <script>
+        $(document).ready(function () {
+            jQuery('table').each(function (cmp) {
+                var parent = this.parentNode;
+                var wrapper = document.createElement('div');
+
+                parent.replaceChild(wrapper, this);
+                wrapper.appendChild(this);
+                this.parentElement.style.overflowX = 'auto';
+            });
+            if (window.location.search.indexOf("2709") != -1 || window.location.search.indexOf("MevzuatTur=19") != -1) {
+                var tableCss = document.styleSheets[0].cssRules[2].style;
+                tableCss.cssText = tableCss.cssText.replace("100%", "initial");
+            }
+            //$('.tooltip').tooltipster();
+            //replaceTable();
+            //$(window).on('resize', function () {
+            //    replaceTable();
+            //});
+            //replaceTable();
+        });
+            //function replaceTable() {
+            //    //if (window.location.search.indexOf("MevzuatTur=19") == -1) {
+            //    //    var iframe = document.getElementsByTagName("td");
+            //    //    var value = $('body').width() - 10;
+            //    //    for (var i = 0; i < iframe.length; i++) {
+            //    //        iframe[i].style.width = "initial !important";
+            //    //    }
+            //    //}
+
+
+            //    //var iframe = document.getElementsByClassName("MsoNormalTable");
+            //    //var value = $('body').width() - 10;
+            //
+            //    //for (var i = 0; i < iframe.length; i++) {
+            //    //    iframe[i].style.width = value;
+            //    //}
+
+            //    //var iframe2 = document.getElementsByClassName("MsoNormal");
+            //    ////for (var j = 0; j < iframe2.length; j++) {
+            //    ////    iframe2[j].style.width = value;
+            //    ////}
+            //}
+    </script>
+
+
+
