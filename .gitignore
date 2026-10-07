@@ -12,3 +12,4 @@ runs/
 .vscode/
 *.zip
 scratch/
+data/ap6/annotation/excel/
