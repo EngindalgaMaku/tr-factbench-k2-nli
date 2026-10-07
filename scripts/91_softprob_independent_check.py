@@ -58,7 +58,7 @@ def main() -> None:
         lines.append(f"| {name} | {len(ids)} | {mf1(y, flat):.4f} | {mf1(y, soft):.4f} | {mf1(y, soft) - mf1(y, flat):+.4f} | "
                      f"[{d[125]:+.4f}, {d[4875]:+.4f}] | {sum(f != s for f, s in zip(flat, soft))} | {b} / {c} |")
     out = ROOT / "reports" / "K2_SOFTPROB_INDEPENDENT_CHECK.md"
-    lines += ["", "Pilot kümesi Gold-480 ile iddia düzeyinde örtüşmez (0/200). Pilotta önermeler Gemma atomizerinden değil, asistan taslağından gelir."]
+    lines += ["", "Pilot kümesi DEV960 (legacy) içinden 200 iddiadır (200/200 eşleşme); Gold-480 ile örtüşmez (0/200). Pilotta önermeler Gemma atomizerinden değil, asistan taslağından gelir."]
     out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 
