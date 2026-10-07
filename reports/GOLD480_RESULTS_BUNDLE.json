@@ -81,7 +81,7 @@
         "unverifiable": 0.8416
       }
     },
-    "Kahin üst sınırı (K1 veya K2 doğru)": {
+    "İdeal seçim üst sınırı (K1 veya K2 doğru)": {
       "accuracy": 0.9333333333333333,
       "macro_f1": 0.9331127019961373,
       "ci95": [

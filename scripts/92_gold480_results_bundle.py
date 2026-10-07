@@ -78,7 +78,7 @@ def main() -> None:
     systems["K1 (ELECTRA-TR)"] = (k1, 0.0)
     systems["K2 düz kural"] = (k2f, 0.0)
     systems["K2 soft-prob"] = (k2s, 0.0)
-    systems["Kahin üst sınırı (K1 veya K2 doğru)"] = ({i: gold[i] if gold[i] in (k1[i], k2s[i]) else k1[i] for i in ids}, None)
+    systems["İdeal seçim üst sınırı (K1 veya K2 doğru)"] = ({i: gold[i] if gold[i] in (k1[i], k2s[i]) else k1[i] for i in ids}, None)
     systems["Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)"] = ({i: k1[i] if k1[i] == k2s[i] else v4[i] for i in ids}, len(dis) / len(ids))
     gz = llm[("google_gemma-4-26b-a4b-it", "zero_shot")]
     for (model, mode), pred in llm.items():
