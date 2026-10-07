@@ -8,10 +8,10 @@
     "legal": 485,
     "finance": 396
   },
-  "hit_at_3_overall": 0.9833,
+  "hit_at_3_overall": 1.0,
   "hit_at_3_by_domain": {
     "medical": 1.0,
-    "legal": 0.95,
+    "legal": 1.0,
     "finance": 1.0
   },
   "max_context_words": 212,

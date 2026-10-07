@@ -2,17 +2,52 @@
   "created_before_any_label": true,
   "census": true,
   "seed": 42,
-  "n_sentences": 854,
+  "n_sentences": 858,
   "n_system_flagged": 636,
   "n_abstention_flag_only": 0,
   "n_random": 218,
   "n_rest_pool": 218,
-  "n_items_A": 854,
+  "n_items_A": 858,
   "n_items_B": 50,
   "sha256": {
-    "system_predictions_v1.jsonl": "b1bcbbf322bff30e8fd4354577d150f504fa5d9f90745e85a029bd5fbda7648f",
-    "items_A.jsonl": "fc8b5fa4ebb64a01f035eb270936ce283b552e7eb0a2dd6b4e12d365b18f86a8",
-    "items_B.jsonl": "2ff722395da038204193a3357e6a96d08a5445a62761c27cf45e939e16495988",
-    "item_key_v1.jsonl": "ed7ce6e522ccef464ea15c268a23d696417c2c04b76e198a73cfe2a2a4779a85"
-  }
+    "system_predictions_v1.jsonl": "04bf9f89df977ac819ed911cecccb6970fa60f889e2f004c714a9bfd52b60ae6",
+    "items_A.jsonl": "fda14e3794fff7864f29569fa5bed91a0ae4ffa1244feebe0ef55f2bbe65d07e",
+    "items_B.jsonl": "c487f13575a242d66adb97eb89f2809a9c23b3a1bf845cd2c356be2090d2aafd",
+    "item_key_v1.jsonl": "cb25fd46638b0daec5ba2a37b7330b48162506a135b8fd7ca5f0dc4de31bfe15"
+  },
+  "protocol_amendment": "v1.7 (LEG-B2 question fix)",
+  "legb2_removed_items": [
+    "AP6-0013",
+    "AP6-0088",
+    "AP6-0323",
+    "AP6-0390",
+    "AP6-0403",
+    "AP6-0459",
+    "AP6-0465",
+    "AP6-0474",
+    "AP6-0541",
+    "AP6-0708",
+    "AP6-0830"
+  ],
+  "legb2_added_items": [
+    "AP6-0855",
+    "AP6-0856",
+    "AP6-0857",
+    "AP6-0858",
+    "AP6-0859",
+    "AP6-0860",
+    "AP6-0861",
+    "AP6-0862",
+    "AP6-0863",
+    "AP6-0864",
+    "AP6-0865",
+    "AP6-0866",
+    "AP6-0867",
+    "AP6-0868",
+    "AP6-0869"
+  ],
+  "b_items_replaced": [
+    "AP6-0323",
+    "AP6-0708"
+  ]
 }

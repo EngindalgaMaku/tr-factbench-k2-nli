@@ -54,7 +54,7 @@ def sha256(path: Path) -> str:
 def main() -> None:
     sentences = read_jsonl(AP6 / "generation" / "sentences.jsonl")
     claims = {r["example_id"]: r for r in read_jsonl(VER / "ap6_claims.jsonl")}
-    questions = {r["question_id"]: r["question"] for r in read_jsonl(AP6 / "questions" / "questions_v1.0.jsonl")}
+    questions = {r["question_id"]: r["question"] for r in read_jsonl(AP6 / "questions" / "questions_v1.1.jsonl")}
     k1 = {r["example_id"]: r["predicted_label"] for r in read_jsonl(VER / "k1_predictions.jsonl")}
     k2 = {r["example_id"]: r["pred_label"] for r in read_jsonl(VER / "k2_soft_prob_predictions.jsonl")}
     judge = {r["example_id"]: r["judge_decision"] for r in read_jsonl(VER / "v4_judge_predictions.jsonl")}

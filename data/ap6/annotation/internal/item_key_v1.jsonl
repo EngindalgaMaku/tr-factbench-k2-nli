@@ -10,7 +10,6 @@
 {"item_id": "AP6-0010", "example_id": "MED-B7__qwen3-8b__s07", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0011", "example_id": "MED-A4__deepseek-v4-pro__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0012", "example_id": "LEG-A3__qwen3-8b__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0013", "example_id": "LEG-B2__ministral-3b-2512__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0014", "example_id": "FIN-A5__ministral-3b-2512__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0015", "example_id": "MED-A4__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0016", "example_id": "MED-C5__qwen3-8b__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -85,7 +84,6 @@
 {"item_id": "AP6-0085", "example_id": "FIN-A7__ministral-3b-2512__s07", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0086", "example_id": "FIN-A7__deepseek-v4-pro__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0087", "example_id": "LEG-A3__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0088", "example_id": "LEG-B2__qwen3-8b__s05", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0089", "example_id": "MED-C1__deepseek-v4-pro__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0090", "example_id": "FIN-B2__qwen3-8b__s04", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0091", "example_id": "MED-A2__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
@@ -320,7 +318,6 @@
 {"item_id": "AP6-0320", "example_id": "LEG-B1__ministral-3b-2512__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0321", "example_id": "LEG-B5__qwen3-8b__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0322", "example_id": "LEG-B6__ministral-3b-2512__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
-{"item_id": "AP6-0323", "example_id": "LEG-B2__qwen3-8b__s04", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0324", "example_id": "MED-C2__qwen3-8b__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0325", "example_id": "LEG-C5__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0326", "example_id": "MED-B1__qwen3-8b__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -387,7 +384,6 @@
 {"item_id": "AP6-0387", "example_id": "FIN-C1__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0388", "example_id": "FIN-C5__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0389", "example_id": "FIN-C5__ministral-3b-2512__s05", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0390", "example_id": "LEG-B2__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0391", "example_id": "LEG-B7__deepseek-v4-pro__s03", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0392", "example_id": "MED-C4__ministral-3b-2512__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0393", "example_id": "MED-A6__ministral-3b-2512__s04", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -400,7 +396,6 @@
 {"item_id": "AP6-0400", "example_id": "LEG-B7__qwen3-8b__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0401", "example_id": "MED-C5__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0402", "example_id": "MED-B7__deepseek-v4-pro__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0403", "example_id": "LEG-B2__qwen3-8b__s03", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0404", "example_id": "FIN-A7__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0405", "example_id": "MED-A7__qwen3-8b__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0406", "example_id": "FIN-B7__deepseek-v4-pro__s03", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -456,13 +451,11 @@
 {"item_id": "AP6-0456", "example_id": "MED-C4__qwen3-8b__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0457", "example_id": "MED-A8__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0458", "example_id": "LEG-A1__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0459", "example_id": "LEG-B2__qwen3-8b__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0460", "example_id": "FIN-C3__deepseek-v4-pro__s05", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0461", "example_id": "MED-C3__qwen3-8b__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0462", "example_id": "LEG-A7__ministral-3b-2512__s04", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0463", "example_id": "MED-A8__ministral-3b-2512__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0464", "example_id": "FIN-A8__ministral-3b-2512__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
-{"item_id": "AP6-0465", "example_id": "LEG-B2__ministral-3b-2512__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0466", "example_id": "MED-B4__ministral-3b-2512__s11", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0467", "example_id": "LEG-A2__qwen3-8b__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0468", "example_id": "LEG-C1__deepseek-v4-pro__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
@@ -471,7 +464,6 @@
 {"item_id": "AP6-0471", "example_id": "MED-B2__deepseek-v4-pro__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0472", "example_id": "LEG-A6__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0473", "example_id": "MED-A8__ministral-3b-2512__s04", "stratum": "census_rest", "inclusion_prob": 1.0}
-{"item_id": "AP6-0474", "example_id": "LEG-B2__qwen3-8b__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0475", "example_id": "MED-B4__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0476", "example_id": "MED-C3__qwen3-8b__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0477", "example_id": "LEG-A5__qwen3-8b__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -538,7 +530,6 @@
 {"item_id": "AP6-0538", "example_id": "MED-B7__qwen3-8b__s06", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0539", "example_id": "MED-A8__qwen3-8b__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0540", "example_id": "MED-B3__qwen3-8b__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0541", "example_id": "LEG-B2__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0542", "example_id": "MED-A5__qwen3-8b__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0543", "example_id": "MED-A5__ministral-3b-2512__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0544", "example_id": "FIN-A8__qwen3-8b__s07", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -705,7 +696,6 @@
 {"item_id": "AP6-0705", "example_id": "MED-B7__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0706", "example_id": "FIN-A5__qwen3-8b__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0707", "example_id": "LEG-A6__qwen3-8b__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
-{"item_id": "AP6-0708", "example_id": "LEG-B2__ministral-3b-2512__s05", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0709", "example_id": "LEG-A5__deepseek-v4-pro__s02", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0710", "example_id": "LEG-B3__ministral-3b-2512__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0711", "example_id": "MED-A4__qwen3-8b__s04", "stratum": "system_flagged", "inclusion_prob": 1.0}
@@ -827,7 +817,6 @@
 {"item_id": "AP6-0827", "example_id": "FIN-B2__deepseek-v4-pro__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0828", "example_id": "FIN-A6__ministral-3b-2512__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0829", "example_id": "FIN-B5__qwen3-8b__s07", "stratum": "census_rest", "inclusion_prob": 1.0}
-{"item_id": "AP6-0830", "example_id": "LEG-B2__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0831", "example_id": "LEG-B5__deepseek-v4-pro__s03", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0832", "example_id": "MED-B7__ministral-3b-2512__s06", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0833", "example_id": "MED-A1__ministral-3b-2512__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
@@ -852,3 +841,18 @@
 {"item_id": "AP6-0852", "example_id": "MED-B4__ministral-3b-2512__s03", "stratum": "system_flagged", "inclusion_prob": 1.0}
 {"item_id": "AP6-0853", "example_id": "LEG-A1__deepseek-v4-pro__s01", "stratum": "census_rest", "inclusion_prob": 1.0}
 {"item_id": "AP6-0854", "example_id": "FIN-A4__ministral-3b-2512__s02", "stratum": "system_flagged", "inclusion_prob": 1.0}
+{"item_id": "AP6-0855", "example_id": "LEG-B2__deepseek-v4-pro__s01", "stratum": "census_rest", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0856", "example_id": "LEG-B2__deepseek-v4-pro__s02", "stratum": "census_rest", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0857", "example_id": "LEG-B2__deepseek-v4-pro__s03", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0858", "example_id": "LEG-B2__ministral-3b-2512__s01", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0859", "example_id": "LEG-B2__ministral-3b-2512__s02", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0860", "example_id": "LEG-B2__ministral-3b-2512__s03", "stratum": "census_rest", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0861", "example_id": "LEG-B2__ministral-3b-2512__s04", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0862", "example_id": "LEG-B2__ministral-3b-2512__s05", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0863", "example_id": "LEG-B2__ministral-3b-2512__s06", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0864", "example_id": "LEG-B2__ministral-3b-2512__s07", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0865", "example_id": "LEG-B2__qwen3-8b__s01", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0866", "example_id": "LEG-B2__qwen3-8b__s02", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0867", "example_id": "LEG-B2__qwen3-8b__s03", "stratum": "census_rest", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0868", "example_id": "LEG-B2__qwen3-8b__s04", "stratum": "census_rest", "inclusion_prob": 1.0, "added_in": "v1.7"}
+{"item_id": "AP6-0869", "example_id": "LEG-B2__qwen3-8b__s05", "stratum": "system_flagged", "inclusion_prob": 1.0, "added_in": "v1.7"}

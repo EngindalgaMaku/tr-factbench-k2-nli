@@ -24,7 +24,7 @@ from transformers import AutoModel, AutoTokenizer
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "data" / "ap6" / "sources"
-QUESTIONS = ROOT / "data" / "ap6" / "questions" / "questions_v1.0.jsonl"
+QUESTIONS = ROOT / "data" / "ap6" / "questions" / "questions_v1.1.jsonl"
 OUT = ROOT / "data" / "ap6" / "rag"
 MODEL_ID = "intfloat/multilingual-e5-large"
 MAX_WORDS = 70  # 85 exceeded mDeBERTa's 512-token limit for 37/60 contexts (Turkish ~2.2 tok/word)

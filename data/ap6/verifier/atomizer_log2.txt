@@ -1,0 +1,34 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+W1007 06:18:19.480000 10600 torch\utils\flop_counter.py:29] triton not found; flop counting will not work for triton kernels
+======================================================================
+K2 PIPELINE: GEMMA-4 QLoRA ATOMIZATION ON 480 GOLD TEST EXAMPLES
+======================================================================
+Input Gold Set : data\ap6\verifier\ap6_claims.jsonl
+Adapter Path   : C:\Users\Engin Dalga\Documents\GitHub\halusinasyon\hls_new\atomizer\v2\outputs\google_gemma_4_e2b_it_final_adapter
+Output File    : data\ap6\verifier\atoms\k2_input.jsonl
+Loaded 854 gold test claims.
+Resuming: 829 records already processed.
+
+Loading Gemma-4 QLoRA Atomizer onto GPU...
+Loading weights:   0%|          | 0/1951 [00:00<?, ?it/s]Loading weights:   0%|          | 3/1951 [00:00<01:39, 19.49it/s]Loading weights:   7%|▋         | 132/1951 [00:00<00:02, 615.48it/s]Loading weights:  13%|█▎        | 263/1951 [00:00<00:01, 875.92it/s]Loading weights:  20%|██        | 392/1951 [00:00<00:01, 1003.56it/s]Loading weights:  27%|██▋       | 530/1951 [00:00<00:01, 1123.58it/s]Loading weights:  34%|███▎      | 654/1951 [00:00<00:01, 1155.02it/s]Loading weights:  40%|███▉      | 773/1951 [00:05<00:14, 80.37it/s]  Loading weights:  44%|████▍     | 854/1951 [00:05<00:11, 92.99it/s]Loading weights:  47%|████▋     | 916/1951 [00:05<00:10, 101.86it/s]Loading weights:  49%|████▉     | 963/1951 [00:06<00:08, 113.63it/s]Loading weights:  51%|█████▏    | 1003/1951 [00:06<00:07, 125.78it/s]Loading weights:  53%|█████▎    | 1039/1951 [00:06<00:07, 127.04it/s]Loading weights:  55%|█████▍    | 1068/1951 [00:06<00:06, 126.46it/s]Loading weights:  56%|█████▌    | 1092/1951 [00:06<00:07, 121.34it/s]Loading weights:  57%|█████▋    | 1112/1951 [00:07<00:07, 118.43it/s]Loading weights:  58%|█████▊    | 1129/1951 [00:07<00:07, 116.49it/s]Loading weights:  59%|█████▊    | 1145/1951 [00:07<00:06, 120.03it/s]Loading weights:  59%|█████▉    | 1160/1951 [00:07<00:06, 120.04it/s]Loading weights:  60%|██████    | 1174/1951 [00:07<00:06, 118.80it/s]Loading weights:  61%|██████    | 1188/1951 [00:07<00:06, 117.77it/s]Loading weights:  62%|██████▏   | 1201/1951 [00:07<00:06, 115.71it/s]Loading weights:  62%|██████▏   | 1214/1951 [00:08<00:06, 114.61it/s]Loading weights:  63%|██████▎   | 1226/1951 [00:08<00:06, 109.28it/s]Loading weights:  64%|██████▎   | 1239/1951 [00:08<00:06, 109.24it/s]Loading weights:  64%|██████▍   | 1253/1951 [00:08<00:06, 107.45it/s]Loading weights:  65%|██████▍   | 1267/1951 [00:08<00:06, 110.75it/s]Loading weights:  66%|██████▌   | 1281/1951 [00:08<00:05, 113.38it/s]Loading weights:  70%|███████   | 1367/1951 [00:08<00:01, 305.70it/s]Loading weights:  79%|███████▉  | 1537/1951 [00:08<00:00, 679.79it/s]Loading weights:  87%|████████▋ | 1707/1951 [00:08<00:00, 962.02it/s]Loading weights:  96%|█████████▌| 1868/1951 [00:09<00:00, 1145.36it/s]Loading weights: 100%|██████████| 1951/1951 [00:09<00:00, 212.85it/s] 
+Atomizer loaded in 18.48 seconds.
+
+Starting inference across 480 claims...
+[850/854] Elapsed: 193.5s | Speed: 4.39 claims/s | Valid: 21 | Failures: 0 | Avg atoms: 1.29
+[854/854] Elapsed: 247.7s | Speed: 3.45 claims/s | Valid: 25 | Failures: 0 | Avg atoms: 1.32
+
+======================================================================
+ATOMIZATION COMPLETED SUCCESSFULLY!
+Output File: data\ap6\verifier\atoms\k2_input.jsonl
+Summary    : {
+  "dataset": "TR-FactBench_controlled480_GOLD_v1.0",
+  "total_claims": 854,
+  "successfully_atomized": 25,
+  "failed_atomization": 0,
+  "coverage": 0.02927400468384075,
+  "total_atoms_produced": 33,
+  "mean_atoms_per_valid_claim": 1.32,
+  "total_inference_time_sec": 247.6836292743683,
+  "claims_per_second": 3.4479468929857804
+}
+======================================================================

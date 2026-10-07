@@ -175,3 +175,20 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 - §8'deki "%95 bootstrap güven aralığı"nın birimi netleştirildi: aynı yanıta ait cümleler bağımsız olmadığından yeniden örnekleme
   **soru düzeyinde küme bootstrap** ile yapılır (60 soru; seçilen sorunun üç modelin bütün cümleleri birlikte alınır), 10.000 tekrar, seed 42.
   Model bazındaki oranlarda aynı kural, ilgili modelin cümleleriyle uygulanır.
+
+### v1.7 (2026-10-07, etiketleme sürerken; LEG-B2'ye ait hiçbir madde etiketlenmemişken)
+- **Hata:** Soru taslağı CSV'den JSONL'e dönüştürülürken LEG-B2 sorusu tırnaksız virgülden kesildi
+  ("Bir yıl içinde 100 ceza puanını birinci"); geri kalanı yan sütuna kaydı. Diğer 59 soru taslakla birebir aynıdır (CSV ayrıştırıcıyla doğrulandı).
+  Hata, etiketleme arayüzünde yazar tarafından fark edildi; dönüşümü yapan araştırma asistanının (Claude) hatasıdır.
+- **Geri çekilen yorum (§4.2):** "Kaçan soru (LEG-B2) … gerçekçi retrieval kusuru" yanlıştır. Kanıt kontrolü kayan sütunu okuduğu için
+  başarısız görünmüştü. Düzeltilmiş soruyla getirme aynı üç parçayı döndürdü ve kanıt bu parçalardadır: Hit@3 = 60/60.
+- **Düzeltme (yazar kararı):** `questions_v1.1.jsonl` (yalnız LEG-B2 değişti). LEG-B2'nin üç yanıtı aynı istem ve kod çözme ayarlarıyla
+  yeniden üretildi; cümle bölme 15 yeni cümle verdi (eski 11 cümle arşivde). Toplam 858 cümle.
+- Bütün dondurulmuş doğrulayıcılar yeni 15 cümlede çalıştırıldı (K1, atomik ayrıştırıcı, K2, V4 hakemi, Gemma-26B, GPT-4.1-mini).
+  LEG-B2 dışındaki 843 cümlenin bütün sistem tahminleri v1.6 ile birebir aynıdır (betik 94 doğrular).
+- **Gözlem:** K2 NLI aynı girdilerle yeniden çalıştırıldığında yığın (batch) bileşimi değiştiği için 843 cümlenin 2'sinde (LEG-A7 qwen s06,
+  LEG-A8 qwen s01) eşiğe yakın önerme olasılıkları ±0,03–0,05 kaydı ve karar değişti. Ön kayıt gereği bu iki cümlede v1.6 kararları korundu;
+  bu duyarlılık sınırlılık olarak raporlanır.
+- Etiketleme: eski 11 LEG-B2 maddesi (hiçbiri etiketlenmemişti) çıkarıldı; 15 yeni madde yeni kimliklerle (AP6-0855…) etiketlenmemiş bölgeye
+  rastgele yerleştirildi (seed 47). B kümesindeki 2 eski LEG-B2 maddesi yeni LEG-B2 maddeleriyle değiştirildi. Verilmiş 12 etiket korunmuştur.
+- Önceki dosyalar: `data/ap6/_archive_v1.6_before_legb2_fix/`.
