@@ -129,6 +129,11 @@ def main() -> None:
         ("Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)", "Tek başına gpt-4.1-mini few_shot_8"),
         ("Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)", "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot"),
         ("K2 soft-prob", "K2 düz kural"),
+        ("Hibrit P0 + kör llama-3.3-70b-instruct zero_shot", "Tek başına llama-3.3-70b-instruct zero_shot"),
+        ("Hibrit P0 + kör gpt-4.1-mini zero_shot", "Tek başına gpt-4.1-mini zero_shot"),
+        ("Hibrit P0 + kör qwen-2.5-72b-instruct zero_shot", "Tek başına qwen-2.5-72b-instruct zero_shot"),
+        ("Hibrit P0 + kör qwen-2.5-72b-instruct few_shot_8", "Tek başına qwen-2.5-72b-instruct few_shot_8"),
+        ("Hibrit P0 + kör gemma-4-26b-a4b-it few_shot_8", "Tek başına gemma-4-26b-a4b-it few_shot_8"),
     ]
     lines += ["", "## Seçili eşleştirilmiş karşılaştırmalar", "",
               "| A | B | ΔMacro-F1 (A−B) [%95 GA] | McNemar (yalnız A doğru / yalnız B doğru, p) |", "|---|---|---|---|"]
