@@ -601,5 +601,91 @@
         "unverifiable": 0.8235
       }
     }
-  }
+  },
+  "pairs": [
+    {
+      "a": "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot",
+      "b": "Tek başına gemma-4-26b-a4b-it zero_shot",
+      "delta": 0.020114236210326708,
+      "ci95": [
+        -0.002907966973876741,
+        0.04385147069904238
+      ],
+      "a_only": 23,
+      "b_only": 14,
+      "p": 0.18774155899882317
+    },
+    {
+      "a": "Hibrit P0 + kör gpt-4.1-mini few_shot_8",
+      "b": "Tek başına gpt-4.1-mini few_shot_8",
+      "delta": 0.005165423002438607,
+      "ci95": [
+        -0.019411344974710976,
+        0.029945685629741536
+      ],
+      "a_only": 19,
+      "b_only": 17,
+      "p": 0.8679394004284404
+    },
+    {
+      "a": "Hibrit P0 + kör llama-3.3-70b-instruct few_shot_8",
+      "b": "Tek başına llama-3.3-70b-instruct few_shot_8",
+      "delta": 0.005979028967490585,
+      "ci95": [
+        -0.01752258267518536,
+        0.029793350510680883
+      ],
+      "a_only": 20,
+      "b_only": 17,
+      "p": 0.7428293587290682
+    },
+    {
+      "a": "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot",
+      "b": "Tek başına gpt-4.1-mini few_shot_8",
+      "delta": 0.01258115355418199,
+      "ci95": [
+        -0.02007487084361359,
+        0.04570274457020551
+      ],
+      "a_only": 35,
+      "b_only": 29,
+      "p": 0.5323087760278421
+    },
+    {
+      "a": "Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)",
+      "b": "Tek başına gpt-4.1-mini few_shot_8",
+      "delta": 0.021713551935830466,
+      "ci95": [
+        -0.008865638743038029,
+        0.05217322002850744
+      ],
+      "a_only": 35,
+      "b_only": 25,
+      "p": 0.2450608330229457
+    },
+    {
+      "a": "Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)",
+      "b": "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot",
+      "delta": 0.009132398381648477,
+      "ci95": [
+        -0.011883400386071163,
+        0.030820260910907504
+      ],
+      "a_only": 14,
+      "b_only": 10,
+      "p": 0.5412561893463135
+    },
+    {
+      "a": "K2 soft-prob",
+      "b": "K2 düz kural",
+      "delta": 0.022715962270544954,
+      "ci95": [
+        0.007131888728348246,
+        0.03903308292885421
+      ],
+      "a_only": 12,
+      "b_only": 2,
+      "p": 0.012939453125
+    }
+  ]
 }

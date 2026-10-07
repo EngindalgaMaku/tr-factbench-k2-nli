@@ -121,6 +121,26 @@ def main() -> None:
     lines += ["", "## Sınıf bazında F1", "", "| Sistem | " + " | ".join(LABELS) + " |", "|---|" + "---:|" * 4]
     for name, rec in out["systems"].items():
         lines.append(f"| {name} | " + " | ".join(f"{rec['per_class_f1'][l]:.4f}" for l in LABELS) + " |")
+    pairs = [
+        ("Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot", "Tek başına gemma-4-26b-a4b-it zero_shot"),
+        ("Hibrit P0 + kör gpt-4.1-mini few_shot_8", "Tek başına gpt-4.1-mini few_shot_8"),
+        ("Hibrit P0 + kör llama-3.3-70b-instruct few_shot_8", "Tek başına llama-3.3-70b-instruct few_shot_8"),
+        ("Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot", "Tek başına gpt-4.1-mini few_shot_8"),
+        ("Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)", "Tek başına gpt-4.1-mini few_shot_8"),
+        ("Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)", "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot"),
+        ("K2 soft-prob", "K2 düz kural"),
+    ]
+    lines += ["", "## Seçili eşleştirilmiş karşılaştırmalar", "",
+              "| A | B | ΔMacro-F1 (A−B) [%95 GA] | McNemar (yalnız A doğru / yalnız B doğru, p) |", "|---|---|---|---|"]
+    out["pairs"] = []
+    for a_name, b_name in pairs:
+        pa_, pb_ = systems[a_name][0], systems[b_name][0]
+        d = mf1(y_all, [pa_[i] for i in ids]) - mf1(y_all, [pb_[i] for i in ids])
+        ds = sorted(mf1([gold[i] for i in s], [pa_[i] for i in s]) - mf1([gold[i] for i in s], [pb_[i] for i in s]) for s in boots)
+        lo, hi = ds[int(0.025 * N_BOOT)], ds[int(0.975 * N_BOOT) - 1]
+        b, c, p = mcnemar_exact([pb_[i] == gold[i] for i in ids], [pa_[i] == gold[i] for i in ids])
+        out["pairs"].append({"a": a_name, "b": b_name, "delta": d, "ci95": [lo, hi], "a_only": c, "b_only": b, "p": p})
+        lines.append(f"| {a_name} | {b_name} | {d:+.4f} [{lo:+.4f}, {hi:+.4f}] | {c} / {b}, {p:.3g} |")
     lines += ["", "Notlar: V4 istemi ve soft-prob kuralı Gold-480 üzerinde seçilmiştir (Karar 7, 15); PA/PB Gold-480 uzlaşma hataları "
               "incelenerek tasarlanmıştır (tasarım analizi). Kör hakemler istem geliştirmesine katılmamıştır. "
               "McNemar b = yalnız K1 doğru, c = yalnız sistem doğru."]

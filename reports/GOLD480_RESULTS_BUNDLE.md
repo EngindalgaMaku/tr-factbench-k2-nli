@@ -56,4 +56,16 @@ n = 480, bağlam grubu = 120, K1≠K2 (soft-prob) = 123. GA: bağlam grubu boots
 | Tek başına qwen-2.5-72b-instruct zero_shot | 0.9917 | 0.7920 | 0.8138 | 0.6667 |
 | Tek başına qwen-2.5-72b-instruct few_shot_8 | 0.9917 | 0.7570 | 0.8897 | 0.8235 |
 
+## Seçili eşleştirilmiş karşılaştırmalar
+
+| A | B | ΔMacro-F1 (A−B) [%95 GA] | McNemar (yalnız A doğru / yalnız B doğru, p) |
+|---|---|---|---|
+| Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot | Tek başına gemma-4-26b-a4b-it zero_shot | +0.0201 [-0.0029, +0.0439] | 23 / 14, 0.188 |
+| Hibrit P0 + kör gpt-4.1-mini few_shot_8 | Tek başına gpt-4.1-mini few_shot_8 | +0.0052 [-0.0194, +0.0299] | 19 / 17, 0.868 |
+| Hibrit P0 + kör llama-3.3-70b-instruct few_shot_8 | Tek başına llama-3.3-70b-instruct few_shot_8 | +0.0060 [-0.0175, +0.0298] | 20 / 17, 0.743 |
+| Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot | Tek başına gpt-4.1-mini few_shot_8 | +0.0126 [-0.0201, +0.0457] | 35 / 29, 0.532 |
+| Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi) | Tek başına gpt-4.1-mini few_shot_8 | +0.0217 [-0.0089, +0.0522] | 35 / 25, 0.245 |
+| Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi) | Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot | +0.0091 [-0.0119, +0.0308] | 14 / 10, 0.541 |
+| K2 soft-prob | K2 düz kural | +0.0227 [+0.0071, +0.0390] | 12 / 2, 0.0129 |
+
 Notlar: V4 istemi ve soft-prob kuralı Gold-480 üzerinde seçilmiştir (Karar 7, 15); PA/PB Gold-480 uzlaşma hataları incelenerek tasarlanmıştır (tasarım analizi). Kör hakemler istem geliştirmesine katılmamıştır. McNemar b = yalnız K1 doğru, c = yalnız sistem doğru.
