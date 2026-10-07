@@ -170,3 +170,8 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 - Karar (yazar, 2026-10-07): **tam sayım** — 854 cümlenin tamamı Anotatör A tarafından etiketlenir. Örnekleme ağırlıkları gerekmez;
   S1–S3 doğrudan tam küme üzerinde hesaplanır. Anotatör B: A kümesinden rastgele 50 cümle (seçim seed 44, sıra seed 45).
 - A için öğe sırası karışık (seed 43), kimlikler anlamsız (`AP6-0001`…); eşleme `data/ap6/annotation/internal/` altında, anotatöre gösterilmez.
+
+### v1.6 (2026-10-07, hiçbir etiket görülmeden önce)
+- §8'deki "%95 bootstrap güven aralığı"nın birimi netleştirildi: aynı yanıta ait cümleler bağımsız olmadığından yeniden örnekleme
+  **soru düzeyinde küme bootstrap** ile yapılır (60 soru; seçilen sorunun üç modelin bütün cümleleri birlikte alınır), 10.000 tekrar, seed 42.
+  Model bazındaki oranlarda aynı kural, ilgili modelin cümleleriyle uygulanır.
