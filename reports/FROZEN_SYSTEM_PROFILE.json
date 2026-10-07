@@ -1,0 +1,84 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "torch": "2.11.0+cu126",
+  "python": "3.14.3",
+  "components": {
+    "K1 (ELECTRA-TR LoRA)": {
+      "n": 480,
+      "mean_ms": 16.53301103748769,
+      "median_ms": 16.356850042939186,
+      "p95_ms": 18.064799951389432,
+      "peak_gpu_mb": 453.9306640625
+    },
+    "K2 NLI (mDeBERTa-v3, iddianın bütün önermeleri)": {
+      "n": 480,
+      "mean_ms": 19.337963966245297,
+      "median_ms": 19.113250076770782,
+      "p95_ms": 20.60779999010265,
+      "peak_gpu_mb": 595.806640625
+    },
+    "Atomik ayrıştırıcı (Gemma-4-E2B QLoRA, 4 bit)": {
+      "n": 60,
+      "mean_ms": 7528.976549999788,
+      "median_ms": 6990.6219500117,
+      "p95_ms": 10180.812399834394,
+      "peak_gpu_mb": 6730.65478515625
+    }
+  },
+  "external": {
+    "google_gemma-4-26b-a4b-it zero_shot": {
+      "n": 480,
+      "median_s": 4.497,
+      "p95_s": 13.46,
+      "mean_cost_usd": 0.000146701594875
+    },
+    "google_gemma-4-26b-a4b-it few_shot_8": {
+      "n": 480,
+      "median_s": 2.778,
+      "p95_s": 6.443,
+      "mean_cost_usd": 0.00023517874875
+    },
+    "meta-llama_llama-3.3-70b-instruct zero_shot": {
+      "n": 480,
+      "median_s": 4.5715,
+      "p95_s": 10.795,
+      "mean_cost_usd": 0.00035001483
+    },
+    "meta-llama_llama-3.3-70b-instruct few_shot_8": {
+      "n": 480,
+      "median_s": 4.379,
+      "p95_s": 7.251,
+      "mean_cost_usd": 0.000477428263125
+    },
+    "openai_gpt-4.1-mini zero_shot": {
+      "n": 480,
+      "median_s": 3.9285,
+      "p95_s": 5.928,
+      "mean_cost_usd": 0.0007198752
+    },
+    "openai_gpt-4.1-mini few_shot_8": {
+      "n": 480,
+      "median_s": 3.798,
+      "p95_s": 6.172,
+      "mean_cost_usd": 0.0006954024
+    },
+    "qwen_qwen-2.5-72b-instruct zero_shot": {
+      "n": 480,
+      "median_s": 10.0755,
+      "p95_s": 30.996,
+      "mean_cost_usd": 0.00047597583
+    },
+    "qwen_qwen-2.5-72b-instruct few_shot_8": {
+      "n": 480,
+      "median_s": 6.0585,
+      "p95_s": 9.86,
+      "mean_cost_usd": 0.001310477355
+    },
+    "V4 hakemi (Llama-3.3-70B), genellenebilirlik çağrıları": {
+      "n": 466,
+      "median_s": 3.54,
+      "p95_s": 7.97,
+      "mean_cost_usd": null
+    }
+  }
+}
