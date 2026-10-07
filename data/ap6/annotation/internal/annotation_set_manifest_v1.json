@@ -1,0 +1,18 @@
+{
+  "created_before_any_label": true,
+  "census": true,
+  "seed": 42,
+  "n_sentences": 854,
+  "n_system_flagged": 636,
+  "n_abstention_flag_only": 0,
+  "n_random": 218,
+  "n_rest_pool": 218,
+  "n_items_A": 854,
+  "n_items_B": 50,
+  "sha256": {
+    "system_predictions_v1.jsonl": "b1bcbbf322bff30e8fd4354577d150f504fa5d9f90745e85a029bd5fbda7648f",
+    "items_A.jsonl": "fc8b5fa4ebb64a01f035eb270936ce283b552e7eb0a2dd6b4e12d365b18f86a8",
+    "items_B.jsonl": "2ff722395da038204193a3357e6a96d08a5445a62761c27cf45e939e16495988",
+    "item_key_v1.jsonl": "ed7ce6e522ccef464ea15c268a23d696417c2c04b76e198a73cfe2a2a4779a85"
+  }
+}

@@ -150,3 +150,23 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
   - Doğrulayıcılara cümle, soru ve bağlamla birlikte verilir.
   - Anotatör soruyu ve yanıtın tamamını görür, hedef cümle vurgulanır; göndermeler yanıta göre çözülerek cümlenin söyledikleri etiketlenir.
   - "Bu/Bunlar/Söz konusu…" ile başlayan cümleler `back_reference` olarak işaretlenir ve ayrı alt küme olarak raporlanır.
+
+### v1.4 (2026-10-07, atomizer çalıştırıldı; K2 NLI, hakem ve etiketleme öncesinde)
+- Dondurulmuş atomizer ayarıyla (en fazla 180 üretilen belirteç) 854 cümlenin 2'sinde geçerli JSON üretilmedi.
+  Eski sonsuz döngü düzeltmesi (`<end_of_turn>` durdurma belirteci + ilk geçerli JSON nesnesinin alınması) etkindir; iki vakada da döngü yoktur.
+- `MED-B2__qwen3-8b__s01` (8 öğeli sayım cümlesi): çıktı 180 belirteçte kesiliyor. Yalnızca bu cümle 400 belirteç sınırıyla yeniden ayrıştırıldı;
+  model 251 belirteçte kendiliğinden durdu, 8 önerme üretildi. Kayıtta `atomizer_retry` alanı vardır.
+- `FIN-B1__ministral-3b-2512__s02`: 180 ve 400 belirteçte de biçimi bozuk JSON (her öğeden sonra fazladan `"]`). Onarılmadı;
+  atomizer hatası olarak raporlanır. Bu cümlede K2 karar vermez, hibrit sistem K1 kararını kullanır (hakeme gönderilmez).
+- Dondurulmuş ayarla üretilen dosya `data/ap6/verifier/atoms/k2_input_frozen180.jsonl` olarak saklanır.
+- Raporda: "Dondurulmuş ayarlarla 2/854 ayrıştırma hatası; 1'i uzunluk sınırı artırılarak giderildi, 1'i hata olarak kaldı."
+- Gözlem (değişiklik yok): Kör Gemma-26B karşılaştırma koşusunda 854 yanıtın 119'u yapılandırılmış çıktı modunda boşluk tekrarına girip
+  uzunluk sınırında kesildi. Etiket alanı JSON'un ilk alanı olduğu için, Gold-480'deki (2 vaka) ile aynı ayrıştırma kuralıyla etiket
+  kesilmeden önceki çıktıdan alındı. Kural değiştirilmedi; sayı raporda ayrıca verilir.
+
+### v1.5 (2026-10-07, hiçbir etiket görülmeden önce)
+- §7 seçim kuralı ("herhangi bir sistemin supported dışı dediği cümleler + 100 rastgele") ~230 cümle varsayıyordu; gerçek RAG yanıtlarında
+  yedi sistemden en az birinin itirazı 854 cümlenin 636'sını kapsadı (+100 rastgele = 736).
+- Karar (yazar, 2026-10-07): **tam sayım** — 854 cümlenin tamamı Anotatör A tarafından etiketlenir. Örnekleme ağırlıkları gerekmez;
+  S1–S3 doğrudan tam küme üzerinde hesaplanır. Anotatör B: A kümesinden rastgele 50 cümle (seçim seed 44, sıra seed 45).
+- A için öğe sırası karışık (seed 43), kimlikler anlamsız (`AP6-0001`…); eşleme `data/ap6/annotation/internal/` altında, anotatöre gösterilmez.
