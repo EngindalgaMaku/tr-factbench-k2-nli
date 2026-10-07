@@ -1,0 +1,605 @@
+{
+  "n": 480,
+  "groups": 120,
+  "disagreements": 123,
+  "systems": {
+    "K1 (ELECTRA-TR)": {
+      "accuracy": 0.83125,
+      "macro_f1": 0.8300912459845597,
+      "ci95": [
+        0.7988449345644963,
+        0.8601999836079011
+      ],
+      "mcc": 0.7785282022440176,
+      "call_rate": 0.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 0,
+        "c_sys_only": 0,
+        "p": 1.0
+      },
+      "domain_macro_f1": {
+        "finance": 0.8631749219098617,
+        "legal": 0.8565568798646961,
+        "medical": 0.7667417773561037
+      },
+      "per_class_f1": {
+        "supported": 0.9091,
+        "partially_supported": 0.8078,
+        "contradicted": 0.7918,
+        "unverifiable": 0.8116
+      }
+    },
+    "K2 düz kural": {
+      "accuracy": 0.7833333333333333,
+      "macro_f1": 0.7838338864487612,
+      "ci95": [
+        0.7468710335671462,
+        0.8189804038014933
+      ],
+      "mcc": 0.714525132080023,
+      "call_rate": 0.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 69,
+        "c_sys_only": 46,
+        "p": 0.03975050512654258
+      },
+      "domain_macro_f1": {
+        "finance": 0.8349871068526276,
+        "legal": 0.771298586957383,
+        "medical": 0.740320268004369
+      },
+      "per_class_f1": {
+        "supported": 0.8175,
+        "partially_supported": 0.7287,
+        "contradicted": 0.8066,
+        "unverifiable": 0.7826
+      }
+    },
+    "K2 soft-prob": {
+      "accuracy": 0.8041666666666667,
+      "macro_f1": 0.8065498487193061,
+      "ci95": [
+        0.7742224364183391,
+        0.83825792092504
+      ],
+      "mcc": 0.7412419841320983,
+      "call_rate": 0.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 62,
+        "c_sys_only": 49,
+        "p": 0.25460512309379413
+      },
+      "domain_macro_f1": {
+        "finance": 0.8689527086099913,
+        "legal": 0.7777312964812965,
+        "medical": 0.7707380823656669
+      },
+      "per_class_f1": {
+        "supported": 0.8175,
+        "partially_supported": 0.7287,
+        "contradicted": 0.8384,
+        "unverifiable": 0.8416
+      }
+    },
+    "Kahin üst sınırı (K1 veya K2 doğru)": {
+      "accuracy": 0.9333333333333333,
+      "macro_f1": 0.9331127019961373,
+      "ci95": [
+        0.9121377087754203,
+        0.9521253299317831
+      ],
+      "mcc": 0.9122180962861791,
+      "call_rate": null,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 0,
+        "c_sys_only": 49,
+        "p": 3.552713678800501e-15
+      },
+      "domain_macro_f1": {
+        "finance": 0.9562281985554343,
+        "legal": 0.9313163302251877,
+        "medical": 0.9109181976560026
+      },
+      "per_class_f1": {
+        "supported": 0.9714,
+        "partially_supported": 0.9274,
+        "contradicted": 0.9098,
+        "unverifiable": 0.9238
+      }
+    },
+    "Hibrit P0 + Llama-70B V4 (istem Gold'da geliştirildi)": {
+      "accuracy": 0.93125,
+      "macro_f1": 0.931469464129567,
+      "ci95": [
+        0.9112069521709527,
+        0.9504174825620196
+      ],
+      "mcc": 0.9091570145891897,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 6,
+        "c_sys_only": 54,
+        "p": 9.722961671898567e-11
+      },
+      "domain_macro_f1": {
+        "finance": 0.9560838081671414,
+        "legal": 0.9319751327104268,
+        "medical": 0.9055905885513709
+      },
+      "per_class_f1": {
+        "supported": 0.9669,
+        "partially_supported": 0.9004,
+        "contradicted": 0.9328,
+        "unverifiable": 0.9258
+      }
+    },
+    "Hibrit P0 + kör gemma-4-26b-a4b-it zero_shot": {
+      "accuracy": 0.9229166666666667,
+      "macro_f1": 0.9223370657479185,
+      "ci95": [
+        0.8967746779971517,
+        0.9453411480643037
+      ],
+      "mcc": 0.8998026193818368,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 4,
+        "c_sys_only": 48,
+        "p": 1.3065282189472782e-10
+      },
+      "domain_macro_f1": {
+        "finance": 0.9436397707231041,
+        "legal": 0.9500572410125255,
+        "medical": 0.8691953297059205
+      },
+      "per_class_f1": {
+        "supported": 0.9794,
+        "partially_supported": 0.8992,
+        "contradicted": 0.9218,
+        "unverifiable": 0.8889
+      }
+    },
+    "Hibrit P0 + kör gemma-4-26b-a4b-it few_shot_8": {
+      "accuracy": 0.9083333333333333,
+      "macro_f1": 0.9078036019765158,
+      "ci95": [
+        0.8826359415114191,
+        0.9311690807534665
+      ],
+      "mcc": 0.8823175633779334,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 3,
+        "c_sys_only": 40,
+        "p": 3.0213413992896676e-09
+      },
+      "domain_macro_f1": {
+        "finance": 0.9379607281906132,
+        "legal": 0.9376679096327499,
+        "medical": 0.8437698516770114
+      },
+      "per_class_f1": {
+        "supported": 0.9754,
+        "partially_supported": 0.8614,
+        "contradicted": 0.9372,
+        "unverifiable": 0.8571
+      }
+    },
+    "Hibrit P0 + kör llama-3.3-70b-instruct zero_shot": {
+      "accuracy": 0.8395833333333333,
+      "macro_f1": 0.8392404246246105,
+      "ci95": [
+        0.8081673050220102,
+        0.8682847330455601
+      ],
+      "mcc": 0.7934461071873151,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 24,
+        "c_sys_only": 28,
+        "p": 0.6778086391424605
+      },
+      "domain_macro_f1": {
+        "finance": 0.8825159744725354,
+        "legal": 0.8564021797367053,
+        "medical": 0.7748145359214637
+      },
+      "per_class_f1": {
+        "supported": 0.9712,
+        "partially_supported": 0.7652,
+        "contradicted": 0.8028,
+        "unverifiable": 0.8177
+      }
+    },
+    "Hibrit P0 + kör llama-3.3-70b-instruct few_shot_8": {
+      "accuracy": 0.9145833333333333,
+      "macro_f1": 0.9144852187065479,
+      "ci95": [
+        0.8902333138773062,
+        0.9374958421948262
+      ],
+      "mcc": 0.8885664428526692,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 7,
+        "c_sys_only": 47,
+        "p": 2.2918642095248742e-08
+      },
+      "domain_macro_f1": {
+        "finance": 0.9563806375798246,
+        "legal": 0.9191678830398343,
+        "medical": 0.8650869963369963
+      },
+      "per_class_f1": {
+        "supported": 0.9794,
+        "partially_supported": 0.8716,
+        "contradicted": 0.918,
+        "unverifiable": 0.8889
+      }
+    },
+    "Hibrit P0 + kör gpt-4.1-mini zero_shot": {
+      "accuracy": 0.9020833333333333,
+      "macro_f1": 0.9025438445890757,
+      "ci95": [
+        0.8774345470198006,
+        0.9269862156902757
+      ],
+      "mcc": 0.8718158368225907,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 15,
+        "c_sys_only": 49,
+        "p": 2.436457216293327e-05
+      },
+      "domain_macro_f1": {
+        "finance": 0.9434159649845925,
+        "legal": 0.89341764620953,
+        "medical": 0.8699250276942554
+      },
+      "per_class_f1": {
+        "supported": 0.9794,
+        "partially_supported": 0.8356,
+        "contradicted": 0.8571,
+        "unverifiable": 0.9381
+      }
+    },
+    "Hibrit P0 + kör gpt-4.1-mini few_shot_8": {
+      "accuracy": 0.9145833333333333,
+      "macro_f1": 0.9149213351961751,
+      "ci95": [
+        0.888735769278538,
+        0.9378656882705056
+      ],
+      "mcc": 0.886895421977193,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 13,
+        "c_sys_only": 53,
+        "p": 7.237175237417024e-07
+      },
+      "domain_macro_f1": {
+        "finance": 0.9558463912630579,
+        "legal": 0.8932803500302081,
+        "medical": 0.8933900885935769
+      },
+      "per_class_f1": {
+        "supported": 0.9794,
+        "partially_supported": 0.8607,
+        "contradicted": 0.8952,
+        "unverifiable": 0.9244
+      }
+    },
+    "Hibrit P0 + kör qwen-2.5-72b-instruct zero_shot": {
+      "accuracy": 0.8833333333333333,
+      "macro_f1": 0.8810513383626778,
+      "ci95": [
+        0.8540511164653237,
+        0.9068619837962815
+      ],
+      "mcc": 0.8492324244129449,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 12,
+        "c_sys_only": 37,
+        "p": 0.0004697573180081349
+      },
+      "domain_macro_f1": {
+        "finance": 0.9116444174316092,
+        "legal": 0.9180700735578784,
+        "medical": 0.8097170203911777
+      },
+      "per_class_f1": {
+        "supported": 0.9754,
+        "partially_supported": 0.8482,
+        "contradicted": 0.8828,
+        "unverifiable": 0.8177
+      }
+    },
+    "Hibrit P0 + kör qwen-2.5-72b-instruct few_shot_8": {
+      "accuracy": 0.9041666666666667,
+      "macro_f1": 0.9036374314794058,
+      "ci95": [
+        0.8775868205885615,
+        0.9284686265305319
+      ],
+      "mcc": 0.8749372630729465,
+      "call_rate": 0.25625,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 8,
+        "c_sys_only": 43,
+        "p": 6.867117736675254e-07
+      },
+      "domain_macro_f1": {
+        "finance": 0.9564048717668526,
+        "legal": 0.9250768951081936,
+        "medical": 0.8273926158923323
+      },
+      "per_class_f1": {
+        "supported": 0.9714,
+        "partially_supported": 0.8549,
+        "contradicted": 0.915,
+        "unverifiable": 0.8732
+      }
+    },
+    "PA (P0-V4 + kör Gemma uzlaşma denetimi)": {
+      "accuracy": 0.9479166666666666,
+      "macro_f1": 0.9478357893968923,
+      "ci95": [
+        0.9291249951322262,
+        0.9663380935367276
+      ],
+      "mcc": 0.9306840239351608,
+      "call_rate": 0.63125,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 9,
+        "c_sys_only": 65,
+        "p": 1.3509940352772296e-11
+      },
+      "domain_macro_f1": {
+        "finance": 0.9557223569311716,
+        "legal": 0.9380773825584714,
+        "medical": 0.9496058307303288
+      },
+      "per_class_f1": {
+        "supported": 0.9669,
+        "partially_supported": 0.9167,
+        "contradicted": 0.959,
+        "unverifiable": 0.9487
+      }
+    },
+    "PB (P0-V4 + yalnız tıp uzlaşma denetimi)": {
+      "accuracy": 0.9458333333333333,
+      "macro_f1": 0.9459555599333452,
+      "ci95": [
+        0.9271594866782924,
+        0.9645226744853721
+      ],
+      "mcc": 0.9281199406293015,
+      "call_rate": 0.39791666666666664,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 6,
+        "c_sys_only": 61,
+        "p": 1.4944372779199244e-12
+      },
+      "domain_macro_f1": {
+        "finance": 0.9560838081671414,
+        "legal": 0.9319751327104268,
+        "medical": 0.9496058307303288
+      },
+      "per_class_f1": {
+        "supported": 0.9669,
+        "partially_supported": 0.9187,
+        "contradicted": 0.954,
+        "unverifiable": 0.9442
+      }
+    },
+    "Tek başına gemma-4-26b-a4b-it zero_shot": {
+      "accuracy": 0.9041666666666667,
+      "macro_f1": 0.9022228295375918,
+      "ci95": [
+        0.8751767633204429,
+        0.926378896855615
+      ],
+      "mcc": 0.8776342892292982,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 27,
+        "c_sys_only": 62,
+        "p": 0.0002655853429874699
+      },
+      "domain_macro_f1": {
+        "finance": 0.9180864786634924,
+        "legal": 0.9046547891788577,
+        "medical": 0.8829153136553516
+      },
+      "per_class_f1": {
+        "supported": 0.9787,
+        "partially_supported": 0.8712,
+        "contradicted": 0.9297,
+        "unverifiable": 0.8293
+      }
+    },
+    "Tek başına gemma-4-26b-a4b-it few_shot_8": {
+      "accuracy": 0.9,
+      "macro_f1": 0.8990639695239752,
+      "ci95": [
+        0.8739135450067061,
+        0.9227139092826164
+      ],
+      "mcc": 0.873277755228984,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 22,
+        "c_sys_only": 55,
+        "p": 0.00021680385841747665
+      },
+      "domain_macro_f1": {
+        "finance": 0.9195062214698969,
+        "legal": 0.9243716749220325,
+        "medical": 0.8507620558238955
+      },
+      "per_class_f1": {
+        "supported": 0.9917,
+        "partially_supported": 0.8278,
+        "contradicted": 0.959,
+        "unverifiable": 0.8177
+      }
+    },
+    "Tek başına llama-3.3-70b-instruct zero_shot": {
+      "accuracy": 0.7166666666666667,
+      "macro_f1": 0.701642475171887,
+      "ci95": [
+        0.6670645825011312,
+        0.7342802276065382
+      ],
+      "mcc": 0.6611003713870724,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 95,
+        "c_sys_only": 40,
+        "p": 2.472265102979547e-06
+      },
+      "domain_macro_f1": {
+        "finance": 0.7141549385145902,
+        "legal": 0.7175491432039968,
+        "medical": 0.666776164980188
+      },
+      "per_class_f1": {
+        "supported": 0.9917,
+        "partially_supported": 0.4205,
+        "contradicted": 0.6779,
+        "unverifiable": 0.7166
+      }
+    },
+    "Tek başına llama-3.3-70b-instruct few_shot_8": {
+      "accuracy": 0.9083333333333333,
+      "macro_f1": 0.9085061897390573,
+      "ci95": [
+        0.8839326726545405,
+        0.9329930141209926
+      ],
+      "mcc": 0.8798303410579639,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 27,
+        "c_sys_only": 64,
+        "p": 0.00013216326274489122
+      },
+      "domain_macro_f1": {
+        "finance": 0.931344552662382,
+        "legal": 0.9066759172662237,
+        "medical": 0.8870597706424065
+      },
+      "per_class_f1": {
+        "supported": 0.9832,
+        "partially_supported": 0.8293,
+        "contradicted": 0.9225,
+        "unverifiable": 0.8991
+      }
+    },
+    "Tek başına gpt-4.1-mini zero_shot": {
+      "accuracy": 0.7895833333333333,
+      "macro_f1": 0.7620520762148195,
+      "ci95": [
+        0.7302154437814153,
+        0.7936502628224567
+      ],
+      "mcc": 0.7581173002062337,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 85,
+        "c_sys_only": 65,
+        "p": 0.12052916970948838
+      },
+      "domain_macro_f1": {
+        "finance": 0.7963636363636364,
+        "legal": 0.721922102174203,
+        "medical": 0.7667592129617447
+      },
+      "per_class_f1": {
+        "supported": 0.9958,
+        "partially_supported": 0.3841,
+        "contradicted": 0.7118,
+        "unverifiable": 0.9565
+      }
+    },
+    "Tek başına gpt-4.1-mini few_shot_8": {
+      "accuracy": 0.9104166666666667,
+      "macro_f1": 0.9097559121937365,
+      "ci95": [
+        0.8821722179845749,
+        0.9350414108431513
+      ],
+      "mcc": 0.8829928118764525,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 32,
+        "c_sys_only": 70,
+        "p": 0.0002133912534118648
+      },
+      "domain_macro_f1": {
+        "finance": 0.9241387153024873,
+        "legal": 0.8735663082437277,
+        "medical": 0.930865800865801
+      },
+      "per_class_f1": {
+        "supported": 0.9958,
+        "partially_supported": 0.8054,
+        "contradicted": 0.8764,
+        "unverifiable": 0.9614
+      }
+    },
+    "Tek başına qwen-2.5-72b-instruct zero_shot": {
+      "accuracy": 0.825,
+      "macro_f1": 0.8160316091954023,
+      "ci95": [
+        0.7816844545687129,
+        0.8470315332617184
+      ],
+      "mcc": 0.7803999525052888,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 50,
+        "c_sys_only": 47,
+        "p": 0.8392136618440833
+      },
+      "domain_macro_f1": {
+        "finance": 0.8356410256410256,
+        "legal": 0.8454592363261093,
+        "medical": 0.763154572036151
+      },
+      "per_class_f1": {
+        "supported": 0.9917,
+        "partially_supported": 0.792,
+        "contradicted": 0.8138,
+        "unverifiable": 0.6667
+      }
+    },
+    "Tek başına qwen-2.5-72b-instruct few_shot_8": {
+      "accuracy": 0.8666666666666667,
+      "macro_f1": 0.865492725203189,
+      "ci95": [
+        0.8339861240475334,
+        0.8945216576787869
+      ],
+      "mcc": 0.8267944892688783,
+      "call_rate": 1.0,
+      "mcnemar_vs_k1": {
+        "b_k1_only": 41,
+        "c_sys_only": 58,
+        "p": 0.1073515865331888
+      },
+      "domain_macro_f1": {
+        "finance": 0.8866803927779537,
+        "legal": 0.899184336403227,
+        "medical": 0.8096354864647548
+      },
+      "per_class_f1": {
+        "supported": 0.9917,
+        "partially_supported": 0.757,
+        "contradicted": 0.8897,
+        "unverifiable": 0.8235
+      }
+    }
+  }
+}
