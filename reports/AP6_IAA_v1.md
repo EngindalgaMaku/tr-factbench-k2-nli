@@ -19,3 +19,8 @@ Uyuşmazlıklar (9): 5'i çekimser / bilgi veren ayrımında (AP6-0396, AP6-0311
 
 Not: Örneklem küçük ve dengesizdir (cümlelerin ~%74'ü supported); κ bu koşullarda düşük çıkma eğilimindedir ve güven aralıkları geniştir.
 Uzlaşma kaydı ayrı tutulacaktır.
+
+## Uzlaşma (2026-10-08)
+9 uyuşmazlık A ve B tarafından birlikte, sistem tahminleri görülmeden kapatıldı (reports/AP6_ADJUDICATION_v1.md).
+Çekimser sınırındaki 5 uyuşmazlık kılavuzun yazılı kuralıyla (5'i de A'nın etiketiyle), sınıf ayrımındaki 4 uyuşmazlık tartışmayla
+kapatıldı (3'ü A, 1'i B lehine: AP6-0489 → partially_supported). A'nın census etiketlerinde bu tek madde güncellendi.
