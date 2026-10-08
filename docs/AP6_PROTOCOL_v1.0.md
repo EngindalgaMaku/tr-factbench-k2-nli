@@ -197,5 +197,5 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 - Etiketlemenin büyük bölümü web arayüzü yerine aynı alanları içeren bir Excel çalışma kitabıyla yapıldı
   (`scripts/95_ap6_excel_annotation.py`); kitapta sistem tahmini ve otomatik çekimserlik işareti yoktur. Kayıtlar `source: excel` ile işaretlidir.
 - v1.2'de ikincil ölçüt olarak öngörülen "çekimserliğin doğruluğu" (bilgi kaynakta gerçekten yok mu) etiketleme arayüzlerinde ayrı bir alan
-  olarak bulunmadığından toplanmadı ve raporlanmayacaktır. Çekimser cümleler (72) 4 sınıflı değerlendirmeden ayrılır ve çekimserlik oranı
+  olarak bulunmadığından toplanmadı ve raporlanmayacaktır. Çekimser cümleler (75; ilk sayımdaki 72, üç düzeltmeyle 75 oldu) 4 sınıflı değerlendirmeden ayrılır ve çekimserlik oranı
   model ve soru türü bazında raporlanır. Ana ölçütler (S1–S4) bu değişiklikten etkilenmez.

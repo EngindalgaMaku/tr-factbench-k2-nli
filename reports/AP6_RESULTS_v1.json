@@ -1,0 +1,1257 @@
+{
+  "inputs": {
+    "annotation/labels_A.jsonl": "e80e606dc23f78d14057447919f75b554489d32cf614a083e48ccc99a30c275e",
+    "annotation/internal/item_key_v1.jsonl": "cb25fd46638b0daec5ba2a37b7330b48162506a135b8fd7ca5f0dc4de31bfe15",
+    "verifier/system_predictions_v1.jsonl": "04bf9f89df977ac819ed911cecccb6970fa60f889e2f004c714a9bfd52b60ae6",
+    "generation/sentences.jsonl": "3671b5cac181dbfebd051e6f48b77e4761c727a87dbddf3e055650093780091c"
+  },
+  "n_sentences": 858,
+  "n_abstention_human": 75,
+  "n_eval": 783,
+  "S3": {
+    "overall": {
+      "rate": 0.16602809706257982,
+      "ci": [
+        0.1351981351981352,
+        0.1989247311827957
+      ],
+      "n": 783
+    },
+    "by_model": {
+      "Ministral-3B": {
+        "rate": 0.30405405405405406,
+        "ci": [
+          0.24342105263157895,
+          0.3664383561643836
+        ],
+        "n": 296
+      },
+      "Qwen3-8B": {
+        "rate": 0.12177121771217712,
+        "ci": [
+          0.08032128514056225,
+          0.16793893129770993
+        ],
+        "n": 271
+      },
+      "DeepSeek-V4": {
+        "rate": 0.032407407407407406,
+        "ci": [
+          0.012658227848101266,
+          0.05583756345177665
+        ],
+        "n": 216
+      }
+    },
+    "by_domain": {
+      "finance": {
+        "rate": 0.19011406844106463,
+        "ci": [
+          0.12734082397003746,
+          0.26436781609195403
+        ],
+        "n": 263
+      },
+      "legal": {
+        "rate": 0.12350597609561753,
+        "ci": [
+          0.0851063829787234,
+          0.16535433070866143
+        ],
+        "n": 251
+      },
+      "medical": {
+        "rate": 0.1821561338289963,
+        "ci": [
+          0.13356164383561644,
+          0.23863636363636365
+        ],
+        "n": 269
+      }
+    },
+    "label_dist": {
+      "unverifiable": 64,
+      "supported": 653,
+      "partially_supported": 29,
+      "contradicted": 37
+    },
+    "error_types": {
+      "relation_fabrication": 23,
+      "added_information": 72,
+      "other": 2,
+      "scope": 6,
+      "negation": 16,
+      "number_date": 11
+    },
+    "by_model_label": {
+      "Ministral-3B": {
+        "supported": 206,
+        "unverifiable": 41,
+        "partially_supported": 19,
+        "contradicted": 30
+      },
+      "Qwen3-8B": {
+        "unverifiable": 17,
+        "supported": 238,
+        "partially_supported": 9,
+        "contradicted": 7
+      },
+      "DeepSeek-V4": {
+        "supported": 209,
+        "unverifiable": 6,
+        "partially_supported": 1
+      }
+    },
+    "abstention": {
+      "Ministral-3B": {
+        "n_sent": 310,
+        "abst": 14,
+        "by_qtype": {
+          "answerable": [
+            5,
+            102
+          ],
+          "multi_fact": [
+            2,
+            122
+          ],
+          "partial": [
+            7,
+            86
+          ]
+        }
+      },
+      "Qwen3-8B": {
+        "n_sent": 307,
+        "abst": 36,
+        "by_qtype": {
+          "answerable": [
+            8,
+            111
+          ],
+          "multi_fact": [
+            7,
+            126
+          ],
+          "partial": [
+            21,
+            70
+          ]
+        }
+      },
+      "DeepSeek-V4": {
+        "n_sent": 241,
+        "abst": 25,
+        "by_qtype": {
+          "answerable": [
+            3,
+            78
+          ],
+          "multi_fact": [
+            5,
+            100
+          ],
+          "partial": [
+            17,
+            63
+          ]
+        }
+      }
+    },
+    "auto_abstention_flag_vs_human": {
+      "auto=False,human=False": 777,
+      "auto=True,human=True": 47,
+      "auto=False,human=True": 28,
+      "auto=True,human=False": 6
+    }
+  },
+  "systems": {
+    "k1": {
+      "n": 783,
+      "tp": 101,
+      "fp": 272,
+      "fn": 29,
+      "tn": 381,
+      "false_alarm": 0.4165390505359878,
+      "precision": 0.2707774798927614,
+      "recall": 0.7769230769230769,
+      "f1": 0.40159045725646125,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.3706293706293706,
+        0.464471403812825
+      ],
+      "precision_ci": [
+        0.21764705882352942,
+        0.32642487046632124
+      ],
+      "recall_ci": [
+        0.6906474820143885,
+        0.8583333333333333
+      ],
+      "f1_ci": [
+        0.33540372670807456,
+        0.46679316888045547
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.5632183908045977,
+        "macro_f1": 0.35202027740946806,
+        "per_class_f1": {
+          "supported": 0.7168391345249294,
+          "partially_supported": 0.15053763440860216,
+          "contradicted": 0.15151515151515152,
+          "unverifiable": 0.3891891891891892
+        },
+        "confusion": {
+          "supported": {
+            "supported": 381,
+            "contradicted": 74,
+            "partially_supported": 123,
+            "unverifiable": 75
+          },
+          "partially_supported": {
+            "contradicted": 3,
+            "partially_supported": 14,
+            "unverifiable": 3,
+            "supported": 9
+          },
+          "contradicted": {
+            "supported": 11,
+            "unverifiable": 7,
+            "contradicted": 10,
+            "partially_supported": 9
+          },
+          "unverifiable": {
+            "unverifiable": 36,
+            "contradicted": 8,
+            "supported": 9,
+            "partially_supported": 11
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 73,
+          "fp": 89,
+          "fn": 17,
+          "tn": 117,
+          "false_alarm": 0.4320388349514563,
+          "precision": 0.4506172839506173,
+          "recall": 0.8111111111111111,
+          "f1": 0.5793650793650793
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 23,
+          "fp": 101,
+          "fn": 10,
+          "tn": 137,
+          "false_alarm": 0.42436974789915966,
+          "precision": 0.18548387096774194,
+          "recall": 0.696969696969697,
+          "f1": 0.29299363057324834
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 5,
+          "fp": 82,
+          "fn": 2,
+          "tn": 127,
+          "false_alarm": 0.3923444976076555,
+          "precision": 0.05747126436781609,
+          "recall": 0.7142857142857143,
+          "f1": 0.10638297872340424
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 31,
+          "fp": 103,
+          "fn": 9,
+          "tn": 132,
+          "false_alarm": 0.43829787234042555,
+          "precision": 0.23134328358208955,
+          "recall": 0.775,
+          "f1": 0.3563218390804598
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 36,
+          "fp": 116,
+          "fn": 16,
+          "tn": 166,
+          "false_alarm": 0.41134751773049644,
+          "precision": 0.23684210526315788,
+          "recall": 0.6923076923076923,
+          "f1": 0.35294117647058826
+        },
+        "partial": {
+          "n": 174,
+          "tp": 34,
+          "fp": 53,
+          "fn": 4,
+          "tn": 83,
+          "false_alarm": 0.3897058823529412,
+          "precision": 0.39080459770114945,
+          "recall": 0.8947368421052632,
+          "f1": 0.5439999999999999
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 34,
+        "fp": 82,
+        "fn": 5,
+        "tn": 62,
+        "false_alarm": 0.5694444444444444,
+        "precision": 0.29310344827586204,
+        "recall": 0.8717948717948718,
+        "f1": 0.43870967741935474
+      }
+    },
+    "k2": {
+      "n": 782,
+      "tp": 83,
+      "fp": 243,
+      "fn": 46,
+      "tn": 410,
+      "false_alarm": 0.3721286370597244,
+      "precision": 0.254601226993865,
+      "recall": 0.6434108527131783,
+      "f1": 0.3648351648351648,
+      "n_excluded_no_prediction": 1,
+      "false_alarm_ci": [
+        0.3081967213114754,
+        0.4388059701492537
+      ],
+      "precision_ci": [
+        0.19714285714285715,
+        0.31761006289308175
+      ],
+      "recall_ci": [
+        0.5528455284552846,
+        0.7288135593220338
+      ],
+      "f1_ci": [
+        0.2964601769911504,
+        0.4319654427645788
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.5767263427109974,
+        "macro_f1": 0.30706499644156726,
+        "per_class_f1": {
+          "supported": 0.739404869251578,
+          "partially_supported": 0.0851063829787234,
+          "contradicted": 0.09523809523809523,
+          "unverifiable": 0.30851063829787234
+        },
+        "confusion": {
+          "supported": {
+            "supported": 410,
+            "contradicted": 76,
+            "partially_supported": 89,
+            "unverifiable": 78
+          },
+          "partially_supported": {
+            "contradicted": 3,
+            "supported": 11,
+            "partially_supported": 6,
+            "unverifiable": 8
+          },
+          "contradicted": {
+            "supported": 16,
+            "partially_supported": 6,
+            "unverifiable": 9,
+            "contradicted": 6
+          },
+          "unverifiable": {
+            "partially_supported": 12,
+            "supported": 19,
+            "unverifiable": 29,
+            "contradicted": 4
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 295,
+          "tp": 58,
+          "fp": 61,
+          "fn": 31,
+          "tn": 145,
+          "false_alarm": 0.2961165048543689,
+          "precision": 0.48739495798319327,
+          "recall": 0.651685393258427,
+          "f1": 0.5576923076923077
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 20,
+          "fp": 89,
+          "fn": 13,
+          "tn": 149,
+          "false_alarm": 0.3739495798319328,
+          "precision": 0.1834862385321101,
+          "recall": 0.6060606060606061,
+          "f1": 0.28169014084507044
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 5,
+          "fp": 93,
+          "fn": 2,
+          "tn": 116,
+          "false_alarm": 0.4449760765550239,
+          "precision": 0.05102040816326531,
+          "recall": 0.7142857142857143,
+          "f1": 0.09523809523809523
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 23,
+          "fp": 87,
+          "fn": 17,
+          "tn": 148,
+          "false_alarm": 0.3702127659574468,
+          "precision": 0.20909090909090908,
+          "recall": 0.575,
+          "f1": 0.30666666666666664
+        },
+        "multi_fact": {
+          "n": 333,
+          "tp": 28,
+          "fp": 102,
+          "fn": 23,
+          "tn": 180,
+          "false_alarm": 0.3617021276595745,
+          "precision": 0.2153846153846154,
+          "recall": 0.5490196078431373,
+          "f1": 0.30939226519337015
+        },
+        "partial": {
+          "n": 174,
+          "tp": 32,
+          "fp": 54,
+          "fn": 6,
+          "tn": 82,
+          "false_alarm": 0.39705882352941174,
+          "precision": 0.37209302325581395,
+          "recall": 0.8421052631578947,
+          "f1": 0.5161290322580645
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 29,
+        "fp": 50,
+        "fn": 10,
+        "tn": 94,
+        "false_alarm": 0.3472222222222222,
+        "precision": 0.3670886075949367,
+        "recall": 0.7435897435897436,
+        "f1": 0.4915254237288136
+      }
+    },
+    "hybrid_P0": {
+      "n": 783,
+      "tp": 99,
+      "fp": 142,
+      "fn": 31,
+      "tn": 511,
+      "false_alarm": 0.21745788667687596,
+      "precision": 0.4107883817427386,
+      "recall": 0.7615384615384615,
+      "f1": 0.5336927223719676,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.1796875,
+        0.2579113924050633
+      ],
+      "precision_ci": [
+        0.33771929824561403,
+        0.48559670781893005
+      ],
+      "recall_ci": [
+        0.6861313868613139,
+        0.8333333333333334
+      ],
+      "f1_ci": [
+        0.4606741573033708,
+        0.6024691358024692
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.7266922094508301,
+        "macro_f1": 0.4147796885496316,
+        "per_class_f1": {
+          "supported": 0.8552301255230126,
+          "partially_supported": 0.208,
+          "contradicted": 0.15873015873015872,
+          "unverifiable": 0.4371584699453552
+        },
+        "confusion": {
+          "supported": {
+            "supported": 511,
+            "unverifiable": 60,
+            "partially_supported": 66,
+            "contradicted": 16
+          },
+          "partially_supported": {
+            "contradicted": 2,
+            "partially_supported": 13,
+            "supported": 8,
+            "unverifiable": 6
+          },
+          "contradicted": {
+            "supported": 12,
+            "unverifiable": 13,
+            "partially_supported": 7,
+            "contradicted": 5
+          },
+          "unverifiable": {
+            "unverifiable": 40,
+            "contradicted": 3,
+            "supported": 11,
+            "partially_supported": 10
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 70,
+          "fp": 43,
+          "fn": 20,
+          "tn": 163,
+          "false_alarm": 0.2087378640776699,
+          "precision": 0.6194690265486725,
+          "recall": 0.7777777777777778,
+          "f1": 0.689655172413793
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 25,
+          "fp": 54,
+          "fn": 8,
+          "tn": 184,
+          "false_alarm": 0.226890756302521,
+          "precision": 0.31645569620253167,
+          "recall": 0.7575757575757576,
+          "f1": 0.4464285714285714
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 4,
+          "fp": 45,
+          "fn": 3,
+          "tn": 164,
+          "false_alarm": 0.215311004784689,
+          "precision": 0.08163265306122448,
+          "recall": 0.5714285714285714,
+          "f1": 0.14285714285714285
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 31,
+          "fp": 57,
+          "fn": 9,
+          "tn": 178,
+          "false_alarm": 0.2425531914893617,
+          "precision": 0.3522727272727273,
+          "recall": 0.775,
+          "f1": 0.48437499999999994
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 35,
+          "fp": 48,
+          "fn": 17,
+          "tn": 234,
+          "false_alarm": 0.1702127659574468,
+          "precision": 0.42168674698795183,
+          "recall": 0.6730769230769231,
+          "f1": 0.5185185185185185
+        },
+        "partial": {
+          "n": 174,
+          "tp": 33,
+          "fp": 37,
+          "fn": 5,
+          "tn": 99,
+          "false_alarm": 0.27205882352941174,
+          "precision": 0.4714285714285714,
+          "recall": 0.868421052631579,
+          "f1": 0.6111111111111112
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 35,
+        "fp": 44,
+        "fn": 4,
+        "tn": 100,
+        "false_alarm": 0.3055555555555556,
+        "precision": 0.4430379746835443,
+        "recall": 0.8974358974358975,
+        "f1": 0.5932203389830508
+      }
+    },
+    "hybrid_PA": {
+      "n": 783,
+      "tp": 98,
+      "fp": 117,
+      "fn": 32,
+      "tn": 536,
+      "false_alarm": 0.17917304747320062,
+      "precision": 0.4558139534883721,
+      "recall": 0.7538461538461538,
+      "f1": 0.5681159420289855,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.1442857142857143,
+        0.21578099838969403
+      ],
+      "precision_ci": [
+        0.3778801843317972,
+        0.5357142857142857
+      ],
+      "recall_ci": [
+        0.6764705882352942,
+        0.8270676691729323
+      ],
+      "f1_ci": [
+        0.4939024390243903,
+        0.6356164383561643
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.7637292464878672,
+        "macro_f1": 0.450748231998232,
+        "per_class_f1": {
+          "supported": 0.877968877968878,
+          "partially_supported": 0.23214285714285715,
+          "contradicted": 0.22727272727272727,
+          "unverifiable": 0.4656084656084656
+        },
+        "confusion": {
+          "supported": {
+            "supported": 536,
+            "unverifiable": 61,
+            "partially_supported": 55,
+            "contradicted": 1
+          },
+          "partially_supported": {
+            "partially_supported": 13,
+            "supported": 9,
+            "unverifiable": 7
+          },
+          "contradicted": {
+            "supported": 12,
+            "unverifiable": 13,
+            "partially_supported": 7,
+            "contradicted": 5
+          },
+          "unverifiable": {
+            "unverifiable": 44,
+            "partially_supported": 8,
+            "supported": 11,
+            "contradicted": 1
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 69,
+          "fp": 32,
+          "fn": 21,
+          "tn": 174,
+          "false_alarm": 0.1553398058252427,
+          "precision": 0.6831683168316832,
+          "recall": 0.7666666666666667,
+          "f1": 0.7225130890052356
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 25,
+          "fp": 46,
+          "fn": 8,
+          "tn": 192,
+          "false_alarm": 0.19327731092436976,
+          "precision": 0.352112676056338,
+          "recall": 0.7575757575757576,
+          "f1": 0.4807692307692308
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 4,
+          "fp": 39,
+          "fn": 3,
+          "tn": 170,
+          "false_alarm": 0.18660287081339713,
+          "precision": 0.09302325581395349,
+          "recall": 0.5714285714285714,
+          "f1": 0.16
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 30,
+          "fp": 48,
+          "fn": 10,
+          "tn": 187,
+          "false_alarm": 0.20425531914893616,
+          "precision": 0.38461538461538464,
+          "recall": 0.75,
+          "f1": 0.5084745762711865
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 35,
+          "fp": 38,
+          "fn": 17,
+          "tn": 244,
+          "false_alarm": 0.1347517730496454,
+          "precision": 0.4794520547945205,
+          "recall": 0.6730769230769231,
+          "f1": 0.56
+        },
+        "partial": {
+          "n": 174,
+          "tp": 33,
+          "fp": 31,
+          "fn": 5,
+          "tn": 105,
+          "false_alarm": 0.22794117647058823,
+          "precision": 0.515625,
+          "recall": 0.868421052631579,
+          "f1": 0.6470588235294118
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 34,
+        "fp": 40,
+        "fn": 5,
+        "tn": 104,
+        "false_alarm": 0.2777777777777778,
+        "precision": 0.4594594594594595,
+        "recall": 0.8717948717948718,
+        "f1": 0.6017699115044248
+      }
+    },
+    "hybrid_PB": {
+      "n": 783,
+      "tp": 99,
+      "fp": 139,
+      "fn": 31,
+      "tn": 514,
+      "false_alarm": 0.21286370597243492,
+      "precision": 0.41596638655462187,
+      "recall": 0.7615384615384615,
+      "f1": 0.5380434782608695,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.17435158501440923,
+        0.2543352601156069
+      ],
+      "precision_ci": [
+        0.34234234234234234,
+        0.49236641221374045
+      ],
+      "recall_ci": [
+        0.6861313868613139,
+        0.8333333333333334
+      ],
+      "f1_ci": [
+        0.46470588235294114,
+        0.6060606060606061
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.7343550446998723,
+        "macro_f1": 0.42460485217297644,
+        "per_class_f1": {
+          "supported": 0.8580968280467446,
+          "partially_supported": 0.21666666666666667,
+          "contradicted": 0.16129032258064516,
+          "unverifiable": 0.46236559139784944
+        },
+        "confusion": {
+          "supported": {
+            "supported": 514,
+            "unverifiable": 60,
+            "partially_supported": 64,
+            "contradicted": 15
+          },
+          "partially_supported": {
+            "contradicted": 2,
+            "partially_supported": 13,
+            "supported": 8,
+            "unverifiable": 6
+          },
+          "contradicted": {
+            "supported": 12,
+            "unverifiable": 13,
+            "partially_supported": 7,
+            "contradicted": 5
+          },
+          "unverifiable": {
+            "unverifiable": 43,
+            "contradicted": 3,
+            "supported": 11,
+            "partially_supported": 7
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 70,
+          "fp": 43,
+          "fn": 20,
+          "tn": 163,
+          "false_alarm": 0.2087378640776699,
+          "precision": 0.6194690265486725,
+          "recall": 0.7777777777777778,
+          "f1": 0.689655172413793
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 25,
+          "fp": 53,
+          "fn": 8,
+          "tn": 185,
+          "false_alarm": 0.22268907563025211,
+          "precision": 0.32051282051282054,
+          "recall": 0.7575757575757576,
+          "f1": 0.4504504504504505
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 4,
+          "fp": 43,
+          "fn": 3,
+          "tn": 166,
+          "false_alarm": 0.20574162679425836,
+          "precision": 0.0851063829787234,
+          "recall": 0.5714285714285714,
+          "f1": 0.14814814814814814
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 31,
+          "fp": 56,
+          "fn": 9,
+          "tn": 179,
+          "false_alarm": 0.23829787234042554,
+          "precision": 0.3563218390804598,
+          "recall": 0.775,
+          "f1": 0.4881889763779527
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 35,
+          "fp": 46,
+          "fn": 17,
+          "tn": 236,
+          "false_alarm": 0.16312056737588654,
+          "precision": 0.43209876543209874,
+          "recall": 0.6730769230769231,
+          "f1": 0.5263157894736843
+        },
+        "partial": {
+          "n": 174,
+          "tp": 33,
+          "fp": 37,
+          "fn": 5,
+          "tn": 99,
+          "false_alarm": 0.27205882352941174,
+          "precision": 0.4714285714285714,
+          "recall": 0.868421052631579,
+          "f1": 0.6111111111111112
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 35,
+        "fp": 44,
+        "fn": 4,
+        "tn": 100,
+        "false_alarm": 0.3055555555555556,
+        "precision": 0.4430379746835443,
+        "recall": 0.8974358974358975,
+        "f1": 0.5932203389830508
+      }
+    },
+    "gemma26b_zero_shot": {
+      "n": 783,
+      "tp": 112,
+      "fp": 158,
+      "fn": 18,
+      "tn": 495,
+      "false_alarm": 0.24196018376722817,
+      "precision": 0.4148148148148148,
+      "recall": 0.8615384615384616,
+      "f1": 0.56,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.20094191522762953,
+        0.2837423312883436
+      ],
+      "precision_ci": [
+        0.34210526315789475,
+        0.48951048951048953
+      ],
+      "recall_ci": [
+        0.7967479674796748,
+        0.9161290322580645
+      ],
+      "f1_ci": [
+        0.48437499999999994,
+        0.6298342541436464
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.7318007662835249,
+        "macro_f1": 0.5129041768107121,
+        "per_class_f1": {
+          "supported": 0.8490566037735849,
+          "partially_supported": 0.21875,
+          "contradicted": 0.37735849056603776,
+          "unverifiable": 0.6064516129032258
+        },
+        "confusion": {
+          "supported": {
+            "supported": 495,
+            "partially_supported": 120,
+            "unverifiable": 34,
+            "contradicted": 4
+          },
+          "partially_supported": {
+            "partially_supported": 21,
+            "supported": 3,
+            "unverifiable": 5
+          },
+          "contradicted": {
+            "contradicted": 10,
+            "unverifiable": 5,
+            "partially_supported": 16,
+            "supported": 6
+          },
+          "unverifiable": {
+            "unverifiable": 47,
+            "partially_supported": 6,
+            "supported": 9,
+            "contradicted": 2
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 79,
+          "fp": 58,
+          "fn": 11,
+          "tn": 148,
+          "false_alarm": 0.2815533980582524,
+          "precision": 0.5766423357664233,
+          "recall": 0.8777777777777778,
+          "f1": 0.696035242290749
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 28,
+          "fp": 68,
+          "fn": 5,
+          "tn": 170,
+          "false_alarm": 0.2857142857142857,
+          "precision": 0.2916666666666667,
+          "recall": 0.8484848484848485,
+          "f1": 0.434108527131783
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 5,
+          "fp": 32,
+          "fn": 2,
+          "tn": 177,
+          "false_alarm": 0.15311004784688995,
+          "precision": 0.13513513513513514,
+          "recall": 0.7142857142857143,
+          "f1": 0.22727272727272727
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 30,
+          "fp": 65,
+          "fn": 10,
+          "tn": 170,
+          "false_alarm": 0.2765957446808511,
+          "precision": 0.3157894736842105,
+          "recall": 0.75,
+          "f1": 0.44444444444444436
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 45,
+          "fp": 57,
+          "fn": 7,
+          "tn": 225,
+          "false_alarm": 0.20212765957446807,
+          "precision": 0.4411764705882353,
+          "recall": 0.8653846153846154,
+          "f1": 0.5844155844155845
+        },
+        "partial": {
+          "n": 174,
+          "tp": 37,
+          "fp": 36,
+          "fn": 1,
+          "tn": 100,
+          "false_alarm": 0.2647058823529412,
+          "precision": 0.5068493150684932,
+          "recall": 0.9736842105263158,
+          "f1": 0.6666666666666667
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 36,
+        "fp": 52,
+        "fn": 3,
+        "tn": 92,
+        "false_alarm": 0.3611111111111111,
+        "precision": 0.4090909090909091,
+        "recall": 0.9230769230769231,
+        "f1": 0.5669291338582677
+      }
+    },
+    "gpt41mini_few_shot_8": {
+      "n": 783,
+      "tp": 94,
+      "fp": 78,
+      "fn": 36,
+      "tn": 575,
+      "false_alarm": 0.11944869831546708,
+      "precision": 0.5465116279069767,
+      "recall": 0.7230769230769231,
+      "f1": 0.6225165562913907,
+      "n_excluded_no_prediction": 0,
+      "false_alarm_ci": [
+        0.08888888888888889,
+        0.15236686390532544
+      ],
+      "precision_ci": [
+        0.44508670520231214,
+        0.6453488372093024
+      ],
+      "recall_ci": [
+        0.6415094339622641,
+        0.8045112781954887
+      ],
+      "f1_ci": [
+        0.5382059800664452,
+        0.6967741935483871
+      ],
+      "four_class_descriptive": {
+        "accuracy": 0.8237547892720306,
+        "macro_f1": 0.5342833704899831,
+        "per_class_f1": {
+          "supported": 0.9098101265822784,
+          "partially_supported": 0.27692307692307694,
+          "contradicted": 0.38235294117647056,
+          "unverifiable": 0.5680473372781065
+        },
+        "confusion": {
+          "supported": {
+            "supported": 575,
+            "contradicted": 15,
+            "unverifiable": 41,
+            "partially_supported": 22
+          },
+          "partially_supported": {
+            "contradicted": 2,
+            "supported": 11,
+            "partially_supported": 9,
+            "unverifiable": 7
+          },
+          "contradicted": {
+            "supported": 12,
+            "unverifiable": 9,
+            "contradicted": 13,
+            "partially_supported": 3
+          },
+          "unverifiable": {
+            "unverifiable": 48,
+            "supported": 13,
+            "partially_supported": 2,
+            "contradicted": 1
+          }
+        }
+      },
+      "by_model": {
+        "Ministral-3B": {
+          "n": 296,
+          "tp": 70,
+          "fp": 27,
+          "fn": 20,
+          "tn": 179,
+          "false_alarm": 0.13106796116504854,
+          "precision": 0.7216494845360825,
+          "recall": 0.7777777777777778,
+          "f1": 0.7486631016042781
+        },
+        "Qwen3-8B": {
+          "n": 271,
+          "tp": 20,
+          "fp": 36,
+          "fn": 13,
+          "tn": 202,
+          "false_alarm": 0.15126050420168066,
+          "precision": 0.35714285714285715,
+          "recall": 0.6060606060606061,
+          "f1": 0.449438202247191
+        },
+        "DeepSeek-V4": {
+          "n": 216,
+          "tp": 4,
+          "fp": 15,
+          "fn": 3,
+          "tn": 194,
+          "false_alarm": 0.07177033492822966,
+          "precision": 0.21052631578947367,
+          "recall": 0.5714285714285714,
+          "f1": 0.3076923076923077
+        }
+      },
+      "by_qtype": {
+        "answerable": {
+          "n": 275,
+          "tp": 29,
+          "fp": 32,
+          "fn": 11,
+          "tn": 203,
+          "false_alarm": 0.13617021276595745,
+          "precision": 0.47540983606557374,
+          "recall": 0.725,
+          "f1": 0.5742574257425742
+        },
+        "multi_fact": {
+          "n": 334,
+          "tp": 36,
+          "fp": 27,
+          "fn": 16,
+          "tn": 255,
+          "false_alarm": 0.09574468085106383,
+          "precision": 0.5714285714285714,
+          "recall": 0.6923076923076923,
+          "f1": 0.6260869565217392
+        },
+        "partial": {
+          "n": 174,
+          "tp": 29,
+          "fp": 19,
+          "fn": 9,
+          "tn": 117,
+          "false_alarm": 0.13970588235294118,
+          "precision": 0.6041666666666666,
+          "recall": 0.7631578947368421,
+          "f1": 0.6744186046511628
+        }
+      },
+      "back_reference": {
+        "n": 183,
+        "tp": 32,
+        "fp": 32,
+        "fn": 7,
+        "tn": 112,
+        "false_alarm": 0.2222222222222222,
+        "precision": 0.5,
+        "recall": 0.8205128205128205,
+        "f1": 0.6213592233009708
+      }
+    }
+  },
+  "comparisons": {
+    "hybrid_P0 vs k1": {
+      "only_a_correct": 152,
+      "only_b_correct": 24,
+      "p_exact": 6.0142623008524104e-24,
+      "f1_diff": 0.13210226511550638,
+      "f1_diff_ci": [
+        0.09658229447439365,
+        0.16995092631338682
+      ],
+      "n": 783
+    },
+    "hybrid_P0 vs k2": {
+      "only_a_correct": 156,
+      "only_b_correct": 39,
+      "p_exact": 8.982314129279908e-18,
+      "f1_diff": 0.1702999702999703,
+      "f1_diff_ci": [
+        0.11362425049966685,
+        0.22553519768563157
+      ],
+      "n": 782
+    },
+    "hybrid_P0 vs gemma26b_zero_shot": {
+      "only_a_correct": 94,
+      "only_b_correct": 91,
+      "p_exact": 0.8831496927414336,
+      "f1_diff": -0.02630727762803242,
+      "f1_diff_ci": [
+        -0.08586683273967305,
+        0.030766978922716626
+      ],
+      "n": 783
+    },
+    "hybrid_P0 vs gpt41mini_few_shot_8": {
+      "only_a_correct": 50,
+      "only_b_correct": 109,
+      "p_exact": 3.3064765101721643e-06,
+      "f1_diff": -0.08882383391942306,
+      "f1_diff_ci": [
+        -0.15120967741935493,
+        -0.027273467393959194
+      ],
+      "n": 783
+    },
+    "hybrid_PA vs hybrid_P0": {
+      "only_a_correct": 25,
+      "only_b_correct": 1,
+      "p_exact": 8.046627044677734e-07,
+      "f1_diff": 0.03442321965701789,
+      "f1_diff_ci": [
+        0.01868383958431208,
+        0.05206139949342359
+      ],
+      "n": 783
+    },
+    "hybrid_PB vs hybrid_P0": {
+      "only_a_correct": 3,
+      "only_b_correct": 0,
+      "p_exact": 0.25,
+      "f1_diff": 0.0043507558889018805,
+      "f1_diff_ci": [
+        0.0,
+        0.011589074989263426
+      ],
+      "n": 783
+    }
+  },
+  "llm_call_rate": {
+    "n": 858,
+    "P0": 0.5442890442890443,
+    "PA": 0.6177156177156177,
+    "PB": 0.5606060606060606
+  }
+}
