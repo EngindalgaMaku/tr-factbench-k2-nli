@@ -70,8 +70,12 @@ KILAVUZ = [
     ("cümlenin söylediğini kaynakla karşılaştırarak etiketleyin.", False),
     ("", False),
     ("Kaydetme", True),
-    ("Excel'i sık sık kaydedin. Bitirince ya da ara verdiğinizde Claude'a haber verin; etiketler", False),
-    ("'import' komutuyla doğrulanıp labels_A.jsonl dosyasına aktarılır. Web arayüzünü aynı anda kullanmayın.", False),
+    ("Excel'i sık sık kaydedin. Bitirince dosyayı kaydedip araştırmacıya geri verin.", False),
+    ("Etiketler 'import' komutuyla doğrulanıp etiket dosyasına aktarılır.", False),
+    ("", False),
+    ("Bağımsızlık", True),
+    ("Etiketleri kendi kararınızla verin: başka bir kişiye danışmayın, yapay zekâ aracı (ChatGPT vb.) kullanmayın.", False),
+    ("Bir cümlede emin olamazsanız en uygun etiketi seçip Not sütununa kısaca yazın.", False),
     ("L sütunu (Durum) satır tamamlanınca 'tamam' olur; satır yeşile döner.", False),
 ]
 
