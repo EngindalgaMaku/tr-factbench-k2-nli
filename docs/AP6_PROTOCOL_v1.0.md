@@ -199,3 +199,5 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 - v1.2'de ikincil ölçüt olarak öngörülen "çekimserliğin doğruluğu" (bilgi kaynakta gerçekten yok mu) etiketleme arayüzlerinde ayrı bir alan
   olarak bulunmadığından toplanmadı ve raporlanmayacaktır. Çekimser cümleler (75; ilk sayımdaki 72, üç düzeltmeyle 75 oldu) 4 sınıflı değerlendirmeden ayrılır ve çekimserlik oranı
   model ve soru türü bazında raporlanır. Ana ölçütler (S1–S4) bu değişiklikten etkilenmez.
+- §8'deki "yanıt başına toplam gecikme" AP6'da ayrıca ölçülmedi; maliyet yalnızca büyük dil modeli çağrı oranıyla raporlanır.
+  Bileşen süreleri için Gold-480 üzerindeki profil ölçümüne (reports/FROZEN_SYSTEM_PROFILE.md) başvurulur.
