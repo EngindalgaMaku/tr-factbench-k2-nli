@@ -192,3 +192,10 @@ Dışlanan aileler: Llama (K3 hakemi), Gemma (atomizer ve kör hakem), GPT (kar�
 - Etiketleme: eski 11 LEG-B2 maddesi (hiçbiri etiketlenmemişti) çıkarıldı; 15 yeni madde yeni kimliklerle (AP6-0855…) etiketlenmemiş bölgeye
   rastgele yerleştirildi (seed 47). B kümesindeki 2 eski LEG-B2 maddesi yeni LEG-B2 maddeleriyle değiştirildi. Verilmiş 12 etiket korunmuştur.
 - Önceki dosyalar: `data/ap6/_archive_v1.6_before_legb2_fix/`.
+
+### v1.8 (2026-10-08, Anotatör A etiketlemesi tamamlandıktan sonra, sistem tahminleri görülmeden)
+- Etiketlemenin büyük bölümü web arayüzü yerine aynı alanları içeren bir Excel çalışma kitabıyla yapıldı
+  (`scripts/95_ap6_excel_annotation.py`); kitapta sistem tahmini ve otomatik çekimserlik işareti yoktur. Kayıtlar `source: excel` ile işaretlidir.
+- v1.2'de ikincil ölçüt olarak öngörülen "çekimserliğin doğruluğu" (bilgi kaynakta gerçekten yok mu) etiketleme arayüzlerinde ayrı bir alan
+  olarak bulunmadığından toplanmadı ve raporlanmayacaktır. Çekimser cümleler (72) 4 sınıflı değerlendirmeden ayrılır ve çekimserlik oranı
+  model ve soru türü bazında raporlanır. Ana ölçütler (S1–S4) bu değişiklikten etkilenmez.
