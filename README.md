@@ -1,8 +1,19 @@
-# K2 — Atom-Tabanlı Zero-Shot NLI Deney Hattı
+# K2 — Atom-Tabanlı Zero-Shot NLI ve K3 Hibrit Doğrulama Hattı
+
+[![K1 Model on HF](https://img.shields.io/badge/🤗%20K1%20Model-angeldust007%2Ftr--factbench--electra--lora-yellow.svg)](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+[![Atomizer on HF](https://img.shields.io/badge/🤗%20Atomizer-angeldust007%2Ftr--factbench--gemma--atomizer-orange.svg)](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
+
+> 🤗 **YAYIMLANAN AÇIK KAYNAK MODEL AĞIRLIKLARI (HUGGING FACE HUB):**
+> - **Bileşen 0 (Önerme Ayrıştırıcı / Atomizer — Gemma-4-E2B-it QLoRA):** [`https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer`](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer)
+> - **Bileşen 1 (Bütüncül Doğrulayıcı / K1 — ELECTRA-TR LoRA `H1_DROP10_S45`):** [`https://huggingface.co/angeldust007/tr-factbench-electra-lora`](https://huggingface.co/angeldust007/tr-factbench-electra-lora)
+> - **Bileşen 2 (Atomik Zero-Shot NLI / K2):** [`https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7`](https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7)
 
 > 📌 **TEZ SAVUNMASI VE TEMEL METODOLOJİ RAPORU:**  
 > Jüri savunmasında K1 ve K2'nin bilimsel varlık sebebi, "Frugal AI / Model Cascading", Açıklanabilirlik (XAI), 478 vaka tam LLM karşılaştırması ($p = 0.3593$) ve Danışman Prof. Dr. Serkan Ballı'nın 358 uzlaşma vakası deney bulguları için ana referans belgesi:  
-> 👉 [**`reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md)
+> 👉 [**`reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md)  
+> 👉 [**`reports/GOLD480_RESULTS_BUNDLE.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/GOLD480_RESULTS_BUNDLE.md) *(Bölüm 4 Tüm Sistemler Karşılaştırma Paketi: P0-V4 %93.13, PA %94.79, PB %94.58)*  
+> 👉 [**`reports/AP6_RESULTS_v1.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/AP6_RESULTS_v1.md) *(AP6 Doğal Üretilmiş 858 Türkçe LLM Cümlesi Genellenebilirlik Analizi: K1 %56.3 $\rightarrow$ P0 %72.7 $\rightarrow$ PA %76.4)*  
+> 👉 [**`reports/TR_FACTBENCH_480_DATASET_AND_ATOMIZATION_REPORT.pdf`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/TR_FACTBENCH_480_DATASET_AND_ATOMIZATION_REPORT.pdf) *(Gold-480 Veri Seti, Atomizasyon Mimarisi ve 1-Atomlu Kısmi Destek Paradoksu Analizi)*
 
 > 🔬 **DAĞILIM DIŞI (OOD) GENELLENEBİLİRLİK RAPORLARI (%0 Veri Sızıntısı / Zero Data Leakage):**  
 > Tez başlığındaki *"ve Genellenebilirlik Analizi"* boyutunu kanıtlayan 3 farklı disiplin ve 48 vakalık uçtan uca benchmark sonuçları:  
@@ -15,7 +26,7 @@
 
 > ⚡ **DONANIM, GECİKME (LATENCY) VE VRAM PROFİLLEME RAPORU:**  
 > Tek tüketici dizüstü GPU'sunda (RTX 4060 8GB VRAM) 7.39 GB bellek tüketimi, K1'in 15ms hızı ve Frugal AI mühendislik analizi:  
-> 👉 [**`reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md)
+> 👉 [**`reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/LATENCY_AND_HARDWARE_PROFILING_REPORT.md) ve [**`reports/FROZEN_SYSTEM_PROFILE.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/FROZEN_SYSTEM_PROFILE.md)
 
 > 🔍 **44 HATA DETAYLI ADLİ TAKSONOMİ RAPORU (434/478 — %90.79):**  
 > 21 Konsensüs ve 23 Hakem hatasının her birinin tek tek iddia, bağlam, atom ve kök neden analiz dökümü:  
@@ -26,12 +37,12 @@ K2'nin temel amacı, önceden atomize edilmiş claim'leri hazır çok dilli NLI 
 
 ## Deneysel ayrım
 
-- **K1:** task-specific, doğrudan dört sınıflı sınıflandırıcı.
-- **K2-ZS:** TR-FactBench üzerinde fine-tune edilmemiş hazır NLI modeli + atomlar + sabit aggregation.
+- **K1:** task-specific, doğrudan dört sınıflı sınıflandırıcı (`angeldust007/tr-factbench-electra-lora`).
+- **K2-ZS:** TR-FactBench üzerinde fine-tune edilmemiş hazır NLI modeli + atomlar (`angeldust007/tr-factbench-gemma-atomizer`) + sabit/soft-prob aggregation.
 - **K2-Cal:** ayrı calibration bölümü üzerinde eşik/kalibrasyon öğrenilmiş K2 varyantı.
 - **K2-FT:** ileride eklenebilecek task-adapted atom verifier; K2-ZS ile karıştırılmaz.
 
-Atomizer bu klasörün parçası değildir. K2 yalnızca sürümlenmiş atom JSONL dosyalarını girdi olarak kabul eder.
+Atomizer eğitim ve çıkarım paketleri `../atomizer/v2/` altında yer alır ve eğitilmiş QLoRA adaptörü Hugging Face Hub'da [`angeldust007/tr-factbench-gemma-atomizer`](https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer) adresinde herkese açık olarak yayımlanmıştır. K2 yalnızca sürümlenmiş atom JSONL dosyalarını girdi olarak kabul eder.
 
 ## Veri rolleri
 
