@@ -12,14 +12,15 @@
 > Jüri savunmasında K1 ve K2'nin bilimsel varlık sebebi, "Frugal AI / Model Cascading", Açıklanabilirlik (XAI), 478 vaka tam LLM karşılaştırması ($p = 0.3593$) ve Danışman Prof. Dr. Serkan Ballı'nın 358 uzlaşma vakası deney bulguları için ana referans belgesi:  
 > 👉 [**`reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/THESIS_CORE_DEFENSE_AND_METHODOLOGY_REPORT.md)  
 > 👉 [**`reports/GOLD480_RESULTS_BUNDLE.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/GOLD480_RESULTS_BUNDLE.md) *(Bölüm 4 Tüm Sistemler Karşılaştırma Paketi: P0-V4 %93.13, PA %94.79, PB %94.58)*  
-> 👉 [**`reports/AP6_RESULTS_v1.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/AP6_RESULTS_v1.md) *(AP6 Doğal Üretilmiş 858 Türkçe LLM Cümlesi Genellenebilirlik Analizi: K1 %56.3 $\rightarrow$ P0 %72.7 $\rightarrow$ PA %76.4)*  
+> 👉 [**`reports/AP6_RESULTS_v1.md`**](reports/AP6_RESULTS_v1.md) *(AP6 v1, 858 cümle — **pilot** küme, kappa 0,58; tez kararı #19 gereği sistem sonuçları ana bulgu olarak raporlanmaz. Bağımsız dış veri sonuçları için `docs/AP6v2_KARAR_KAYDI.md` ve tez Bölüm 4.9.)*  
 > 👉 [**`reports/TR_FACTBENCH_480_DATASET_AND_ATOMIZATION_REPORT.pdf`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/TR_FACTBENCH_480_DATASET_AND_ATOMIZATION_REPORT.pdf) *(Gold-480 Veri Seti, Atomizasyon Mimarisi ve 1-Atomlu Kısmi Destek Paradoksu Analizi)*
 
-> 🔬 **DAĞILIM DIŞI (OOD) GENELLENEBİLİRLİK RAPORLARI (%0 Veri Sızıntısı / Zero Data Leakage):**  
-> Tez başlığındaki *"ve Genellenebilirlik Analizi"* boyutunu kanıtlayan 3 farklı disiplin ve 48 vakalık uçtan uca benchmark sonuçları:  
-> 1. [**Klinik Tıp (Alzheimer / Nöroloji) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_ALZHEIMER_CASE_STUDY_REPORT.md)  
-> 2. [**Türk İş Hukuku (4857 Sayılı Kanun) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_LEGAL_CASE_STUDY_REPORT.md)  
-> 3. [**Finans Piyasaları (Eurobond / Takas) Raporu (16/16 - %100 Doğruluk)**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/OOD_FINANCE_CASE_STUDY_REPORT.md)  
+> 🔬 **OOD GELİŞTİRME / STRES VAKALARI (48 vaka — genellenebilirlik kanıtı DEĞİLDİR):**  
+> Bağlam, iddia ve etiketler Gemini tarafından üretildi; insan anotasyonu yoktur ve vakalar hakem istemi seçiminde kullanıldı. Bu nedenle sonuçlar "doğruluk" değil, Gemini etiketleriyle uyum olarak okunmalı ve held-out sonuç olarak sunulmamalıdır (bkz. `../INCELEME_NOTLARI.md` B2).  
+> 1. [Klinik tıp (Alzheimer / nöroloji), 16 vaka](reports/OOD_ALZHEIMER_CASE_STUDY_REPORT.md)  
+> 2. [Türk iş hukuku (4857 sayılı Kanun), 16 vaka](reports/OOD_LEGAL_CASE_STUDY_REPORT.md)  
+> 3. [Finans piyasaları (Eurobond / takas), 16 vaka](reports/OOD_FINANCE_CASE_STUDY_REPORT.md)  
+
 > 📚 **BÖLÜM 2 LİTERATÜR VE TAKSONOMİ MATRİSİ:**  
 > Uluslararası (FEVER, FActScore, SAFE, MiniCheck) ve Türkçe (Budur vd., ImplicaTR, Turk-LettuceDetect) 15 çalışmanın 10 parametreli karşılaştırma matrisi ve tezin 4 temel araştırma boşluğu (research gap) analizi:  
 > 👉 [**`reports/LITERATURE_TAXONOMY_MATRIX_REPORT.md`**](file:///c:/Users/Engin%20Dalga/Documents/GitHub/halusinasyon/hls_new/k2_nli/reports/LITERATURE_TAXONOMY_MATRIX_REPORT.md)
@@ -114,7 +115,7 @@ K1 (Bütüncül Encoder) ve K2 (Atomik Önerme NLI) arasındaki 120 uyuşmazlık
 | **OpenAI GPT-4o-mini** | **%63.33** (76/120) | **%86.40** (413/478) | **0.8666** | **0.8259** | p = 0.07693 | **p = 2.49e-05** |
 | **Gemma-4-E2B-it (Yerel 4-bit)** | %50.00 (60/120) | %83.05 (397/478) | 0.8294 | 0.7840 | p = 1.0000 | p = 0.1340 |
 
-- **Konsensüs Alanı (358 Vaka):** %94.13 Doğruluk, 0 LLM API Çağrısı, ~35ms gecikme.
+- **Konsensüs Alanı (358 Vaka):** %94.13 Doğruluk, 0 LLM API çağrısı. Not: uzlaşmayı belirlemek için K2 (atomizer, ort. ~9 sn/iddia) her iddiada çalışır; kazanç gecikmede değil, hakem çağrısı sayısındadır. Bu tablo erken V1 few-shot koşusudur (478 örnek, 120 vaka); güncel sonuçlar için `reports/GOLD480_RESULTS_BUNDLE.md` ve tez Bölüm 4.
 - **Detaylı Rapor ve Ablasyon Analizi:** [`reports/K3_MULTIMODEL_ARBITRATION_REPORT.md`](reports/K3_MULTIMODEL_ARBITRATION_REPORT.md)
 - **Canlı İnteraktif Arayüz:** `python ../demo_hybrid_pipeline.py` (veya `../run_hybrid_demo.bat`)
 
