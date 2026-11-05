@@ -1,0 +1,60 @@
+{
+  "per_run": {
+    "original": {
+      "judge_correct": 110,
+      "judge_acc": 0.8943,
+      "p0_correct": 447,
+      "p0_acc": 0.9313
+    },
+    "rep1": {
+      "judge_correct": 111,
+      "judge_acc": 0.9024,
+      "p0_correct": 448,
+      "p0_acc": 0.9333
+    },
+    "rep2": {
+      "judge_correct": 109,
+      "judge_acc": 0.8862,
+      "p0_correct": 446,
+      "p0_acc": 0.9292
+    }
+  },
+  "pairwise_changed": {
+    "original vs rep1": {
+      "changed": 9,
+      "changed_correctness": 9
+    },
+    "original vs rep2": {
+      "changed": 13,
+      "changed_correctness": 13
+    },
+    "rep1 vs rep2": {
+      "changed": 6,
+      "changed_correctness": 6
+    }
+  },
+  "meta": {
+    "rep1": {
+      "cost_usd": 0.046,
+      "providers": {
+        "AkashML": 107,
+        "DeepInfra": 10,
+        "Novita": 5,
+        "Cloudflare": 1
+      },
+      "finish_length": 0,
+      "parse_notes": {}
+    },
+    "rep2": {
+      "cost_usd": 0.0456,
+      "providers": {
+        "AkashML": 121,
+        "DeepInfra": 2
+      },
+      "finish_length": 0,
+      "parse_notes": {}
+    }
+  },
+  "unstable_cases": 14,
+  "majority_vote": 112
+}

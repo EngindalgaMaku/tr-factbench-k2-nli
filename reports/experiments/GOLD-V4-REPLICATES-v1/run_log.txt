@@ -1,0 +1,308 @@
+C:\Users\Engin Dalga\AppData\Roaming\Python\Python314\site-packages\requests\__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.1.0)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+[rep1 001/123] unverifiable        WRONG AkashML
+[rep1 002/123] contradicted        OK AkashML
+[rep1 003/123] unverifiable        WRONG AkashML
+[rep1 004/123] supported           OK AkashML
+[rep1 005/123] partially_supported OK AkashML
+[rep1 006/123] unverifiable        OK AkashML
+[rep1 007/123] partially_supported OK AkashML
+[rep1 008/123] contradicted        OK AkashML
+[rep1 009/123] unverifiable        OK AkashML
+[rep1 010/123] contradicted        OK AkashML
+[rep1 011/123] contradicted        OK AkashML
+[rep1 012/123] supported           OK AkashML
+[rep1 013/123] contradicted        OK AkashML
+[rep1 014/123] unverifiable        OK AkashML
+[rep1 015/123] partially_supported OK AkashML
+[rep1 016/123] unverifiable        OK AkashML
+[rep1 017/123] unverifiable        OK AkashML
+[rep1 018/123] partially_supported OK AkashML
+[rep1 019/123] unverifiable        OK AkashML
+[rep1 020/123] unverifiable        OK AkashML
+[rep1 021/123] partially_supported OK AkashML
+[rep1 022/123] contradicted        OK AkashML
+[rep1 023/123] unverifiable        OK AkashML
+[rep1 024/123] contradicted        OK DeepInfra
+[rep1 025/123] supported           OK DeepInfra
+[rep1 026/123] unverifiable        OK DeepInfra
+[rep1 027/123] partially_supported WRONG Novita
+[rep1 028/123] unverifiable        OK DeepInfra
+[rep1 029/123] unverifiable        OK Novita
+[rep1 030/123] unverifiable        WRONG DeepInfra
+[rep1 031/123] partially_supported WRONG AkashML
+[rep1 032/123] partially_supported OK AkashML
+[rep1 033/123] contradicted        OK AkashML
+[rep1 034/123] contradicted        OK AkashML
+[rep1 035/123] supported           OK AkashML
+[rep1 036/123] supported           OK AkashML
+[rep1 037/123] contradicted        OK AkashML
+[rep1 038/123] partially_supported OK AkashML
+[rep1 039/123] unverifiable        OK AkashML
+[rep1 040/123] supported           OK AkashML
+[rep1 041/123] partially_supported OK AkashML
+[rep1 042/123] contradicted        OK AkashML
+[rep1 043/123] unverifiable        OK AkashML
+[rep1 044/123] unverifiable        OK AkashML
+[rep1 045/123] partially_supported OK AkashML
+[rep1 046/123] contradicted        OK AkashML
+[rep1 047/123] partially_supported OK AkashML
+[rep1 048/123] contradicted        OK AkashML
+[rep1 049/123] unverifiable        OK AkashML
+[rep1 050/123] contradicted        OK AkashML
+[rep1 051/123] partially_supported OK AkashML
+[rep1 052/123] contradicted        OK AkashML
+[rep1 053/123] unverifiable        OK AkashML
+[rep1 054/123] unverifiable        OK AkashML
+[rep1 055/123] partially_supported WRONG AkashML
+[rep1 056/123] contradicted        OK AkashML
+[rep1 057/123] supported           OK AkashML
+[rep1 058/123] partially_supported OK AkashML
+[rep1 059/123] partially_supported WRONG AkashML
+[rep1 060/123] unverifiable        OK AkashML
+[rep1 061/123] supported           OK AkashML
+[rep1 062/123] partially_supported WRONG AkashML
+[rep1 063/123] supported           OK AkashML
+[rep1 064/123] contradicted        WRONG AkashML
+[rep1 065/123] supported           OK AkashML
+[rep1 066/123] contradicted        OK AkashML
+[rep1 067/123] contradicted        OK AkashML
+[rep1 068/123] partially_supported OK AkashML
+[rep1 069/123] partially_supported WRONG AkashML
+[rep1 070/123] partially_supported OK AkashML
+[rep1 071/123] partially_supported OK AkashML
+[rep1 072/123] partially_supported OK AkashML
+[rep1 073/123] partially_supported OK AkashML
+[rep1 074/123] partially_supported WRONG AkashML
+[rep1 075/123] partially_supported OK AkashML
+[rep1 076/123] contradicted        OK AkashML
+[rep1 077/123] partially_supported OK AkashML
+[rep1 078/123] partially_supported OK AkashML
+[rep1 079/123] unverifiable        OK AkashML
+[rep1 080/123] supported           OK AkashML
+[rep1 081/123] unverifiable        WRONG AkashML
+[rep1 082/123] contradicted        OK AkashML
+[rep1 083/123] unverifiable        OK AkashML
+[rep1 084/123] supported           OK AkashML
+[rep1 085/123] supported           OK AkashML
+[rep1 086/123] unverifiable        OK AkashML
+[rep1 087/123] unverifiable        OK AkashML
+[rep1 088/123] partially_supported OK AkashML
+[rep1 089/123] unverifiable        OK AkashML
+[rep1 090/123] partially_supported OK AkashML
+[rep1 091/123] contradicted        OK AkashML
+[rep1 092/123] unverifiable        OK AkashML
+[rep1 093/123] contradicted        OK AkashML
+[rep1 094/123] contradicted        OK AkashML
+[rep1 095/123] partially_supported OK AkashML
+[rep1 096/123] unverifiable        OK AkashML
+[rep1 097/123] supported           OK AkashML
+[rep1 098/123] partially_supported OK AkashML
+[rep1 099/123] contradicted        OK AkashML
+[rep1 100/123] supported           OK AkashML
+[rep1 101/123] unverifiable        OK AkashML
+[rep1 102/123] supported           OK AkashML
+[rep1 103/123] partially_supported OK AkashML
+[rep1 104/123] unverifiable        OK AkashML
+[rep1 105/123] contradicted        OK AkashML
+[rep1 106/123] unverifiable        OK AkashML
+[rep1 107/123] partially_supported OK AkashML
+[rep1 108/123] partially_supported OK AkashML
+[rep1 109/123] partially_supported OK AkashML
+[rep1 110/123] contradicted        OK AkashML
+[rep1 111/123] unverifiable        OK AkashML
+[rep1 112/123] supported           OK AkashML
+[rep1 113/123] partially_supported OK DeepInfra
+[rep1 114/123] unverifiable        OK Novita
+[rep1 115/123] partially_supported OK Novita
+[rep1 116/123] supported           OK DeepInfra
+[rep1 117/123] contradicted        OK DeepInfra
+[rep1 118/123] supported           OK DeepInfra
+[rep1 119/123] unverifiable        OK DeepInfra
+[rep1 120/123] supported           OK Novita
+[rep1 121/123] partially_supported OK Cloudflare
+[rep1 122/123] unverifiable        OK AkashML
+[rep1 123/123] unverifiable        OK AkashML
+[rep2 001/123] unverifiable        WRONG AkashML
+[rep2 002/123] contradicted        OK AkashML
+[rep2 003/123] unverifiable        WRONG AkashML
+[rep2 004/123] supported           OK AkashML
+[rep2 005/123] partially_supported OK AkashML
+[rep2 006/123] unverifiable        OK AkashML
+[rep2 007/123] partially_supported OK AkashML
+[rep2 008/123] contradicted        OK AkashML
+[rep2 009/123] unverifiable        OK AkashML
+[rep2 010/123] contradicted        OK AkashML
+[rep2 011/123] contradicted        OK AkashML
+[rep2 012/123] supported           OK AkashML
+[rep2 013/123] contradicted        OK AkashML
+[rep2 014/123] unverifiable        OK AkashML
+[rep2 015/123] partially_supported OK AkashML
+[rep2 016/123] unverifiable        OK AkashML
+[rep2 017/123] unverifiable        OK AkashML
+[rep2 018/123] partially_supported OK AkashML
+[rep2 019/123] unverifiable        OK AkashML
+[rep2 020/123] unverifiable        OK AkashML
+[rep2 021/123] partially_supported OK AkashML
+[rep2 022/123] contradicted        OK AkashML
+[rep2 023/123] unverifiable        OK AkashML
+[rep2 024/123] contradicted        OK AkashML
+[rep2 025/123] supported           OK AkashML
+[rep2 026/123] unverifiable        OK AkashML
+[rep2 027/123] partially_supported WRONG AkashML
+[rep2 028/123] unverifiable        OK AkashML
+[rep2 029/123] unverifiable        OK AkashML
+[rep2 030/123] unverifiable        WRONG AkashML
+[rep2 031/123] partially_supported WRONG AkashML
+[rep2 032/123] partially_supported OK AkashML
+[rep2 033/123] contradicted        OK AkashML
+[rep2 034/123] contradicted        OK AkashML
+[rep2 035/123] supported           OK AkashML
+[rep2 036/123] supported           OK AkashML
+[rep2 037/123] contradicted        OK AkashML
+[rep2 038/123] partially_supported OK AkashML
+[rep2 039/123] unverifiable        OK AkashML
+[rep2 040/123] supported           OK AkashML
+[rep2 041/123] partially_supported OK AkashML
+[rep2 042/123] partially_supported WRONG AkashML
+[rep2 043/123] unverifiable        OK AkashML
+[rep2 044/123] unverifiable        OK AkashML
+[rep2 045/123] partially_supported OK AkashML
+[rep2 046/123] contradicted        OK AkashML
+[rep2 047/123] partially_supported OK AkashML
+[rep2 048/123] contradicted        OK AkashML
+[rep2 049/123] unverifiable        OK AkashML
+[rep2 050/123] contradicted        OK AkashML
+[rep2 051/123] partially_supported OK AkashML
+[rep2 052/123] contradicted        OK AkashML
+[rep2 053/123] unverifiable        OK AkashML
+[rep2 054/123] unverifiable        OK AkashML
+[rep2 055/123] partially_supported WRONG AkashML
+[rep2 056/123] contradicted        OK AkashML
+[rep2 057/123] supported           OK AkashML
+[rep2 058/123] partially_supported OK AkashML
+[rep2 059/123] partially_supported WRONG AkashML
+[rep2 060/123] unverifiable        OK AkashML
+[rep2 061/123] supported           OK AkashML
+[rep2 062/123] partially_supported WRONG AkashML
+[rep2 063/123] supported           OK AkashML
+[rep2 064/123] contradicted        WRONG AkashML
+[rep2 065/123] supported           OK AkashML
+[rep2 066/123] contradicted        OK AkashML
+[rep2 067/123] contradicted        OK AkashML
+[rep2 068/123] partially_supported OK AkashML
+[rep2 069/123] partially_supported WRONG AkashML
+[rep2 070/123] partially_supported OK AkashML
+[rep2 071/123] partially_supported OK AkashML
+[rep2 072/123] partially_supported OK AkashML
+[rep2 073/123] partially_supported OK AkashML
+[rep2 074/123] contradicted        OK AkashML
+[rep2 075/123] contradicted        WRONG AkashML
+[rep2 076/123] contradicted        OK AkashML
+[rep2 077/123] partially_supported OK AkashML
+[rep2 078/123] partially_supported OK AkashML
+[rep2 079/123] unverifiable        OK AkashML
+[rep2 080/123] supported           OK AkashML
+[rep2 081/123] partially_supported OK AkashML
+[rep2 082/123] contradicted        OK AkashML
+[rep2 083/123] unverifiable        OK AkashML
+[rep2 084/123] supported           OK AkashML
+[rep2 085/123] supported           OK AkashML
+[rep2 086/123] unverifiable        OK AkashML
+[rep2 087/123] partially_supported WRONG AkashML
+[rep2 088/123] partially_supported OK AkashML
+[rep2 089/123] unverifiable        OK AkashML
+[rep2 090/123] partially_supported OK AkashML
+[rep2 091/123] contradicted        OK AkashML
+[rep2 092/123] unverifiable        OK AkashML
+[rep2 093/123] contradicted        OK AkashML
+[rep2 094/123] contradicted        OK AkashML
+[rep2 095/123] partially_supported OK AkashML
+[rep2 096/123] unverifiable        OK AkashML
+[rep2 097/123] supported           OK AkashML
+[rep2 098/123] partially_supported OK AkashML
+[rep2 099/123] contradicted        OK AkashML
+[rep2 100/123] supported           OK AkashML
+[rep2 101/123] unverifiable        OK AkashML
+[rep2 102/123] supported           OK AkashML
+[rep2 103/123] partially_supported OK AkashML
+[rep2 104/123] unverifiable        OK AkashML
+[rep2 105/123] contradicted        OK AkashML
+[rep2 106/123] unverifiable        OK AkashML
+[rep2 107/123] contradicted        WRONG AkashML
+[rep2 108/123] partially_supported OK AkashML
+[rep2 109/123] partially_supported OK AkashML
+[rep2 110/123] contradicted        OK AkashML
+[rep2 111/123] unverifiable        OK AkashML
+[rep2 112/123] supported           OK AkashML
+[rep2 113/123] partially_supported OK AkashML
+[rep2 114/123] unverifiable        OK AkashML
+[rep2 115/123] partially_supported OK AkashML
+[rep2 116/123] supported           OK AkashML
+[rep2 117/123] contradicted        OK AkashML
+[rep2 118/123] supported           OK AkashML
+[rep2 119/123] unverifiable        OK AkashML
+[rep2 120/123] supported           OK AkashML
+[rep2 121/123] partially_supported OK AkashML
+[rep2 122/123] unverifiable        OK DeepInfra
+[rep2 123/123] unverifiable        OK DeepInfra
+{
+  "per_run": {
+    "original": {
+      "judge_correct": 110,
+      "judge_acc": 0.8943,
+      "p0_correct": 447,
+      "p0_acc": 0.9313
+    },
+    "rep1": {
+      "judge_correct": 111,
+      "judge_acc": 0.9024,
+      "p0_correct": 448,
+      "p0_acc": 0.9333
+    },
+    "rep2": {
+      "judge_correct": 109,
+      "judge_acc": 0.8862,
+      "p0_correct": 446,
+      "p0_acc": 0.9292
+    }
+  },
+  "pairwise_changed": {
+    "original vs rep1": {
+      "changed": 9,
+      "changed_correctness": 9
+    },
+    "original vs rep2": {
+      "changed": 13,
+      "changed_correctness": 13
+    },
+    "rep1 vs rep2": {
+      "changed": 6,
+      "changed_correctness": 6
+    }
+  },
+  "meta": {
+    "rep1": {
+      "cost_usd": 0.046,
+      "providers": {
+        "AkashML": 107,
+        "DeepInfra": 10,
+        "Novita": 5,
+        "Cloudflare": 1
+      },
+      "finish_length": 0,
+      "parse_notes": {}
+    },
+    "rep2": {
+      "cost_usd": 0.0456,
+      "providers": {
+        "AkashML": 121,
+        "DeepInfra": 2
+      },
+      "finish_length": 0,
+      "parse_notes": {}
+    }
+  },
+  "unstable_cases": 14,
+  "majority_vote": 112
+}

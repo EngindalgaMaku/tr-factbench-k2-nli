@@ -1,0 +1,165 @@
+{
+  "dev960": {
+    "n": 960,
+    "atomizer_failures": 0,
+    "k1": {
+      "acc": 0.899,
+      "macro_f1": 0.8994
+    },
+    "k2": {
+      "acc": 0.8052,
+      "macro_f1": 0.806
+    },
+    "agreement": {
+      "n": 741,
+      "correct": 716,
+      "errors": 25,
+      "errors_by_shared_label": {
+        "contradicted": 4,
+        "partially_supported": 13,
+        "supported": 6,
+        "unverifiable": 2
+      }
+    },
+    "disagreement": {
+      "n": 219,
+      "k1_right": 147,
+      "k2_right": 57,
+      "both_wrong": 15,
+      "by_domain": {
+        "finance": {
+          "n": 76,
+          "k1_right": 52,
+          "k2_right": 20
+        },
+        "legal": {
+          "n": 60,
+          "k1_right": 41,
+          "k2_right": 18
+        },
+        "medical": {
+          "n": 83,
+          "k1_right": 54,
+          "k2_right": 19
+        }
+      },
+      "by_k1_confidence": {
+        "[0.00,0.80)": {
+          "n": 27,
+          "k1_right": 8,
+          "k2_right": 14
+        },
+        "[0.80,0.90)": {
+          "n": 13,
+          "k1_right": 5,
+          "k2_right": 6
+        },
+        "[0.90,0.99)": {
+          "n": 43,
+          "k1_right": 21,
+          "k2_right": 18
+        },
+        "[0.99,1.00)": {
+          "n": 136,
+          "k1_right": 113,
+          "k2_right": 19
+        }
+      },
+      "pairs": {
+        "partially_supported | supported": 41,
+        "contradicted | partially_supported": 35,
+        "contradicted | unverifiable": 24,
+        "supported | partially_supported": 23,
+        "contradicted | supported": 17,
+        "supported | unverifiable": 15,
+        "unverifiable | contradicted": 14,
+        "supported | contradicted": 13,
+        "unverifiable | supported": 12,
+        "partially_supported | contradicted": 11,
+        "unverifiable | partially_supported": 8,
+        "partially_supported | unverifiable": 6
+      }
+    },
+    "oracle_acc": 0.9583
+  },
+  "dev600": {
+    "n": 600,
+    "atomizer_failures": 0,
+    "k1": {
+      "acc": 0.865,
+      "macro_f1": 0.8686
+    },
+    "k2": {
+      "acc": 0.8317,
+      "macro_f1": 0.8364
+    },
+    "agreement": {
+      "n": 461,
+      "correct": 443,
+      "errors": 18,
+      "errors_by_shared_label": {
+        "partially_supported": 15,
+        "unverifiable": 2,
+        "supported": 1
+      }
+    },
+    "disagreement": {
+      "n": 139,
+      "k1_right": 76,
+      "k2_right": 56,
+      "both_wrong": 7,
+      "by_domain": {
+        "finance": {
+          "n": 47,
+          "k1_right": 24,
+          "k2_right": 20
+        },
+        "legal": {
+          "n": 43,
+          "k1_right": 22,
+          "k2_right": 19
+        },
+        "medical": {
+          "n": 49,
+          "k1_right": 30,
+          "k2_right": 17
+        }
+      },
+      "by_k1_confidence": {
+        "[0.00,0.80)": {
+          "n": 16,
+          "k1_right": 6,
+          "k2_right": 8
+        },
+        "[0.80,0.90)": {
+          "n": 10,
+          "k1_right": 3,
+          "k2_right": 7
+        },
+        "[0.90,0.99)": {
+          "n": 37,
+          "k1_right": 16,
+          "k2_right": 20
+        },
+        "[0.99,1.00)": {
+          "n": 76,
+          "k1_right": 51,
+          "k2_right": 21
+        }
+      },
+      "pairs": {
+        "contradicted | partially_supported": 33,
+        "supported | partially_supported": 29,
+        "partially_supported | contradicted": 20,
+        "partially_supported | supported": 18,
+        "partially_supported | unverifiable": 16,
+        "unverifiable | partially_supported": 9,
+        "contradicted | unverifiable": 5,
+        "unverifiable | contradicted": 4,
+        "contradicted | supported": 4,
+        "supported | contradicted": 1
+      }
+    },
+    "oracle_acc": 0.9583
+  }
+}

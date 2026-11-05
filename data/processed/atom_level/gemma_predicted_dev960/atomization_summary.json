@@ -1,0 +1,11 @@
+{
+  "dataset": "TR-FactBench_controlled480_GOLD_v1.0",
+  "total_claims": 960,
+  "successfully_atomized": 960,
+  "failed_atomization": 0,
+  "coverage": 1.0,
+  "total_atoms_produced": 1714,
+  "mean_atoms_per_valid_claim": 1.7854166666666667,
+  "total_inference_time_sec": 8570.188401699066,
+  "claims_per_second": 0.11201620722943233
+}

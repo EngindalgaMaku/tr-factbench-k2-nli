@@ -1,0 +1,30 @@
+{"slice": "medical", "example_id": "PMQ-004__claude3haiku__e", "category": "D", "note": "ikinci yarı (aşırı dozla kendine zarar) bağlamda yok; temkinli çıkarım destekli sayılmış", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-012__claude3haiku__b", "category": "F", "note": "'Bağlamdan çıkan temel kanıtlar şunlardır:'", "route": "consensus"}
+{"slice": "medical", "example_id": "PMQ-012__claude3haiku__f", "category": "D", "note": "bağlam yalnızca çalışmanın amacını veriyor; amaç bulgu gibi okunmuş", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-015__claude3haiku__g", "category": "A", "note": "ölçümler bağlamda var; 'nicelleştirilebilir' bir adımlık çıkarım", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-022__claude3haiku__c", "category": "F", "note": "'Temel bulgular şunlardır:'", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-023__claude3haiku__d", "category": "E", "note": "bağlamın ilk belgesi tam olarak bunu karşılaştırıyor; 'doğrudan değerlendirmedi' iddiası şüpheli", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-025__gpt35turbo__c", "category": "A", "note": "bağlamda neredeyse aynen geçiyor; K1 ve K2 ikisi de kaçırmış", "route": "consensus"}
+{"slice": "medical", "example_id": "PMQ-058__claude3haiku__b", "category": "F", "note": "'Temel noktalar şunlardır:'", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-065__claude3haiku__i", "category": "A", "note": "'genetik çeşitlilik yüksek' → 'ciddi biçimde sınırlamıyor' çıkarımı", "route": "v4_judge"}
+{"slice": "medical", "example_id": "PMQ-066__claude3haiku__a", "category": "F", "note": "'...sorusunun cevabı şudur:'", "route": "v4_judge"}
+{"slice": "legal", "example_id": "CIVIL-Q035-05", "category": "A", "note": "koşul cümlesinde açıkça var; hakem 'bilgi yok' demiş", "route": "v4_judge"}
+{"slice": "legal", "example_id": "CIVIL-Q054-05", "category": "A", "note": "velayet koşulu bağlamda var; yeniden ifade", "route": "v4_judge"}
+{"slice": "legal", "example_id": "CIVIL-Q057-06", "category": "A", "note": "'yeni koşullar haklı kılıyorsa' → 'tespit etmelidir' kip değişimi", "route": "v4_judge"}
+{"slice": "legal", "example_id": "GDPR-Q006-02", "category": "D", "note": "'Avrupa Birliği içinde' bu parçada yok; genel bilgiyle destekli sayılmış", "route": "consensus"}
+{"slice": "legal", "example_id": "GDPR-Q023-01", "category": "A", "note": "'63. maddede belirtilen tutarlılık mekanizması' ilişkisi ters yönden ifade", "route": "v4_judge"}
+{"slice": "legal", "example_id": "GDPR-Q028-06", "category": "A", "note": "(a) bendinde neredeyse aynen geçiyor", "route": "v4_judge"}
+{"slice": "legal", "example_id": "GDPR-Q035-06", "category": "E", "note": "bu parça yalnızca 16 yaş kuralını içeriyor; Üye Devlet farkı yok", "route": "consensus"}
+{"slice": "legal", "example_id": "GDPR-Q043-04", "category": "D", "note": "madde numarası (49) parçada geçmiyor; dış bilgi gerekiyor", "route": "v4_judge"}
+{"slice": "legal", "example_id": "GDPR-Q046-03", "category": "D", "note": "madde numarası (49) parçada geçmiyor", "route": "v4_judge"}
+{"slice": "legal", "example_id": "GDPR-Q050-03", "category": "D", "note": "parçada ne 49. madde ne istisna geçiyor", "route": "consensus"}
+{"slice": "finance", "example_id": "ie-test-324", "category": "B", "note": "iki ayrı kanıt öğesi (tablo + paragraf); 'önemli kur dalgalanması' yorum", "route": "consensus"}
+{"slice": "finance", "example_id": "ie-test-370", "category": "B", "note": "üç paragrafa dağılmış birleşik iddia", "route": "consensus"}
+{"slice": "finance", "example_id": "ie-test-504", "category": "B", "note": "paragraf + tablo; K2 doğru, hakem bozmuş", "route": "v4_judge"}
+{"slice": "finance", "example_id": "ie-test-536", "category": "B", "note": "üç kanıt öğesine dağılmış yorumlayıcı birleşik iddia", "route": "consensus"}
+{"slice": "finance", "example_id": "ie-test-583", "category": "B", "note": "üç paragrafa dağılmış birleşik iddia", "route": "consensus"}
+{"slice": "finance", "example_id": "numeric-test-100", "category": "C", "note": "12/21 hesabı", "route": "consensus"}
+{"slice": "finance", "example_id": "numeric-test-137", "category": "C", "note": "0.09/0.75 − 1 hesabı", "route": "consensus"}
+{"slice": "finance", "example_id": "numeric-test-195", "category": "C", "note": "(80 − 109)/109 hesabı", "route": "v4_judge"}
+{"slice": "finance", "example_id": "numeric-test-288", "category": "A", "note": "üyelerin tamamı bağımsız → 'olasılık %100' çıkarımı", "route": "v4_judge"}
+{"slice": "finance", "example_id": "numeric-test-98", "category": "C", "note": "1.7 − 1.1 milyar hesabı", "route": "v4_judge"}

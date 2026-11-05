@@ -1,0 +1,98 @@
+{
+  "dev_union": {
+    "disagreements": 358,
+    "eligible_k1_not_unverifiable": 311,
+    "with_S": {
+      "n": 69,
+      "k1_wrong": 18,
+      "k1_error_rate": 0.261,
+      "judge_correct": 62,
+      "judge_acc": 0.899,
+      "judge_followed_wrong_k1": 3
+    },
+    "without_S": {
+      "n": 242,
+      "k1_wrong": 109,
+      "k1_error_rate": 0.45,
+      "judge_correct": 216,
+      "judge_acc": 0.893,
+      "judge_followed_wrong_k1": 6
+    },
+    "fisher_k1_error_S_vs_notS": {
+      "odds_ratio": 0.431,
+      "p": 0.0053
+    }
+  },
+  "dev960": {
+    "disagreements": 219,
+    "eligible_k1_not_unverifiable": 185,
+    "with_S": {
+      "n": 41,
+      "k1_wrong": 8,
+      "k1_error_rate": 0.195,
+      "judge_correct": 36,
+      "judge_acc": 0.878,
+      "judge_followed_wrong_k1": 1
+    },
+    "without_S": {
+      "n": 144,
+      "k1_wrong": 57,
+      "k1_error_rate": 0.396,
+      "judge_correct": 125,
+      "judge_acc": 0.868,
+      "judge_followed_wrong_k1": 4
+    },
+    "fisher_k1_error_S_vs_notS": {
+      "odds_ratio": 0.37,
+      "p": 0.0252
+    }
+  },
+  "dev600": {
+    "disagreements": 139,
+    "eligible_k1_not_unverifiable": 126,
+    "with_S": {
+      "n": 28,
+      "k1_wrong": 10,
+      "k1_error_rate": 0.357,
+      "judge_correct": 26,
+      "judge_acc": 0.929,
+      "judge_followed_wrong_k1": 2
+    },
+    "without_S": {
+      "n": 98,
+      "k1_wrong": 52,
+      "k1_error_rate": 0.531,
+      "judge_correct": 91,
+      "judge_acc": 0.929,
+      "judge_followed_wrong_k1": 2
+    },
+    "fisher_k1_error_S_vs_notS": {
+      "odds_ratio": 0.491,
+      "p": 0.1345
+    }
+  },
+  "gold480_once": {
+    "disagreements": 123,
+    "eligible_k1_not_unverifiable": 110,
+    "with_S": {
+      "n": 7,
+      "k1_wrong": 2,
+      "k1_error_rate": 0.286,
+      "judge_correct": 6,
+      "judge_acc": 0.857,
+      "judge_followed_wrong_k1": 0
+    },
+    "without_S": {
+      "n": 103,
+      "k1_wrong": 56,
+      "k1_error_rate": 0.544,
+      "judge_correct": 92,
+      "judge_acc": 0.893,
+      "judge_followed_wrong_k1": 4
+    },
+    "fisher_k1_error_S_vs_notS": {
+      "odds_ratio": 0.336,
+      "p": 0.2519
+    }
+  }
+}

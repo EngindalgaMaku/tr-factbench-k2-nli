@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TR-FactBench Akademik Araştırma ve Hibrit Doğrulama Platformu</title>
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --sidebar-bg: #0f172a;
+      --sidebar-hover: #1e293b;
+      --sidebar-active: #2563eb;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #1d4ed8;
+      --primary-hover: #1e40af;
+      --sup: #15803d;
+      --sup-bg: #f0fdf4;
+      --sup-border: #bbf7d0;
+      --ps: #b45309;
+      --ps-bg: #fffbeb;
+      --ps-border: #fde68a;
+      --con: #b91c1c;
+      --con-bg: #fef2f2;
+      --con-border: #fecaca;
+      --unv: #475569;
+      --unv-bg: #f8fafc;
+      --unv-border: #cbd5e1;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── SOL YAN MENÜ (SIDEBAR) ─────────────────────────────────────────── */
+    .sidebar {
+      width: 275px;
+      background: var(--sidebar-bg);
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 100;
+      border-right: 1px solid #1e293b;
+    }
+    .brand {
+      padding: 20px 18px 16px;
+      border-bottom: 1px solid #1e293b;
+    }
+    .brand-univ {
+      font-size: 10.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #93c5fd;
+      font-weight: 700;
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 4px 0 6px;
+      letter-spacing: -0.2px;
+    }
+    .brand-sub {
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.4;
+    }
+    .nav-section-label {
+      padding: 16px 18px 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: #64748b;
+    }
+    .nav-list {
+      list-style: none;
+      margin: 0;
+      padding: 0 10px;
+      flex: 1;
+      overflow-y: auto;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      margin: 3px 0;
+      border-radius: 8px;
+      color: #cbd5e1;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 13.5px;
+      transition: all 0.15s ease;
+      user-select: none;
+    }
+    .nav-item:hover {
+      background: var(--sidebar-hover);
+      color: #ffffff;
+    }
+    .nav-item.active {
+      background: var(--sidebar-active);
+      color: #ffffff;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+    }
+    .nav-badge {
+      margin-left: auto;
+      font-size: 11px;
+      background: rgba(255,255,255,0.12);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    .sidebar-footer {
+      padding: 14px 16px;
+      border-top: 1px solid #1e293b;
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+    .hf-link {
+      display: block;
+      background: #1e293b;
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 7px 10px;
+      border-radius: 6px;
+      margin-top: 6px;
+      font-weight: 600;
+      font-size: 11.5px;
+      border: 1px solid #334155;
+      transition: background 0.15s;
+    }
+    .hf-link:hover {
+      background: #334155;
+      color: #ffffff;
+    }
+
+    /* ── ANA İÇERİK ALANI ───────────────────────────────────────────────── */
+    .main-wrapper {
+      margin-left: 275px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .topbar-case {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .pill-blue { background: #dbeafe; color: #1e40af; }
+    .pill-amber { background: #fef3c7; color: #92400e; }
+    .pill-green { background: #dcfce7; color: #166534; }
+    .pill-red { background: #fee2e2; color: #991b1b; }
+    .pill-slate { background: #e2e8f0; color: #334155; }
+
+    .page-container {
+      padding: 24px 28px 48px;
+      max-width: 1480px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .page-view { display: none; }
+    .page-view.active { display: block; }
+
+    .page-header {
+      margin-bottom: 20px;
+    }
+    .page-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--text);
+      margin: 0 0 4px 0;
+    }
+    .page-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* ── KARTLAR VE IZGARALAR ───────────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
+    }
+    .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #334155;
+      margin: 0 0 12px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .grid-6 { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    @media (max-width: 1100px) {
+      .grid-2, .grid-3, .grid-4, .grid-6 { grid-template-columns: 1fr; }
+    }
+
+    /* ── FORM ELEMANLARI ────────────────────────────────────────────────── */
+    label.field-label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+    select, input[type="text"], textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 7px;
+      background: #ffffff;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 13.5px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    select:focus, input[type="text"]:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.12);
+    }
+    textarea { resize: vertical; line-height: 1.55; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 7px;
+      font-family: inherit;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-secondary {
+      background: #f8fafc;
+      color: #1e293b;
+      border-color: #cbd5e1;
+    }
+    .btn-secondary:hover { background: #e2e8f0; }
+    .btn-sm { padding: 5px 10px; font-size: 12px; }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    /* ── TABLOLAR ───────────────────────────────────────────────────────── */
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      background: #ffffff;
+    }
+    table.data-table th {
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    table.data-table td {
+      padding: 9px 12px;
+      border-bottom: 1px solid #f1f5f9;
+      vertical-align: top;
+    }
+    table.data-table tr.clickable-row { cursor: pointer; transition: background 0.12s; }
+    table.data-table tr.clickable-row:hover { background: #eff6ff; }
+    table.data-table tr.selected-row { background: #dbeafe !important; }
+
+    /* ── ETİKET RENKLERİ ────────────────────────────────────────────────── */
+    .lbl-supported { color: var(--sup); background: var(--sup-bg); border: 1px solid var(--sup-border); }
+    .lbl-partially_supported { color: var(--ps); background: var(--ps-bg); border: 1px solid var(--ps-border); }
+    .lbl-contradicted { color: var(--con); background: var(--con-bg); border: 1px solid var(--con-border); }
+    .lbl-unverifiable { color: var(--unv); background: var(--unv-bg); border: 1px solid var(--unv-border); }
+    .lbl-unsupported { color: var(--con); background: var(--con-bg); border: 1px solid var(--con-border); }
+
+    .prob-row { margin: 8px 0; }
+    .prob-head { display: flex; justify-content: space-between; font-size: 12.5px; margin-bottom: 3px; }
+    .prob-track { height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; }
+    .prob-fill { height: 100%; border-radius: 4px; transition: width 0.25s ease; }
+
+    .atom-item {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      background: #f8fafc;
+    }
+    .stat-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .stat-label { font-size: 11.5px; color: var(--text-muted); font-weight: 600; }
+    .stat-val { font-size: 18px; font-weight: 800; color: var(--text); margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       SOL NAVİGASYON SÜTUNU (SIDEBAR — 6 AYRI SAYFA)
+       ════════════════════════════════════════════════════════════════════ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-univ">MAKÜ &bull; Fen Bilimleri Enstitüsü</div>
+      <div class="brand-title">TR-FactBench Lab</div>
+      <div class="brand-sub">
+        Araştırmacı: <b>Engin Dalga</b><br>
+        Danışman: <b>Prof. Dr. Serkan Ballı</b>
+      </div>
+    </div>
+
+    <div class="nav-section-label">Araştırma Modülleri</div>
+    <ul class="nav-list">
+      <li class="nav-item active" data-page="page-explorer" onclick="switchPage('page-explorer')">
+        <span>📂 1. Veri Seti Gezgini</span>
+        <span class="nav-badge" id="nav-total-count">4667</span>
+      </li>
+      <li class="nav-item" data-page="page-hybrid" onclick="switchPage('page-hybrid')">
+        <span>🚀 2. Uçtan Uca Hibrit Test</span>
+        <span class="nav-badge">K1+K2+K3</span>
+      </li>
+      <li class="nav-item" data-page="page-k1" onclick="switchPage('page-k1')">
+        <span>🟦 3. Bileşen 1 (K1) Lab</span>
+        <span class="nav-badge">ELECTRA</span>
+      </li>
+      <li class="nav-item" data-page="page-k2" onclick="switchPage('page-k2')">
+        <span>🟧 4. Bileşen 0 & K2 NLI Lab</span>
+        <span class="nav-badge">Atom+NLI</span>
+      </li>
+      <li class="nav-item" data-page="page-k3" onclick="switchPage('page-k3')">
+        <span>⚖️ 5. Bileşen 3 (K3 Hakem)</span>
+        <span class="nav-badge">V4 / PA</span>
+      </li>
+      <li class="nav-item" data-page="page-benchmarks" onclick="switchPage('page-benchmarks')">
+        <span>📊 6. Tez Sonuç Matrisi</span>
+        <span class="nav-badge">Tablolar</span>
+      </li>
+    </ul>
+
+    <div class="sidebar-footer">
+      <div>Açık Bilim Model Ağırlıkları:</div>
+      <a class="hf-link" href="https://huggingface.co/angeldust007/tr-factbench-electra-lora" target="_blank">
+        🤗 K1: tr-factbench-electra-lora ↗
+      </a>
+      <a class="hf-link" href="https://huggingface.co/angeldust007/tr-factbench-gemma-atomizer" target="_blank">
+        🤗 K2: tr-factbench-gemma-atomizer ↗
+      </a>
+    </div>
+  </aside>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       ANA İÇERİK BÖLGESİ
+       ════════════════════════════════════════════════════════════════════ -->
+  <div class="main-wrapper">
+
+    <!-- ÜST DURUM ÇUBUĞU (AKTİF VAKA BİLGİSİ VE HIZLI GEÇİŞ) -->
+    <header class="topbar">
+      <div class="topbar-case">
+        <span style="color:var(--text-muted);font-weight:600">Aktif Çalışma Vakası:</span>
+        <span class="pill pill-blue" id="active-case-badge">tfb_ex_0006 (GOLD480)</span>
+        <span class="pill pill-slate" id="active-domain-badge">Finans</span>
+        <span class="pill pill-amber" id="active-gold-badge">Gold: Kısmi Destek</span>
+      </div>
+      <div style="display:flex; gap:8px">
+        <button class="btn btn-secondary btn-sm" onclick="switchPage('page-explorer')">📂 Başka Vaka Seç</button>
+        <button class="btn btn-primary btn-sm" onclick="runCurrentPageAction()">▶ Aktif Sayfada Çalıştır</button>
+      </div>
+    </header>
+
+    <div class="page-container">
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 1: VERİ SETİ VE ANLAŞMAZLIK GEZGİNİ (8 KÜME, 4.667 VAKA)
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-explorer" class="page-view active">
+        <div class="page-header">
+          <h1 class="page-title">1. Veri Seti ve Anlaşmazlık Gezgini (8 Veri Kümesi — 4.667 Vaka)</h1>
+          <p class="page-desc">
+            Tez kapsamında kullanılan tüm veri kümelerini, özellikle K1≠K2 anlaşmazlık (gri alan) vakalarını, OOD vaka çalışmalarını ve uluslararası RAG benchmarklarını (AP6, RAGBench-TR, ClaimRAG-LAW, FinDVer-TR) filtreleyin. Tablodan bir satıra tıklayarak istediğiniz test laboratuvarına gönderin.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="grid-4">
+            <div>
+              <label class="field-label">1. Veri Kümesi / Benchmark</label>
+              <select id="exp-dataset" onchange="loadExplorerCases()">
+                <option value="GOLD480">TR-FactBench Gold-480 (Altın Test - 480 Vaka)</option>
+                <option value="OOD48">OOD Vaka Çalışmaları (Alzheimer/Hukuk/Finans - 48 Vaka)</option>
+                <option value="AP6">AP6 Doğal Türkçe RAG Yanıtları (858 Cümle)</option>
+                <option value="RAGBENCH_MED">RAGBench-TR Tıp (PubMedQA - 809 Cümle)</option>
+                <option value="CLAIMRAG_LAW">ClaimRAG-LAW Hukuk (GDPR & Medeni K. - 787 İddia)</option>
+                <option value="FINDVER_FIN">FinDVer-TR Finans (10-K/10-Q - 125 İddia)</option>
+                <option value="DEV960">TR-FactBench DEV960-GEN (Genel Geliştirme - 960 Vaka)</option>
+                <option value="DEV600_STR">TR-FactBench DEV600-STR (Zorlu Stres - 600 Vaka)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">2. Anlaşmazlık ve Kök Neden Filtresi</label>
+              <select id="exp-filter" onchange="loadExplorerCases()">
+                <option value="DISAGREEMENT">🔥 K1 ≠ K2 Anlaşmazlık Vakaları (Gri Alan / Hakem Vakaları)</option>
+                <option value="ALL">📋 Tüm Vakalar (Filtresiz)</option>
+                <option value="CONSENSUS">🤝 K1 == K2 Uzlaşma Vakaları (Konsensüs Alanı)</option>
+                <option value="ONLY_K1_CORRECT">🎯 Yalnızca K1 Doğru (K1 > K2)</option>
+                <option value="ONLY_K2_CORRECT">🚀 Yalnızca K2 Doğru (K2 > K1 — Atomik NLI Kurtarması)</option>
+                <option value="JUDGE_RESCUED">⚖️ K3 Meta-Hakemin Kurtardığı Ayrışma Vakaları</option>
+                <option value="BOTH_WRONG">❌ Hem K1 Hem K2 Hatalı (Ortak Hatalar)</option>
+                <option value="PARADOX_1ATOM_PS">🧩 1-Atomlu Kısmi Destek Paradoksu (3 Vaka)</option>
+                <option value="HUMAN_ADJUDICATED_48">👥 İnsan Anotatör A≠B Uzlaştırma Vakaları (48 Vaka)</option>
+                <option value="K1_TRUNCATED">✂️ 512 Token Sınırında Kesilen Uzun Bağlamlar</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">3. Alan (Domain) Filtresi</label>
+              <select id="exp-domain" onchange="loadExplorerCases()">
+                <option value="ALL">Tüm Alanlar</option>
+                <option value="medical">Tıp / Sağlık</option>
+                <option value="legal">Hukuk</option>
+                <option value="finance">Finans</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">4. Vaka ID veya Metin Ara</label>
+              <input type="text" id="exp-search" placeholder="Örn: tfb_ex_0006, KOAH, GDPR..." oninput="loadExplorerCases()">
+            </div>
+          </div>
+
+          <div style="margin-top:12px; display:flex; justify-content:space-between; align-items:center; font-size:12.5px; color:var(--text-muted)">
+            <div id="exp-stats-text">Yükleniyor...</div>
+            <div>💡 <b>İpucu:</b> Tablodaki herhangi bir satıra tıklayarak vakayı seçebilir ve istediğiniz bileşen sayfasında test edebilirsiniz.</div>
+          </div>
+        </div>
+
+        <!-- ÜST TAM GENİŞLİK: FİLTRELENEN VAKALAR LİSTESİ TABLOSU (SAĞA SOLA KAYDIRMASIZ & KESİNTİSİZ İDDİA) -->
+        <div class="card" style="padding:0; overflow:hidden; margin-bottom:18px">
+          <div style="padding:14px 18px; border-bottom:1px solid var(--border); font-weight:700; background:#f8fafc; display:flex; justify-content:space-between; align-items:center">
+            <span>Filtrelenen Vakalar Listesi (Tam Genişlik & Kesintisiz İddia Görünümü)</span>
+            <span id="exp-shown-count" style="color:var(--primary)"></span>
+          </div>
+          <div class="table-wrap" style="max-height:420px; overflow-y:auto; overflow-x:hidden; border:none; border-radius:0">
+            <table class="data-table" style="width:100%; table-layout:auto">
+              <thead style="position:sticky; top:0; z-index:2; box-shadow:0 1px 2px rgba(0,0,0,0.06)">
+                <tr>
+                  <th style="white-space:nowrap; width:110px">Vaka ID</th>
+                  <th style="white-space:nowrap; width:95px">Alan</th>
+                  <th style="white-space:nowrap; width:130px">Altın Etiket</th>
+                  <th style="white-space:nowrap; width:130px">K1</th>
+                  <th style="white-space:nowrap; width:130px">K2</th>
+                  <th style="white-space:nowrap; width:130px">Hibrit P0</th>
+                  <th style="min-width:340px">Doğrulanacak İddia (Tam Metin)</th>
+                </tr>
+              </thead>
+              <tbody id="exp-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ALT TAM GENİŞLİK: SEÇİLİ VAKA ÖNİZLEME VE YÖNLENDİRME KARTI -->
+        <div class="card">
+          <div class="card-title">
+            <span>Seçili Vaka Detayı ve Hızlı Test Yönlendirmesi</span>
+            <span id="prev-id-badge" class="pill pill-blue"></span>
+          </div>
+          <div id="prev-meta" style="font-size:12.5px; color:var(--text-muted); margin-bottom:10px"></div>
+
+          <div class="grid-4" style="margin-bottom:14px" id="prev-scores-grid"></div>
+
+          <div class="grid-2" style="gap:16px">
+            <div>
+              <label class="field-label">Kaynak Bağlam (Context)</label>
+              <div id="prev-context" style="padding:10px 12px; background:#f8fafc; border:1px solid var(--border); border-radius:6px; max-height:210px; overflow-y:auto; white-space:pre-wrap; font-size:12.5px; line-height:1.5"></div>
+            </div>
+            <div>
+              <label class="field-label">Soru (K1 Giriş Bileşeni)</label>
+              <div id="prev-question" style="padding:8px 10px; background:#f8fafc; border:1px solid var(--border); border-radius:6px; margin-bottom:10px; font-size:13px"></div>
+
+              <label class="field-label">Doğrulanacak İddia (Claim)</label>
+              <div id="prev-claim" style="padding:10px 12px; background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; margin-bottom:12px; font-weight:600; font-size:13.5px; line-height:1.45"></div>
+
+              <div style="padding-top:10px; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:8px">
+                <button class="btn btn-primary" onclick="switchPage('page-hybrid'); runHybridTest();">🚀 Uçtan Uca Hibrit Sistemde Test Et</button>
+                <button class="btn btn-secondary" onclick="switchPage('page-k1'); runK1Test();">🟦 Sadece K1'de Test Et</button>
+                <button class="btn btn-secondary" onclick="switchPage('page-k2'); runK2Test();">🟧 Sadece K2 (Atom+NLI) Test Et</button>
+                <button class="btn btn-secondary" onclick="switchPage('page-k3'); runK3Test();">⚖️ Sadece K3 Hakemde Test Et</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 2: UÇTAN UCA HİBRİT DOĞRULAMA HATTI (K0 + K1 + K2 + K3)
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-hybrid" class="page-view">
+        <div class="page-header">
+          <h1 class="page-title">2. Uçtan Uca Hibrit Doğrulama Hattı (Bileşen 0 + K1 + K2 + K3)</h1>
+          <p class="page-desc">
+            Bağlam, Soru ve İddiayı tüm hibrit boru hattından geçirin; P0 (Standart Kaskad), PA (Genel Uzlaşma Denetimi) ve PB (Tıbbi Uzlaşma Denetimi) yönlendirme politikalarını canlı olarak deneyin.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="grid-2">
+            <div>
+              <label class="field-label">Kaynak Bağlam (Kanıt Metni / RAG Belgeleri)</label>
+              <textarea id="hyb-context" rows="7"></textarea>
+            </div>
+            <div>
+              <label class="field-label">Soru (K1 Eğitim Formatı İçin Zorunlu: <code>Bağlam + Soru + İddia</code>)</label>
+              <textarea id="hyb-question" rows="2" placeholder="İddianın yanıtladığı soru (K1 ELECTRA-TR modeli Soru bileşeniyle eğitilmiştir)..."></textarea>
+              <div style="margin-top:8px">
+                <label class="field-label">Doğrulanacak İddia (LLM Yanıtı / Cümle)</label>
+                <textarea id="hyb-claim" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-4" style="margin-top:14px; align-items:end">
+            <div>
+              <label class="field-label">Yönlendirme Politikası (K3)</label>
+              <select id="hyb-policy">
+                <option value="P0">P0 — Standart Kaskad (K1=K2 Uzlaşma, K1≠K2 V4 Hakem)</option>
+                <option value="PA">PA — Genel Uzlaşma Denetimi (P0 + PS/C Uzlaşmada Kör Gemma-26B)</option>
+                <option value="PB">PB — Tıbbi Uzlaşma Denetimi (P0 + Tıp PS/C Uzlaşma Denetimi)</option>
+                <option value="FORCE_JUDGE">Zorunlu Meta-Hakem (Uzlaşsa Bile Hakeme Sor)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">K2 Toplulaştırma Kuralı</label>
+              <select id="hyb-agg">
+                <option value="soft_prob_avg">Soft-Probability Average (Tez Seçimi — 0.8065 F1)</option>
+                <option value="flat">Flat (Deterministik Düz Kural — 0.7838 F1)</option>
+                <option value="contradiction_priority">Contradiction-Priority (0.6237 F1)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label">K2 Bağlam Pencereleme (K-017)</label>
+              <select id="hyb-window">
+                <option value="auto">Otomatik (Uzun RAG Bağlamlarında Pencereli)</option>
+                <option value="full">Tam Bağlam (512 Token Tek Pencere)</option>
+                <option value="windowed">Belge / Paragraf Pencereli (Windowed)</option>
+              </select>
+            </div>
+            <div>
+              <button class="btn btn-primary" style="width:100%" id="btn-run-hybrid" onclick="runHybridTest()">
+                🚀 Hibrit Doğrulama Hattını Çalıştır
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div id="hyb-results-area"></div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 3: BİLEŞEN 1 (K1: ELECTRA-TR LoRA) TEKİL LABORATUVARI
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-k1" class="page-view">
+        <div class="page-header">
+          <h1 class="page-title">3. Bileşen 1 (K1) Laboratuvarı — Bütüncül Sınıflandırıcı (`ELECTRA-TR LoRA H1_DROP10_S45`)</h1>
+          <p class="page-desc">
+            K1 modelini (`Bağlam + Soru + İddia` formatı) tek başına test edin; 4-sınıflı softmax olasılık dağılımını, Shannon entropisini, 512 token kesilme durumunu ve <b>Tam Girdi vs. Sorusuz Girdi vs. Bağlamsız Girdi Ablasyonunu</b> canlı olarak karşılaştırın.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="grid-2">
+            <div>
+              <label class="field-label">Kaynak Bağlam (`[CONTEXT]`)</label>
+              <textarea id="k1-context" rows="7"></textarea>
+            </div>
+            <div>
+              <label class="field-label">Soru (`[QUESTION]` — K1 Eğitim Formatı İçin Zorunlu Bileşen)</label>
+              <textarea id="k1-question" rows="2" placeholder="K1 giriş şablonundaki Soru metni..."></textarea>
+              <div style="margin-top:8px">
+                <label class="field-label">Doğrulanacak İddia (`[CLAIM]`)</label>
+                <textarea id="k1-claim" rows="3"></textarea>
+              </div>
+              <div style="margin-top:12px; display:flex; gap:10px">
+                <button class="btn btn-primary" id="btn-run-k1" onclick="runK1Test()">🟦 K1 Çıkarımını ve Girdi Ablasyonlarını (Tam / Sorusuz / Bağlamsız) Çalıştır</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="k1-results-area"></div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 4: BİLEŞEN 0 (ATOMIZER) & BİLEŞEN 2 (K2 NLI) LABORATUVARI
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-k2" class="page-view">
+        <div class="page-header">
+          <h1 class="page-title">4. Bileşen 0 (Gemma-4 QLoRA Atomizer) ve Bileşen 2 (mDeBERTa-v3 Zero-Shot NLI) Laboratuvarı</h1>
+          <p class="page-desc">
+            İddiayı Gemma-4-E2B QLoRA Atomizer ile önermelere ayırın, önermeleri elle düzenleyerek ("What-If" analizi) mDeBERTa-v3 NLI olasılıklarını, 3 toplulaştırma kuralını (`Soft-Prob`, `Flat`, `Contradiction-Priority`) ve Belge Pencerelemeyi (`Windowing`) test edin.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="grid-2">
+            <div>
+              <label class="field-label">1. Doğrulanacak Ham İddia (Claim)</label>
+              <textarea id="k2-claim" rows="3"></textarea>
+              <div style="margin-top:8px; display:flex; gap:8px">
+                <button class="btn btn-secondary" id="btn-run-atomizer" onclick="runAtomizerOnly()">🟪 1. Adım: Gemma-4 QLoRA ile Önermelere Ayır</button>
+              </div>
+              <div style="margin-top:14px">
+                <label class="field-label">Kaynak Bağlam (Premise)</label>
+                <textarea id="k2-context" rows="6"></textarea>
+              </div>
+            </div>
+            <div>
+              <label class="field-label">2. Atomik Önermeler (Her satıra 1 atom — Elle değiştirip "What-If" testi yapabilirsiniz)</label>
+              <textarea id="k2-atoms" rows="7" placeholder="Her satıra bir atomik önerme yazın veya sol taraftaki 'Önermelere Ayır' butonuna tıklayın..."></textarea>
+              <div id="k2-atomizer-meta" style="font-size:12px; color:var(--text-muted); margin-top:4px"></div>
+              <div style="margin-top:12px">
+                <button class="btn btn-primary" style="width:100%" id="btn-run-k2" onclick="runK2Test()">
+                  🟧 2. Adım: Atomları mDeBERTa-v3 NLI ile Test Et (Tam Bağlam vs Pencereli + 3 Kural Kıyaslaması)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="k2-results-area"></div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 5: BİLEŞEN 3 (K3 EMSALLİ META-HAKEM) LABORATUVARI
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-k3" class="page-view">
+        <div class="page-header">
+          <h1 class="page-title">5. Bileşen 3 (K3 Meta-Hakem & Yönlendirme) Laboratuvarı</h1>
+          <p class="page-desc">
+            K1 ve K2'nin ayrıştığı vakalarda (veya uzlaşma denetiminde) farklı hakem modellerini (`Llama-3.3-70B`, `Gemma-4-26B`, `GPT-4.1-mini`, `Qwen-2.5-72B`) ve istem sürümlerini (`V4 Semantik Yüklem Kuralı` vs `V3 Tarafsız Atomlar`) test edin.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="grid-2">
+            <div>
+              <label class="field-label">Kaynak Bağlam</label>
+              <textarea id="k3-context" rows="5"></textarea>
+              <div style="margin-top:8px">
+                <label class="field-label">Doğrulanacak İddia</label>
+                <textarea id="k3-claim" rows="2"></textarea>
+              </div>
+            </div>
+            <div>
+              <div class="grid-2">
+                <div>
+                  <label class="field-label">Model A (K1 Bütüncül Kararı)</label>
+                  <select id="k3-k1-pred">
+                    <option value="supported">supported (Destekleniyor)</option>
+                    <option value="partially_supported">partially_supported (Kısmi Destek)</option>
+                    <option value="contradicted">contradicted (Çelişiyor)</option>
+                    <option value="unverifiable">unverifiable (Doğrulanamaz)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="field-label">Model B (K2 Atomik Kararı)</label>
+                  <select id="k3-k2-pred">
+                    <option value="supported">supported (Destekleniyor)</option>
+                    <option value="partially_supported">partially_supported (Kısmi Destek)</option>
+                    <option value="contradicted">contradicted (Çelişiyor)</option>
+                    <option value="unverifiable">unverifiable (Doğrulanamaz)</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-top:8px">
+                <label class="field-label">Hakeme Gönderilecek Tarafsız Atomik Önermeler (Her satır 1 atom)</label>
+                <textarea id="k3-atoms" rows="3"></textarea>
+              </div>
+              <div class="grid-2" style="margin-top:8px">
+                <div>
+                  <label class="field-label">Hakem LLM Modeli</label>
+                  <select id="k3-model">
+                    <option value="meta-llama/llama-3.3-70b-instruct">Meta Llama-3.3-70B-Instruct (Ana Hakem)</option>
+                    <option value="google/gemma-4-26b-a4b-it">Google Gemma-4-26B-A4B-it MoE</option>
+                    <option value="openai/gpt-4.1-mini">OpenAI GPT-4.1-mini</option>
+                    <option value="qwen/qwen-2.5-72b-instruct">Alibaba Qwen-2.5-72B-Instruct</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="field-label">İstem (Prompt) Protokolü</label>
+                  <select id="k3-prompt-ver">
+                    <option value="V4">V4 — Bilgili Meta-Hakem (4 Emsalli + Yüklem Kuralı, %89.4)</option>
+                    <option value="V3">V3 — Bilgili Meta-Hakem (4 Emsalli + Tarafsız Atomlar, %87.0)</option>
+                    <option value="BLIND_8SHOT">Kör Hakem — 8 Örnekli (few_shot_8 — K1/K2 Kararını Görmez)</option>
+                    <option value="BLIND_0SHOT">Kör Hakem — Sıfır Örnekli (zero_shot — K1/K2 Kararını Görmez)</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-top:10px; display:flex; align-items:center; justify-content:space-between">
+                <label style="font-size:12.5px; display:flex; align-items:center; gap:6px; cursor:pointer">
+                  <input type="checkbox" id="k3-use-cache" checked> Dondurulmuş Deney Önbelleğini Kullan (Anında Sonuç)
+                </label>
+                <button class="btn btn-primary" id="btn-run-k3" onclick="runK3Test()">⚖️ K3 Meta-Hakemi Çalıştır</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="k3-results-area"></div>
+      </section>
+
+      <!-- ════════════════════════════════════════════════════════════════
+           SAYFA 6: BÜTÜN TEZ TABLOLARI VE GENELLENEBİLİRLİK MATRİSİ
+           ════════════════════════════════════════════════════════════════ -->
+      <section id="page-benchmarks" class="page-view">
+        <div class="page-header">
+          <h1 class="page-title">6. Akademik Sonuç Tabloları ve Genellenebilirlik Matrisi</h1>
+          <p class="page-desc">
+            Tez kapsamında yürütülen tüm resmi deneylerin (`Gold-480`, `DEV960`, `DEV600-STR`, `OOD-48`, `AP6`, `RAGBench-TR`, `ClaimRAG-LAW`, `FinDVer-TR`) dondurulmuş kanonik sonuçları.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>Tablo 1: TR-FactBench Gold-480 Resmi Held-Out Sonuç Paketi (n = 480, κ = 0.8666, 123 Ayrışma)</span>
+            <span class="pill pill-blue">scripts/92_gold480_results_bundle.py</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Sistem / Mimari</th>
+                  <th>Doğruluk (Acc)</th>
+                  <th>Macro-F1 [%95 GA]</th>
+                  <th>MCC</th>
+                  <th>LLM Çağrı Oranı</th>
+                  <th>McNemar vs K1 (b/c, p)</th>
+                  <th>Finans F1</th>
+                  <th>Hukuk F1</th>
+                  <th>Tıp F1</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td><b>K1 (ELECTRA-TR LoRA H1_DROP10_S45)</b></td><td>%83.13</td><td>0.8301 [0.7988, 0.8602]</td><td>0.7785</td><td><b>%0.0</b></td><td>—</td><td>0.8632</td><td>0.8566</td><td>0.7667</td></tr>
+                <tr><td><b>K2 (Gemma-4 QLoRA + mDeBERTa-v3 Flat)</b></td><td>%78.33</td><td>0.7838 [0.7469, 0.8190]</td><td>0.7145</td><td><b>%0.0</b></td><td>69/46, p = 0.0398</td><td>0.8350</td><td>0.7713</td><td>0.7403</td></tr>
+                <tr><td><b>K2 (Gemma-4 QLoRA + mDeBERTa-v3 Soft-Prob)</b></td><td>%80.42</td><td>0.8065 [0.7742, 0.8383]</td><td>0.7412</td><td><b>%0.0</b></td><td>62/49, p = 0.255</td><td><b>0.8690</b></td><td>0.7777</td><td>0.7707</td></tr>
+                <tr><td><b>Hibrit P0 + Kör Gemma-4-26B (Zero-Shot)</b></td><td><b>%92.29</b></td><td><b>0.9223</b> [0.8968, 0.9453]</td><td>0.8998</td><td><b>%25.6</b></td><td>4/48, p = 1.31e-10</td><td>0.9436</td><td><b>0.9501</b></td><td>0.8692</td></tr>
+                <tr><td><b>Hibrit P0 + Kör Llama-3.3-70B (8-Shot)</b></td><td>%91.46</td><td>0.9145 [0.8902, 0.9375]</td><td>0.8886</td><td><b>%25.6</b></td><td>7/47, p = 2.29e-8</td><td>0.9564</td><td>0.9192</td><td>0.8651</td></tr>
+                <tr><td><b>Hibrit P0 + Kör GPT-4.1-mini (8-Shot)</b></td><td>%91.46</td><td>0.9149 [0.8887, 0.9379]</td><td>0.8869</td><td><b>%25.6</b></td><td>13/53, p = 7.24e-7</td><td>0.9558</td><td>0.8933</td><td>0.8934</td></tr>
+                <tr style="background:#f0fdf4"><td><b>Hibrit P0 + Llama-3.3-70B V4 (Yüklem Kuralı)</b></td><td><b>%93.13</b></td><td><b>0.9315</b> [0.9112, 0.9504]</td><td><b>0.9092</b></td><td><b>%25.6</b></td><td>6/54, p = 9.72e-11</td><td>0.9561</td><td>0.9320</td><td>0.9056</td></tr>
+                <tr style="background:#f0fdf4"><td><b>Hibrit PB (P0-V4 + Yalnız Tıp Uzlaşma Denetimi)</b></td><td><b>%94.58</b></td><td><b>0.9460</b> [0.9272, 0.9645]</td><td><b>0.9281</b></td><td><b>%39.8</b></td><td>6/61, p = 1.49e-12</td><td>0.9561</td><td>0.9320</td><td><b>0.9496</b></td></tr>
+                <tr style="background:#f0fdf4"><td><b>Hibrit PA (P0-V4 + Genel PS/C Uzlaşma Denetimi)</b></td><td><b>%94.79</b></td><td><b>0.9478</b> [0.9291, 0.9663]</td><td><b>0.9307</b></td><td><b>%63.1</b></td><td>9/65, p = 1.35e-11</td><td>0.9557</td><td>0.9381</td><td><b>0.9496</b></td></tr>
+                <tr><td><i>İdeal Seçim Üst Sınırı (Oracle: K1 veya K2 Doğru)</i></td><td><i>%93.33</i></td><td><i>0.9331 [0.9121, 0.9521]</i></td><td><i>0.9122</i></td><td>—</td><td>0/49, p = 3.55e-15</td><td>0.9562</td><td>0.9313</td><td>0.9109</td></tr>
+                <tr><td>Tek Başına Llama-3.3-70B (Zero-Shot)</td><td>%71.67</td><td>0.7016 [0.6671, 0.7343]</td><td>0.6611</td><td>%100.0</td><td>95/40, p = 2.47e-6</td><td>0.7142</td><td>0.7175</td><td>0.6668</td></tr>
+                <tr><td>Tek Başına GPT-4.1-mini (Zero-Shot)</td><td>%78.96</td><td>0.7621 [0.7302, 0.7937]</td><td>0.7581</td><td>%100.0</td><td>85/65, p = 0.121</td><td>0.7964</td><td>0.7219</td><td>0.7668</td></tr>
+                <tr><td>Tek Başına Gemma-4-26B (Zero-Shot)</td><td>%90.42</td><td>0.9022 [0.8752, 0.9264]</td><td>0.8776</td><td>%100.0</td><td>27/62, p = 0.000266</td><td>0.9181</td><td>0.9047</td><td>0.8829</td></tr>
+                <tr><td>Tek Başına GPT-4.1-mini (8-Shot)</td><td>%91.04</td><td>0.9098 [0.8822, 0.9350]</td><td>0.8830</td><td>%100.0</td><td>32/70, p = 0.000213</td><td>0.9241</td><td>0.8736</td><td>0.9309</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <span>Tablo 2: Doğal RAG Çıktıları ve Uluslararası Benchmark Genellenebilirlik Matrisi</span>
+            <span class="pill pill-green">Dağılım Dışı (OOD & In-the-Wild RAG)</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Veri Kümesi / Benchmark</th>
+                  <th>Kapsam ve Kaynak</th>
+                  <th>K1 Başarımı</th>
+                  <th>K2 Başarımı</th>
+                  <th>Hibrit P0</th>
+                  <th>Hibrit PA</th>
+                  <th>Temel Bilimsel Bulgu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>OOD-48 Vaka Çalışmaları</b></td>
+                  <td>Alzheimer, 4857 İş Hukuku, Eurobond (48 Vaka)</td>
+                  <td>%83.33 (40/48)</td>
+                  <td>%79.17 (38/48)</td>
+                  <td><b>%100.0 (48/48)</b></td>
+                  <td><b>%100.0 (48/48)</b></td>
+                  <td>Sıfır veri sızıntısında tam isabet</td>
+                </tr>
+                <tr>
+                  <td><b>AP6 Doğal Türkçe RAG (v1)</b></td>
+                  <td>Ministral-3B, Qwen3-8B, DeepSeek-V4 (783 Cümle)</td>
+                  <td>İkili: %61.9 (4-Sınıf: %56.3)<br>Yanlış Alarm: %41.7</td>
+                  <td>İkili: %73.9 (4-Sınıf: %68.1)<br>Yanlış Alarm: %22.7</td>
+                  <td><b>İkili: %78.8 (4-Sınıf: %72.7)</b><br>Yanlış Alarm: %21.7</td>
+                  <td><b>İkili: %81.9 (4-Sınıf: %76.4)</b><br>Yanlış Alarm: %17.9</td>
+                  <td>Eğitimsiz K2 ve Hibrit PA, K1'in doğal RAG yanlış alarmlarını yarıdan fazla azalttı (p &lt; 10⁻¹⁵)</td>
+                </tr>
+                <tr>
+                  <td><b>RAGBench-TR Tıp (PubMedQA)</b></td>
+                  <td>74 Soru, GPT-3.5 & Claude-3 Haiku (809 Cümle)</td>
+                  <td>Doğruluk: %46.9 / F1: 0.243</td>
+                  <td>Doğruluk: %64.5 / F1: 0.295</td>
+                  <td>Doğruluk: %64.0 / F1: 0.319</td>
+                  <td><b>Doğruluk: %68.0 / F1: 0.327</b></td>
+                  <td>P0 &gt; K1 (+%17.2 doğruluk, Holm p &lt; 0.05); Belge pencereleme kesilmeyi sıfırladı</td>
+                </tr>
+                <tr>
+                  <td><b>ClaimRAG-LAW Hukuk</b></td>
+                  <td>GDPR & Medeni Kanun (787 İddia, 51 Bağlam)</td>
+                  <td>Doğruluk: %63.8 / F1: 0.585</td>
+                  <td>Doğruluk: %64.8 / F1: 0.565</td>
+                  <td>Doğruluk: %69.3 / F1: 0.628</td>
+                  <td><b>Doğruluk: %70.5 / F1: 0.633</b></td>
+                  <td>Hibrit P0 ve PA her iki tekil modeli istatistiksel olarak anlamlı geçti (p &lt; 0.05)</td>
+                </tr>
+                <tr>
+                  <td><b>FinDVer-TR Finans</b></td>
+                  <td>10-K/10-Q Raporları (125 İddia: IE & MATH)</td>
+                  <td>Doğruluk: %54.4 (IE: %54.5)</td>
+                  <td>Doğruluk: %50.4 (IE: %61.8)</td>
+                  <td>Doğruluk: %64.0 (IE: %67.3)</td>
+                  <td><b>Doğruluk: %66.4 (IE: %74.5)</b></td>
+                  <td>IE (Bilgi Çıkarımı) alt kümesinde PA (%74.5), Gemma-4-26B'yi (%72.7) geride bıraktı</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       JAVASCRIPT İSTEMCİ MANTIĞI (HIZLI REST API İLETİŞİMİ)
+       ════════════════════════════════════════════════════════════════════ -->
+  <script>
+    const LABEL_TR = {
+      supported: "Destekleniyor (Supported)",
+      partially_supported: "Kısmen Destekleniyor (Partially Supported)",
+      contradicted: "Çelişiyor (Contradicted)",
+      unverifiable: "Doğrulanamaz (Unverifiable)",
+      unsupported: "Desteklenmiyor (Unsupported)"
+    };
+    const LABEL_SHORT = {
+      supported: "Destekleniyor",
+      partially_supported: "Kısmi Destek",
+      contradicted: "Çelişiyor",
+      unverifiable: "Doğrulanamaz",
+      unsupported: "Desteklenmiyor"
+    };
+    const LABEL_COLOR = {
+      supported: "#15803d",
+      partially_supported: "#b45309",
+      contradicted: "#b91c1c",
+      unverifiable: "#475569",
+      unsupported: "#be123c"
+    };
+    const DOMAIN_TR = { finance: "Finans", legal: "Hukuk", medical: "Tıp / Sağlık" };
+
+    let currentDataset = "GOLD480";
+    let currentExampleId = "tfb_ex_0006";
+    let currentCaseData = null;
+
+    function esc(s) {
+      return String(s || "").replace(/[&<>"']/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m]));
+    }
+
+    function labelBadge(lbl) {
+      if (!lbl) return '<span style="color:#94a3b8">—</span>';
+      return `<span class="pill lbl-${lbl}">${esc(LABEL_SHORT[lbl] || lbl)}</span>`;
+    }
+
+    function switchPage(pageId) {
+      document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(n => {
+        n.classList.toggle('active', n.dataset.page === pageId);
+      });
+    }
+
+    function runCurrentPageAction() {
+      const activePage = document.querySelector('.page-view.active').id;
+      if (activePage === 'page-hybrid') runHybridTest();
+      else if (activePage === 'page-k1') runK1Test();
+      else if (activePage === 'page-k2') runK2Test();
+      else if (activePage === 'page-k3') runK3Test();
+      else { switchPage('page-hybrid'); runHybridTest(); }
+    }
+
+    async function loadExplorerCases() {
+      const ds = document.getElementById('exp-dataset').value;
+      const flt = document.getElementById('exp-filter').value;
+      const dom = document.getElementById('exp-domain').value;
+      const q = document.getElementById('exp-search').value;
+      currentDataset = ds;
+
+      const resp = await fetch(`/api/cases?dataset=${encodeURIComponent(ds)}&filter=${encodeURIComponent(flt)}&domain=${encodeURIComponent(dom)}&q=${encodeURIComponent(q)}`);
+      const data = await resp.json();
+
+      document.getElementById('exp-stats-text').innerHTML =
+        `Seçili Küme Toplamı: <b>${data.total_in_dataset}</b> vaka (<b>${data.disagreements_in_dataset}</b> K1≠K2 Ayrışma, <b>${data.consensus_in_dataset}</b> Uzlaşma)`;
+      document.getElementById('exp-shown-count').textContent = `${data.matching_count} eşleşen vaka`;
+
+      const tbody = document.getElementById('exp-tbody');
+      tbody.innerHTML = data.cases.map(c => `
+        <tr class="clickable-row ${c.example_id === currentExampleId ? 'selected-row' : ''}" id="row-${esc(c.example_id)}" onclick="selectCase('${esc(ds)}', '${esc(c.example_id)}')">
+          <td style="white-space:nowrap"><b>${esc(c.example_id)}</b></td>
+          <td style="white-space:nowrap">${esc(DOMAIN_TR[c.domain] || c.domain)}</td>
+          <td style="white-space:nowrap">${labelBadge(c.gold_display)}</td>
+          <td style="white-space:nowrap">${labelBadge(c.k1_pred)}</td>
+          <td style="white-space:nowrap">${labelBadge(c.k2_pred)}</td>
+          <td style="white-space:nowrap">${labelBadge(c.hybrid_P0)}</td>
+          <td style="color:#0f172a; line-height:1.45; font-size:13px; word-break:break-word">${esc(c.claim_snippet)}</td>
+        </tr>
+      `).join('');
+
+      if (data.cases.length > 0) {
+        const exists = data.cases.some(c => c.example_id === currentExampleId);
+        selectCase(ds, exists ? currentExampleId : data.cases[0].example_id);
+      }
+    }
+
+    async function selectCase(ds, exId) {
+      currentDataset = ds;
+      currentExampleId = exId;
+      document.querySelectorAll('#exp-tbody tr').forEach(tr => tr.classList.remove('selected-row'));
+      const activeRow = document.getElementById(`row-${exId}`);
+      if (activeRow) activeRow.classList.add('selected-row');
+
+      const resp = await fetch(`/api/case_detail?dataset=${encodeURIComponent(ds)}&id=${encodeURIComponent(exId)}`);
+      const rec = await resp.json();
+      currentCaseData = rec;
+
+      // Üst durum çubuğu güncelle
+      document.getElementById('active-case-badge').textContent = `${rec.example_id} (${rec.dataset})`;
+      document.getElementById('active-domain-badge').textContent = DOMAIN_TR[rec.domain] || rec.domain;
+      const gDisp = rec.label_scheme === 'binary' ? rec.gold_binary : rec.gold_label;
+      document.getElementById('active-gold-badge').textContent = `Gold: ${LABEL_SHORT[gDisp] || gDisp}`;
+
+      // Önizleme kartı güncelle
+      document.getElementById('prev-id-badge').textContent = `${rec.example_id} (${rec.is_disagreement ? 'K1 ≠ K2 Ayrışma' : 'Uzlaşma / Tekil'})`;
+      document.getElementById('prev-meta').textContent = rec.meta_note || '';
+      document.getElementById('prev-question').textContent = rec.question || '— (Soru alanı yok)';
+      document.getElementById('prev-claim').textContent = rec.claim;
+      document.getElementById('prev-context').textContent = rec.context;
+
+      document.getElementById('prev-scores-grid').innerHTML = `
+        <div class="stat-box"><div class="stat-label">Altın Referans</div><div style="margin-top:4px">${labelBadge(gDisp)}</div></div>
+        <div class="stat-box"><div class="stat-label">K1 (ELECTRA)</div><div style="margin-top:4px">${labelBadge(rec.k1_pred)}</div></div>
+        <div class="stat-box"><div class="stat-label">K2 (Soft-Prob)</div><div style="margin-top:4px">${labelBadge(rec.k2_pred)}</div></div>
+        <div class="stat-box"><div class="stat-label">Hibrit P0 (V4)</div><div style="margin-top:4px">${labelBadge(rec.hybrid_P0)}</div></div>
+      `;
+
+      // Diğer tüm sayfaların form alanlarını bu vakayla senkronize et
+      document.getElementById('hyb-context').value = rec.context;
+      document.getElementById('hyb-claim').value = rec.claim;
+      document.getElementById('hyb-question').value = rec.question || '';
+
+      document.getElementById('k1-context').value = rec.context;
+      document.getElementById('k1-claim').value = rec.claim;
+      document.getElementById('k1-question').value = rec.question || '';
+
+      document.getElementById('k2-context').value = rec.context;
+      document.getElementById('k2-claim').value = rec.claim;
+      const atomLines = (rec.atoms || []).map(a => a.atom).join('\n');
+      document.getElementById('k2-atoms').value = atomLines || rec.claim;
+
+      document.getElementById('k3-context').value = rec.context;
+      document.getElementById('k3-claim').value = rec.claim;
+      if (rec.k1_pred) document.getElementById('k3-k1-pred').value = rec.k1_pred;
+      if (rec.k2_pred) document.getElementById('k3-k2-pred').value = rec.k2_pred;
+      document.getElementById('k3-atoms').value = atomLines || rec.claim;
+    }
+
+    // ── SAYFA 2: UÇTAN UCA HİBRİT TEST ──────────────────────────────────
+    async function runHybridTest() {
+      const btn = document.getElementById('btn-run-hybrid');
+      btn.disabled = true;
+      btn.textContent = "⏳ Çalıştırılıyor...";
+
+      const payload = {
+        context: document.getElementById('hyb-context').value,
+        claim: document.getElementById('hyb-claim').value,
+        question: document.getElementById('hyb-question').value,
+        routing_policy: document.getElementById('hyb-policy').value,
+        agg_rule: document.getElementById('hyb-agg').value,
+        windowing_mode: document.getElementById('hyb-window').value,
+        dataset: currentDataset,
+        example_id: currentExampleId
+      };
+
+      try {
+        const resp = await fetch('/api/run_hybrid', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const res = await resp.json();
+        document.getElementById('hyb-results-area').innerHTML = res.html;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "🚀 Hibrit Doğrulama Hattını Çalıştır";
+      }
+    }
+
+    // ── SAYFA 3: K1 TEKİL VE BAĞLAM ABLASYON TESTİ ──────────────────────
+    async function runK1Test() {
+      const btn = document.getElementById('btn-run-k1');
+      btn.disabled = true;
+      btn.textContent = "⏳ K1 Çalıştırılıyor...";
+
+      const payload = {
+        context: document.getElementById('k1-context').value,
+        claim: document.getElementById('k1-claim').value,
+        question: document.getElementById('k1-question').value,
+        dataset: currentDataset,
+        example_id: currentExampleId
+      };
+
+      try {
+        const resp = await fetch('/api/run_k1', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const res = await resp.json();
+        document.getElementById('k1-results-area').innerHTML = res.html;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "🟦 K1 Çıkarımını ve Bağlam Ablasyonunu Çalıştır";
+      }
+    }
+
+    // ── SAYFA 4: ATOMIZER VE K2 NLI TESTİ ───────────────────────────────
+    async function runAtomizerOnly() {
+      const btn = document.getElementById('btn-run-atomizer');
+      btn.disabled = true;
+      btn.textContent = "⏳ Atomlara Ayrılıyor...";
+
+      try {
+        const resp = await fetch('/api/run_atomizer', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            claim: document.getElementById('k2-claim').value,
+            dataset: currentDataset,
+            example_id: currentExampleId
+          })
+        });
+        const res = await resp.json();
+        document.getElementById('k2-atoms').value = (res.atoms || []).join('\n');
+        document.getElementById('k2-atomizer-meta').innerHTML =
+          `Kaynak: <b>${esc(res.source)}</b> &bull; Süre: <b>${res.latency_ms} ms</b> &bull; Atom Sayısı: <b>${(res.atoms || []).length}</b>`;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "🟪 1. Adım: Gemma-4 QLoRA ile Önermelere Ayır";
+      }
+    }
+
+    async function runK2Test() {
+      const btn = document.getElementById('btn-run-k2');
+      btn.disabled = true;
+      btn.textContent = "⏳ mDeBERTa-v3 NLI Çalıştırılıyor...";
+
+      const atomsList = document.getElementById('k2-atoms').value
+        .split('\n').map(s => s.trim()).filter(Boolean);
+
+      try {
+        const resp = await fetch('/api/run_k2', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            context: document.getElementById('k2-context').value,
+            claim: document.getElementById('k2-claim').value,
+            atoms: atomsList,
+            dataset: currentDataset,
+            example_id: currentExampleId
+          })
+        });
+        const res = await resp.json();
+        document.getElementById('k2-results-area').innerHTML = res.html;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "🟧 2. Adım: Atomları mDeBERTa-v3 NLI ile Test Et (Tam Bağlam vs Pencereli + 3 Kural Kıyaslaması)";
+      }
+    }
+
+    // ── SAYFA 5: K3 META-HAKEM TESTİ ────────────────────────────────────
+    async function runK3Test() {
+      const btn = document.getElementById('btn-run-k3');
+      btn.disabled = true;
+      btn.textContent = "⏳ Hakem Değerlendiriyor...";
+
+      const atomsList = document.getElementById('k3-atoms').value
+        .split('\n').map(s => s.trim()).filter(Boolean);
+
+      try {
+        const resp = await fetch('/api/run_k3', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            context: document.getElementById('k3-context').value,
+            claim: document.getElementById('k3-claim').value,
+            k1_pred: document.getElementById('k3-k1-pred').value,
+            k2_pred: document.getElementById('k3-k2-pred').value,
+            atoms: atomsList,
+            judge_model: document.getElementById('k3-model').value,
+            prompt_version: document.getElementById('k3-prompt-ver').value,
+            use_cache: document.getElementById('k3-use-cache').checked,
+            dataset: currentDataset,
+            example_id: currentExampleId
+          })
+        });
+        const res = await resp.json();
+        document.getElementById('k3-results-area').innerHTML = res.html;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "⚖️ K3 Meta-Hakemi Çalıştır";
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      loadExplorerCases();
+    });
+  </script>
+</body>
+</html>

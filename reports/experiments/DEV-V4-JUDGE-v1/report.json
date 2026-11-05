@@ -1,0 +1,138 @@
+{
+  "dev960": {
+    "n": 219,
+    "judge_correct": 193,
+    "judge_acc": 0.8813,
+    "k1_correct": 147,
+    "k2_correct": 57,
+    "oracle": 204,
+    "judge_vs_k1": {
+      "only_first": 59,
+      "only_second": 13,
+      "p_exact": 0.0
+    },
+    "by_stratum": {
+      "k1_right": {
+        "n": 147,
+        "judge_correct": 134,
+        "acc": 0.9116
+      },
+      "k2_right": {
+        "n": 57,
+        "judge_correct": 53,
+        "acc": 0.9298
+      },
+      "both_wrong": {
+        "n": 15,
+        "judge_correct": 6,
+        "acc": 0.4
+      }
+    },
+    "p0_acc": 0.9469,
+    "k1_acc_all": 0.899
+  },
+  "dev600": {
+    "n": 139,
+    "judge_correct": 128,
+    "judge_acc": 0.9209,
+    "k1_correct": 76,
+    "k2_correct": 56,
+    "oracle": 132,
+    "judge_vs_k1": {
+      "only_first": 58,
+      "only_second": 6,
+      "p_exact": 0.0
+    },
+    "by_stratum": {
+      "k1_right": {
+        "n": 76,
+        "judge_correct": 70,
+        "acc": 0.9211
+      },
+      "k2_right": {
+        "n": 56,
+        "judge_correct": 54,
+        "acc": 0.9643
+      },
+      "both_wrong": {
+        "n": 7,
+        "judge_correct": 4,
+        "acc": 0.5714
+      }
+    },
+    "p0_acc": 0.9517,
+    "k1_acc_all": 0.865
+  },
+  "gold480_reference": {
+    "n": 123,
+    "judge_correct": 110,
+    "judge_acc": 0.8943,
+    "k1_correct": 62,
+    "k2_correct": 49,
+    "oracle": 111,
+    "judge_vs_k1": {
+      "only_first": 54,
+      "only_second": 6,
+      "p_exact": 0.0
+    },
+    "by_stratum": {
+      "k1_right": {
+        "n": 62,
+        "judge_correct": 56,
+        "acc": 0.9032
+      },
+      "k2_right": {
+        "n": 49,
+        "judge_correct": 47,
+        "acc": 0.9592
+      },
+      "both_wrong": {
+        "n": 12,
+        "judge_correct": 7,
+        "acc": 0.5833
+      }
+    }
+  },
+  "dev_union": {
+    "n": 358,
+    "judge_correct": 321,
+    "judge_acc": 0.8966,
+    "k1_correct": 223,
+    "k2_correct": 113,
+    "oracle": 336,
+    "judge_vs_k1": {
+      "only_first": 117,
+      "only_second": 19,
+      "p_exact": 0.0
+    },
+    "by_stratum": {
+      "k1_right": {
+        "n": 223,
+        "judge_correct": 204,
+        "acc": 0.9148
+      },
+      "k2_right": {
+        "n": 113,
+        "judge_correct": 107,
+        "acc": 0.9469
+      },
+      "both_wrong": {
+        "n": 22,
+        "judge_correct": 10,
+        "acc": 0.4545
+      }
+    }
+  },
+  "dev_usage": {
+    "calls": 358,
+    "cost_usd": 0.1422,
+    "providers": {
+      "DeepInfra": 7,
+      "Parasail": 2,
+      "Novita": 2,
+      "AkashML": 347
+    },
+    "finish_length": 0,
+    "parse_notes": {}
+  }
+}

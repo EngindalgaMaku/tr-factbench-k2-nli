@@ -1,0 +1,92 @@
+{
+  "dev960": {
+    "n": 960,
+    "gemma_matched": 960,
+    "routed_agreements": 364,
+    "routed_unmatched": 0,
+    "acc": {
+      "K1": 0.899,
+      "P0": 0.9469,
+      "PA": 0.9521,
+      "gemma_zero_shot_all": 0.9427
+    },
+    "pa_on_routed": {
+      "n": 364,
+      "agreed_label_correct": 347,
+      "gemma_correct": 352,
+      "fixed": 10,
+      "broken": 5
+    },
+    "PA_vs_P0": {
+      "only_first": 10,
+      "only_second": 5,
+      "p_exact": 0.3018
+    },
+    "by_domain": {
+      "finance": {
+        "routed": 119,
+        "fixed": 2,
+        "broken": 3
+      },
+      "legal": {
+        "routed": 127,
+        "fixed": 5,
+        "broken": 0
+      },
+      "medical": {
+        "routed": 118,
+        "fixed": 3,
+        "broken": 2
+      }
+    },
+    "llm_call_share": {
+      "P0": 0.2281,
+      "PA": 0.6073
+    }
+  },
+  "dev600": {
+    "n": 600,
+    "gemma_matched": 599,
+    "routed_agreements": 236,
+    "routed_unmatched": 0,
+    "acc": {
+      "K1": 0.865,
+      "P0": 0.9517,
+      "PA": 0.97,
+      "gemma_zero_shot_all": 0.9633
+    },
+    "pa_on_routed": {
+      "n": 236,
+      "agreed_label_correct": 221,
+      "gemma_correct": 232,
+      "fixed": 14,
+      "broken": 3
+    },
+    "PA_vs_P0": {
+      "only_first": 14,
+      "only_second": 3,
+      "p_exact": 0.0127
+    },
+    "by_domain": {
+      "finance": {
+        "routed": 79,
+        "fixed": 6,
+        "broken": 1
+      },
+      "legal": {
+        "routed": 80,
+        "fixed": 4,
+        "broken": 2
+      },
+      "medical": {
+        "routed": 77,
+        "fixed": 4,
+        "broken": 0
+      }
+    },
+    "llm_call_share": {
+      "P0": 0.2317,
+      "PA": 0.625
+    }
+  }
+}

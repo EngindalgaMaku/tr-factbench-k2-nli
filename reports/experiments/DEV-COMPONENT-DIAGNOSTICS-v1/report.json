@@ -1,0 +1,269 @@
+{
+  "dev960": {
+    "n": 960,
+    "k2_acc": 0.8052,
+    "k2_errors": 187,
+    "patterns": {
+      "P1_undersplit_partial": {
+        "claims": 1,
+        "k2_acc_with": 0.0,
+        "k2_acc_without": 0.806,
+        "share_of_k2_errors": 0.0053,
+        "k1_acc_with": 0.0
+      },
+      "P2_anaphoric_atom": {
+        "claims": 41,
+        "k2_acc_with": 0.8537,
+        "k2_acc_without": 0.803,
+        "share_of_k2_errors": 0.0321,
+        "k1_acc_with": 0.878
+      },
+      "P3_short_atom": {
+        "claims": 118,
+        "k2_acc_with": 0.7288,
+        "k2_acc_without": 0.8159,
+        "share_of_k2_errors": 0.1711,
+        "k1_acc_with": 0.8814
+      },
+      "P4_weak_entailment": {
+        "claims": 54,
+        "k2_acc_with": 0.3704,
+        "k2_acc_without": 0.8311,
+        "share_of_k2_errors": 0.1818,
+        "k1_acc_with": 0.8333
+      },
+      "P5_subhalf_entailment": {
+        "claims": 6,
+        "k2_acc_with": 0.5,
+        "k2_acc_without": 0.8071,
+        "share_of_k2_errors": 0.016,
+        "k1_acc_with": 1.0
+      }
+    },
+    "K1_restrictive_adverb": {
+      "with": {
+        "claims": 71,
+        "k1_pred_contradicted_rate": 0.5211,
+        "k1_contradicted_precision": 0.8378,
+        "gold_contradicted_rate": 0.4366
+      },
+      "without": {
+        "claims": 889,
+        "k1_pred_contradicted_rate": 0.2385,
+        "k1_contradicted_precision": 0.8632,
+        "gold_contradicted_rate": 0.2373
+      }
+    },
+    "k2_error_directions": {
+      "partially_supported -> supported": 36,
+      "contradicted -> partially_supported": 34,
+      "supported -> partially_supported": 23,
+      "contradicted -> supported": 13,
+      "unverifiable -> contradicted": 13,
+      "unverifiable -> supported": 13,
+      "supported -> unverifiable": 13,
+      "contradicted -> unverifiable": 12,
+      "unverifiable -> partially_supported": 10,
+      "partially_supported -> contradicted": 9,
+      "supported -> contradicted": 6,
+      "partially_supported -> unverifiable": 5
+    },
+    "k2_acc_by_atoms": {
+      "1": {
+        "claims": 303,
+        "k2_acc": 0.8185
+      },
+      "2": {
+        "claims": 568,
+        "k2_acc": 0.8063
+      },
+      "3": {
+        "claims": 83,
+        "k2_acc": 0.7349
+      },
+      "4": {
+        "claims": 5,
+        "k2_acc": 1.0
+      },
+      "6": {
+        "claims": 1,
+        "k2_acc": 1.0
+      }
+    }
+  },
+  "dev600": {
+    "n": 600,
+    "k2_acc": 0.8317,
+    "k2_errors": 101,
+    "patterns": {
+      "P1_undersplit_partial": {
+        "claims": 0,
+        "k2_acc_with": null,
+        "k2_acc_without": 0.8317,
+        "share_of_k2_errors": 0.0,
+        "k1_acc_with": null
+      },
+      "P2_anaphoric_atom": {
+        "claims": 12,
+        "k2_acc_with": 0.8333,
+        "k2_acc_without": 0.8316,
+        "share_of_k2_errors": 0.0198,
+        "k1_acc_with": 0.9167
+      },
+      "P3_short_atom": {
+        "claims": 36,
+        "k2_acc_with": 0.8056,
+        "k2_acc_without": 0.8333,
+        "share_of_k2_errors": 0.0693,
+        "k1_acc_with": 0.8889
+      },
+      "P4_weak_entailment": {
+        "claims": 25,
+        "k2_acc_with": 0.52,
+        "k2_acc_without": 0.8452,
+        "share_of_k2_errors": 0.1188,
+        "k1_acc_with": 0.84
+      },
+      "P5_subhalf_entailment": {
+        "claims": 5,
+        "k2_acc_with": 0.6,
+        "k2_acc_without": 0.8336,
+        "share_of_k2_errors": 0.0198,
+        "k1_acc_with": 0.8
+      }
+    },
+    "K1_restrictive_adverb": {
+      "with": {
+        "claims": 27,
+        "k1_pred_contradicted_rate": 0.2222,
+        "k1_contradicted_precision": 1.0,
+        "gold_contradicted_rate": 0.2593
+      },
+      "without": {
+        "claims": 573,
+        "k1_pred_contradicted_rate": 0.2321,
+        "k1_contradicted_precision": 0.9398,
+        "gold_contradicted_rate": 0.2513
+      }
+    },
+    "k2_error_directions": {
+      "contradicted -> partially_supported": 33,
+      "supported -> partially_supported": 21,
+      "unverifiable -> partially_supported": 18,
+      "partially_supported -> supported": 7,
+      "partially_supported -> contradicted": 6,
+      "unverifiable -> contradicted": 5,
+      "contradicted -> unverifiable": 4,
+      "contradicted -> supported": 4,
+      "unverifiable -> supported": 1,
+      "supported -> contradicted": 1,
+      "partially_supported -> unverifiable": 1
+    },
+    "k2_acc_by_atoms": {
+      "1": {
+        "claims": 13,
+        "k2_acc": 0.8462
+      },
+      "2": {
+        "claims": 532,
+        "k2_acc": 0.8421
+      },
+      "3": {
+        "claims": 50,
+        "k2_acc": 0.7
+      },
+      "4": {
+        "claims": 4,
+        "k2_acc": 1.0
+      },
+      "5": {
+        "claims": 1,
+        "k2_acc": 1.0
+      }
+    }
+  },
+  "gold480": {
+    "n": 480,
+    "k2_acc": 0.8042,
+    "k2_errors": 94,
+    "patterns": {
+      "P1_undersplit_partial": {
+        "claims": 3,
+        "k2_acc_with": 0.0,
+        "k2_acc_without": 0.8092,
+        "share_of_k2_errors": 0.0319,
+        "k1_acc_with": 1.0
+      },
+      "P2_anaphoric_atom": {
+        "claims": 28,
+        "k2_acc_with": 0.8214,
+        "k2_acc_without": 0.8031,
+        "share_of_k2_errors": 0.0532,
+        "k1_acc_with": 0.7857
+      },
+      "P3_short_atom": {
+        "claims": 67,
+        "k2_acc_with": 0.8507,
+        "k2_acc_without": 0.7966,
+        "share_of_k2_errors": 0.1064,
+        "k1_acc_with": 0.8358
+      },
+      "P4_weak_entailment": {
+        "claims": 29,
+        "k2_acc_with": 0.4138,
+        "k2_acc_without": 0.8293,
+        "share_of_k2_errors": 0.1809,
+        "k1_acc_with": 0.6897
+      },
+      "P5_subhalf_entailment": {
+        "claims": 4,
+        "k2_acc_with": 0.25,
+        "k2_acc_without": 0.8088,
+        "share_of_k2_errors": 0.0319,
+        "k1_acc_with": 0.5
+      }
+    },
+    "K1_restrictive_adverb": {
+      "with": {
+        "claims": 53,
+        "k1_pred_contradicted_rate": 0.3962,
+        "k1_contradicted_precision": 0.8095,
+        "gold_contradicted_rate": 0.3774
+      },
+      "without": {
+        "claims": 427,
+        "k1_pred_contradicted_rate": 0.2412,
+        "k1_contradicted_precision": 0.7767,
+        "gold_contradicted_rate": 0.2365
+      }
+    },
+    "k2_error_directions": {
+      "partially_supported -> supported": 18,
+      "contradicted -> partially_supported": 17,
+      "unverifiable -> partially_supported": 15,
+      "supported -> partially_supported": 13,
+      "unverifiable -> supported": 6,
+      "unverifiable -> contradicted": 6,
+      "contradicted -> supported": 5,
+      "partially_supported -> contradicted": 5,
+      "contradicted -> unverifiable": 3,
+      "supported -> unverifiable": 3,
+      "partially_supported -> unverifiable": 2,
+      "supported -> contradicted": 1
+    },
+    "k2_acc_by_atoms": {
+      "1": {
+        "claims": 46,
+        "k2_acc": 0.8043
+      },
+      "2": {
+        "claims": 350,
+        "k2_acc": 0.7943
+      },
+      "3": {
+        "claims": 84,
+        "k2_acc": 0.8452
+      }
+    }
+  }
+}

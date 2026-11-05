@@ -1,0 +1,120 @@
+{
+  "protocol": "tau selected on DEV960+DEV600 disagreements by accuracy (ties -> smaller tau); Gold-480 evaluated once",
+  "dev_sizes": {
+    "dev960": 219,
+    "dev600": 139
+  },
+  "grid_search": [
+    {
+      "tau": 0.0,
+      "union": 223,
+      "dev960": 147,
+      "dev600": 76
+    },
+    {
+      "tau": 0.5,
+      "union": 223,
+      "dev960": 147,
+      "dev600": 76
+    },
+    {
+      "tau": 0.6,
+      "union": 223,
+      "dev960": 149,
+      "dev600": 74
+    },
+    {
+      "tau": 0.7,
+      "union": 228,
+      "dev960": 153,
+      "dev600": 75
+    },
+    {
+      "tau": 0.75,
+      "union": 230,
+      "dev960": 152,
+      "dev600": 78
+    },
+    {
+      "tau": 0.8,
+      "union": 231,
+      "dev960": 153,
+      "dev600": 78
+    },
+    {
+      "tau": 0.85,
+      "union": 234,
+      "dev960": 155,
+      "dev600": 79
+    },
+    {
+      "tau": 0.9,
+      "union": 236,
+      "dev960": 154,
+      "dev600": 82
+    },
+    {
+      "tau": 0.95,
+      "union": 243,
+      "dev960": 156,
+      "dev600": 87
+    },
+    {
+      "tau": 0.99,
+      "union": 237,
+      "dev960": 151,
+      "dev600": 86
+    },
+    {
+      "tau": 0.999,
+      "union": 208,
+      "dev960": 130,
+      "dev600": 78
+    },
+    {
+      "tau": 1.01,
+      "union": 113,
+      "dev960": 57,
+      "dev600": 56
+    }
+  ],
+  "selected_tau": 0.95,
+  "gold480": {
+    "K1": {
+      "correct": 399,
+      "acc": 0.8313
+    },
+    "L_tau": {
+      "correct": 408,
+      "acc": 0.85
+    },
+    "P0": {
+      "correct": 447,
+      "acc": 0.9313,
+      "judge_calls": 123
+    },
+    "P0_tau": {
+      "correct": 437,
+      "acc": 0.9104,
+      "judge_calls": 94
+    }
+  },
+  "gold480_tests": {
+    "L_tau_vs_K1": {
+      "only_first_correct": 16,
+      "only_second_correct": 7,
+      "p_exact": 0.0931
+    },
+    "L_tau_vs_P0": {
+      "only_first_correct": 5,
+      "only_second_correct": 44,
+      "p_exact": 0.0
+    },
+    "P0_tau_vs_P0": {
+      "only_first_correct": 0,
+      "only_second_correct": 10,
+      "p_exact": 0.002
+    }
+  },
+  "gold_disagreements_below_tau": 29
+}

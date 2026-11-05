@@ -1,0 +1,347 @@
+{
+  "method": "paired cluster bootstrap (10000 resamples, seed 42), 95% percentile; two-sided bootstrap p; Holm within slice x metric; exact McNemar (sentence level)",
+  "slices": {
+    "medical": {
+      "n_rows": 809,
+      "n_clusters": 74,
+      "comparisons": [
+        {
+          "comparison": "P0 - K1",
+          "n": 809,
+          "f1": {
+            "diff": 0.0755,
+            "ci95": [
+              0.0355,
+              0.1109
+            ],
+            "p_boot": 0.0,
+            "p_holm": 0.0
+          },
+          "accuracy": {
+            "diff": 0.1718,
+            "ci95": [
+              0.1289,
+              0.2146
+            ],
+            "p_boot": 0.0,
+            "p_holm": 0.0
+          },
+          "mcnemar": {
+            "only_first_correct": 169,
+            "only_second_correct": 30,
+            "p_exact": 0.0
+          }
+        },
+        {
+          "comparison": "P0 - K2",
+          "n": 808,
+          "f1": {
+            "diff": 0.0244,
+            "ci95": [
+              -0.0154,
+              0.0644
+            ],
+            "p_boot": 0.2306,
+            "p_holm": 0.5814
+          },
+          "accuracy": {
+            "diff": -0.0037,
+            "ci95": [
+              -0.0395,
+              0.0321
+            ],
+            "p_boot": 0.884,
+            "p_holm": 0.884
+          },
+          "mcnemar": {
+            "only_first_correct": 99,
+            "only_second_correct": 102,
+            "p_exact": 0.8879
+          }
+        },
+        {
+          "comparison": "PA - P0",
+          "n": 809,
+          "f1": {
+            "diff": 0.0088,
+            "ci95": [
+              -0.0104,
+              0.0269
+            ],
+            "p_boot": 0.3664,
+            "p_holm": 0.5814
+          },
+          "accuracy": {
+            "diff": 0.0396,
+            "ci95": [
+              0.0209,
+              0.0608
+            ],
+            "p_boot": 0.0,
+            "p_holm": 0.0
+          },
+          "mcnemar": {
+            "only_first_correct": 37,
+            "only_second_correct": 5,
+            "p_exact": 0.0
+          }
+        },
+        {
+          "comparison": "Gemma26B - PA",
+          "n": 809,
+          "f1": {
+            "diff": 0.0359,
+            "ci95": [
+              -0.0187,
+              0.0858
+            ],
+            "p_boot": 0.1938,
+            "p_holm": 0.5814
+          },
+          "accuracy": {
+            "diff": 0.0383,
+            "ci95": [
+              0.0024,
+              0.0754
+            ],
+            "p_boot": 0.0388,
+            "p_holm": 0.0776
+          },
+          "mcnemar": {
+            "only_first_correct": 99,
+            "only_second_correct": 68,
+            "p_exact": 0.02
+          }
+        }
+      ]
+    },
+    "legal": {
+      "n_rows": 787,
+      "n_clusters": 148,
+      "comparisons": [
+        {
+          "comparison": "P0 - K1",
+          "n": 787,
+          "f1": {
+            "diff": 0.0425,
+            "ci95": [
+              0.0065,
+              0.0791
+            ],
+            "p_boot": 0.0222,
+            "p_holm": 0.0666
+          },
+          "accuracy": {
+            "diff": 0.0546,
+            "ci95": [
+              0.0118,
+              0.098
+            ],
+            "p_boot": 0.0118,
+            "p_holm": 0.0354
+          },
+          "mcnemar": {
+            "only_first_correct": 121,
+            "only_second_correct": 78,
+            "p_exact": 0.0028
+          }
+        },
+        {
+          "comparison": "P0 - K2",
+          "n": 787,
+          "f1": {
+            "diff": 0.0625,
+            "ci95": [
+              0.0302,
+              0.0972
+            ],
+            "p_boot": 0.0002,
+            "p_holm": 0.0008
+          },
+          "accuracy": {
+            "diff": 0.0445,
+            "ci95": [
+              0.0149,
+              0.0743
+            ],
+            "p_boot": 0.0048,
+            "p_holm": 0.0192
+          },
+          "mcnemar": {
+            "only_first_correct": 66,
+            "only_second_correct": 31,
+            "p_exact": 0.0005
+          }
+        },
+        {
+          "comparison": "PA - P0",
+          "n": 787,
+          "f1": {
+            "diff": 0.0052,
+            "ci95": [
+              -0.0062,
+              0.0158
+            ],
+            "p_boot": 0.351,
+            "p_holm": 0.702
+          },
+          "accuracy": {
+            "diff": 0.0127,
+            "ci95": [
+              0.0026,
+              0.023
+            ],
+            "p_boot": 0.0194,
+            "p_holm": 0.0388
+          },
+          "mcnemar": {
+            "only_first_correct": 14,
+            "only_second_correct": 4,
+            "p_exact": 0.0309
+          }
+        },
+        {
+          "comparison": "Gemma26B - PA",
+          "n": 787,
+          "f1": {
+            "diff": 0.0097,
+            "ci95": [
+              -0.0315,
+              0.0509
+            ],
+            "p_boot": 0.646,
+            "p_holm": 0.702
+          },
+          "accuracy": {
+            "diff": 0.0178,
+            "ci95": [
+              -0.0197,
+              0.0536
+            ],
+            "p_boot": 0.3658,
+            "p_holm": 0.3658
+          },
+          "mcnemar": {
+            "only_first_correct": 98,
+            "only_second_correct": 84,
+            "p_exact": 0.3353
+          }
+        }
+      ]
+    },
+    "finance": {
+      "n_rows": 125,
+      "n_clusters": 40,
+      "comparisons": [
+        {
+          "comparison": "P0 - K1",
+          "n": 125,
+          "f1": {
+            "diff": 0.0215,
+            "ci95": [
+              -0.0463,
+              0.086
+            ],
+            "p_boot": 0.5218,
+            "p_holm": 0.84
+          },
+          "accuracy": {
+            "diff": 0.096,
+            "ci95": [
+              0.0,
+              0.1901
+            ],
+            "p_boot": 0.058,
+            "p_holm": 0.174
+          },
+          "mcnemar": {
+            "only_first_correct": 24,
+            "only_second_correct": 12,
+            "p_exact": 0.0652
+          }
+        },
+        {
+          "comparison": "P0 - K2",
+          "n": 125,
+          "f1": {
+            "diff": 0.1213,
+            "ci95": [
+              0.0505,
+              0.205
+            ],
+            "p_boot": 0.001,
+            "p_holm": 0.004
+          },
+          "accuracy": {
+            "diff": 0.136,
+            "ci95": [
+              0.062,
+              0.2164
+            ],
+            "p_boot": 0.0006,
+            "p_holm": 0.0024
+          },
+          "mcnemar": {
+            "only_first_correct": 21,
+            "only_second_correct": 4,
+            "p_exact": 0.0009
+          }
+        },
+        {
+          "comparison": "PA - P0",
+          "n": 125,
+          "f1": {
+            "diff": 0.0103,
+            "ci95": [
+              -0.0148,
+              0.0339
+            ],
+            "p_boot": 0.3746,
+            "p_holm": 0.84
+          },
+          "accuracy": {
+            "diff": 0.024,
+            "ci95": [
+              -0.0085,
+              0.0593
+            ],
+            "p_boot": 0.2352,
+            "p_holm": 0.4704
+          },
+          "mcnemar": {
+            "only_first_correct": 4,
+            "only_second_correct": 1,
+            "p_exact": 0.375
+          }
+        },
+        {
+          "comparison": "Gemma26B - PA",
+          "n": 125,
+          "f1": {
+            "diff": 0.0279,
+            "ci95": [
+              -0.0188,
+              0.0848
+            ],
+            "p_boot": 0.28,
+            "p_holm": 0.84
+          },
+          "accuracy": {
+            "diff": 0.024,
+            "ci95": [
+              -0.0348,
+              0.0859
+            ],
+            "p_boot": 0.529,
+            "p_holm": 0.529
+          },
+          "mcnemar": {
+            "only_first_correct": 11,
+            "only_second_correct": 8,
+            "p_exact": 0.6476
+          }
+        }
+      ]
+    }
+  }
+}
