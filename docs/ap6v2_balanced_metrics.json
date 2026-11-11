@@ -1,0 +1,217 @@
+{
+  "note": "post hoc descriptive metrics; system decisions unchanged",
+  "slices": {
+    "medical": {
+      "n": 809,
+      "n_unsupported": 100,
+      "unsupported_rate": 0.1236,
+      "baseline_all_unsupported": {
+        "n": 809,
+        "accuracy": 0.1236,
+        "f1_unsupported": 0.22,
+        "balanced_accuracy": 0.5,
+        "mcc": 0.0
+      },
+      "baseline_majority": {
+        "class": "supported",
+        "accuracy": 0.8764
+      },
+      "systems": {
+        "k1": {
+          "n": 809,
+          "accuracy": 0.4685,
+          "f1_unsupported": 0.243,
+          "balanced_accuracy": 0.5636,
+          "mcc": 0.0848
+        },
+        "k2": {
+          "n": 808,
+          "accuracy": 0.6448,
+          "f1_unsupported": 0.2948,
+          "balanced_accuracy": 0.6256,
+          "mcc": 0.1704
+        },
+        "hybrid_P0": {
+          "n": 809,
+          "accuracy": 0.6403,
+          "f1_unsupported": 0.3185,
+          "balanced_accuracy": 0.6573,
+          "mcc": 0.2111
+        },
+        "hybrid_PA": {
+          "n": 809,
+          "accuracy": 0.6799,
+          "f1_unsupported": 0.3273,
+          "balanced_accuracy": 0.6584,
+          "mcc": 0.2183
+        },
+        "gemma26b_zero_shot": {
+          "n": 809,
+          "accuracy": 0.7182,
+          "f1_unsupported": 0.3631,
+          "balanced_accuracy": 0.6889,
+          "mcc": 0.2668
+        }
+      }
+    },
+    "medical_no_intro": {
+      "n": 723,
+      "n_unsupported": 96,
+      "unsupported_rate": 0.1328,
+      "baseline_all_unsupported": {
+        "n": 723,
+        "accuracy": 0.1328,
+        "f1_unsupported": 0.2344,
+        "balanced_accuracy": 0.5,
+        "mcc": 0.0
+      },
+      "baseline_majority": {
+        "class": "supported",
+        "accuracy": 0.8672
+      },
+      "systems": {
+        "k1": {
+          "n": 723,
+          "accuracy": 0.5062,
+          "f1_unsupported": 0.2729,
+          "balanced_accuracy": 0.5874,
+          "mcc": 0.1191
+        },
+        "k2": {
+          "n": 723,
+          "accuracy": 0.6279,
+          "f1_unsupported": 0.3049,
+          "balanced_accuracy": 0.6223,
+          "mcc": 0.1692
+        },
+        "hybrid_P0": {
+          "n": 723,
+          "accuracy": 0.6957,
+          "f1_unsupported": 0.3785,
+          "balanced_accuracy": 0.6966,
+          "mcc": 0.2786
+        },
+        "hybrid_PA": {
+          "n": 723,
+          "accuracy": 0.7386,
+          "f1_unsupported": 0.3962,
+          "balanced_accuracy": 0.6993,
+          "mcc": 0.2951
+        },
+        "gemma26b_zero_shot": {
+          "n": 723,
+          "accuracy": 0.7787,
+          "f1_unsupported": 0.4406,
+          "balanced_accuracy": 0.7268,
+          "mcc": 0.3498
+        }
+      }
+    },
+    "legal": {
+      "n": 787,
+      "n_unsupported": 246,
+      "unsupported_rate": 0.3126,
+      "baseline_all_unsupported": {
+        "n": 787,
+        "accuracy": 0.3126,
+        "f1_unsupported": 0.4763,
+        "balanced_accuracy": 0.5,
+        "mcc": 0.0
+      },
+      "baseline_majority": {
+        "class": "supported",
+        "accuracy": 0.6874
+      },
+      "systems": {
+        "k1": {
+          "n": 787,
+          "accuracy": 0.6379,
+          "f1_unsupported": 0.5852,
+          "balanced_accuracy": 0.6867,
+          "mcc": 0.3488
+        },
+        "k2": {
+          "n": 787,
+          "accuracy": 0.648,
+          "f1_unsupported": 0.5651,
+          "balanced_accuracy": 0.6708,
+          "mcc": 0.3168
+        },
+        "hybrid_P0": {
+          "n": 787,
+          "accuracy": 0.6925,
+          "f1_unsupported": 0.6277,
+          "balanced_accuracy": 0.7298,
+          "mcc": 0.4262
+        },
+        "hybrid_PA": {
+          "n": 787,
+          "accuracy": 0.7052,
+          "f1_unsupported": 0.6329,
+          "balanced_accuracy": 0.7346,
+          "mcc": 0.4351
+        },
+        "gemma26b_zero_shot": {
+          "n": 787,
+          "accuracy": 0.723,
+          "f1_unsupported": 0.6426,
+          "balanced_accuracy": 0.7431,
+          "mcc": 0.452
+        }
+      }
+    },
+    "finance": {
+      "n": 125,
+      "n_unsupported": 70,
+      "unsupported_rate": 0.56,
+      "baseline_all_unsupported": {
+        "n": 125,
+        "accuracy": 0.56,
+        "f1_unsupported": 0.7179,
+        "balanced_accuracy": 0.5,
+        "mcc": 0.0
+      },
+      "baseline_majority": {
+        "class": "unsupported",
+        "accuracy": 0.56
+      },
+      "systems": {
+        "k1": {
+          "n": 125,
+          "accuracy": 0.544,
+          "f1_unsupported": 0.6919,
+          "balanced_accuracy": 0.4935,
+          "mcc": -0.0238
+        },
+        "k2": {
+          "n": 125,
+          "accuracy": 0.504,
+          "f1_unsupported": 0.5921,
+          "balanced_accuracy": 0.4851,
+          "mcc": -0.0312
+        },
+        "hybrid_P0": {
+          "n": 125,
+          "accuracy": 0.64,
+          "f1_unsupported": 0.7134,
+          "balanced_accuracy": 0.6182,
+          "mcc": 0.2551
+        },
+        "hybrid_PA": {
+          "n": 125,
+          "accuracy": 0.664,
+          "f1_unsupported": 0.7237,
+          "balanced_accuracy": 0.6474,
+          "mcc": 0.3081
+        },
+        "gemma26b_zero_shot": {
+          "n": 125,
+          "accuracy": 0.688,
+          "f1_unsupported": 0.7516,
+          "balanced_accuracy": 0.6669,
+          "mcc": 0.3602
+        }
+      }
+    }
+  }
+}

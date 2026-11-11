@@ -1,0 +1,170 @@
+{
+  "method": "within-domain context-group bootstrap, 10000, seed 42, percentile 95%",
+  "domains": {
+    "finance": {
+      "n": 160,
+      "groups": 40,
+      "systems": {
+        "K1": {
+          "macro_f1": 0.8632,
+          "ci95": [
+            0.8024,
+            0.9186
+          ]
+        },
+        "K2 (olasılık ortalaması)": {
+          "macro_f1": 0.869,
+          "ci95": [
+            0.8176,
+            0.9181
+          ]
+        },
+        "Hibrit, kör Gemma hakemi": {
+          "macro_f1": 0.9436,
+          "ci95": [
+            0.9107,
+            0.975
+          ]
+        },
+        "Hibrit, V4 hakemi": {
+          "macro_f1": 0.9561,
+          "ci95": [
+            0.9245,
+            0.9813
+          ]
+        },
+        "PB": {
+          "macro_f1": 0.9561,
+          "ci95": [
+            0.9245,
+            0.9813
+          ]
+        },
+        "Gemma-4-26B (sıfır örnekli)": {
+          "macro_f1": 0.9181,
+          "ci95": [
+            0.8794,
+            0.9555
+          ]
+        },
+        "GPT-4.1-mini (8 örnekli)": {
+          "macro_f1": 0.9241,
+          "ci95": [
+            0.8775,
+            0.9625
+          ]
+        }
+      }
+    },
+    "legal": {
+      "n": 160,
+      "groups": 40,
+      "systems": {
+        "K1": {
+          "macro_f1": 0.8566,
+          "ci95": [
+            0.8059,
+            0.9009
+          ]
+        },
+        "K2 (olasılık ortalaması)": {
+          "macro_f1": 0.7777,
+          "ci95": [
+            0.7209,
+            0.8331
+          ]
+        },
+        "Hibrit, kör Gemma hakemi": {
+          "macro_f1": 0.9501,
+          "ci95": [
+            0.9014,
+            0.9875
+          ]
+        },
+        "Hibrit, V4 hakemi": {
+          "macro_f1": 0.932,
+          "ci95": [
+            0.8953,
+            0.9628
+          ]
+        },
+        "PB": {
+          "macro_f1": 0.932,
+          "ci95": [
+            0.8953,
+            0.9628
+          ]
+        },
+        "Gemma-4-26B (sıfır örnekli)": {
+          "macro_f1": 0.9047,
+          "ci95": [
+            0.8522,
+            0.9497
+          ]
+        },
+        "GPT-4.1-mini (8 örnekli)": {
+          "macro_f1": 0.8736,
+          "ci95": [
+            0.8148,
+            0.9246
+          ]
+        }
+      }
+    },
+    "medical": {
+      "n": 160,
+      "groups": 40,
+      "systems": {
+        "K1": {
+          "macro_f1": 0.7667,
+          "ci95": [
+            0.711,
+            0.8191
+          ]
+        },
+        "K2 (olasılık ortalaması)": {
+          "macro_f1": 0.7707,
+          "ci95": [
+            0.7125,
+            0.8258
+          ]
+        },
+        "Hibrit, kör Gemma hakemi": {
+          "macro_f1": 0.8692,
+          "ci95": [
+            0.8188,
+            0.9148
+          ]
+        },
+        "Hibrit, V4 hakemi": {
+          "macro_f1": 0.9056,
+          "ci95": [
+            0.8658,
+            0.9436
+          ]
+        },
+        "PB": {
+          "macro_f1": 0.9496,
+          "ci95": [
+            0.917,
+            0.9811
+          ]
+        },
+        "Gemma-4-26B (sıfır örnekli)": {
+          "macro_f1": 0.8829,
+          "ci95": [
+            0.8325,
+            0.929
+          ]
+        },
+        "GPT-4.1-mini (8 örnekli)": {
+          "macro_f1": 0.9309,
+          "ci95": [
+            0.8925,
+            0.9625
+          ]
+        }
+      }
+    }
+  }
+}
